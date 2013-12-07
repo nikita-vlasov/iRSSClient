@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "Internet.h"
 #import "RSSParser.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface TableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
