@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self reloadDataOnline];
     
     slComposeViewController = [[SLComposeViewController alloc] init];
     mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
