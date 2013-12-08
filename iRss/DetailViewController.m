@@ -23,6 +23,7 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
 }
 
@@ -37,4 +38,7 @@
 
 - (IBAction)buttonSendEmail:(id)sender {
 }
+
+#pragma mark -
+
 @end

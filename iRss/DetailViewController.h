@@ -1,4 +1,6 @@
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 #import "RSSParser.h"
 
 @interface DetailViewController : UIViewController <UIActionSheetDelegate> {
@@ -26,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textViewContent;
 
 #pragma mark - Online
-@property (nonatomic, strong) RSSItem *detail;
+@property (nonatomic, strong) RSSItem *detailItem;
 
 #pragma mark - Offline
 @property (strong, nonatomic) NSDictionary *detailItemOffline;
