@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     slComposeViewController = [[SLComposeViewController alloc] init];
     mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
     
@@ -37,9 +36,9 @@
 - (IBAction)buttonBarAction:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
-                                                    cancelButtonTitle:@"Cancel"
+                                                    cancelButtonTitle:NSLocalizedString(@"CANCEL", nil)
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Open", @"Open in Safari", nil];
+                                                    otherButtonTitles:NSLocalizedString(@"OPEN", nil), NSLocalizedString(@"OPEN_IN_SAFARI", nil), nil];
     [actionSheet showInView:self.view];
 }
 

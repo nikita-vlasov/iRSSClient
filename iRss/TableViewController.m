@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"News";
+    self.navigationItem.title = NSLocalizedString(@"TITLE_NEWS_ONLINE", nil);
     [self buttonBarRefresh:nil];
 }
 

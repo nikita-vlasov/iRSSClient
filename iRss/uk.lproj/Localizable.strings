@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  iRss
+
+  Created by Alex on 12/8/13.
+  Copyright (c) 2013 Alex. All rights reserved.
+*/
+
+/* Table View Controller */
+"TITLE_NEWS_ONLINE" = "Новини";
+
+
+/* Detail View Controller */
+"CANCEL" = "Скасувати";
+"OPEN" = "Відкрити";
+"OPEN_IN_SAFARI" = "Відкрити у Safari";
+
+/* Offline Table View Controller */
+"OFFLINE" = "Офлайн";
