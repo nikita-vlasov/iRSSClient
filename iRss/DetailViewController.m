@@ -19,6 +19,9 @@
     [super viewDidLoad];
     [self reloadDataOnline];
     
+    slComposeViewController = [[SLComposeViewController alloc] init];
+    mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    
     if ([_stringOfflineKey isEqualToString:@"Offline"]) {
         [self reloadDataOffline];
     }
@@ -90,6 +93,14 @@
 }
 
 - (IBAction)buttonSendEmail:(id)sender {
+    mfMailComposeViewController.mailComposeDelegate = self;
+    [mfMailComposeViewController setSubject:[_detailItem title]];
+    [mfMailComposeViewController setMessageBody:[_detailItem itemDescription] isHTML:YES];
+    [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error; {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Online

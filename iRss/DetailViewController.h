@@ -1,13 +1,15 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 #import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 #import "RSSParser.h"
 #import "WebViewController.h"
-#include "SQLiteAccess.h"
+#import "SQLiteAccess.h"
 
-@interface DetailViewController : UIViewController <UIActionSheetDelegate> {
+@interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     @private
     SLComposeViewController *slComposeViewController;
+    MFMailComposeViewController *mfMailComposeViewController;
 }
 
 #pragma mark - Action
