@@ -45,6 +45,8 @@
 		FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC9481853F7EB00765CD9 /* WebViewController.m */; };
 		FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */; };
 		FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FABCC94F1854039000765CD9 /* offline_news.sqlite */; };
+		FABCC9551854069300765CD9 /* email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC9531854069300765CD9 /* email@2x.png */; };
+		FABCC9561854069300765CD9 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC9541854069300765CD9 /* email.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		FABCC94B1853FDB600765CD9 /* OfflineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineTableViewController.h; sourceTree = "<group>"; };
 		FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineTableViewController.m; sourceTree = "<group>"; };
 		FABCC94F1854039000765CD9 /* offline_news.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = offline_news.sqlite; sourceTree = "<group>"; };
+		FABCC9531854069300765CD9 /* email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email@2x.png"; sourceTree = "<group>"; };
+		FABCC9541854069300765CD9 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +198,8 @@
 		FABCC8D81853E52F00765CD9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FABCC94E1854037600765CD9 /* Database */,
 				FABCC90B1853EAB300765CD9 /* Libraries */,
+				FABCC94E1854037600765CD9 /* Database */,
 				FABCC9361853F09800765CD9 /* Resources */,
 				FABCC8D91853E52F00765CD9 /* iRss-Info.plist */,
 				FABCC8DA1853E52F00765CD9 /* InfoPlist.strings */,
@@ -324,6 +328,8 @@
 		FABCC9371853F09E00765CD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FABCC9531854069300765CD9 /* email@2x.png */,
+				FABCC9541854069300765CD9 /* email.png */,
 				FABCC9381853F0B500765CD9 /* twitter.png */,
 				FABCC9391853F0B500765CD9 /* twitter@2x.png */,
 				FABCC93A1853F0B500765CD9 /* facebook@2x.png */,
@@ -426,11 +432,13 @@
 			files = (
 				FABCC93D1853F0B500765CD9 /* twitter@2x.png in Resources */,
 				FABCC8DC1853E52F00765CD9 /* InfoPlist.strings in Resources */,
+				FABCC9551854069300765CD9 /* email@2x.png in Resources */,
 				FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */,
 				FABCC93C1853F0B500765CD9 /* twitter.png in Resources */,
 				FABCC93F1853F0B500765CD9 /* facebook.png in Resources */,
 				FABCC9031853E61A00765CD9 /* iPhone.storyboard in Resources */,
 				FABCC93E1853F0B500765CD9 /* facebook@2x.png in Resources */,
+				FABCC9561854069300765CD9 /* email.png in Resources */,
 				FABCC8E41853E52F00765CD9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
