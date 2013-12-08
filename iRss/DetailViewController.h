@@ -5,6 +5,7 @@
 #import "RSSParser.h"
 #import "WebViewController.h"
 #import "SQLiteAccess.h"
+#import "Internet.h"
 
 @interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     @private

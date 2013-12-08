@@ -1,8 +1,9 @@
 #import <UIKit/UIKit.h>
+#import "DetainSettingTableViewController.h"
 
 @interface SettingViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
-    NSArray *array;
+    NSArray *arrayPoints;
 }
 
 #pragma mark - Outlet

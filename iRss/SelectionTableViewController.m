@@ -74,7 +74,7 @@
     if ([indexPath section] == 0) {
         tableViewController.linkToTheRssFeeds = @"http://images.apple.com/main/rss/hotnews/hotnews.rss";
     }
-    if ([indexPath section] == 1) {
+    else if ([indexPath section] == 1) {
         tableViewController.linkToTheRssFeeds = @"https://developer.apple.com/news/rss/news.rss";
     }
 }

@@ -5,11 +5,8 @@
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "Новости";
-
-//
 "ERROR" = "Ошибка";
 "ERROR_INTERNET_CONNECTION" = "К сожалению вы не подключены к интернету, мы советуем Вам это сделать. В противном случае мы сможете читать только те новости, которые добавили в список для оффлайн чтения.";
-//
 
 /* Detail View Controller */
 "CANCEL" = "Отмена";
@@ -19,3 +16,10 @@
 
 /* Offline Table View Controller */
 "OFFLINE" = "Оффлайн";
+
+/* Setting View Controller */
+"SETTING" = "Настройки";
+
+/* Detain Setting Table View Controller */
+"ABOUT" = "Про";
+"REPORT_AN_ISSUE" = "Сообщить о проблеме";

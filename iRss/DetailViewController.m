@@ -17,10 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    slComposeViewController = [[SLComposeViewController alloc] init];
-    mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    
+    if ([Internet internetConnection] == YES) {
+        slComposeViewController = [[SLComposeViewController alloc] init];
+        mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    }
+    else {
+        [self switchOffButtons];
+    }
     
     if ([_stringOfflineKey isEqualToString:@"Offline"]) {
+        _buttonAddNewsToOfflineOutlet.enabled = NO;
+        [self switchOffButtons];
         [self reloadDataOffline];
     }
     else {
@@ -108,8 +116,17 @@
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
 }
 
+#pragma mark - MFMail Compose View Controller Delegate
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error; {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Hiding Buttons
+- (void)switchOffButtons {
+    _buttonBarActionOutlet.enabled = NO;
+    _buttonShareFacebookOutlet.enabled = NO;
+    _buttonShareTwitterOutlet.enabled = NO;
+    _buttonSendEmailOutlet.enabled = NO;
 }
 
 #pragma mark - Online
@@ -132,12 +149,6 @@
     self.labelTitle.text = [_detailItemOffline objectForKey:@"title"];
     self.labelDate.text = [_detailItemOffline objectForKey:@"pub_date"];
     self.textViewContent.text = [_detailItemOffline objectForKey:@"item_description"];
-    
-    _buttonBarActionOutlet.enabled = NO;
-    _buttonAddNewsToOfflineOutlet.enabled = NO;
-    _buttonShareFacebookOutlet.enabled = NO;
-    _buttonShareTwitterOutlet.enabled = NO;
-    _buttonSendEmailOutlet.enabled = NO;
 }
 
 #pragma mark - Navigation

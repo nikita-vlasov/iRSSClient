@@ -5,11 +5,8 @@
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "News";
-
-//
 "ERROR" = "Error";
 "ERROR_INTERNET_CONNECTION" = "Unfortunately you are not connected to the Internet, we encourage you to do it. Otherwise, we can only read the news, which was added to the list for offline reading.";
-//
 
 /* Detail View Controller */
 "CANCEL" = "Cancel";
@@ -19,3 +16,10 @@
 
 /* Offline Table View Controller */
 "OFFLINE" = "Offline";
+
+/* Setting View Controller */
+"SETTING" = "Setting";
+
+/* Detain Setting Table View Controller */
+"ABOUT" = "About";
+"REPORT_AN_ISSUE" = "Report an issue";
