@@ -34,7 +34,7 @@
 
 #pragma mark -
 - (void)retrievingData {
-    NSURL *url = [NSURL URLWithString:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
+    NSURL *url = [NSURL URLWithString:_linkToTheRssFeeds];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     [RSSParser parseRSSFeedForRequest:request success:^(NSArray *feedItems) {

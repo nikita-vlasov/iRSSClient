@@ -1,14 +1,10 @@
-/* 
-  Localizable.strings
-  iRss
+/* Russian */
 
-  Created by Alex on 12/8/13.
-  Copyright (c) 2013 Alex. All rights reserved.
-*/
+/* Selection Table View Controller */
+"APPLE_ALL_RSS" = "Apple RSS-каналы";
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "Новости";
-
 
 /* Detail View Controller */
 "CANCEL" = "Отмена";

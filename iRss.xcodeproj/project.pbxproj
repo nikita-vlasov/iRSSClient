@@ -48,6 +48,7 @@
 		FABCC95918540A0A00765CD9 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC95718540A0A00765CD9 /* email.png */; };
 		FABCC95A18540A0A00765CD9 /* email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC95818540A0A00765CD9 /* email@2x.png */; };
 		FABCC9FA185412C900765CD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FABCC9FC185412C900765CD9 /* Localizable.strings */; };
+		FABCCA45185423F700765CD9 /* SelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCCA44185423F700765CD9 /* SelectionTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,9 +128,11 @@
 		FABCC9F7185412A900765CD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FABCC9F8185412AF00765CD9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FABCC9F9185412AF00765CD9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FABCC9FB185412C900765CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FABCC9FD1854141400765CD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FABCC9FE1854141500765CD9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FABCC9FB185412C900765CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FABCC9FD1854141400765CD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FABCC9FE1854141500765CD9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FABCCA43185423F700765CD9 /* SelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewController.h; sourceTree = "<group>"; };
+		FABCCA44185423F700765CD9 /* SelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +245,7 @@
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
 				FABCC9041853E66A00765CD9 /* Logic */,
+				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FABCC9081853E75900765CD9 /* TableViewController.h */,
 				FABCC9091853E75900765CD9 /* TableViewController.m */,
 				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
@@ -372,6 +376,15 @@
 			name = Localizable;
 			sourceTree = "<group>";
 		};
+		FABCCA4618542D0C00765CD9 /* ChannelSelection */ = {
+			isa = PBXGroup;
+			children = (
+				FABCCA43185423F700765CD9 /* SelectionTableViewController.h */,
+				FABCCA44185423F700765CD9 /* SelectionTableViewController.m */,
+			);
+			name = ChannelSelection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,6 +497,7 @@
 				FABCC92A1853EAB300765CD9 /* AFImageRequestOperation.m in Sources */,
 				FABCC9311853EAB300765CD9 /* RSSItem.m in Sources */,
 				FABCC9291853EAB300765CD9 /* AFHTTPRequestOperation.m in Sources */,
+				FABCCA45185423F700765CD9 /* SelectionTableViewController.m in Sources */,
 				FABCC9281853EAB300765CD9 /* AFHTTPClient.m in Sources */,
 				FABCC92F1853EAB300765CD9 /* AFXMLRequestOperation.m in Sources */,
 				FABCC9321853EAB300765CD9 /* RSSParser.m in Sources */,
