@@ -4,4 +4,13 @@
     
 }
 
+#pragma mark - Outlet
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+#pragma mark -
+@property (strong, nonatomic) NSURL *link;
+
+#pragma mark - 
+- (void)reloadData;
+
 @end

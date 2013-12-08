@@ -189,17 +189,17 @@
                         <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
                         <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
                         <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
-                        <segue destination="1Wy-Ux-oLy" kind="push" id="u1O-XC-otZ"/>
+                        <segue destination="1Wy-Ux-oLy" kind="push" identifier="OpenLink" id="u1O-XC-otZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2t-vt-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="461" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="ArJ-4Y-3qq">
             <objects>
-                <viewController id="1Wy-Ux-oLy" sceneMemberID="viewController">
+                <viewController id="1Wy-Ux-oLy" customClass="WebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="msO-Mz-ZvQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,6 +213,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xXh-li-zV1"/>
+                    <connections>
+                        <outlet property="webView" destination="gJ4-Dw-k2i" id="Z3Q-eb-lia"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUe-yV-R4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

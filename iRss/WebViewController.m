@@ -17,10 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)reloadData {
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [self link]];
+    [[self webView] loadRequest:request];
+    self.webView.scalesPageToFit = YES;
 }
 
 @end

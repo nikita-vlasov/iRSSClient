@@ -2,6 +2,7 @@
 #import <Social/Social.h>
 #import <MessageUI/MessageUI.h>
 #import "RSSParser.h"
+#import "WebViewController.h"
 
 @interface DetailViewController : UIViewController <UIActionSheetDelegate> {
     @private

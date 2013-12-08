@@ -26,6 +26,28 @@
 
 #pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Open", @"Open in Safari", nil];
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0: {
+            [self performSegueWithIdentifier:@"OpenLink" sender:self];
+            break;
+        }
+        case 1: {
+            [[UIApplication sharedApplication] openURL:[_detailItem link]];
+            break;
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 - (IBAction)buttonAddNewsToOffline:(id)sender {
@@ -62,8 +84,8 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    WebViewController *webViewController = segue.destinationViewController;
-//    webViewController.link = [_detail link];
+    WebViewController *webViewController = segue.destinationViewController;
+    webViewController.link = [_detailItem link];
 }
 
 @end
