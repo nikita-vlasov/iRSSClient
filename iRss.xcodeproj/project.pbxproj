@@ -186,8 +186,8 @@
 		FABCC8D81853E52F00765CD9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FABCC9361853F09800765CD9 /* Resources */,
 				FABCC90B1853EAB300765CD9 /* Libraries */,
+				FABCC9361853F09800765CD9 /* Resources */,
 				FABCC8D91853E52F00765CD9 /* iRss-Info.plist */,
 				FABCC8DA1853E52F00765CD9 /* InfoPlist.strings */,
 				FABCC8DD1853E52F00765CD9 /* main.m */,

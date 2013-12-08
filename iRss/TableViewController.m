@@ -59,7 +59,7 @@
     
     RSSItem *item = [arrayDataRss objectAtIndex:indexPath.row];
     cell.textLabel.text = [item title];
-    cell.detailTextLabel.text = [[item pubDate] description];
+    cell.detailTextLabel.text = [item pubDates];
     
     return cell;
 }

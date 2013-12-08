@@ -120,6 +120,10 @@
         if ([elementName isEqualToString:@"guid"]) {
             [currentItem setGuid:tmpString];
         }
+        
+        if ([elementName isEqualToString:@"pubDate"]) {
+            [currentItem setPubDates:tmpString];
+        }
     }
     
     if ([elementName isEqualToString:@"rss"]) {
