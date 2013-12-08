@@ -42,6 +42,7 @@
 		FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC9411853F14B00765CD9 /* DetailViewController.m */; };
 		FABCC9441853F34600765CD9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9431853F34600765CD9 /* Social.framework */; };
 		FABCC9461853F34E00765CD9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9451853F34E00765CD9 /* MessageUI.framework */; };
+		FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC9481853F7EB00765CD9 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		FABCC9411853F14B00765CD9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FABCC9431853F34600765CD9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FABCC9451853F34E00765CD9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FABCC9471853F7EB00765CD9 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FABCC9481853F7EB00765CD9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,8 @@
 				FABCC9091853E75900765CD9 /* TableViewController.m */,
 				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
 				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
+				FABCC9471853F7EB00765CD9 /* WebViewController.h */,
+				FABCC9481853F7EB00765CD9 /* WebViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				FABCC8E21853E52F00765CD9 /* AppDelegate.m in Sources */,
 				FABCC8DE1853E52F00765CD9 /* main.m in Sources */,
 				FABCC92B1853EAB300765CD9 /* AFJSONRequestOperation.m in Sources */,
+				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
 				FABCC92D1853EAB300765CD9 /* AFPropertyListRequestOperation.m in Sources */,
