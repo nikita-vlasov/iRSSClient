@@ -39,6 +39,8 @@
     
     [RSSParser parseRSSFeedForRequest:request success:^(NSArray *feedItems) {
         arrayDataRss = feedItems;
+        NSString *str = [NSString stringWithFormat:@"News (%lu)", (unsigned long)[arrayDataRss count]];
+        self.navigationItem.title = str;
         [[self tableView] reloadData];
     }failure:^(NSError *error) {
         NSLog(@"Error Get Data! %@", error);

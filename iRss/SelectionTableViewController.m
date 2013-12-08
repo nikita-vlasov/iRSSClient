@@ -32,7 +32,12 @@
 
 /*
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    retutn @"Имя секции";
+    if (section == 0) {
+        return @"Hello";
+    }
+    else {
+        return @"sad";
+    }
 }
  */
 
@@ -61,7 +66,6 @@
     if ([indexPath section] == 0) {
         tableViewController.linkToTheRssFeeds = @"http://images.apple.com/main/rss/hotnews/hotnews.rss";
     }
-    
     if ([indexPath section] == 1) {
         tableViewController.linkToTheRssFeeds = @"https://developer.apple.com/news/rss/news.rss";
     }
