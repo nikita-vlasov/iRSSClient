@@ -74,6 +74,17 @@
     
     [SQLiteAccess updateWithSQL:queryString];
     [self.navigationController popViewControllerAnimated:YES];
+    
+    UIAlertView *autoAlertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:NSLocalizedString(@"ADD_NEWS_TO_OFFLINE", "")
+                                                           delegate:self
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:nil];
+    autoAlertView.transform = CGAffineTransformMake(1.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f);
+    [autoAlertView performSelector:@selector(dismissWithClickedButtonIndex:animated:)
+                        withObject:nil
+                        afterDelay:1.5f];
+    [autoAlertView show];
 }
 
 - (IBAction)buttonShareFacebook:(id)sender {

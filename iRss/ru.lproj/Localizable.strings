@@ -10,6 +10,7 @@
 "CANCEL" = "Отмена";
 "OPEN" = "Открыть";
 "OPEN_IN_SAFARI" = "Открыть в Safari";
+"ADD_NEWS_TO_OFFLINE" = "Новость добавлена ​​для чтения в автономном режиме.";
 
 /* Offline Table View Controller */
 "OFFLINE" = "Оффлайн";

@@ -10,6 +10,7 @@
 "CANCEL" = "Cancel";
 "OPEN" = "Open";
 "OPEN_IN_SAFARI" = "Open in Safari";
+"ADD_NEWS_TO_OFFLINE" = "News added for offline reading.";
 
 /* Offline Table View Controller */
 "OFFLINE" = "Offline";
