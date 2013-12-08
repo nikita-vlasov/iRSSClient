@@ -1,5 +1,5 @@
 /* Название базы данных */
-#define dbName @"untitled"
+#define dbName @"offline_news"
 
 @interface SQLiteAccess : NSObject {
     

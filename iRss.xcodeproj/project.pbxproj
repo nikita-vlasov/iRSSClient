@@ -44,6 +44,7 @@
 		FABCC9461853F34E00765CD9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9451853F34E00765CD9 /* MessageUI.framework */; };
 		FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC9481853F7EB00765CD9 /* WebViewController.m */; };
 		FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */; };
+		FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FABCC94F1854039000765CD9 /* offline_news.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		FABCC9481853F7EB00765CD9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		FABCC94B1853FDB600765CD9 /* OfflineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineTableViewController.h; sourceTree = "<group>"; };
 		FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineTableViewController.m; sourceTree = "<group>"; };
+		FABCC94F1854039000765CD9 /* offline_news.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = offline_news.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		FABCC8D81853E52F00765CD9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FABCC94E1854037600765CD9 /* Database */,
 				FABCC90B1853EAB300765CD9 /* Libraries */,
 				FABCC9361853F09800765CD9 /* Resources */,
 				FABCC8D91853E52F00765CD9 /* iRss-Info.plist */,
@@ -338,6 +341,14 @@
 			name = Offline;
 			sourceTree = "<group>";
 		};
+		FABCC94E1854037600765CD9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FABCC94F1854039000765CD9 /* offline_news.sqlite */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,6 +426,7 @@
 			files = (
 				FABCC93D1853F0B500765CD9 /* twitter@2x.png in Resources */,
 				FABCC8DC1853E52F00765CD9 /* InfoPlist.strings in Resources */,
+				FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */,
 				FABCC93C1853F0B500765CD9 /* twitter.png in Resources */,
 				FABCC93F1853F0B500765CD9 /* facebook.png in Resources */,
 				FABCC9031853E61A00765CD9 /* iPhone.storyboard in Resources */,

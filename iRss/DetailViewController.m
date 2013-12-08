@@ -18,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self reloadDataOnline];
+    
+    if ([_stringOfflineKey isEqualToString:@"Offline"]) {
+        [self reloadDataOffline];
+    }
+    else {
+        [self reloadDataOnline];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,7 +109,15 @@
 }
 
 - (void)reloadDataOffline {
+    self.labelTitle.text = [_detailItemOffline objectForKey:@"title"];
+    self.labelDate.text = [_detailItemOffline objectForKey:@"pub_date"];
+    self.textViewContent.text = [_detailItemOffline objectForKey:@"item_description"];
     
+    _buttonBarActionOutlet.enabled = NO;
+    _buttonAddNewsToOfflineOutlet.enabled = NO;
+    _buttonShareFacebookOutlet.enabled = NO;
+    _buttonShareTwitterOutlet.enabled = NO;
+    _buttonSendEmailOutlet.enabled = NO;
 }
 
 #pragma mark - Navigation
