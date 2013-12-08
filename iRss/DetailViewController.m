@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self reloadDataOnline];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +40,30 @@
 - (IBAction)buttonSendEmail:(id)sender {
 }
 
-#pragma mark -
+#pragma mark - Online
+- (void)setDetailItem:(RSSItem *)detailItem {
+    _detailItem = detailItem;
+}
+
+- (void)reloadDataOnline {
+    self.labelTitle.text = [_detailItem title];
+    self.labelDate.text = [_detailItem pubDates];
+    self.textViewContent.text = [_detailItem itemDescription];
+}
+
+#pragma mark - Offline
+- (void)setDetailItemOffline:(NSDictionary *)detailItemOffline {
+    _detailItemOffline = detailItemOffline;
+}
+
+- (void)reloadDataOffline {
+    
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    WebViewController *webViewController = segue.destinationViewController;
+//    webViewController.link = [_detail link];
+}
 
 @end

@@ -81,7 +81,7 @@
         <scene sceneID="us1-ll-cHy">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="is6-41-UkZ" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gxE-fX-5Ti">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -162,7 +162,7 @@
                                     <action selector="buttonSendEmail:" destination="UEn-bv-hdN" eventType="touchUpInside" id="rm2-ym-nTm"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wLh-1z-HbH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="wLh-1z-HbH">
                                 <rect key="frame" x="20" y="175" width="280" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
