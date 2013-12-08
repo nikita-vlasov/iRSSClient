@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-883" y="109"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="veF-Bj-5dP">
             <objects>
-                <viewController id="UEn-bv-hdN" sceneMemberID="viewController">
+                <viewController id="UEn-bv-hdN" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="77V-Ye-MOa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,6 +128,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonAddNewsToOffline:" destination="UEn-bv-hdN" eventType="touchUpInside" id="y8d-Cn-T1W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1kl-aP-gjb">
                                 <rect key="frame" x="50" y="144" width="25" height="25"/>
@@ -135,6 +138,9 @@
                                 <state key="normal" backgroundImage="facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonShareFacebook:" destination="UEn-bv-hdN" eventType="touchUpInside" id="sjD-EG-rX2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pvu-1V-tWB">
                                 <rect key="frame" x="83" y="144" width="25" height="25"/>
@@ -142,6 +148,9 @@
                                 <state key="normal" backgroundImage="twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonShareTwitter:" destination="UEn-bv-hdN" eventType="touchUpInside" id="LQE-Ut-IBT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dzd-9M-l0U">
                                 <rect key="frame" x="116" y="144" width="25" height="25"/>
@@ -149,6 +158,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonSendEmail:" destination="UEn-bv-hdN" eventType="touchUpInside" id="rm2-ym-nTm"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wLh-1z-HbH">
                                 <rect key="frame" x="20" y="175" width="280" height="344"/>
@@ -162,8 +174,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lxt-R1-JGb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="nOq-Ww-ZLh"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="nOq-Ww-ZLh">
+                            <connections>
+                                <action selector="buttonBarAction:" destination="UEn-bv-hdN" id="CR8-HW-8Ch"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonAddNewsToOfflineOutlet" destination="rHv-mD-BSY" id="6fb-w0-l2m"/>
+                        <outlet property="buttonBarActionOutlet" destination="nOq-Ww-ZLh" id="IKy-hc-O3L"/>
+                        <outlet property="buttonSendEmailOutlet" destination="Dzd-9M-l0U" id="ccR-ix-mr4"/>
+                        <outlet property="buttonShareFacebookOutlet" destination="1kl-aP-gjb" id="Y9i-yk-2RS"/>
+                        <outlet property="buttonShareTwitterOutlet" destination="pvu-1V-tWB" id="k52-d4-sVi"/>
+                        <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
+                        <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
+                        <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2t-vt-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -39,6 +39,9 @@
 		FABCC93D1853F0B500765CD9 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC9391853F0B500765CD9 /* twitter@2x.png */; };
 		FABCC93E1853F0B500765CD9 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC93A1853F0B500765CD9 /* facebook@2x.png */; };
 		FABCC93F1853F0B500765CD9 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FABCC93B1853F0B500765CD9 /* facebook.png */; };
+		FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC9411853F14B00765CD9 /* DetailViewController.m */; };
+		FABCC9441853F34600765CD9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9431853F34600765CD9 /* Social.framework */; };
+		FABCC9461853F34E00765CD9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9451853F34E00765CD9 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,10 @@
 		FABCC9391853F0B500765CD9 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 		FABCC93A1853F0B500765CD9 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
 		FABCC93B1853F0B500765CD9 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		FABCC9401853F14B00765CD9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FABCC9411853F14B00765CD9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FABCC9431853F34600765CD9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FABCC9451853F34E00765CD9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCC9461853F34E00765CD9 /* MessageUI.framework in Frameworks */,
+				FABCC9441853F34600765CD9 /* Social.framework in Frameworks */,
 				FABCC9351853EC7F00765CD9 /* libsqlite3.0.dylib in Frameworks */,
 				FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */,
 				FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */,
@@ -152,6 +161,8 @@
 		FABCC8D01853E52E00765CD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FABCC9451853F34E00765CD9 /* MessageUI.framework */,
+				FABCC9431853F34600765CD9 /* Social.framework */,
 				FABCC9341853EC7F00765CD9 /* libsqlite3.0.dylib */,
 				FABCC8D11853E52E00765CD9 /* Foundation.framework */,
 				FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */,
@@ -211,6 +222,8 @@
 				FABCC9041853E66A00765CD9 /* Logic */,
 				FABCC9081853E75900765CD9 /* TableViewController.h */,
 				FABCC9091853E75900765CD9 /* TableViewController.m */,
+				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
+				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -409,6 +422,7 @@
 			files = (
 				FABCC92E1853EAB300765CD9 /* AFURLConnectionOperation.m in Sources */,
 				FABCC9301853EAB300765CD9 /* UIImageView+AFNetworking.m in Sources */,
+				FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */,
 				FABCC92A1853EAB300765CD9 /* AFImageRequestOperation.m in Sources */,
 				FABCC9311853EAB300765CD9 /* RSSItem.m in Sources */,
 				FABCC9291853EAB300765CD9 /* AFHTTPRequestOperation.m in Sources */,
