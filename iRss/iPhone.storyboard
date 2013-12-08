@@ -189,11 +189,34 @@
                         <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
                         <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
                         <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
+                        <segue destination="1Wy-Ux-oLy" kind="push" id="u1O-XC-otZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2t-vt-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="461" y="103"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ArJ-4Y-3qq">
+            <objects>
+                <viewController id="1Wy-Ux-oLy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="msO-Mz-ZvQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="gJ4-Dw-k2i">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xXh-li-zV1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUe-yV-R4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="103"/>
         </scene>
     </scenes>
     <resources>
