@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA41530D1854F997005A7685 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530C1854F997005A7685 /* SettingViewController.m */; };
+		FA415310185522B3005A7685 /* DetainSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetainSettingTableViewController.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
 		FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D51853E52F00765CD9 /* UIKit.framework */; };
@@ -62,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA41530B1854F997005A7685 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		FA41530C1854F997005A7685 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		FA41530E185522B3005A7685 /* DetainSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetainSettingTableViewController.h; sourceTree = "<group>"; };
+		FA41530F185522B3005A7685 /* DetainSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetainSettingTableViewController.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC8D11853E52E00765CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,6 +168,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4153091854F954005A7685 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FA41530B1854F997005A7685 /* SettingViewController.h */,
+				FA41530C1854F997005A7685 /* SettingViewController.m */,
+				FA41530E185522B3005A7685 /* DetainSettingTableViewController.h */,
+				FA41530F185522B3005A7685 /* DetainSettingTableViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		FA41530A1854F971005A7685 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				FABCC9081853E75900765CD9 /* TableViewController.h */,
+				FABCC9091853E75900765CD9 /* TableViewController.m */,
+				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
+				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
+				FABCC9471853F7EB00765CD9 /* WebViewController.h */,
+				FABCC9481853F7EB00765CD9 /* WebViewController.m */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
 		FABCC8C51853E52E00765CD9 = {
 			isa = PBXGroup;
 			children = (
@@ -246,13 +276,9 @@
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
 				FABCC9041853E66A00765CD9 /* Logic */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
-				FABCC9081853E75900765CD9 /* TableViewController.h */,
-				FABCC9091853E75900765CD9 /* TableViewController.m */,
-				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
-				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
-				FABCC9471853F7EB00765CD9 /* WebViewController.h */,
-				FABCC9481853F7EB00765CD9 /* WebViewController.m */,
+				FA41530A1854F971005A7685 /* Online */,
 				FABCC94A1853FD8500765CD9 /* Offline */,
+				FA4153091854F954005A7685 /* Setting */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -492,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABCC92E1853EAB300765CD9 /* AFURLConnectionOperation.m in Sources */,
+				FA415310185522B3005A7685 /* DetainSettingTableViewController.m in Sources */,
 				FABCC9301853EAB300765CD9 /* UIImageView+AFNetworking.m in Sources */,
 				FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */,
 				FABCC92A1853EAB300765CD9 /* AFImageRequestOperation.m in Sources */,
@@ -508,6 +535,7 @@
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
+				FA41530D1854F997005A7685 /* SettingViewController.m in Sources */,
 				FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */,
 				FABCC92D1853EAB300765CD9 /* AFPropertyListRequestOperation.m in Sources */,
 				FABCC92C1853EAB300765CD9 /* AFNetworkActivityIndicatorManager.m in Sources */,

@@ -30,6 +30,14 @@
     if ([Internet internetConnection] == YES) {
         [self retrievingData];
     }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", nil)
+                                                            message:NSLocalizedString(@"ERROR_INTERNET_CONNECTION", nil)
+                                                           delegate:self
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"OK", nil];
+        [alertView show];
+    }
 }
 
 #pragma mark -
