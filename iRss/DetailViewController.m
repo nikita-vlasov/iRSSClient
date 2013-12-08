@@ -54,9 +54,17 @@
 }
 
 - (IBAction)buttonShareFacebook:(id)sender {
+    slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [slComposeViewController setInitialText:[_detailItem itemDescription]];
+    [slComposeViewController addURL:[_detailItem link]];
+    [self presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
 - (IBAction)buttonShareTwitter:(id)sender {
+    slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [slComposeViewController setInitialText:[_detailItem title]];
+    [slComposeViewController addURL:[_detailItem link]];
+    [self presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
 - (IBAction)buttonSendEmail:(id)sender {
