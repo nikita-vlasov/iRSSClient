@@ -124,6 +124,10 @@
         if ([elementName isEqualToString:@"pubDate"]) {
             [currentItem setPubDates:tmpString];
         }
+        
+        if ([elementName isEqualToString:@"category"]) {
+            [currentItem setCategory:tmpString];
+        }
     }
     
     if ([elementName isEqualToString:@"rss"]) {

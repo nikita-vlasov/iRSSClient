@@ -15,6 +15,7 @@
 @property (strong,nonatomic) NSString *author;
 @property (strong,nonatomic) NSString *guid;
 @property (strong,nonatomic) NSString *pubDates;
+@property (strong,nonatomic) NSString *category;
 
 - (NSArray *)imagesFromItemDescription;
 - (NSArray *)imagesFromContent;

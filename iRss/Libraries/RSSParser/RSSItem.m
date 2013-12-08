@@ -10,7 +10,7 @@
 
 @implementation RSSItem
 
-@synthesize title,itemDescription,content,link,commentsLink,commentsFeed,commentsCount,pubDate,author,guid, pubDates;
+@synthesize title,itemDescription,content,link,commentsLink,commentsFeed,commentsCount,pubDate,author,guid, pubDates, category;
 
 -(NSArray *)imagesFromItemDescription
 {

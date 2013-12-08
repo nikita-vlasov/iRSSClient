@@ -51,6 +51,20 @@
 }
 
 - (IBAction)buttonAddNewsToOffline:(id)sender {
+    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
+                             [_detailItem title],
+                             [_detailItem itemDescription],
+                             [_detailItem content],
+                             [_detailItem link],
+                             [_detailItem commentsLink],
+                             [_detailItem commentsFeed],
+                             [_detailItem commentsCount],
+                             [_detailItem pubDates],
+                             [_detailItem author],
+                             [_detailItem guid],
+                             [_detailItem category]];
+    
+    [SQLiteAccess updateWithSQL:queryString];
 }
 
 - (IBAction)buttonShareFacebook:(id)sender {
