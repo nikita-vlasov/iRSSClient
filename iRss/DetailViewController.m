@@ -65,6 +65,7 @@
                              [_detailItem category]];
     
     [SQLiteAccess updateWithSQL:queryString];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)buttonShareFacebook:(id)sender {

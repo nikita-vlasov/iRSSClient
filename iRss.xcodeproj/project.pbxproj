@@ -43,6 +43,7 @@
 		FABCC9441853F34600765CD9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9431853F34600765CD9 /* Social.framework */; };
 		FABCC9461853F34E00765CD9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC9451853F34E00765CD9 /* MessageUI.framework */; };
 		FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC9481853F7EB00765CD9 /* WebViewController.m */; };
+		FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		FABCC9451853F34E00765CD9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FABCC9471853F7EB00765CD9 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		FABCC9481853F7EB00765CD9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		FABCC94B1853FDB600765CD9 /* OfflineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineTableViewController.h; sourceTree = "<group>"; };
+		FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +232,7 @@
 				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
 				FABCC9471853F7EB00765CD9 /* WebViewController.h */,
 				FABCC9481853F7EB00765CD9 /* WebViewController.m */,
+				FABCC94A1853FD8500765CD9 /* Offline */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -323,6 +327,15 @@
 				FABCC93B1853F0B500765CD9 /* facebook.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		FABCC94A1853FD8500765CD9 /* Offline */ = {
+			isa = PBXGroup;
+			children = (
+				FABCC94B1853FDB600765CD9 /* OfflineTableViewController.h */,
+				FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */,
+			);
+			name = Offline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +454,7 @@
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
+				FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */,
 				FABCC92D1853EAB300765CD9 /* AFPropertyListRequestOperation.m in Sources */,
 				FABCC92C1853EAB300765CD9 /* AFNetworkActivityIndicatorManager.m in Sources */,
 			);
