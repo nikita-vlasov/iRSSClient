@@ -10,7 +10,4 @@
 #pragma mark -
 @property (strong, nonatomic) NSURL *link;
 
-#pragma mark - 
-- (void)reloadData;
-
 @end

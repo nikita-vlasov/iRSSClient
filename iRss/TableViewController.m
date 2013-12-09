@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    arrayDataRss = [[NSArray alloc] init];
+    
     self.navigationItem.title = NSLocalizedString(@"TITLE_NEWS_ONLINE", nil);
     [self buttonBarRefresh:nil];
 }
