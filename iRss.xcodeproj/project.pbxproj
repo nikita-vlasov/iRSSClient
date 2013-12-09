@@ -186,10 +186,17 @@
 				FABCC9091853E75900765CD9 /* TableViewController.m */,
 				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
 				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
+		FA6F4B4818553DAB00C42218 /* Web */ = {
+			isa = PBXGroup;
+			children = (
 				FABCC9471853F7EB00765CD9 /* WebViewController.h */,
 				FABCC9481853F7EB00765CD9 /* WebViewController.m */,
 			);
-			name = Online;
+			name = Web;
 			sourceTree = "<group>";
 		};
 		FABCC8C51853E52E00765CD9 = {
@@ -239,8 +246,8 @@
 		FABCC8D81853E52F00765CD9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FABCC9F31854125800765CD9 /* Localizable */,
 				FABCC90B1853EAB300765CD9 /* Libraries */,
+				FABCC9F31854125800765CD9 /* Localizable */,
 				FABCC94E1854037600765CD9 /* Database */,
 				FABCC9361853F09800765CD9 /* Resources */,
 				FABCC8D91853E52F00765CD9 /* iRss-Info.plist */,
@@ -277,6 +284,7 @@
 				FABCC9041853E66A00765CD9 /* Logic */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
+				FA6F4B4818553DAB00C42218 /* Web */,
 				FABCC94A1853FD8500765CD9 /* Offline */,
 				FA4153091854F954005A7685 /* Setting */,
 			);

@@ -9,6 +9,11 @@
 
 @interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     @private
+    NSString *stringTitle;
+    NSString *stringItemDescription;
+    NSString *stringPubDate;
+    NSURL *urlLink;
+    
     SLComposeViewController *slComposeViewController;
     MFMailComposeViewController *mfMailComposeViewController;
 }

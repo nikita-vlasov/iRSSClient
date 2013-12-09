@@ -24,7 +24,6 @@
 }
 
 #pragma mark - Table View Delegate
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.1f;
 }

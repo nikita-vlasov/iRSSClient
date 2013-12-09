@@ -74,8 +74,8 @@
         detainSettingTableViewController.stringCellLabel = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
         detainSettingTableViewController.stringTitleForFooterSection = @"This version of the program.";
     }
-    else {
-        nil;
+    else if ([indexPath section] == 1) {
+        
     }
 }
 

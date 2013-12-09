@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    stringTitle = [[NSString alloc] init];
+    stringPubDate = [[NSString alloc] init];
+    stringItemDescription = [[NSString alloc] init];
+    urlLink = [[NSURL alloc] init];
+    
     if ([Internet internetConnection] == YES) {
         slComposeViewController = [[SLComposeViewController alloc] init];
         mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
@@ -26,13 +31,14 @@
         [self switchOffButtons];
     }
     
-    if ([_stringOfflineKey isEqualToString:@"Offline"]) {
-        _buttonAddNewsToOfflineOutlet.enabled = NO;
-        [self switchOffButtons];
-        [self reloadDataOffline];
+    if (![_stringOfflineKey isEqualToString:@"Offline"]) {
+        [self obtainingOnlineData];
+        [self reloadData];
     }
     else {
-        [self reloadDataOnline];
+        _buttonAddNewsToOfflineOutlet.enabled = NO;
+        [self obtainingOfflineData];
+        [self reloadData];
     }
 }
 
@@ -57,7 +63,7 @@
             break;
         }
         case 1: {
-            [[UIApplication sharedApplication] openURL:[_detailItem link]];
+            [[UIApplication sharedApplication] openURL:urlLink];
             break;
         }
         default: {
@@ -97,28 +103,59 @@
 
 - (IBAction)buttonShareFacebook:(id)sender {
     slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [slComposeViewController setInitialText:[_detailItem itemDescription]];
-    [slComposeViewController addURL:[_detailItem link]];
+    [slComposeViewController setInitialText:stringItemDescription];
+    [slComposeViewController addURL:urlLink];
     [self presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
 - (IBAction)buttonShareTwitter:(id)sender {
     slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [slComposeViewController setInitialText:[_detailItem title]];
-    [slComposeViewController addURL:[_detailItem link]];
+    [slComposeViewController setInitialText:stringTitle];
+    [slComposeViewController addURL:urlLink];
     [self presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
 - (IBAction)buttonSendEmail:(id)sender {
     mfMailComposeViewController.mailComposeDelegate = self;
-    [mfMailComposeViewController setSubject:[_detailItem title]];
-    [mfMailComposeViewController setMessageBody:[_detailItem itemDescription] isHTML:YES];
+    [mfMailComposeViewController setSubject:stringTitle];
+    [mfMailComposeViewController setMessageBody:stringItemDescription isHTML:YES];
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
 }
 
 #pragma mark - MFMail Compose View Controller Delegate
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error; {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Online
+- (void)setDetailItem:(RSSItem *)detailItem {
+    _detailItem = detailItem;
+}
+
+- (void)obtainingOnlineData {
+    stringTitle = [_detailItem title];
+    stringItemDescription = [_detailItem itemDescription];
+    stringPubDate = [_detailItem pubDates];
+    urlLink = [_detailItem link];
+}
+
+#pragma mark - Offline
+- (void)setDetailItemOffline:(NSDictionary *)detailItemOffline {
+    _detailItemOffline = detailItemOffline;
+}
+
+- (void)obtainingOfflineData {
+    stringTitle = [_detailItemOffline objectForKey:@"title"];
+    stringItemDescription = [_detailItemOffline objectForKey:@"item_description"];
+    stringPubDate = [_detailItemOffline objectForKey:@"pub_date"];
+    urlLink = [NSURL URLWithString:[_detailItemOffline objectForKey:@"link"]];
+}
+
+#pragma mark -
+- (void)reloadData {
+    self.labelTitle.text = stringTitle;
+    self.labelDate.text = stringPubDate;
+    self.textViewContent.text = stringItemDescription;
 }
 
 #pragma mark - Hiding Buttons
@@ -129,32 +166,10 @@
     _buttonSendEmailOutlet.enabled = NO;
 }
 
-#pragma mark - Online
-- (void)setDetailItem:(RSSItem *)detailItem {
-    _detailItem = detailItem;
-}
-
-- (void)reloadDataOnline {
-    self.labelTitle.text = [_detailItem title];
-    self.labelDate.text = [_detailItem pubDates];
-    self.textViewContent.text = [_detailItem itemDescription];
-}
-
-#pragma mark - Offline
-- (void)setDetailItemOffline:(NSDictionary *)detailItemOffline {
-    _detailItemOffline = detailItemOffline;
-}
-
-- (void)reloadDataOffline {
-    self.labelTitle.text = [_detailItemOffline objectForKey:@"title"];
-    self.labelDate.text = [_detailItemOffline objectForKey:@"pub_date"];
-    self.textViewContent.text = [_detailItemOffline objectForKey:@"item_description"];
-}
-
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     WebViewController *webViewController = segue.destinationViewController;
-    webViewController.link = [_detailItem link];
+    webViewController.link = urlLink;
 }
 
 @end
