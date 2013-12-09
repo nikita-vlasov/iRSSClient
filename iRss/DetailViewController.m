@@ -103,6 +103,7 @@
     [autoAlertView show];
 }
 
+#pragma mark - Button Share
 - (IBAction)buttonShareFacebook:(id)sender {
     slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     [slComposeViewController setInitialText:stringItemDescription];
@@ -117,21 +118,22 @@
     [self presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
-- (IBAction)buttonFondSizeAdd:(id)sender {
-    ++ fontSize;
-    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
-}
-
-- (IBAction)buttonFondSizeTake:(id)sender {
-    -- fontSize;
-    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
-}
-
 - (IBAction)buttonSendEmail:(id)sender {
     mfMailComposeViewController.mailComposeDelegate = self;
     [mfMailComposeViewController setSubject:stringTitle];
     [mfMailComposeViewController setMessageBody:stringItemDescription isHTML:YES];
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
+}
+
+#pragma mark - Button Size
+- (IBAction)buttonFondSizeAdd:(id)sender {
+    fontSize ++;
+    [self updateTextField];
+}
+
+- (IBAction)buttonFondSizeTake:(id)sender {
+    fontSize --;
+    [self updateTextField];
 }
 
 #pragma mark - MFMail Compose View Controller Delegate
@@ -163,11 +165,16 @@
     urlLink = [NSURL URLWithString:[_detailItemOffline objectForKey:@"link"]];
 }
 
-#pragma mark -
+#pragma mark - Reload
 - (void)reloadData {
     self.labelTitle.text = stringTitle;
     self.labelDate.text = stringPubDate;
     self.textViewContent.text = stringItemDescription;
+}
+
+#pragma mark - Update Size
+- (void)updateTextField {
+    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
 }
 
 #pragma mark - Hiding Buttons
