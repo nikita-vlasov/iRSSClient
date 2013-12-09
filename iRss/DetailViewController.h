@@ -54,4 +54,6 @@
 @property (strong, nonatomic) NSDictionary *detailItemOffline;
 @property (strong, nonatomic) NSString *stringOfflineKey;
 
+//
+
 @end

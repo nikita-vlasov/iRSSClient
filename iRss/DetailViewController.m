@@ -18,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                            target:self
+                                                                            action:@selector(buttonBarAction:)];
+    
+    UIBarButtonItem *share =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
+                                                                          target:self
+                                                                          action:@selector(buttonBarShareSocial:)];
+    self.navigationItem.rightBarButtonItems = @[action, share];
+    
     fontSize = 14;
     fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
     

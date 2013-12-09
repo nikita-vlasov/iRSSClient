@@ -31,6 +31,7 @@
 #pragma mark - Action
 - (IBAction)buttonBarRefresh:(id)sender {
     if ([Internet internetConnection] == YES) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         [self retrievingData];
     }
     else {
@@ -49,6 +50,7 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     [RSSParser parseRSSFeedForRequest:request success:^(NSArray *feedItems) {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         arrayDataRss = feedItems;
         NSString *stringTitle = [NSString stringWithFormat:@"News (%lu)", (unsigned long)[arrayDataRss count]];
         self.navigationItem.title = stringTitle;

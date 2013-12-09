@@ -403,16 +403,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lxt-R1-JGb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="nOq-Ww-ZLh">
-                            <connections>
-                                <action selector="buttonBarAction:" destination="UEn-bv-hdN" id="CR8-HW-8Ch"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="lxt-R1-JGb"/>
                     <connections>
                         <outlet property="buttonAddNewsToOfflineOutlet" destination="rHv-mD-BSY" id="6fb-w0-l2m"/>
-                        <outlet property="buttonBarActionOutlet" destination="nOq-Ww-ZLh" id="IKy-hc-O3L"/>
                         <outlet property="buttonSendEmailOutlet" destination="Dzd-9M-l0U" id="ccR-ix-mr4"/>
                         <outlet property="buttonShareFacebookOutlet" destination="1kl-aP-gjb" id="Y9i-yk-2RS"/>
                         <outlet property="buttonShareTwitterOutlet" destination="pvu-1V-tWB" id="k52-d4-sVi"/>
