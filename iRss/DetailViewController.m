@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
+    fontSize = 14;
+    fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
     
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
@@ -35,13 +36,12 @@
     
     if (![_stringOfflineKey isEqualToString:@"Offline"]) {
         [self obtainingOnlineData];
-        [self reloadData];
     }
     else {
         _buttonAddNewsToOfflineOutlet.enabled = NO;
         [self obtainingOfflineData];
-        [self reloadData];
     }
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,6 +117,16 @@
     [self presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
+- (IBAction)buttonFondSizeAdd:(id)sender {
+    ++ fontSize;
+    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
+}
+
+- (IBAction)buttonFondSizeTake:(id)sender {
+    -- fontSize;
+    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
+}
+
 - (IBAction)buttonSendEmail:(id)sender {
     mfMailComposeViewController.mailComposeDelegate = self;
     [mfMailComposeViewController setSubject:stringTitle];
@@ -158,17 +168,6 @@
     self.labelTitle.text = stringTitle;
     self.labelDate.text = stringPubDate;
     self.textViewContent.text = stringItemDescription;
-}
-
-#pragma mark - Font
-- (void)fontSizeAdd {
-    fontSize ++;
-    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
-}
-
-- (void)fondSizeTake {
-    fontSize --;
-    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
 }
 
 #pragma mark - Hiding Buttons

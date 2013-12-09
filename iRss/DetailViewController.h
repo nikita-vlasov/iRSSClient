@@ -14,11 +14,11 @@
     NSString *stringPubDate;
     NSURL *urlLink;
     
-    SLComposeViewController *slComposeViewController;
-    MFMailComposeViewController *mfMailComposeViewController;
-    
     NSInteger fontSize;
     UIFontDescriptor *fontName;
+    
+    SLComposeViewController *slComposeViewController;
+    MFMailComposeViewController *mfMailComposeViewController;
 }
 
 #pragma mark - Action
@@ -27,6 +27,9 @@
 - (IBAction)buttonShareFacebook:(id)sender;
 - (IBAction)buttonShareTwitter:(id)sender;
 - (IBAction)buttonSendEmail:(id)sender;
+
+- (IBAction)buttonFondSizeAdd:(id)sender;
+- (IBAction)buttonFondSizeTake:(id)sender;
 
 #pragma mark - Outlet Button
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonBarActionOutlet;
