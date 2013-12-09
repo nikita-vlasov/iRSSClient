@@ -37,6 +37,11 @@
                BlueprintName = "iRssTests"
                ReferencedContainer = "container:iRss.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "iRssTests/testExample">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

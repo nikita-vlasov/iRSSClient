@@ -25,6 +25,22 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Table View Data Source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [arrayPoints count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = [arrayPoints objectAtIndex:indexPath.section];
+    return cell;
+}
+
 #pragma mark - Table View Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.1f;
@@ -48,22 +64,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark - Table View Data Source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [arrayPoints count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = [arrayPoints objectAtIndex:indexPath.section];
-    return cell;
 }
 
 #pragma mark - Navigation

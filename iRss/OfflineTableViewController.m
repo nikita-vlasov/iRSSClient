@@ -87,7 +87,7 @@
         DetailViewController *detailViewController = segue.destinationViewController;
         detailViewController.detailItemOffline = dictionary;
         detailViewController.stringOfflineKey = @"Offline";
-        [[segue destinationViewController] setDetailItemOffline:dictionary]; 
+//        [[segue destinationViewController] setDetailItemOffline:dictionary];
     }
 }
 

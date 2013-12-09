@@ -16,6 +16,9 @@
     
     SLComposeViewController *slComposeViewController;
     MFMailComposeViewController *mfMailComposeViewController;
+    
+    NSInteger fontSize;
+    UIFontDescriptor *fontName;
 }
 
 #pragma mark - Action

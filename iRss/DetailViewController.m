@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
+    
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
     stringItemDescription = [[NSString alloc] init];
@@ -156,6 +158,17 @@
     self.labelTitle.text = stringTitle;
     self.labelDate.text = stringPubDate;
     self.textViewContent.text = stringItemDescription;
+}
+
+#pragma mark - Font
+- (void)fontSizeAdd {
+    fontSize ++;
+    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
+}
+
+- (void)fondSizeTake {
+    fontSize --;
+    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
 }
 
 #pragma mark - Hiding Buttons

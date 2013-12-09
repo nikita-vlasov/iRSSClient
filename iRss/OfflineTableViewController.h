@@ -2,7 +2,7 @@
 #import "DetailViewController.h"
 #import "SQLiteAccess.h"
 
-@interface OfflineTableViewController : UITableViewController {
+@interface OfflineTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     
 }
 

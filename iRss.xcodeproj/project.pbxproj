@@ -281,12 +281,12 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
-				FABCC9041853E66A00765CD9 /* Logic */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
 				FA6F4B4818553DAB00C42218 /* Web */,
 				FABCC94A1853FD8500765CD9 /* Offline */,
 				FA4153091854F954005A7685 /* Setting */,
+				FABCC9041853E66A00765CD9 /* Other */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -299,13 +299,13 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		FABCC9041853E66A00765CD9 /* Logic */ = {
+		FABCC9041853E66A00765CD9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				FABCC9051853E69B00765CD9 /* Internet.h */,
 				FABCC9061853E69B00765CD9 /* Internet.m */,
 			);
-			name = Logic;
+			name = Other;
 			sourceTree = "<group>";
 		};
 		FABCC90B1853EAB300765CD9 /* Libraries */ = {

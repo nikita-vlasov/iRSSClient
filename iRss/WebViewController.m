@@ -25,7 +25,7 @@
 }
 
 - (void)reloadData {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [self link]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[self link]];
     [[self webView] loadRequest:request];
     self.webView.scalesPageToFit = YES;
 }
