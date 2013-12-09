@@ -9,8 +9,6 @@
     void (^block)(NSArray *feedItems);
 }
 
-
-
 + (void)parseRSSFeedForRequest:(NSURLRequest *)urlRequest
                        success:(void (^)(NSArray *feedItems))success
                        failure:(void (^)(NSError *error))failure;

@@ -57,6 +57,12 @@
     [super didReceiveMemoryWarning];
 }
 
+
+
+- (IBAction)buttonBarShareSocial:(id)sender {
+
+}
+
 #pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
@@ -197,7 +203,7 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     WebViewController *webViewController = segue.destinationViewController;
-    webViewController.link = urlLink;
+    [webViewController setLink:urlLink];
 }
 
 @end

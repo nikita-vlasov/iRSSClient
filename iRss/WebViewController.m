@@ -42,28 +42,37 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Setter
+- (void)setLink:(NSURL *)link {
+    _link = link;
+}
+
+- (void)setWebView:(UIWebView *)webView {
+    _webView = webView;
+}
+
 #pragma mark - Action Bar Button
 - (IBAction)buttonBarRefreshPage:(id)sender {
-    [[self webView] reload];
+    [_webView reload];
 }
 
 - (IBAction)buttonBarForwardPage:(id)sender {
-    [[self webView] goForward];
+    [_webView goForward];
 }
 
 - (IBAction)buttonBarBackPage:(id)sender {
-    [[self webView] goBack];
+    [_webView goBack];
 }
 
 - (IBAction)buttonBarStopPage:(id)sender {
-    [[self webView] stopLoading];
+    [_webView stopLoading];
 }
 
 #pragma mark -
 - (void)reloadData {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[self link]];
-    [[self webView] loadRequest:request];
-    self.webView.scalesPageToFit = YES;
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:_link];
+    [_webView loadRequest:request];
+    _webView.scalesPageToFit = YES;
 }
 
 @end

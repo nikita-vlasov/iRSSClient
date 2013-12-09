@@ -70,12 +70,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     TableViewController *tableViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+
     
     if ([indexPath section] == 0) {
-        tableViewController.linkToTheRssFeeds = @"http://images.apple.com/main/rss/hotnews/hotnews.rss";
+        [tableViewController setLinkToTheRssFeeds:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
     }
     else if ([indexPath section] == 1) {
-        tableViewController.linkToTheRssFeeds = @"https://developer.apple.com/news/rss/news.rss";
+        [tableViewController setLinkToTheRssFeeds:@"https://developer.apple.com/news/rss/news.rss"];
     }
 }
 
