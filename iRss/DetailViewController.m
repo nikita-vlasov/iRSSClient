@@ -23,12 +23,12 @@
     stringItemDescription = [[NSString alloc] init];
     urlLink = [[NSURL alloc] init];
     
-    if ([Internet internetConnection] == YES) {
-        slComposeViewController = [[SLComposeViewController alloc] init];
-        mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    if ([Internet internetConnection] == NO) {
+        [self switchOffButtons];
     }
     else {
-        [self switchOffButtons];
+        slComposeViewController = [[SLComposeViewController alloc] init];
+        mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
     }
     
     if (![_stringOfflineKey isEqualToString:@"Offline"]) {
