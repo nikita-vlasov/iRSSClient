@@ -83,6 +83,7 @@
     }
     else if ([indexPath section] == 2) {
         [ResetSettingToDefault resetFontSize];
+        [ResetSettingToDefault cleanerListFavorites];
         [detainSettingTableViewController setStringCellLabel:@"Settings are reset."];
          
     }
