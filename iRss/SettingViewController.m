@@ -82,10 +82,9 @@
         [detainSettingTableViewController setStringCellLabel:@"Этот раздел в стадии разработки"];
     }
     else if ([indexPath section] == 2) {
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setInteger:14 forKey:@"FONT_SIZE"];
-        [userDefaults synchronize];
+        [ResetSettingToDefault resetFontSize];
         [detainSettingTableViewController setStringCellLabel:@"Settings are reset."];
+         
     }
 }
 

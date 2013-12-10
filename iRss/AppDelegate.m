@@ -4,10 +4,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
     if ([userDefaults integerForKey:@"FONT_SIZE"] <= 1) {
-        [userDefaults setInteger:14 forKey:@"FONT_SIZE"];
-        [userDefaults synchronize];
+        [ResetSettingToDefault resetFontSize];
     }
     return YES;
 }

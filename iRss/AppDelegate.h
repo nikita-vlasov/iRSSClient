@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "ResetSettingToDefault.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     
