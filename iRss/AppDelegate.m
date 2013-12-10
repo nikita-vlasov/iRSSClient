@@ -5,9 +5,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    if ([userDefaults integerForKey:@"FONT_SIZE"] == 0) {
+    if ([userDefaults integerForKey:@"FONT_SIZE"] <= 6) {
         [userDefaults setInteger:14 forKey:@"FONT_SIZE"];
-        NSLog(@"Hello");
         [userDefaults synchronize];
     }
     return YES;
