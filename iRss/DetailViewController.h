@@ -7,7 +7,7 @@
 #import "SQLiteAccess.h"
 #import "Internet.h"
 
-@interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
+@interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate, UIPrintInteractionControllerDelegate> {
     @private
     NSString *stringTitle;
     NSString *stringItemDescription;

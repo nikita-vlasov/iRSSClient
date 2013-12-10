@@ -98,34 +98,43 @@
     [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
     NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
 
-    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
-                             [_detailItem title],
-                             [_detailItem itemDescription],
-                             [_detailItem content],
-                             [_detailItem link],
-                             [_detailItem commentsLink],
-                             [_detailItem commentsFeed],
-                             [_detailItem commentsCount],
-                             [_detailItem pubDates],
-                             [_detailItem author],
-                             [_detailItem guid],
-                             [_detailItem category],
-                             stringTodayDate];
-    
-    
-    [SQLiteAccess updateWithSQL:queryString];
-    [self.navigationController popViewControllerAnimated:YES];
-    
-    UIAlertView *autoAlertView = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:NSLocalizedString(@"ADD_NEWS_TO_OFFLINE", "")
-                                                           delegate:self
-                                                  cancelButtonTitle:nil
-                                                  otherButtonTitles:nil];
-    autoAlertView.transform = CGAffineTransformMake(1.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f);
-    [autoAlertView performSelector:@selector(dismissWithClickedButtonIndex:animated:)
-                        withObject:nil
-                        afterDelay:1.5f];
-    [autoAlertView show];
+    if ([self requestToLink: (NSString *) urlLink] == YES) {
+        //если есть
+        NSLog(@"Уже есть такая новость");
+        return;
+    }
+    else {
+        NSLog(@"NO");
+        
+        NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
+                                 [_detailItem title],
+                                 [_detailItem itemDescription],
+                                 [_detailItem content],
+                                 [_detailItem link],
+                                 [_detailItem commentsLink],
+                                 [_detailItem commentsFeed],
+                                 [_detailItem commentsCount],
+                                 [_detailItem pubDates],
+                                 [_detailItem author],
+                                 [_detailItem guid],
+                                 [_detailItem category],
+                                 stringTodayDate];
+        
+        [SQLiteAccess insertWithSQL:queryString];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        
+        UIAlertView *autoAlertView = [[UIAlertView alloc] initWithTitle:nil
+                                                                message:NSLocalizedString(@"ADD_NEWS_TO_OFFLINE", "")
+                                                               delegate:self
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:nil];
+        autoAlertView.transform = CGAffineTransformMake(1.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f);
+        [autoAlertView performSelector:@selector(dismissWithClickedButtonIndex:animated:)
+                            withObject:nil
+                            afterDelay:1.5f];
+        [autoAlertView show];
+    }
 }
 
 #pragma mark - Button Share
@@ -169,6 +178,19 @@
 - (IBAction)buttonFondSizeTake:(id)sender {
     fontSize --;
     [self updateTextField];
+}
+
+#pragma mark - link == || != null
+- (BOOL)requestToLink:(NSString *)link {
+    NSString *query = [[NSString alloc] initWithFormat:@"SELECT link FROM offline WHERE link = '%@'", link];
+    NSString *result = [SQLiteAccess selectOneValueSQL:query];
+    
+    if (result == NULL) {
+        return NO;
+    }
+    else {
+        return YES;
+    }
 }
 
 #pragma mark - Share Method
