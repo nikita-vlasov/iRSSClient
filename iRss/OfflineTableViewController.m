@@ -90,4 +90,6 @@
     }
 }
 
+- (IBAction)buttondeleteAllRecords:(id)sender {
+}
 @end
