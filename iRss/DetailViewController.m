@@ -30,8 +30,6 @@
     UIBarButtonItem *share =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
-
-    
     self.navigationItem.rightBarButtonItems = @[action, share];
 
     stringTitle = [[NSString alloc] init];
@@ -93,36 +91,13 @@
 }
 
 - (IBAction)buttonAddNewsToOffline:(id)sender {
-    NSDate *dateToday =[NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
-    NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
-
     if ([self requestToLink: (NSString *) urlLink] == YES) {
-        //если есть
         NSLog(@"Уже есть такая новость");
         return;
     }
     else {
-        NSLog(@"NO");
-        
-        NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
-                                 [_detailItem title],
-                                 [_detailItem itemDescription],
-                                 [_detailItem content],
-                                 [_detailItem link],
-                                 [_detailItem commentsLink],
-                                 [_detailItem commentsFeed],
-                                 [_detailItem commentsCount],
-                                 [_detailItem pubDates],
-                                 [_detailItem author],
-                                 [_detailItem guid],
-                                 [_detailItem category],
-                                 stringTodayDate];
-        
-        [SQLiteAccess insertWithSQL:queryString];
-        [self.navigationController popViewControllerAnimated:YES];
-        
+        NSLog(@"Нет такой новости");
+        [self addNewNews];
         
         UIAlertView *autoAlertView = [[UIAlertView alloc] initWithTitle:nil
                                                                 message:NSLocalizedString(@"ADD_NEWS_TO_OFFLINE", "")
@@ -134,6 +109,7 @@
                             withObject:nil
                             afterDelay:1.5f];
         [autoAlertView show];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
@@ -180,7 +156,30 @@
     [self updateTextField];
 }
 
-#pragma mark - link == || != null
+#pragma mark - SQL Query
+- (void)addNewNews {
+    NSDate *dateToday =[NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
+    NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
+    
+    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
+                             [_detailItem title],
+                             [_detailItem itemDescription],
+                             [_detailItem content],
+                             [_detailItem link],
+                             [_detailItem commentsLink],
+                             [_detailItem commentsFeed],
+                             [_detailItem commentsCount],
+                             [_detailItem pubDates],
+                             [_detailItem author],
+                             [_detailItem guid],
+                             [_detailItem category],
+                             stringTodayDate];
+    
+    [SQLiteAccess insertWithSQL:queryString];
+}
+
 - (BOOL)requestToLink:(NSString *)link {
     NSString *query = [[NSString alloc] initWithFormat:@"SELECT link FROM offline WHERE link = '%@'", link];
     NSString *result = [SQLiteAccess selectOneValueSQL:query];
