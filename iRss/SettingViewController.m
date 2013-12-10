@@ -71,8 +71,8 @@
     DetainSettingTableViewController *detainSettingTableViewController = [segue destinationViewController];
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
     if ([indexPath section] == 0) {
-        detainSettingTableViewController.stringCellLabel = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-        detainSettingTableViewController.stringTitleForFooterSection = @"This version of the program.";
+        [detainSettingTableViewController setStringCellLabel:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+        [detainSettingTableViewController setStringTitleForFooterSection:@"This version of the program."];
     }
     else if ([indexPath section] == 1) {
         

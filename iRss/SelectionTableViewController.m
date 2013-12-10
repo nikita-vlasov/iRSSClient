@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"APPLE_ALL_RSS", nil);
+    
     arrayTopic = [NSArray arrayWithObjects:
                   @"Hot News",
                   @"Apple Developer News",
