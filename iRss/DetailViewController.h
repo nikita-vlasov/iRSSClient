@@ -14,14 +14,14 @@
     NSString *stringPubDate;
     NSURL *urlLink;
     
+    NSString *fontName;
     NSInteger fontSize;
-    UIFontDescriptor *fontName;
     
     SLComposeViewController *slComposeViewController;
     MFMailComposeViewController *mfMailComposeViewController;
 }
 
-#pragma mark Bar Button
+#pragma mark - Bar Button
 - (IBAction)buttonBarAction:(id)sender;
 
 #pragma mark - Action
@@ -53,7 +53,5 @@
 #pragma mark - Offline
 @property (strong, nonatomic) NSDictionary *detailItemOffline;
 @property (strong, nonatomic) NSString *stringOfflineKey;
-
-//
 
 @end

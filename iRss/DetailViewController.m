@@ -18,6 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    fontName = @"HelveticaNeue";
+    
+    //----
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    fontSize = [userDefaults integerForKey:@"SIZE_KEY"];
+    NSLog(@"%lu", fontSize);
+    NSLog(@"%li", [userDefaults integerForKey:@"SIZE_KEY"]);
+    
+    self.textViewContent.font = [UIFont fontWithName:fontName size:fontSize];
+    
+
+    
+    //----
+    
     UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
                                                                             action:@selector(buttonBarAction:)];
@@ -27,8 +42,8 @@
                                                                           action:@selector(buttonBarShareSocial:)];
     self.navigationItem.rightBarButtonItems = @[action, share];
     
-    fontSize = 14;
-    fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
+    //fontSize = 14;
+    //fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
     
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
@@ -189,15 +204,25 @@
 
 #pragma mark - Update Size
 - (void)updateTextField {
-    self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
+    
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:fontSize forKey:@"SIZE_KEY"];
+    [userDefaults synchronize];
+
+    
+    
+    
+    
+    //self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
 }
 
 #pragma mark - Hiding Buttons
 - (void)switchOffButtons {
-    _buttonBarActionOutlet.enabled = NO;
-    _buttonShareFacebookOutlet.enabled = NO;
-    _buttonShareTwitterOutlet.enabled = NO;
-    _buttonSendEmailOutlet.enabled = NO;
+    self.buttonBarActionOutlet.enabled = NO;
+    self.buttonShareFacebookOutlet.enabled = NO;
+    self.buttonShareTwitterOutlet.enabled = NO;
+    self.buttonSendEmailOutlet.enabled = NO;
 }
 
 #pragma mark - Navigation

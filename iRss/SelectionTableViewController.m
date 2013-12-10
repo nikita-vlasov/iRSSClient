@@ -71,7 +71,6 @@
     TableViewController *tableViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
 
-    
     if ([indexPath section] == 0) {
         [tableViewController setLinkToTheRssFeeds:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
     }
