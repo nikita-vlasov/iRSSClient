@@ -1,4 +1,5 @@
 #import "SelectionTableViewController.h"
+#import "AddNewRssViewController.h"
 
 @interface SelectionTableViewController () {
     
@@ -74,10 +75,11 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    /*
     TableViewController *tableViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
 
-    if ([indexPath section] == 0) {
+    if ([indexPath section] == 32) {
         [tableViewController setLinkToTheRssFeeds:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
     }
     else if ([indexPath section] == 1) {
@@ -95,6 +97,16 @@
     else if ([indexPath section] == 5) {
         [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/ipod"];
     }
+    else {
+        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+    }
+    
+    AddNewRssViewController *addNewRssViewController = segue.destinationViewController;
+     */
+    
 }
 
+- (IBAction)buttonAddNewRssChanel:(id)sender {
+    [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+}
 @end

@@ -262,7 +262,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="onH-e5-554" kind="push" id="6YJ-wQ-3wN"/>
+                                    <segue destination="onH-e5-554" kind="push" identifier="ppp" id="6YJ-wQ-3wN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -271,26 +271,20 @@
                             <outlet property="delegate" destination="gvb-Tq-o2Q" id="W4p-0B-ifU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n1E-6F-bDU"/>
+                    <navigationItem key="navigationItem" id="n1E-6F-bDU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wp6-rD-H3h">
+                            <connections>
+                                <action selector="buttonAddNewRssChanel:" destination="gvb-Tq-o2Q" id="if7-Ob-x28"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="APR-U3-Q1F" kind="push" identifier="OpenAddRssChanel" id="TVB-df-y2h"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5E-Oi-hSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2094" y="-1185"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8N6-zC-CDL">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="VdP-oV-daB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Lj-3S-rFP">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="APR-U3-Q1F" kind="relationship" relationship="rootViewController" id="PCB-Kt-cUF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eRX-VQ-ab8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2550" y="-1852"/>
         </scene>
         <!--Add New Rss View Controller-->
         <scene sceneID="Gt0-0h-u2E">
@@ -326,7 +320,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rfm-dO-zfx"/>
+                    <navigationItem key="navigationItem" id="Rfm-dO-zfx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="i87-vf-b7B">
+                            <connections>
+                                <action selector="buttonSaveChanel:" destination="APR-U3-Q1F" id="TIk-dp-aC7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textFieldLink" destination="kah-8K-3oI" id="vVa-d6-u7F"/>
                         <outlet property="textViewDescription" destination="w9H-Ge-QN3" id="ioO-U0-Cy8"/>

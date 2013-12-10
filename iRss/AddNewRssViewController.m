@@ -23,6 +23,18 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark -
+#pragma mark - Action
+- (IBAction)buttonSaveChanel:(id)sender {
+    [self saveRssChanel];
+}
+
+#pragma mark - SQL Query
+- (void)saveRssChanel {
+    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (link, description) VALUES ('%@', '%@')",
+                       [[self textFieldLink] text],
+                       [[self textViewDescription] text]];
+    [SQLiteAccess updateWithSQL:queryString];
+}
+
 
 @end

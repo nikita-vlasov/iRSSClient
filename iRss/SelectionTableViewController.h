@@ -7,4 +7,7 @@
     NSArray *arrayDescription;
 }
 
+#pragma mark -
+- (IBAction)buttonAddNewRssChanel:(id)sender;
+
 @end
