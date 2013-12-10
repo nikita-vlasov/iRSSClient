@@ -25,11 +25,12 @@
     UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
                                                                             action:@selector(buttonBarAction:)];
-    
+    /*
     UIBarButtonItem *share =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
-    self.navigationItem.rightBarButtonItems = @[action, share];
+     */
+    self.navigationItem.rightBarButtonItems = @[action];
 
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
