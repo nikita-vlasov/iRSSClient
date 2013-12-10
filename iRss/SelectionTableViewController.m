@@ -64,12 +64,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/*
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return nil;
-}
- */
-
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     return [arrayDescription objectAtIndex:section];
 }
