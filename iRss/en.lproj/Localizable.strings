@@ -15,7 +15,7 @@
 "ADD_NEWS_TO_OFFLINE" = "News added for offline reading.";
 
 /* Offline Table View Controller */
-"OFFLINE" = "Offline";
+"FAVORITES" = "Favorites";
 
 /* Setting View Controller */
 "SETTING" = "Setting";

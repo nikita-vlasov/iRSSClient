@@ -70,12 +70,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetainSettingTableViewController *detainSettingTableViewController = [segue destinationViewController];
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+    
     if ([indexPath section] == 0) {
         [detainSettingTableViewController setStringCellLabel:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
         [detainSettingTableViewController setStringTitleForFooterSection:@"This version of the program."];
     }
     else if ([indexPath section] == 1) {
-        
+        [detainSettingTableViewController setStringCellLabel:@"Этот раздел в стадии разработки"];
     }
 }
 

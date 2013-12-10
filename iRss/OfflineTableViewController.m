@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = NSLocalizedString(@"OFFLINE", nil);
+    self.navigationItem.title = NSLocalizedString(@"FAVORITES", nil);
     [[self tableView] reloadData];
 }
 

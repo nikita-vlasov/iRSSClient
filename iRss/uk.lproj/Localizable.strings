@@ -15,7 +15,7 @@
 "ADD_NEWS_TO_OFFLINE" = "Новина додана для читання в автономному режимі.";
 
 /* Offline Table View Controller */
-"OFFLINE" = "Офлайн";
+"FAVORITES" = "Обране";
 
 /* Setting View Controller */
 "SETTING" = "Налаштування";
