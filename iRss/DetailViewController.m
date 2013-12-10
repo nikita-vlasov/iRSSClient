@@ -26,13 +26,13 @@
                                                                             target:self
                                                                             action:@selector(buttonBarAction:)];
     
-    /*
+
     UIBarButtonItem *share =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
-     */
+
     
-    self.navigationItem.rightBarButtonItems = @[action];
+    self.navigationItem.rightBarButtonItems = @[action, share];
 
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
@@ -61,10 +61,12 @@
     [super didReceiveMemoryWarning];
 }
 
-/*
+
 - (IBAction)buttonBarShareSocial:(id)sender {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setURL:urlLink];
 }
- */
+
 
 #pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
@@ -72,7 +74,7 @@
                                                              delegate:self
                                                     cancelButtonTitle:NSLocalizedString(@"CANCEL", nil)
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:NSLocalizedString(@"OPEN", nil), NSLocalizedString(@"OPEN_IN_SAFARI", nil), nil];
+                                                    otherButtonTitles:NSLocalizedString(@"OPEN", nil), NSLocalizedString(@"OPEN_IN_SAFARI", nil), @"Copy link", nil];
     [actionSheet showInView:self.view];
 }
 
@@ -84,6 +86,11 @@
         }
         case 1: {
             [[UIApplication sharedApplication] openURL:urlLink];
+            break;
+        }
+        case 2: {
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            [pasteboard setURL:urlLink];
             break;
         }
         default: {

@@ -53,7 +53,7 @@
     [self.navigationController.navigationBar addSubview:progressView];
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [progressView removeFromSuperview];
 }
@@ -89,7 +89,6 @@
 #pragma mark - NJKWebViewProgressDelegate
 -(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
     [progressView setProgress:progress animated:YES];
-//    self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 @end

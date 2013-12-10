@@ -25,7 +25,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table View Data Source
+#pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [arrayPoints count];
 }
@@ -41,7 +41,7 @@
     return cell;
 }
 
-#pragma mark - Table View Delegate
+#pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.1f;
 }

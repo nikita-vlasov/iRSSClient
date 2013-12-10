@@ -3,6 +3,7 @@
 #import "NJKWebViewProgressView.h"
 
 @interface WebViewController : UIViewController <UIWebViewDelegate, NJKWebViewProgressDelegate> {
+    @private
     NJKWebViewProgressView *progressView;
     NJKWebViewProgress *progressProxy;
 }

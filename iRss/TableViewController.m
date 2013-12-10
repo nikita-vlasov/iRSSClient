@@ -59,7 +59,7 @@
     }];
 }
 
-#pragma mark - Table View Data Source
+#pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -72,13 +72,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     RSSItem *item = [arrayDataRss objectAtIndex:indexPath.row];
-    cell.textLabel.text = [item title];
-    cell.detailTextLabel.text = [item pubDates];
+    
+    [[cell textLabel] setText:[item title]];
+    [[cell detailTextLabel] setText:[item pubDates]];
+    
     
     return cell;
 }
 
-#pragma mark - Table View Delegate
+#pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

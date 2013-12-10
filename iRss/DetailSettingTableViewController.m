@@ -23,7 +23,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table View Data Source
+#pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -35,12 +35,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = _stringCellLabel;
+    cell.textLabel.text = [self stringCellLabel];
     
     return cell;
 }
 
-#pragma mark - Table View Delegate
+#pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.1f;
 }
@@ -53,7 +53,7 @@
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return _stringTitleForFooterSection;
+    return [self stringTitleForFooterSection];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
