@@ -29,7 +29,7 @@
 - (IBAction)buttonFondSizeTake:(id)sender;
 
 #pragma mark - Outlet Bar Button
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonBarActionOutlet;
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonBarActionOutlet;
 
 #pragma mark - Outlet Button
 @property (weak, nonatomic) IBOutlet UIButton *buttonAddNewsToOfflineOutlet;

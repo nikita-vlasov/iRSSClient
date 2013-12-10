@@ -193,8 +193,7 @@
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
 }
 
-
-#pragma mark - MFMail Compose View Controller Delegate
+#pragma mark - MFMailComposeViewControllerDelegate
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error; {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -241,7 +240,7 @@
 
 #pragma mark - Hiding Buttons
 - (void)switchOffButtons {
-    self.buttonBarActionOutlet.enabled = NO;
+//    self.buttonBarActionOutlet.enabled = NO;
 }
 
 #pragma mark - Navigation

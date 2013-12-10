@@ -47,8 +47,7 @@
             break;
         }
         case 1: {
-            NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline"];
-            [SQLiteAccess deleteWithSQL:queryString];
+            [ResetSettingToDefault cleanerListFavorites];
             [[self tableView] reloadData];
             break;
         }

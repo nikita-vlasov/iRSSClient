@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
 #import "SQLiteAccess.h"
+#import "ResetSettingToDefault.h"
 
 @interface OfflineTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     
