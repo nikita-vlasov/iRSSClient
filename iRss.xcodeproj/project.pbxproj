@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA41530D1854F997005A7685 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530C1854F997005A7685 /* SettingViewController.m */; };
-		FA415310185522B3005A7685 /* DetainSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetainSettingTableViewController.m */; };
+		FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
 		FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D51853E52F00765CD9 /* UIKit.framework */; };
@@ -66,8 +66,8 @@
 /* Begin PBXFileReference section */
 		FA41530B1854F997005A7685 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		FA41530C1854F997005A7685 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		FA41530E185522B3005A7685 /* DetainSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetainSettingTableViewController.h; sourceTree = "<group>"; };
-		FA41530F185522B3005A7685 /* DetainSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetainSettingTableViewController.m; sourceTree = "<group>"; };
+		FA41530E185522B3005A7685 /* DetailSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSettingTableViewController.h; sourceTree = "<group>"; };
+		FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSettingTableViewController.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC8D11853E52E00765CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,8 +173,8 @@
 			children = (
 				FA41530B1854F997005A7685 /* SettingViewController.h */,
 				FA41530C1854F997005A7685 /* SettingViewController.m */,
-				FA41530E185522B3005A7685 /* DetainSettingTableViewController.h */,
-				FA41530F185522B3005A7685 /* DetainSettingTableViewController.m */,
+				FA41530E185522B3005A7685 /* DetailSettingTableViewController.h */,
+				FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -526,7 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABCC92E1853EAB300765CD9 /* AFURLConnectionOperation.m in Sources */,
-				FA415310185522B3005A7685 /* DetainSettingTableViewController.m in Sources */,
+				FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */,
 				FABCC9301853EAB300765CD9 /* UIImageView+AFNetworking.m in Sources */,
 				FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */,
 				FABCC92A1853EAB300765CD9 /* AFImageRequestOperation.m in Sources */,

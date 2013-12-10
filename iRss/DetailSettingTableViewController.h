@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface DetainSettingTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface DetailSettingTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     
 }
 

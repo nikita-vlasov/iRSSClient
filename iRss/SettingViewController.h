@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import "DetainSettingTableViewController.h"
+#import "DetailSettingTableViewController.h"
 
 @interface SettingViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private

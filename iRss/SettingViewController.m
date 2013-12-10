@@ -68,7 +68,7 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    DetainSettingTableViewController *detainSettingTableViewController = [segue destinationViewController];
+    DetailSettingTableViewController *detainSettingTableViewController = [segue destinationViewController];
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
     
     if ([indexPath section] == 0) {

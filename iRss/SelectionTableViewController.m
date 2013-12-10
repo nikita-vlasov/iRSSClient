@@ -69,7 +69,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0.1f;
+    return 0.01f;
 }
 
 #pragma mark - Navigation

@@ -1,13 +1,13 @@
-#import "DetainSettingTableViewController.h"
+#import "DetailSettingTableViewController.h"
 
-@interface DetainSettingTableViewController () {
+@interface DetailSettingTableViewController () {
     
 }
 
 @end
 
 
-@implementation DetainSettingTableViewController
+@implementation DetailSettingTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style {
     if (self = [super initWithStyle:style]) {
