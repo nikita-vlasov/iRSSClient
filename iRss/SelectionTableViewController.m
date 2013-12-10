@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"APPLE_ALL_RSS", nil);
-    arrayTopic = [NSArray arrayWithObjects:@"Hot News", @"Apple Developer News", nil];
+    arrayTopic = [NSArray arrayWithObjects:@"Hot News", @"Apple Developer News", @"Mac Desktop Computers", @"Mac OS X",  nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,8 +57,14 @@
     if (section == 0) {
         return @"Hot News provided by Apple.";
     }
-    else {
+    else if (section == 1) {
         return @"Apple Developer News feed provided by Apple, Inc.";
+    }
+    else if (section == 2) {
+        return @"Apple - Support - Most Recent - Apple Inc.";
+    }
+    else {
+        return @"Apple - Support - Most Recent - Mac OS.";
     }
 }
 
@@ -76,6 +82,12 @@
     }
     else if ([indexPath section] == 1) {
         [tableViewController setLinkToTheRssFeeds:@"https://developer.apple.com/news/rss/news.rss"];
+    }
+    else if ([indexPath section] == 2) {
+        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/desktopcomputers"];
+    }
+    else if ([indexPath section] == 3) {
+        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/macos"];
     }
 }
 
