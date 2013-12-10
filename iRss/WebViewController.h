@@ -1,7 +1,10 @@
 #import <UIKit/UIKit.h>
+#import "NJKWebViewProgress.h"
+#import "NJKWebViewProgressView.h"
 
-@interface WebViewController : UIViewController {
-    
+@interface WebViewController : UIViewController <UIWebViewDelegate, NJKWebViewProgressDelegate> {
+    NJKWebViewProgressView *progressView;
+    NJKWebViewProgress *progressProxy;
 }
 
 #pragma mark - Action Bar Button

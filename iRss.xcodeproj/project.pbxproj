@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA41530D1854F997005A7685 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530C1854F997005A7685 /* SettingViewController.m */; };
 		FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */; };
+		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
+		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
 		FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
@@ -69,6 +71,10 @@
 		FA41530C1854F997005A7685 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		FA41530E185522B3005A7685 /* DetailSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSettingTableViewController.h; sourceTree = "<group>"; };
 		FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSettingTableViewController.m; sourceTree = "<group>"; };
+		FA93AB6018573B1700AE5F79 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetSettingToDefault.h; sourceTree = "<group>"; };
 		FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetSettingToDefault.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +208,17 @@
 			name = Web;
 			sourceTree = "<group>";
 		};
+		FA93AB5F18573B1700AE5F79 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				FA93AB6018573B1700AE5F79 /* NJKWebViewProgress.h */,
+				FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */,
+				FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */,
+				FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 		FABCC8C51853E52E00765CD9 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +333,7 @@
 		FABCC90B1853EAB300765CD9 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FA93AB5F18573B1700AE5F79 /* NJKWebViewProgress */,
 				FABCC90C1853EAB300765CD9 /* AFNetworking */,
 				FABCC9201853EAB300765CD9 /* RSSParser */,
 				FABCC9251853EAB300765CD9 /* SQLite */,
@@ -546,10 +564,12 @@
 				FABCC8E21853E52F00765CD9 /* AppDelegate.m in Sources */,
 				FABCC8DE1853E52F00765CD9 /* main.m in Sources */,
 				FABCC92B1853EAB300765CD9 /* AFJSONRequestOperation.m in Sources */,
+				FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */,
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
 				FA41530D1854F997005A7685 /* SettingViewController.m in Sources */,
+				FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */,
 				FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */,
 				FABCC92D1853EAB300765CD9 /* AFPropertyListRequestOperation.m in Sources */,
 				FABCC92C1853EAB300765CD9 /* AFNetworkActivityIndicatorManager.m in Sources */,

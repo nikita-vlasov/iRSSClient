@@ -1,7 +1,7 @@
 #import "WebViewController.h"
 
 @interface WebViewController () {
-    
+
 }
 
 @end
@@ -35,7 +35,27 @@
                                                                          action:@selector(buttonBarStopPage:)];
     self.navigationItem.rightBarButtonItems = @[refresh, forward, back, stop];
     
+    progressProxy = [[NJKWebViewProgress alloc] init];
+    self.webView.delegate = progressProxy;
+    progressProxy.webViewProxyDelegate = self;
+    progressProxy.progressDelegate = self;
+    
+    CGFloat progressBarHeight = 2.5f;
+    CGRect navigaitonBarBounds = self.navigationController.navigationBar.bounds;
+    CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height - progressBarHeight, navigaitonBarBounds.size.width, progressBarHeight);
+    progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
+    
     [self reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar addSubview:progressView];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [progressView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +84,12 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[self link]];
     [[self webView] loadRequest:request];
     self.webView.scalesPageToFit = YES;
+}
+
+#pragma mark - NJKWebViewProgressDelegate
+-(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
+    [progressView setProgress:progress animated:YES];
+//    self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 @end
