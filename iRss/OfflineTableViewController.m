@@ -33,7 +33,7 @@
 
 #pragma mark - SQL Query
 - (NSArray *)arrayDataRssOffline {
-    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline"];
+    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline ORDER BY date_added DESC"];
 }
 
 #pragma mark - Table View Data Source
