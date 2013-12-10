@@ -11,7 +11,6 @@
 		FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */; };
 		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
 		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
-		FA93AB6B1857A21C00AE5F79 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6A1857A21C00AE5F79 /* Database.m */; };
 		FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
@@ -76,8 +75,6 @@
 		FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
 		FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
-		FA93AB691857A21C00AE5F79 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
-		FA93AB6A1857A21C00AE5F79 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetSettingToDefault.h; sourceTree = "<group>"; };
 		FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetSettingToDefault.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,8 +326,6 @@
 				FABCC9061853E69B00765CD9 /* Internet.m */,
 				FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */,
 				FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */,
-				FA93AB691857A21C00AE5F79 /* Database.h */,
-				FA93AB6A1857A21C00AE5F79 /* Database.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -567,7 +562,6 @@
 				FABCC9321853EAB300765CD9 /* RSSParser.m in Sources */,
 				FABCC9071853E69B00765CD9 /* Internet.m in Sources */,
 				FABCC8E21853E52F00765CD9 /* AppDelegate.m in Sources */,
-				FA93AB6B1857A21C00AE5F79 /* Database.m in Sources */,
 				FABCC8DE1853E52F00765CD9 /* main.m in Sources */,
 				FABCC92B1853EAB300765CD9 /* AFJSONRequestOperation.m in Sources */,
 				FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */,
