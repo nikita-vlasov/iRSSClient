@@ -18,20 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    fontName = @"HelveticaNeue";
-    
-    //----
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    fontSize = [userDefaults integerForKey:@"SIZE_KEY"];
-    NSLog(@"%lu", fontSize);
-    NSLog(@"%li", [userDefaults integerForKey:@"SIZE_KEY"]);
-    
-    self.textViewContent.font = [UIFont fontWithName:fontName size:fontSize];
-    
-
-    
-    //----
+    fontSize = [userDefaults integerForKey:@"FONT_SIZE"];
+    self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
     
     UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
@@ -41,10 +30,7 @@
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
     self.navigationItem.rightBarButtonItems = @[action, share];
-    
-    //fontSize = 14;
-    //fontName = [[UIFontDescriptor alloc] fontDescriptorWithFace:@"HelveticaNeue"];
-    
+
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
     stringItemDescription = [[NSString alloc] init];
@@ -71,8 +57,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
 
 - (IBAction)buttonBarShareSocial:(id)sender {
 
@@ -204,17 +188,11 @@
 
 #pragma mark - Update Size
 - (void)updateTextField {
-    
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setInteger:fontSize forKey:@"SIZE_KEY"];
+    [userDefaults setInteger:fontSize forKey:@"FONT_SIZE"];
     [userDefaults synchronize];
 
-    
-    
-    
-    
-    //self.textViewContent.font = [UIFont fontWithDescriptor:fontName size:fontSize];
+    self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
 }
 
 #pragma mark - Hiding Buttons

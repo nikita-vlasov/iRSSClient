@@ -14,7 +14,6 @@
     NSString *stringPubDate;
     NSURL *urlLink;
     
-    NSString *fontName;
     NSInteger fontSize;
     
     SLComposeViewController *slComposeViewController;

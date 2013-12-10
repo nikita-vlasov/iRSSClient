@@ -3,15 +3,13 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-
-    
-    
-    
-    
-    
-    
-    
+    if ([userDefaults integerForKey:@"FONT_SIZE"] == 0) {
+        [userDefaults setInteger:14 forKey:@"FONT_SIZE"];
+        NSLog(@"Hello");
+        [userDefaults synchronize];
+    }
     return YES;
 }
 
