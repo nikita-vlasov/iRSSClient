@@ -37,6 +37,7 @@
     if (progress >= 1.0) {
         [UIView animateWithDuration:animated ? _fadeAnimationDuration : 0.0 delay:_fadeOutDelay options:UIViewAnimationOptionCurveEaseInOut animations:^{
             _progressBarView.alpha = 0.0;
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         } completion:^(BOOL completed){
             CGRect frame = _progressBarView.frame;
             frame.size.width = 0;
