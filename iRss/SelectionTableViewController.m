@@ -24,14 +24,18 @@
                   @"Apple Developer News",
                   @"Mac Desktop Computers",
                   @"Mac OS X",
-                  @"iPhone",  nil];
+                  @"iPhone",
+                  @"iPod",
+                  nil];
     
     arrayDescription = [NSArray arrayWithObjects:
                         @"Hot News provided by Apple.",
                         @"Apple Developer News feed provided by Apple, Inc.",
                         @"Apple - Support - Most Recent - Apple Inc.",
                         @"Apple - Support - Most Recent - Mac OS.",
-                        @"Apple - Support - Most Recent - iPhone", nil];
+                        @"Apple - Support - Most Recent - iPhone",
+                        @"Apple - Support - Most Recent - iPod",
+                        nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,6 +97,9 @@
     }
     else if ([indexPath section] == 4) {
         [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/iphone"];
+    }
+    else if ([indexPath section] == 5) {
+        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/ipod"];
     }
 }
 
