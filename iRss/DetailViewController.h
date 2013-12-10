@@ -25,10 +25,6 @@
 
 #pragma mark - Action
 - (IBAction)buttonAddNewsToOffline:(id)sender;
-- (IBAction)buttonShareFacebook:(id)sender;
-- (IBAction)buttonShareTwitter:(id)sender;
-- (IBAction)buttonSendEmail:(id)sender;
-
 - (IBAction)buttonFondSizeAdd:(id)sender;
 - (IBAction)buttonFondSizeTake:(id)sender;
 
@@ -37,9 +33,6 @@
 
 #pragma mark - Outlet Button
 @property (weak, nonatomic) IBOutlet UIButton *buttonAddNewsToOfflineOutlet;
-@property (weak, nonatomic) IBOutlet UIButton *buttonShareFacebookOutlet;
-@property (weak, nonatomic) IBOutlet UIButton *buttonShareTwitterOutlet;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSendEmailOutlet;
 
 #pragma mark - Outlet
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;

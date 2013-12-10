@@ -61,13 +61,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
-- (IBAction)buttonBarShareSocial:(id)sender {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    [pasteboard setURL:urlLink];
-}
-
-
 #pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
@@ -136,25 +129,35 @@
 }
 
 #pragma mark - Button Share
-- (IBAction)buttonShareFacebook:(id)sender {
-    slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [slComposeViewController setInitialText:stringItemDescription];
-    [slComposeViewController addURL:urlLink];
-    [self presentViewController:slComposeViewController animated:YES completion:nil];
+- (IBAction)buttonBarShareSocial:(id)sender {
+    UIAlertView *alertViewShare = [[UIAlertView alloc] initWithTitle:nil
+                                                             message:nil
+                                                            delegate:self
+                                                   cancelButtonTitle:@"Cancel"
+                                                   otherButtonTitles:@"Send Email", @"Share Facebook", @"Share Twitter", nil];
+    [alertViewShare show];
 }
 
-- (IBAction)buttonShareTwitter:(id)sender {
-    slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [slComposeViewController setInitialText:stringTitle];
-    [slComposeViewController addURL:urlLink];
-    [self presentViewController:slComposeViewController animated:YES completion:nil];
-}
-
-- (IBAction)buttonSendEmail:(id)sender {
-    mfMailComposeViewController.mailComposeDelegate = self;
-    [mfMailComposeViewController setSubject:stringTitle];
-    [mfMailComposeViewController setMessageBody:stringItemDescription isHTML:YES];
-    [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0: {
+            break;
+        }
+        case 1: {
+            [self sendEmail];
+            break;
+        }
+        case 2: {
+            [self shareFacebook];
+            break;
+        }
+        case 3: {
+            [self shareTwitter];
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 #pragma mark - Button Size
@@ -167,6 +170,29 @@
     fontSize --;
     [self updateTextField];
 }
+
+#pragma mark - Share Method
+- (void)shareFacebook {
+    slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [slComposeViewController setInitialText:stringItemDescription];
+    [slComposeViewController addURL:urlLink];
+    [self presentViewController:slComposeViewController animated:YES completion:nil];
+}
+
+- (void)shareTwitter {
+    slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [slComposeViewController setInitialText:stringTitle];
+    [slComposeViewController addURL:urlLink];
+    [self presentViewController:slComposeViewController animated:YES completion:nil];
+}
+
+- (void)sendEmail {
+    mfMailComposeViewController.mailComposeDelegate = self;
+    [mfMailComposeViewController setSubject:stringTitle];
+    [mfMailComposeViewController setMessageBody:stringItemDescription isHTML:YES];
+    [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
+}
+
 
 #pragma mark - MFMail Compose View Controller Delegate
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error; {
@@ -216,9 +242,6 @@
 #pragma mark - Hiding Buttons
 - (void)switchOffButtons {
     self.buttonBarActionOutlet.enabled = NO;
-    self.buttonShareFacebookOutlet.enabled = NO;
-    self.buttonShareTwitterOutlet.enabled = NO;
-    self.buttonSendEmailOutlet.enabled = NO;
 }
 
 #pragma mark - Navigation

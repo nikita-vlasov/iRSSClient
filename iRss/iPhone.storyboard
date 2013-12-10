@@ -346,38 +346,8 @@
                                     <action selector="buttonAddNewsToOffline:" destination="UEn-bv-hdN" eventType="touchUpInside" id="y8d-Cn-T1W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1kl-aP-gjb">
-                                <rect key="frame" x="242" y="159" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="facebook.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonShareFacebook:" destination="UEn-bv-hdN" eventType="touchUpInside" id="sjD-EG-rX2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pvu-1V-tWB">
-                                <rect key="frame" x="275" y="159" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="twitter.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonShareTwitter:" destination="UEn-bv-hdN" eventType="touchUpInside" id="LQE-Ut-IBT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dzd-9M-l0U">
-                                <rect key="frame" x="209" y="159" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="email.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonSendEmail:" destination="UEn-bv-hdN" eventType="touchUpInside" id="rm2-ym-nTm"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is content" id="wLh-1z-HbH">
-                                <rect key="frame" x="20" y="192" width="280" height="327"/>
+                                <rect key="frame" x="20" y="177" width="280" height="342"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
@@ -411,9 +381,6 @@
                     <navigationItem key="navigationItem" id="lxt-R1-JGb"/>
                     <connections>
                         <outlet property="buttonAddNewsToOfflineOutlet" destination="rHv-mD-BSY" id="6fb-w0-l2m"/>
-                        <outlet property="buttonSendEmailOutlet" destination="Dzd-9M-l0U" id="ccR-ix-mr4"/>
-                        <outlet property="buttonShareFacebookOutlet" destination="1kl-aP-gjb" id="Y9i-yk-2RS"/>
-                        <outlet property="buttonShareTwitterOutlet" destination="pvu-1V-tWB" id="k52-d4-sVi"/>
                         <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
                         <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
                         <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
@@ -451,11 +418,6 @@
             <point key="canvasLocation" x="311" y="373"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="email.png" width="512" height="512"/>
-        <image name="facebook.png" width="512" height="512"/>
-        <image name="twitter.png" width="150" height="150"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
