@@ -33,9 +33,26 @@
 
 #pragma mark - Action
 - (void)buttondeleteAllRecords:(id)sender {
-    NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline"];
-    [SQLiteAccess deleteWithSQL:queryString];
-    [[self tableView] reloadData];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Do you really want to delete all records? Then you can not restore the deleted data." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alertView show];
+    
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            break;
+        case 1: {
+            NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline"];
+            [SQLiteAccess deleteWithSQL:queryString];
+            [[self tableView] reloadData];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - SQL Query
