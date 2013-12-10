@@ -25,12 +25,12 @@
     UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
                                                                             action:@selector(buttonBarAction:)];
-    /*
+    
     UIBarButtonItem *share =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
-     */
-    self.navigationItem.rightBarButtonItems = @[action];
+    
+    self.navigationItem.rightBarButtonItems = @[action, share];
 
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
@@ -60,7 +60,6 @@
 }
 
 - (IBAction)buttonBarShareSocial:(id)sender {
-
 }
 
 #pragma mark - Action
@@ -90,7 +89,12 @@
 }
 
 - (IBAction)buttonAddNewsToOffline:(id)sender {
-    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
+    NSDate *dateToday =[NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
+    NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
+
+    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
                              [_detailItem title],
                              [_detailItem itemDescription],
                              [_detailItem content],
@@ -101,7 +105,9 @@
                              [_detailItem pubDates],
                              [_detailItem author],
                              [_detailItem guid],
-                             [_detailItem category]];
+                             [_detailItem category],
+                             stringTodayDate];
+    
     
     [SQLiteAccess updateWithSQL:queryString];
     [self.navigationController popViewControllerAnimated:YES];

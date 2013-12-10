@@ -50,7 +50,7 @@
     NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [dictionaryOfflineNews objectForKey:@"title"];
-    cell.detailTextLabel.text = [dictionaryOfflineNews objectForKey:@"pub_date"];
+    cell.detailTextLabel.text = [dictionaryOfflineNews objectForKey:@"date_added"];
     
     return cell;
 }
