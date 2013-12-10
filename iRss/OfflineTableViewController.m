@@ -31,6 +31,13 @@
     [[self tableView] reloadData];
 }
 
+#pragma mark - Action
+- (void)buttondeleteAllRecords:(id)sender {
+    NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline"];
+    [SQLiteAccess deleteWithSQL:queryString];
+    [[self tableView] reloadData];
+}
+
 #pragma mark - SQL Query
 - (NSArray *)arrayDataRssOffline {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline ORDER BY date_added DESC"];
@@ -90,6 +97,4 @@
     }
 }
 
-- (IBAction)buttondeleteAllRecords:(id)sender {
-}
 @end
