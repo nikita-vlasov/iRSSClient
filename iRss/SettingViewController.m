@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"SETTING", nil);
-    arrayPoints = [NSArray arrayWithObjects:NSLocalizedString(@"ABOUT", nil), NSLocalizedString(@"REPORT_AN_ISSUE", nil), nil];
+    arrayPoints = [NSArray arrayWithObjects:NSLocalizedString(@"ABOUT", nil), NSLocalizedString(@"REPORT_AN_ISSUE", nil), @"Reset", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +59,9 @@
     if (section == 1) {
         return @"You found an error? Please send us a message about your problem.";
     }
+    if (section == 2) {
+        return @"You can reset all settings to default. Do you really want to do this?";
+    }
     return nil;
 }
 
@@ -77,6 +80,12 @@
     }
     else if ([indexPath section] == 1) {
         [detainSettingTableViewController setStringCellLabel:@"Этот раздел в стадии разработки"];
+    }
+    else if ([indexPath section] == 2) {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setInteger:14 forKey:@"FONT_SIZE"];
+        [userDefaults synchronize];
+        [detainSettingTableViewController setStringCellLabel:@"Settings are reset."];
     }
 }
 
