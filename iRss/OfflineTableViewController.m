@@ -85,13 +85,8 @@
     if (indexPath) {
         NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
         DetailViewController *detailViewController = segue.destinationViewController;
-//        detailViewController.detailItemOffline = dictionary;
         [detailViewController setDetailItemOffline:dictionary];
-//        detailViewController.stringOfflineKey = @"Offline";
         [detailViewController setStringOfflineKey:@"Offline"];
-        
-        
-//        [[segue destinationViewController] setDetailItemOffline:dictionary];
     }
 }
 
