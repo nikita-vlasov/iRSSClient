@@ -85,7 +85,6 @@
         [ResetSettingToDefault resetFontSize];
         [ResetSettingToDefault cleanerListFavorites];
         [detainSettingTableViewController setStringCellLabel:@"Settings are reset."];
-         
     }
 }
 

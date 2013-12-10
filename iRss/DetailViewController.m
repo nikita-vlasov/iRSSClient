@@ -130,11 +130,11 @@
 
 #pragma mark - Button Share
 - (IBAction)buttonBarShareSocial:(id)sender {
-    UIAlertView *alertViewShare = [[UIAlertView alloc] initWithTitle:nil
+    UIAlertView *alertViewShare = [[UIAlertView alloc] initWithTitle:@"Share"
                                                              message:nil
                                                             delegate:self
                                                    cancelButtonTitle:@"Cancel"
-                                                   otherButtonTitles:@"Send Email", @"Share Facebook", @"Share Twitter", nil];
+                                                   otherButtonTitles:@"Email", @"Facebook", @"Twitter", nil];
     [alertViewShare show];
 }
 
