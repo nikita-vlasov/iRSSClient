@@ -18,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"APPLE_ALL_RSS", nil);
-    arrayTopic = [NSArray arrayWithObjects:@"Hot News", @"Apple Developer News", @"Mac Desktop Computers", @"Mac OS X", @"iPhone",  nil];
+    arrayTopic = [NSArray arrayWithObjects:
+                  @"Hot News",
+                  @"Apple Developer News",
+                  @"Mac Desktop Computers",
+                  @"Mac OS X",
+                  @"iPhone",  nil];
     
     arrayDescription = [NSArray arrayWithObjects:
                         @"Hot News provided by Apple.",
@@ -56,30 +61,12 @@
 
 /*
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Apple";
+    return nil;
 }
  */
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     return [arrayDescription objectAtIndex:section];
-
-    
-    /*
-    if (section == 0) {
-        return @"Hot News provided by Apple.";
-    }
-    else if (section == 1) {
-        return @"Apple Developer News feed provided by Apple, Inc.";
-    }
-    else if (section == 2) {
-        return @"Apple - Support - Most Recent - Apple Inc.";
-    }
-    else if (section == 3) {
-        return @"Apple - Support - Most Recent - Mac OS.";
-    }
-    else {
-        return @"Apple - Support - Most Recent - iPhone";
-    }*/
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
