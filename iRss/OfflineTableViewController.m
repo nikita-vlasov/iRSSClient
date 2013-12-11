@@ -33,7 +33,7 @@
 
 #pragma mark - Action
 - (void)buttondeleteAllRecords:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
                                                         message:@"Do you really want to delete all records? Then you can not restore the deleted data."
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
