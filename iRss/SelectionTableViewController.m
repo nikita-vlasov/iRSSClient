@@ -21,6 +21,16 @@
     [[self tableView] reloadData];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.title = NSLocalizedString(@"ALL_RSS", nil);
+    
+    UIBarButtonItem *buttonAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                            target:self
+                                                                            action:@selector(buttonAddNewRssChanel:)];
+    
+    
+    UIBarButtonItem *buttonTrash =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                          target:self
+                                                                          action:@selector(buttonBarTrashAllChanel:)];
+    self.navigationItem.rightBarButtonItems = @[buttonAdd, buttonTrash];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +45,11 @@
 #pragma mark - Action
 - (IBAction)buttonAddNewRssChanel:(id)sender {
     [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('Default', 'http://images.apple.com/main/rss/hotnews/hotnews.rss', 'Apple Hot News')"];
+    [[self tableView] reloadData];
+}
+
+- (IBAction)buttonBarTrashAllChanel:(id)sender {
+    [ResetSettingToDefault cleanerAllRssChanel];
     [[self tableView] reloadData];
 }
 

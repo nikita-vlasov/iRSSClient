@@ -271,13 +271,7 @@
                             <outlet property="delegate" destination="gvb-Tq-o2Q" id="W4p-0B-ifU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n1E-6F-bDU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wp6-rD-H3h">
-                            <connections>
-                                <action selector="buttonAddNewRssChanel:" destination="gvb-Tq-o2Q" id="if7-Ob-x28"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="n1E-6F-bDU"/>
                     <connections>
                         <segue destination="APR-U3-Q1F" kind="push" identifier="OpenAddRssChanel" id="TVB-df-y2h"/>
                     </connections>
@@ -495,6 +489,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="y1P-1A-IOa"/>
+        <segue reference="QhL-dM-APS"/>
     </inferredMetricsTieBreakers>
 </document>
