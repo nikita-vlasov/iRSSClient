@@ -24,33 +24,31 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Setter
+- (void)setDictionaryRssChanel:(NSDictionary *)dictionaryRssChanel {
+    _dictionaryRssChanel = dictionaryRssChanel;
+}
+
 #pragma mark - Action
 - (IBAction)buttonSaveChanel:(id)sender {
     [self saveRssChanel];
 }
 
-- (void)reloadData {
-    
-    self.textFieldLink.text = [self.dictionaryRssChanel objectForKey:@"link"];
-    self.textFieldTitle.text = [self.dictionaryRssChanel objectForKey:@"title"];
-    self.textViewDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
-    
-}
-
-- (void)setDictionaryRssChanel:(NSDictionary *)dictionaryRssChanel {
-    _dictionaryRssChanel = dictionaryRssChanel;
-}
-
 #pragma mark - SQL Query
 - (void)saveRssChanel {
     NSString *rssChanelID = [self.dictionaryRssChanel objectForKey:@"id_rss_chanel"];
-    
     NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
                              [[self textFieldTitle] text],
                              [[self textFieldLink] text],
                              [[self textViewDescription] text],
                              rssChanelID];
     [SQLiteAccess updateWithSQL:queryString];
+}
+
+- (void)reloadData {
+    self.textFieldLink.text = [self.dictionaryRssChanel objectForKey:@"link"];
+    self.textFieldTitle.text = [self.dictionaryRssChanel objectForKey:@"title"];
+    self.textViewDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
 }
 
 

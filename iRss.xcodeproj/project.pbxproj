@@ -304,8 +304,6 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
-				FA93AB6C1857D45800AE5F79 /* AddNewRssViewController.h */,
-				FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
 				FA6F4B4818553DAB00C42218 /* Web */,
@@ -441,6 +439,8 @@
 		FABCCA4618542D0C00765CD9 /* ChannelSelection */ = {
 			isa = PBXGroup;
 			children = (
+				FA93AB6C1857D45800AE5F79 /* AddNewRssViewController.h */,
+				FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */,
 				FABCCA43185423F700765CD9 /* SelectionTableViewController.h */,
 				FABCCA44185423F700765CD9 /* SelectionTableViewController.m */,
 			);

@@ -33,13 +33,8 @@
 
 #pragma mark - Action
 - (IBAction)buttonAddNewRssChanel:(id)sender {
-    //@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE
-    
-    
     [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('', '', '')"];
     [[self tableView] reloadData];
-    
-//    [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
 }
 
 #pragma mark SQL
@@ -64,16 +59,6 @@
    
     return cell;
 }
-
-//--
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    if (UITableViewCellAccessoryDisclosureIndicator) {
-        dictionaryRssChanel = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
-        valueKey = 123;
-        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
-    }
-}
-//--
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -107,6 +92,14 @@
     return YES;
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    if (UITableViewCellAccessoryDisclosureIndicator) {
+        dictionaryRssChanel = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        valueKey = 4444;
+        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+    }
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
@@ -116,8 +109,7 @@
         NSString *stringUrlLink = [dictionary objectForKey:@"link"];
         [tableViewController setLinkToTheRssFeeds:stringUrlLink];
     }
-    if (valueKey == 123) {
-
+    if (valueKey == 4444) {
         AddNewRssViewController *addNewRssViewController = [segue destinationViewController];
         [addNewRssViewController setDictionaryRssChanel:dictionaryRssChanel];
         valueKey = 0;
