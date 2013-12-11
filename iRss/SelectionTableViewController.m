@@ -49,8 +49,24 @@
 }
 
 - (IBAction)buttonBarTrashAllChanel:(id)sender {
-    [ResetSettingToDefault cleanerAllRssChanel];
-    [[self tableView] reloadData];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Do you really want to delete all RSS feeds? Be careful, these data can not be recovered." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:{
+            break;
+        }
+        case 1: {
+            [ResetSettingToDefault cleanerAllRssChanel];
+            [[self tableView] reloadData];
+            break;
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 #pragma mark SQL
