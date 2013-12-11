@@ -31,20 +31,19 @@
 
 - (void)reloadData {
     
-    self.textFieldLink.text = [_dictionaryItems objectForKey:@"link"];
-    self.textFieldTitle.text = [_dictionaryItems objectForKey:@"title"];
-    self.textViewDescription.text = [_dictionaryItems objectForKey:@"description"];
+    self.textFieldLink.text = [self.dictionaryRssChanel objectForKey:@"link"];
+    self.textFieldTitle.text = [self.dictionaryRssChanel objectForKey:@"title"];
+    self.textViewDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
     
 }
 
-- (void)setDictionaryItems:(NSDictionary *)dictionaryItems {
-    _dictionaryItems = dictionaryItems;
-
+- (void)setDictionaryRssChanel:(NSDictionary *)dictionaryRssChanel {
+    _dictionaryRssChanel = dictionaryRssChanel;
 }
 
 #pragma mark - SQL Query
 - (void)saveRssChanel {
-    NSString *rssChanelID = [self.dictionaryItems objectForKey:@"id_rss_chanel"];
+    NSString *rssChanelID = [self.dictionaryRssChanel objectForKey:@"id_rss_chanel"];
     
     NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
                              [[self textFieldTitle] text],

@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
 
 #pragma mark -
-@property (strong, nonatomic) NSDictionary *dictionaryItems;
+@property (strong, nonatomic) NSDictionary *dictionaryRssChanel;
 
 @end

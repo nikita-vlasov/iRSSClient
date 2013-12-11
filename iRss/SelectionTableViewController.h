@@ -4,7 +4,7 @@
 
 @interface SelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
-    NSDictionary *dictionaryItems;
+    NSDictionary *dictionaryRssChanel;
     NSInteger valueKey;
 }
 
