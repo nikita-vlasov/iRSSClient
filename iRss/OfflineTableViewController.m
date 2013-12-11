@@ -37,7 +37,7 @@
                                                         message:@"Do you really want to delete all records? Then you can not restore the deleted data."
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:@"OK", nil];
+                                              otherButtonTitles:@"Delete", nil];
     [alertView show];
 }
 
