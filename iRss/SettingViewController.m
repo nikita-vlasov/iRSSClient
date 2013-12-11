@@ -84,6 +84,7 @@
     else if ([indexPath section] == 2) {
         [ResetSettingToDefault resetFontSize];
         [ResetSettingToDefault cleanerListFavorites];
+        [ResetSettingToDefault cleanerAllRssChanel];
         [detainSettingTableViewController setStringCellLabel:@"Settings are reset."];
     }
 }
