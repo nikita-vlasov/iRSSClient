@@ -32,6 +32,7 @@
 #pragma mark - Action
 - (IBAction)buttonSaveChanel:(id)sender {
     [self saveRssChanel];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - SQL Query
