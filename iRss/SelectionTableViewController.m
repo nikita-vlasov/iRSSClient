@@ -31,6 +31,11 @@
     [[self tableView] reloadData];
 }
 
+#pragma mark - Action
+- (IBAction)buttonAddNewRssChanel:(id)sender {
+    [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+}
+
 #pragma mark SQL
 - (NSArray *)arrayGetRssChanel {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
@@ -87,17 +92,6 @@
     return YES;
 }
 
-/*
- NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
- 
- if (indexPath) {
- NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
- DetailViewController *detailViewController = segue.destinationViewController;
- [detailViewController setDetailItemOffline:dictionary];
- [detailViewController setStringOfflineKey:@"Offline"];
- }
- */
-
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
@@ -107,45 +101,7 @@
         NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
         NSString *stringLink = [dictionary objectForKey:@"link"];
         [tableViewController setLinkToTheRssFeeds:stringLink];
-        
-        
-        //TableViewController *tableViewController = segue.destinationViewController;
-        //[tableViewController setLinkToTheRssFeeds:dictionary];
     }
-    
-    
-    /*
-    TableViewController *tableViewController = segue.destinationViewController;
-    NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
-
-    if ([indexPath section] == 32) {
-        [tableViewController setLinkToTheRssFeeds:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
-    }
-    else if ([indexPath section] == 1) {
-        [tableViewController setLinkToTheRssFeeds:@"https://developer.apple.com/news/rss/news.rss"];
-    }
-    else if ([indexPath section] == 2) {
-        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/desktopcomputers"];
-    }
-    else if ([indexPath section] == 3) {
-        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/macos"];
-    }
-    else if ([indexPath section] == 4) {
-        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/iphone"];
-    }
-    else if ([indexPath section] == 5) {
-        [tableViewController setLinkToTheRssFeeds:@"http://rss.support.apple.com/ipod"];
-    }
-    else {
-        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
-    }
-    
-    AddNewRssViewController *addNewRssViewController = segue.destinationViewController;
-     */
-    
 }
 
-- (IBAction)buttonAddNewRssChanel:(id)sender {
-    [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
-}
 @end
