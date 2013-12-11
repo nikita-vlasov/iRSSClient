@@ -9,5 +9,6 @@
 
 #pragma mark -
 - (IBAction)buttonAddNewRssChanel:(id)sender;
+- (NSArray *)arrayGetRssChanel;
 
 @end

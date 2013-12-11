@@ -9,10 +9,11 @@
 - (IBAction)buttonSaveChanel:(id)sender;
 
 #pragma mark - Outlet
+@property (weak, nonatomic) IBOutlet UITextField *textFieldTitle;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldLink;
 @property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
 
 #pragma mark -
-- (NSArray *)arrayGetRssChanel;
+
 
 @end

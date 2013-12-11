@@ -30,9 +30,10 @@
 
 #pragma mark - SQL Query
 - (void)saveRssChanel {
-    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (link, description) VALUES ('%@', '%@')",
-                       [[self textFieldLink] text],
-                       [[self textViewDescription] text]];
+    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link, description) VALUES ('%@', '%@', '%@')",
+                             [[self textFieldTitle] text],
+                             [[self textFieldLink] text],
+                             [[self textViewDescription] text]];
     [SQLiteAccess updateWithSQL:queryString];
 }
 

@@ -18,34 +18,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.title = NSLocalizedString(@"APPLE_ALL_RSS", nil);
-    
-    arrayTopic = [NSArray arrayWithObjects:
-                  @"Hot News",
-                  @"Apple Developer News",
-                  @"Mac Desktop Computers",
-                  @"Mac OS X",
-                  @"iPhone",
-                  @"iPod",
-                  nil];
-    
-    arrayDescription = [NSArray arrayWithObjects:
-                        @"Hot News provided by Apple.",
-                        @"Apple Developer News feed provided by Apple, Inc.",
-                        @"Apple - Support - Most Recent - Apple Inc.",
-                        @"Apple - Support - Most Recent - Mac OS.",
-                        @"Apple - Support - Most Recent - iPhone",
-                        @"Apple - Support - Most Recent - iPod",
-                        nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
+#pragma mark SQL
+- (NSArray *)arrayGetRssChanel {
+    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [arrayTopic count];
+    return [[self arrayGetRssChanel] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,9 +48,26 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [arrayTopic objectAtIndex:indexPath.section];
+    NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+    cell.textLabel.text = [dictionary objectForKey:@"title"];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        NSLog(@"%@", dictionary);
+        NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
+        NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];
+        
+        [SQLiteAccess deleteWithSQL:queryString];
+        [[self tableView] reloadData];
+//        [[self tableView] deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -66,15 +76,45 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return [arrayDescription objectAtIndex:section];
+    NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:section];
+    return [dictionary objectForKey:@"description"];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.01f;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+/*
+ NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+ 
+ if (indexPath) {
+ NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
+ DetailViewController *detailViewController = segue.destinationViewController;
+ [detailViewController setDetailItemOffline:dictionary];
+ [detailViewController setStringOfflineKey:@"Offline"];
+ }
+ */
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+    
+    if (indexPath) {
+        TableViewController *tableViewController = segue.destinationViewController;
+        NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        NSString *stringLink = [dictionary objectForKey:@"link"];
+        [tableViewController setLinkToTheRssFeeds:stringLink];
+        
+        
+        //TableViewController *tableViewController = segue.destinationViewController;
+        //[tableViewController setLinkToTheRssFeeds:dictionary];
+    }
+    
+    
     /*
     TableViewController *tableViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
