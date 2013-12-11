@@ -1,7 +1,7 @@
 /* Ukrainian */
 
 /* Selection Table View Controller */
-"APPLE_ALL_RSS" = "Apple RSS-канали";
+"ALL_RSS" = "RSS-канали";
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "Новини";

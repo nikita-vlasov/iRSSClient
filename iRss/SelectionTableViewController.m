@@ -20,7 +20,7 @@
     [super viewDidLoad];
     [[self tableView] reloadData];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = NSLocalizedString(@"APPLE_ALL_RSS", nil);
+    self.navigationItem.title = NSLocalizedString(@"ALL_RSS", nil);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,7 +1,7 @@
 /* English */
 
 /* Selection Table View Controller */
-"APPLE_ALL_RSS" = "Apple RSS-Feeds";
+"ALL_RSS" = "RSS-Feeds";
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "News";
