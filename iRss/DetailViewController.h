@@ -40,7 +40,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textViewContent;
 
 #pragma mark - Online
-@property (nonatomic, strong) RSSItem *detailItem;
+@property (strong, nonatomic) RSSItem *detailItem;
 
 #pragma mark - Offline
 @property (strong, nonatomic) NSDictionary *detailItemOffline;

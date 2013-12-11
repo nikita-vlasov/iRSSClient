@@ -1,14 +1,17 @@
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
+#import "AddNewRssViewController.h"
 
-@interface SelectionTableViewController : UITableViewController {
+@interface SelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
-    NSArray *arrayTopic;
-    NSArray *arrayDescription;
+    NSDictionary *dictionaryItems;
+    NSInteger valueKey;
 }
 
-#pragma mark -
+#pragma mark - Action
 - (IBAction)buttonAddNewRssChanel:(id)sender;
+
+#pragma mark -
 - (NSArray *)arrayGetRssChanel;
 
 @end

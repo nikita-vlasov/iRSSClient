@@ -33,7 +33,13 @@
 
 #pragma mark - Action
 - (IBAction)buttonAddNewRssChanel:(id)sender {
-    [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+    //@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE
+    
+    
+    [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('', '', '')"];
+    [[self tableView] reloadData];
+    
+//    [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
 }
 
 #pragma mark SQL
@@ -55,14 +61,23 @@
     
     NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
     cell.textLabel.text = [dictionary objectForKey:@"title"];
-    
+   
     return cell;
 }
+
+//--
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    if (UITableViewCellAccessoryDisclosureIndicator) {
+        dictionaryItems = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        valueKey = 123;
+        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+    }
+}
+//--
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
-        NSLog(@"%@", dictionary);
         NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];
 
@@ -95,12 +110,17 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
-    
     if (indexPath) {
-        TableViewController *tableViewController = segue.destinationViewController;
+        TableViewController *tableViewController = [segue destinationViewController];
         NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
-        NSString *stringLink = [dictionary objectForKey:@"link"];
-        [tableViewController setLinkToTheRssFeeds:stringLink];
+        NSString *stringUrlLink = [dictionary objectForKey:@"link"];
+        [tableViewController setLinkToTheRssFeeds:stringUrlLink];
+    }
+    if (valueKey == 123) {
+
+        AddNewRssViewController *addNewRssViewController = [segue destinationViewController];
+        [addNewRssViewController setDictionaryItems:dictionaryItems];
+        valueKey = 0;
     }
 }
 

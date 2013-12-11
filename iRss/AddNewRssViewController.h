@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "SQLiteAccess.h"
+#import "SelectionTableViewController.h"
 
 @interface AddNewRssViewController : UIViewController {
     
@@ -14,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
 
 #pragma mark -
-
+@property (strong, nonatomic) NSDictionary *dictionaryItems;
 
 @end

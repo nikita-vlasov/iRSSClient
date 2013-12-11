@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,14 +29,54 @@
     [self saveRssChanel];
 }
 
+- (void)reloadData {
+    
+    self.textFieldLink.text = [_dictionaryItems objectForKey:@"link"];
+    self.textFieldTitle.text = [_dictionaryItems objectForKey:@"title"];
+    self.textViewDescription.text = [_dictionaryItems objectForKey:@"description"];
+    
+}
+
+- (void)setDictionaryItems:(NSDictionary *)dictionaryItems {
+    _dictionaryItems = dictionaryItems;
+
+}
+
 #pragma mark - SQL Query
 - (void)saveRssChanel {
-    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link, description) VALUES ('%@', '%@', '%@')",
+    NSString *rssChanelID = [self.dictionaryItems objectForKey:@"id_rss_chanel"];
+    
+    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
                              [[self textFieldTitle] text],
                              [[self textFieldLink] text],
-                             [[self textViewDescription] text]];
+                             [[self textViewDescription] text],
+                             rssChanelID];
     [SQLiteAccess updateWithSQL:queryString];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end
