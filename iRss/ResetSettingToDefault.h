@@ -5,8 +5,9 @@
     
 }
 
-#pragma mark -
+#pragma mark SQL
 + (void)cleanerListFavorites;
++ (void)cleanerAllRssChanel;
 
 #pragma mark -
 + (void)resetFontSize;

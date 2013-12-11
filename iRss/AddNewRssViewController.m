@@ -52,29 +52,4 @@
     self.textViewDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end

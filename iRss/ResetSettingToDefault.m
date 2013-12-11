@@ -2,9 +2,14 @@
 
 @implementation ResetSettingToDefault
 
-#pragma mark -
+#pragma mark - SQL
 + (void)cleanerListFavorites {
     NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline"];
+    [SQLiteAccess deleteWithSQL:queryString];
+}
+
++ (void)cleanerAllRssChanel {
+    NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss"];
     [SQLiteAccess deleteWithSQL:queryString];
 }
 

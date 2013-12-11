@@ -76,7 +76,6 @@
     [[cell textLabel] setText:[item title]];
     [[cell detailTextLabel] setText:[item pubDates]];
     
-    
     return cell;
 }
 
