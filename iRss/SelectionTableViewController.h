@@ -6,7 +6,7 @@
 @interface SelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
     NSDictionary *dictionaryRssChanel;
-    NSInteger valueKey;
+    int valueKey;
 }
 
 #pragma mark - Action

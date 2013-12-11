@@ -52,4 +52,12 @@
     self.textViewDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    [[self textFieldTitle] resignFirstResponder];
+    [[self textFieldLink] resignFirstResponder];
+    [[self textViewDescription] resignFirstResponder];
+}
+
 @end

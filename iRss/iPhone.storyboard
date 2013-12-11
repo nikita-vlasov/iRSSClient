@@ -289,36 +289,36 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Link" minimumFontSize="17" clearButtonMode="whileEditing" id="kah-8K-3oI">
-                                <rect key="frame" x="30" y="115" width="270" height="30"/>
+                                <rect key="frame" x="30" y="147" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " id="w9H-Ge-QN3">
-                                <rect key="frame" x="30" y="153" width="270" height="128"/>
+                                <rect key="frame" x="30" y="185" width="270" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="eGZ-1o-uCv">
-                                <rect key="frame" x="20" y="153" width="2" height="128"/>
+                                <rect key="frame" x="20" y="185" width="2" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0016076629950000001" green="1" blue="0.9179265029" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Y3M-Yx-wc0">
-                                <rect key="frame" x="20" y="115" width="2" height="30"/>
+                                <rect key="frame" x="20" y="147" width="2" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0016076629950000001" green="1" blue="0.9179265029" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" clearButtonMode="whileEditing" id="ZeE-VA-GZL">
-                                <rect key="frame" x="30" y="77" width="270" height="30"/>
+                                <rect key="frame" x="30" y="109" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Vft-J3-bTe">
-                                <rect key="frame" x="20" y="77" width="2" height="30"/>
+                                <rect key="frame" x="20" y="109" width="2" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0016076629950000001" green="1" blue="0.9179265029" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
