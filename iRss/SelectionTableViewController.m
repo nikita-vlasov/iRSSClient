@@ -127,7 +127,6 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     if (UITableViewCellAccessoryDisclosureIndicator) {
         dictionaryRssChanel = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
-        valueKey = 4444;
         [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
     }
 }
@@ -141,10 +140,9 @@
         NSString *stringUrlLink = [dictionary objectForKey:@"link"];
         [tableViewController setLinkToTheRssFeeds:stringUrlLink];
     }
-    if (valueKey == 4444) {
+    if ([[segue identifier] isEqualToString:@"OpenAddRssChanel"]) {
         AddNewRssViewController *addNewRssViewController = [segue destinationViewController];
         [addNewRssViewController setDictionaryRssChanel:dictionaryRssChanel];
-        valueKey = 0;
     }
 }
 
