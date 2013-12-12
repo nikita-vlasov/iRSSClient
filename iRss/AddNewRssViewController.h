@@ -12,7 +12,7 @@
 #pragma mark - Outlet
 @property (weak, nonatomic) IBOutlet UITextField *textFieldTitle;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldLink;
-@property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldDescription;
 
 #pragma mark -
 @property (strong, nonatomic) NSDictionary *dictionaryRssChanel;

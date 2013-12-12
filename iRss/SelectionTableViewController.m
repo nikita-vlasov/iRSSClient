@@ -26,10 +26,10 @@
                                                                             target:self
                                                                             action:@selector(buttonAddNewRssChanel:)];
     
-    
     UIBarButtonItem *buttonTrash =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                           target:self
                                                                           action:@selector(buttonBarTrashAllChanel:)];
+    
     self.navigationItem.rightBarButtonItems = @[buttonAdd, buttonTrash];
 }
 

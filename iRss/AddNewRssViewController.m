@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self reloadData];
+    
+    self.textFieldTitle.placeholder = @"Title";
+    self.textFieldLink.placeholder = @"Link";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +44,7 @@
     NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
                              [[self textFieldTitle] text],
                              [[self textFieldLink] text],
-                             [[self textViewDescription] text],
+                             [[self textFieldDescription] text],
                              rssChanelID];
     [SQLiteAccess updateWithSQL:queryString];
 }
@@ -49,7 +52,7 @@
 - (void)reloadData {
     self.textFieldLink.text = [self.dictionaryRssChanel objectForKey:@"link"];
     self.textFieldTitle.text = [self.dictionaryRssChanel objectForKey:@"title"];
-    self.textViewDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
+    self.textFieldDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -57,7 +60,7 @@
     
     [[self textFieldTitle] resignFirstResponder];
     [[self textFieldLink] resignFirstResponder];
-    [[self textViewDescription] resignFirstResponder];
+    [[self textFieldDescription] resignFirstResponder];
 }
 
 @end
