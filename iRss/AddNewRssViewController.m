@@ -40,8 +40,6 @@
 
 #pragma mark - SQL Query
 - (void)saveRssChanel {
-    
-    
     if ([self.textFieldTitle.text isEqualToString:@""]) {
         self.imageTitle.backgroundColor = [UIColor redColor];
     }
