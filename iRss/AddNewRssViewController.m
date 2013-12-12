@@ -36,18 +36,35 @@
 #pragma mark - Action
 - (IBAction)buttonSaveChanel:(id)sender {
     [self saveRssChanel];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - SQL Query
 - (void)saveRssChanel {
-    NSString *rssChanelID = [self.dictionaryRssChanel objectForKey:@"id_rss_chanel"];
-    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
-                             [[self textFieldTitle] text],
-                             [[self textFieldLink] text],
-                             [[self textFieldDescription] text],
-                             rssChanelID];
-    [SQLiteAccess updateWithSQL:queryString];
+    
+    
+    if ([self.textFieldTitle.text isEqualToString:@""]) {
+        self.imageTitle.backgroundColor = [UIColor redColor];
+    }
+    else {
+        self.imageTitle.backgroundColor = [UIColor greenColor];
+    }
+    if ([self.textFieldLink.text isEqualToString:@""]) {
+        self.imageLink.backgroundColor = [UIColor redColor];
+    }
+    else {
+        self.imageLink.backgroundColor = [UIColor greenColor];
+    }
+    
+    if ([self.imageTitle.backgroundColor isEqual:[UIColor greenColor]] && [self.imageLink.backgroundColor isEqual:[UIColor greenColor]]) {
+        NSString *rssChanelID = [self.dictionaryRssChanel objectForKey:@"id_rss_chanel"];
+        NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
+                                 [[self textFieldTitle] text],
+                                 [[self textFieldLink] text],
+                                 [[self textFieldDescription] text],
+                                 rssChanelID];
+        [SQLiteAccess updateWithSQL:queryString];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)reloadData {
