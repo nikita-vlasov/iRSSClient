@@ -19,8 +19,9 @@
     [super viewDidLoad];
     [self reloadData];
     
-    self.textFieldTitle.placeholder = @"Title";
-    self.textFieldLink.placeholder = @"Link";
+    self.textFieldTitle.placeholder = NSLocalizedString(@"TITLE", nil);
+    self.textFieldLink.placeholder = NSLocalizedString(@"LINK", nil);
+    self.textFieldDescription.placeholder = NSLocalizedString(@"DESCRIPTION", nil);
 }
 
 - (void)didReceiveMemoryWarning {

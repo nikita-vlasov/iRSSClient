@@ -1,5 +1,10 @@
 /* Ukrainian */
 
+/* AddNewRssViewController */
+"TITLE" = "Заголовок";
+"LINK" = "Посилання";
+"DESCRIPTION" = "Опис";
+
 /* Selection Table View Controller */
 "ALL_RSS" = "RSS-канали";
 

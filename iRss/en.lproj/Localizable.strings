@@ -1,5 +1,10 @@
 /* English */
 
+/* AddNewRssViewController */
+"TITLE" = "Title";
+"LINK" = "Link";
+"DESCRIPTION" = "Description";
+
 /* Selection Table View Controller */
 "ALL_RSS" = "RSS-Feeds";
 
