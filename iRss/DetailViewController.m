@@ -18,33 +18,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     fontSize = [userDefaults integerForKey:@"FONT_SIZE"];
     self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
     
-    UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+    barButtonAaction = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
                                                                             action:@selector(buttonBarAction:)];
     
-
-    UIBarButtonItem *share =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
+    barButtonShare =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
-    self.navigationItem.rightBarButtonItems = @[action, share];
-
+    self.navigationItem.rightBarButtonItems = @[barButtonAaction, barButtonShare];
+    
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
     stringItemDescription = [[NSString alloc] init];
     urlLink = [[NSURL alloc] init];
     
-    if ([Internet internetConnection] == NO) {
-        [self switchOffButtons];
-    }
-    else {
+    if (![Internet internetConnection] == NO) {
         slComposeViewController = [[SLComposeViewController alloc] init];
         mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+        [barButtonAaction setEnabled:NO];
+        [barButtonShare setEnabled:NO];
     }
-    
+
     if (![_stringOfflineKey isEqualToString:@"Offline"]) {
         [self obtainingOnlineData];
     }
@@ -58,6 +57,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 #pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
@@ -257,11 +257,6 @@
     [userDefaults synchronize];
 
     self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
-}
-
-#pragma mark - Hiding Buttons
-- (void)switchOffButtons {
-//    self.buttonBarActionOutlet.enabled = NO;
 }
 
 #pragma mark - Navigation

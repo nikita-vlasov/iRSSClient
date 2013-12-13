@@ -63,19 +63,18 @@
 }
 
 #pragma mark - Action Bar Button
-- (IBAction)buttonBarRefreshPage:(id)sender {
+- (void)buttonBarRefreshPage:(id)sender {
     [[self webView] reload];
 }
 
-- (IBAction)buttonBarForwardPage:(id)sender {
+- (void)buttonBarForwardPage:(id)sender {
     [[self webView] goForward];
 }
-
-- (IBAction)buttonBarBackPage:(id)sender {
+- (void)buttonBarBackPage:(id)sender {
     [[self webView] goBack];
 }
 
-- (IBAction)buttonBarStopPage:(id)sender {
+- (void)buttonBarStopPage:(id)sender{
     [[self webView] stopLoading];
 }
 

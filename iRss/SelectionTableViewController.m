@@ -2,7 +2,7 @@
 #import "AddNewRssViewController.h"
 
 @interface SelectionTableViewController () {
-    
+    UIBarButtonItem *buttonAdd;
 }
 
 @end
@@ -22,7 +22,7 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.title = NSLocalizedString(@"ALL_RSS", nil);
     
-    UIBarButtonItem *buttonAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+    buttonAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                             target:self
                                                                             action:@selector(buttonAddNewRssChanel:)];
     
