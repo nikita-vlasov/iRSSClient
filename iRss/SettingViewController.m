@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"SETTING", nil);
     
-    arrayPoints = [NSArray arrayWithObjects:NSLocalizedString(@"ABOUT", nil), NSLocalizedString(@"REPORT_AN_ISSUE", nil), @"Reset", nil];
+    mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +67,7 @@
         }
     }
     
-    //Section - 1
+    //Section - 2
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:@"Reset"];
@@ -96,6 +96,9 @@
     if (section == 1) {
         return @"Сбросить контент и насройки.";
     }
+    if (section == 2) {
+        return @"Сбросить контент и насройки.";
+    }
     return nil;
 }
 
@@ -104,10 +107,23 @@
     
     if ([indexPath section] == 1) {
         if ([indexPath row] == 0) {
-            NSLog(@"dsfdsfdsf");
+            [self sendEmail];
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - SendReport
+- (void)sendEmail {
+    mfMailComposeViewController.mailComposeDelegate = self;
+    [mfMailComposeViewController setSubject:@"saf"];
+    [mfMailComposeViewController setMessageBody:@"sfds" isHTML:YES];
+    [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error; {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Navigation

@@ -1,10 +1,13 @@
 #import <UIKit/UIKit.h>
 #import "DetailSettingTableViewController.h"
 #import "ResetSettingToDefault.h"
+#import <Social/Social.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface SettingViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface SettingViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate> {
     @private
-    NSArray *arrayPoints;
+    SLComposeViewController *slComposeViewController;
+    MFMailComposeViewController *mfMailComposeViewController;
 }
 
 #pragma mark - Outlet
