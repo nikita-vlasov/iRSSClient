@@ -91,7 +91,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Here you can see information about the application.";
+        return @"Here you can see information about the application and about the author.";
     }
     if (section == 1) {
         return @"You found an error? Please send us a description of the error, we will try to fix it soon and would be very grateful to you.";
@@ -112,12 +112,27 @@
     }
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
-            [ResetSettingToDefault resetFontSize];
-            [ResetSettingToDefault cleanerListFavorites];
-            [ResetSettingToDefault cleanerAllRssChanel];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Do you really want to delete all content and reset all settings?" delegate:self cancelButtonTitle:@"Delete" otherButtonTitles:@"Cancel", nil];
+            [alertView show];
+            
+            
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0: {
+            [ResetSettingToDefault resetFontSize];
+            [ResetSettingToDefault cleanerListFavorites];
+            [ResetSettingToDefault cleanerAllRssChanel];
+            break;
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 #pragma mark - SendReport
