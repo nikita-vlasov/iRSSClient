@@ -97,7 +97,7 @@
         return @"You found an error? Please send us a description of the error, we will try to fix it soon and would be very grateful to you.";
     }
     if (section == 2) {
-        return @"Сбросить контент и насройки.";
+        return @"This function allows you to remove the content and reset all settings to factory default. Think before you click. This action may not be undone!";
     }
     return nil;
 }
@@ -123,8 +123,8 @@
 #pragma mark - SendReport
 - (void)sendEmail {
     mfMailComposeViewController.mailComposeDelegate = self;
-    [mfMailComposeViewController setSubject:@"saf"];
-    [mfMailComposeViewController setMessageBody:@"sfds" isHTML:YES];
+    [mfMailComposeViewController setSubject:@"Test"];
+    [mfMailComposeViewController setMessageBody:@"Test" isHTML:YES];
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
 }
 
@@ -133,6 +133,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Array
 - (NSArray *)arrayTitle {
     return @[
              @"Version of the program",
