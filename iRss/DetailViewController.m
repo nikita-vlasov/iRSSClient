@@ -47,7 +47,7 @@
         [self obtainingOnlineData];
     }
     else {
-        _buttonAddNewsToOfflineOutlet.enabled = NO;
+        _buttonAddNewsToOfflineOutlet.hidden = YES;
         [self obtainingOfflineData];
     }
     [self reloadData];
@@ -56,7 +56,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 #pragma mark - Action
 - (IBAction)buttonBarAction:(id)sender {
@@ -223,8 +222,7 @@
     urlLink = [_detailItem link];
     
     if ([self requestToLink: (NSString *) urlLink] == YES) {
-        NSLog(@"%@", urlLink);
-        _buttonAddNewsToOfflineOutlet.enabled = NO;
+        _buttonAddNewsToOfflineOutlet.hidden = NO;
     }
 }
 

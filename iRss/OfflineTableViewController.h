@@ -9,9 +9,6 @@
     
 }
 
-#pragma mark - Action
-//- (IBAction)buttondeleteAllRecords:(id)sender;
-
 #pragma mark - Outlet
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
