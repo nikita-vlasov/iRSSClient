@@ -4,11 +4,13 @@
 #import "ResetSettingToDefault.h"
 
 @interface OfflineTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+    @private
+    UIBarButtonItem *buttonDeleteAll;
     
 }
 
 #pragma mark - Action
-- (IBAction)buttondeleteAllRecords:(id)sender;
+//- (IBAction)buttondeleteAllRecords:(id)sender;
 
 #pragma mark - Outlet
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

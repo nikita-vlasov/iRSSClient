@@ -19,6 +19,12 @@
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.title = NSLocalizedString(@"FAVORITES", nil);
+    
+    buttonDeleteAll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                       target:self
+                                                                       action:@selector(buttonDeleteAllRecords:)];
+    //self.navigationItem.rightBarButtonItem = buttonDeleteAllRecords;
+    
     [[self tableView] reloadData];
 }
 
@@ -32,7 +38,7 @@
 }
 
 #pragma mark - Action
-- (void)buttondeleteAllRecords:(id)sender {
+- (void)buttonDeleteAllRecords:(id)sender {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
                                                         message:@"Do you really want to delete all records? Then you can not restore the deleted data."
                                                        delegate:self
@@ -54,6 +60,20 @@
         default: {
             break;
         }
+    }
+}
+
+#pragma mark - Editing Bar Button
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:YES];
+    
+    if (editing) {
+//        self.navigationItem.rightBarButtonItem = barButtonTrashAllChanel;
+        self.navigationItem.rightBarButtonItem = buttonDeleteAll;
+    }
+    else {
+  //      self.navigationItem.rightBarButtonItem = barButtonAddChanel;
+        self.navigationItem.rightBarButtonItem = nil;
     }
 }
 

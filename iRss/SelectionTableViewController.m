@@ -68,7 +68,7 @@
     }
 }
 
-#pragma mark -
+#pragma mark - Editing Bar Button
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:YES];
     

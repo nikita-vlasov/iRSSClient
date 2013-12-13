@@ -120,13 +120,7 @@
                             <outlet property="delegate" destination="5WW-zy-tB0" id="k2M-Ut-cf5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="psU-rR-j9J">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="FP0-uH-DqU">
-                            <connections>
-                                <action selector="buttondeleteAllRecords:" destination="5WW-zy-tB0" id="apG-dx-FXv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="psU-rR-j9J"/>
                     <connections>
                         <outlet property="tableView" destination="XKS-3a-f6Y" id="dze-1e-8hc"/>
                     </connections>
