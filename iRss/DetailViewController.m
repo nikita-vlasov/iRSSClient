@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     fontSize = [userDefaults integerForKey:@"FONT_SIZE"];
     self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
@@ -37,7 +36,7 @@
     stringItemDescription = [[NSString alloc] init];
     urlLink = [[NSURL alloc] init];
     
-    if (![Internet internetConnection] == NO) {
+    if ([Internet internetConnection] == NO) {
         slComposeViewController = [[SLComposeViewController alloc] init];
         mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
         [barButtonAaction setEnabled:NO];
