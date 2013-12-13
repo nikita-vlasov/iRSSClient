@@ -94,7 +94,7 @@
         return @"Here you can see information about the application.";
     }
     if (section == 1) {
-        return @"Сбросить контент и насройки.";
+        return @"You found an error? Please send us a description of the error, we will try to fix it soon and would be very grateful to you.";
     }
     if (section == 2) {
         return @"Сбросить контент и насройки.";
@@ -114,8 +114,6 @@
         if ([indexPath row] == 0) {
             [ResetSettingToDefault resetFontSize];
             [ResetSettingToDefault cleanerListFavorites];
-            
-            
             [ResetSettingToDefault cleanerAllRssChanel];
         }
     }
@@ -135,6 +133,22 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (NSArray *)arrayTitle {
+    return @[
+             @"Version of the program",
+             @"Name",
+             @"Last name"
+             ];
+}
+
+- (NSArray *)arrayDiscription {
+    return @[
+             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
+             @"Alex",
+             @"Zarochoncev",
+             ];
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
@@ -142,34 +156,11 @@
     
     if ([indexPath section] == 0) {
         if ([indexPath row] == 0) {
-            
-            NSArray *arrayTitle = [NSArray arrayWithObjects:
-                                   @"Version of the program",
-                                   @"Name",
-                                   @"Last name", nil];
-            
-            NSArray *arrayDiscription = [NSArray arrayWithObjects:
-                                         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
-                                         @"Alex",
-                                         @"Zarochoncev",
-                                         nil];
-            
-            [detainSettingTableViewController setArrayTitle:arrayTitle];
-            [detainSettingTableViewController setArrayDescription:arrayDiscription];
+            [detainSettingTableViewController setArrayTitle:[self arrayTitle]];
+            [detainSettingTableViewController setArrayDescription:[self arrayDiscription]];
             [detainSettingTableViewController setCountNumberRows:3];
         }
     }
-    /*
-    else if ([indexPath section] == 1) {
-        [detainSettingTableViewController setStringCellLabel:@"Этот раздел в стадии разработки"];
-    }
-    else if ([indexPath section] == 2) {
-        [ResetSettingToDefault resetFontSize];
-        [ResetSettingToDefault cleanerListFavorites];
-        [ResetSettingToDefault cleanerAllRssChanel];
-        [detainSettingTableViewController setStringCellLabel:@"Settings are reset."];
-    }
-     */
 }
 
 @end
