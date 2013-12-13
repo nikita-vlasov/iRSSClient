@@ -20,6 +20,10 @@
 "OPEN_IN_SAFARI" = "Відкрити у Safari";
 "ADD_NEWS_TO_OFFLINE" = "Новина додана для читання в автономному режимі.";
 "COPY_LINK" = "Копіювати посилання";
+"SHARE" = "Розповісти";
+"SEND_EMAIL" = "По електронній пошті";
+"FACEBOOK" = "Фейсбук";
+"TWITTER" = "Твіттер";
 
 /* Offline Table View Controller */
 "FAVORITES" = "Обране";

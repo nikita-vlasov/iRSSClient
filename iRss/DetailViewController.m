@@ -106,11 +106,11 @@
 
 #pragma mark - Button Share
 - (IBAction)buttonBarShareSocial:(id)sender {
-    UIAlertView *alertViewShare = [[UIAlertView alloc] initWithTitle:@"Share"
+    UIAlertView *alertViewShare = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SHARE", nil)
                                                              message:nil
                                                             delegate:self
-                                                   cancelButtonTitle:@"Cancel"
-                                                   otherButtonTitles:@"Email", @"Facebook", @"Twitter", nil];
+                                                   cancelButtonTitle:NSLocalizedString(@"CANCEL", nil)
+                                                   otherButtonTitles:NSLocalizedString(@"SEND_EMAIL", nil), NSLocalizedString(@"FACEBOOK", nil), NSLocalizedString(@"TWITTER", nil), nil];
     [alertViewShare show];
 }
 
