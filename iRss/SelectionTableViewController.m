@@ -18,18 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[self tableView] reloadData];
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
     self.navigationItem.title = NSLocalizedString(@"ALL_RSS", nil);
     
     barButtonAddChanel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                             target:self
-                                                                            action:@selector(buttonAddNewRssChanel:)];
+                                                                            action:@selector(buttonBarAddNewRssChanel:)];
     
     barButtonTrashAllChanel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                           target:self
                                                                           action:@selector(buttonBarTrashAllChanel:)];
     self.navigationItem.rightBarButtonItem = barButtonAddChanel;
+    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,12 +42,12 @@
 }
 
 #pragma mark - Action
-- (IBAction)buttonAddNewRssChanel:(id)sender {
+- (void)buttonBarAddNewRssChanel:(id)sender {
     [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('Hot News', 'http://images.apple.com/main/rss/hotnews/hotnews.rss', 'Apple Hot News')"];
     [[self tableView] reloadData];
 }
 
-- (IBAction)buttonBarTrashAllChanel:(id)sender {
+- (void)buttonBarTrashAllChanel:(id)sender {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Do you really want to delete all RSS feeds? Be careful, these data can not be recovered." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
     [alertView show];
 }
@@ -71,7 +71,6 @@
 #pragma mark - Editing Bar Button
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:YES];
-    
     if (editing) {
         self.navigationItem.rightBarButtonItem = barButtonTrashAllChanel;
     }
@@ -105,7 +104,6 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-            self.navigationItem.rightBarButtonItems = @[barButtonTrashAllChanel];
         NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
         NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];

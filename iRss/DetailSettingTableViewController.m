@@ -45,13 +45,6 @@
     return 0.1f;
 }
 
-/*
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Version of the application";
-}
- */
-
-
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     return [self stringTitleForFooterSection];
 }

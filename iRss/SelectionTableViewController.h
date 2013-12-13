@@ -11,10 +11,6 @@
     NSDictionary *dictionaryRssChanel;
 }
 
-#pragma mark - Action
-- (IBAction)buttonAddNewRssChanel:(id)sender;
-- (IBAction)buttonBarTrashAllChanel:(id)sender;
-
 #pragma mark -
 - (NSArray *)arrayGetRssChanel;
 

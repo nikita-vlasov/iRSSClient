@@ -17,14 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = [self editButtonItem];
     self.navigationItem.title = NSLocalizedString(@"FAVORITES", nil);
     
     buttonDeleteAll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                        target:self
                                                                        action:@selector(buttonDeleteAllRecords:)];
-    //self.navigationItem.rightBarButtonItem = buttonDeleteAllRecords;
-    
     [[self tableView] reloadData];
 }
 
@@ -66,13 +64,10 @@
 #pragma mark - Editing Bar Button
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:YES];
-    
     if (editing) {
-//        self.navigationItem.rightBarButtonItem = barButtonTrashAllChanel;
         self.navigationItem.rightBarButtonItem = buttonDeleteAll;
     }
     else {
-  //      self.navigationItem.rightBarButtonItem = barButtonAddChanel;
         self.navigationItem.rightBarButtonItem = nil;
     }
 }
@@ -109,9 +104,6 @@
         
         [SQLiteAccess deleteWithSQL:queryString];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
 
