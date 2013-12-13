@@ -6,13 +6,13 @@
 "DESCRIPTION" = "Description";
 
 /* Selection Table View Controller */
-"ALL_RSS" = "RSS-Feeds";
+"ALL_RSS" = "Feeds";
 "DELETE_ALL_CHANEL" = "Do you really want to delete all RSS feeds? Be careful, these data can not be recovered.";
 
 /* Table View Controller */
-"TITLE_NEWS_ONLINE" = "News";
 "ERROR" = "Error";
 "ERROR_INTERNET_CONNECTION" = "Unfortunately you are not connected to the Internet, we encourage you to do it. Otherwise, we can only read the news, which was added to the list for offline reading.";
+"TITLE_ALL_NEWS" = "News (%lu)";
 
 /* Detail View Controller */
 "CANCEL" = "Cancel";

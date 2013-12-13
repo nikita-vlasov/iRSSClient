@@ -51,7 +51,7 @@
     [RSSParser parseRSSFeedForRequest:request success:^(NSArray *feedItems) {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         arrayDataRss = feedItems;
-        NSString *stringTitle = [NSString stringWithFormat:@"News (%lu)", (unsigned long)[arrayDataRss count]];
+        NSString *stringTitle = [NSString stringWithFormat:NSLocalizedString(@"TITLE_ALL_NEWS", nil), (unsigned long)[arrayDataRss count]];
         self.navigationItem.title = stringTitle;
         [[self tableView] reloadData];
     }failure:^(NSError *error) {

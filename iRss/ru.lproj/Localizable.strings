@@ -6,13 +6,13 @@
 "DESCRIPTION" = "Описание";
 
 /* Selection Table View Controller */
-"ALL_RSS" = "RSS-каналы";
+"ALL_RSS" = "Каналы";
 "DELETE_ALL_CHANEL" = "Вы действительно хотите удалить все RSS-каналы? Будьте осторожны, эти данные не могут быть восстановлены.";
 
 /* Table View Controller */
-"TITLE_NEWS_ONLINE" = "Новости";
 "ERROR" = "Ошибка";
 "ERROR_INTERNET_CONNECTION" = "К сожалению вы не подключены к интернету, мы советуем Вам это сделать. В противном случае мы сможете читать только те новости, которые добавили в список для оффлайн чтения.";
+"TITLE_ALL_NEWS" = "Новости (%lu)";
 
 /* Detail View Controller */
 "CANCEL" = "Отмена";
