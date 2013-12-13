@@ -48,16 +48,17 @@
 }
 
 - (void)buttonBarTrashAllChanel:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Do you really want to delete all RSS feeds? Be careful, these data can not be recovered." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
+                                                        message:@"Do you really want to delete all RSS feeds? Be careful, these data can not be recovered."
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                              otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
     [alertView show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:{
-            break;
-        }
-        case 1: {
             [ResetSettingToDefault cleanerAllRssChanel];
             [[self tableView] reloadData];
             break;
