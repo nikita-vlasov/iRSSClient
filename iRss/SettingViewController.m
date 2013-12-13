@@ -145,15 +145,13 @@
 
 #pragma mark - Array
 - (NSArray *)arrayTitle {
-    return @[@"Version of the program",
-             @"Name",
-             @"Last name"];
+    return @[@"Version",
+             @"Name"];
 }
 
 - (NSArray *)arrayDiscription {
     return @[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
-             @"Alex",
-             @"Zarochoncev",];
+             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
 }
 
 #pragma mark - Navigation
@@ -165,7 +163,7 @@
         if ([indexPath row] == 0) {
             [detainSettingTableViewController setArrayTitle:[self arrayTitle]];
             [detainSettingTableViewController setArrayDescription:[self arrayDiscription]];
-            [detainSettingTableViewController setCountNumberRows:3];
+            [detainSettingTableViewController setCountNumberRows:2];
         }
     }
 }
