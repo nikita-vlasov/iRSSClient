@@ -104,7 +104,7 @@
     /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
                                                                 message:@"Do you really want to delete all content and reset all settings?"
                                                                delegate:self
                                                       cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
