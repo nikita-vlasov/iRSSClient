@@ -95,8 +95,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
     NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+    
     cell.textLabel.text = [dictionary objectForKey:@"title"];
    
     return cell;

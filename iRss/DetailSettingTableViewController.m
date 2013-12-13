@@ -25,17 +25,20 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //Сколько секций в таблице всего
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    //сколько ячеек в секции
+    return [self countNumberRows];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self stringCellLabel];
+    [[cell textLabel] setText:[self.arrayTitle objectAtIndex:indexPath.row]];
+    [[cell detailTextLabel] setText:[self.arrayDescription objectAtIndex:indexPath.row]];
     
     return cell;
 }
