@@ -470,7 +470,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xXh-li-zV1"/>
+                    <navigationItem key="navigationItem" id="xXh-li-zV1">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="gJ4-Dw-k2i" id="Z3Q-eb-lia"/>
                     </connections>

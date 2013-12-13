@@ -222,7 +222,7 @@
     urlLink = [_detailItem link];
     
     if ([self requestToLink: (NSString *) urlLink] == YES) {
-        _buttonAddNewsToOfflineOutlet.hidden = NO;
+        _buttonAddNewsToOfflineOutlet.hidden = YES;
     }
 }
 
