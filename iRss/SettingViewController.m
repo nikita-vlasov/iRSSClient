@@ -145,13 +145,13 @@
 
 #pragma mark - Array
 - (NSArray *)arrayTitle {
-    return @[@"Version",
-             @"Name"];
+    return @[@"Name",
+             @"Version"];
 }
 
 - (NSArray *)arrayDiscription {
-    return @[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
-             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
+    return @[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"],
+             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
 }
 
 #pragma mark - Navigation
