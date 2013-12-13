@@ -5,6 +5,9 @@
 
 @interface SelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
+    UIBarButtonItem *barButtonTrashAllChanel;
+    UIBarButtonItem *barButtonAddChanel;
+    
     NSDictionary *dictionaryRssChanel;
 }
 

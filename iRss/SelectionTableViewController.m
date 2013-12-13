@@ -2,7 +2,7 @@
 #import "AddNewRssViewController.h"
 
 @interface SelectionTableViewController () {
-    UIBarButtonItem *buttonAdd;
+    
 }
 
 @end
@@ -19,18 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self tableView] reloadData];
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = [self editButtonItem];
     self.navigationItem.title = NSLocalizedString(@"ALL_RSS", nil);
     
-    buttonAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+    barButtonAddChanel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                             target:self
                                                                             action:@selector(buttonAddNewRssChanel:)];
     
-    UIBarButtonItem *buttonTrash =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+    barButtonTrashAllChanel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                           target:self
                                                                           action:@selector(buttonBarTrashAllChanel:)];
-    
-    self.navigationItem.rightBarButtonItems = @[buttonAdd, buttonTrash];
+    self.navigationItem.rightBarButtonItem = barButtonAddChanel;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +68,18 @@
     }
 }
 
+#pragma mark -
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:YES];
+    
+    if (editing) {
+        self.navigationItem.rightBarButtonItem = barButtonTrashAllChanel;
+    }
+    else {
+        self.navigationItem.rightBarButtonItem = barButtonAddChanel;
+    }
+}
+
 #pragma mark SQL
 - (NSArray *)arrayGetRssChanel {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
@@ -94,15 +105,13 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+            self.navigationItem.rightBarButtonItems = @[barButtonTrashAllChanel];
         NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
         NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];
 
         [SQLiteAccess deleteWithSQL:queryString];
         [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
 
