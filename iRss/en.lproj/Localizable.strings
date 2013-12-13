@@ -28,7 +28,10 @@
 "SETTING" = "Setting";
 "DELETE" = "Remove";
 "WARNING" = "Warning";
+"RESET_SETTING" = "Do you really want to delete all content and reset all settings?";
+"ABOUT" = "About a program";
+"SEND_REPORT" = "Send the report";
+"RESET" = "Reset";
 
 /* Detain Setting Table View Controller */
-"ABOUT" = "About";
 "REPORT_AN_ISSUE" = "Report an issue";

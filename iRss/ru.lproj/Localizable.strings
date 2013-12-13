@@ -28,7 +28,10 @@
 "SETTING" = "Настройки";
 "DELETE" = "Удалить";
 "WARNING" = "Предупреждение";
+"RESET_SETTING" = "Вы действительно хотите удалить все содержимое и сбросить все настройки?";
+"ABOUT" = "О программе";
+"SEND_REPORT" = "Отправить отчет";
+"RESET" = "Cброс";
 
 /* Detain Setting Table View Controller */
-"ABOUT" = "Про";
 "REPORT_AN_ISSUE" = "Сообщить о проблеме";

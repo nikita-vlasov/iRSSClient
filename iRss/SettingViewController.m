@@ -53,21 +53,21 @@
     /* Section - 0 */
     if ([indexPath section] == 0) {
         if ([indexPath row] == 0) {
-        [[cell textLabel] setText:@"About"];
+        [[cell textLabel] setText:NSLocalizedString(@"ABOUT", nil)];
         return cell;
         }
     }
     /* Section - 1 */
     if ([indexPath section] == 1) {
         if (indexPath.row == 0) {
-            [[cellButtonReset textLabel] setText:@"Send the report"];
+            [[cellButtonReset textLabel] setText:NSLocalizedString(@"SEND_REPORT", nil)];
             return cellButtonReset;
         }
     }
     /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
-            [[cellButtonReset textLabel] setText:@"Reset"];
+            [[cellButtonReset textLabel] setText:NSLocalizedString(@"RESET", nil)];
             return cellButtonReset;
         }
     }
@@ -105,7 +105,7 @@
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
-                                                                message:@"Do you really want to delete all content and reset all settings?"
+                                                                message:NSLocalizedString(@"RESET_SETTING", nil)
                                                                delegate:self
                                                       cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
                                                       otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
