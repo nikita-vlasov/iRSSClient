@@ -19,6 +19,8 @@
 "OPEN" = "Open";
 "OPEN_IN_SAFARI" = "Open in Safari";
 "ADD_NEWS_TO_OFFLINE" = "News added for offline reading.";
+"COPY_LINK" = "Copy link";
+
 
 /* Offline Table View Controller */
 "FAVORITES" = "Favorites";

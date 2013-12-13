@@ -146,7 +146,7 @@
 #pragma mark - Array
 - (NSArray *)arrayTitle {
     return @[NSLocalizedString(@"NAME_APPS", nil),
-             @"Version"];
+             NSLocalizedString(@"VERSION_APPS", nil)];
 }
 
 - (NSArray *)arrayDiscription {

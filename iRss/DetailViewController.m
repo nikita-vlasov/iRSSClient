@@ -63,7 +63,7 @@
                                                              delegate:self
                                                     cancelButtonTitle:NSLocalizedString(@"CANCEL", nil)
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:NSLocalizedString(@"OPEN", nil), NSLocalizedString(@"OPEN_IN_SAFARI", nil), @"Copy link", nil];
+                                                    otherButtonTitles:NSLocalizedString(@"OPEN", nil), NSLocalizedString(@"OPEN_IN_SAFARI", nil), NSLocalizedString(@"COPY_LINK", nil), nil];
     [actionSheet showInView:self.view];
 }
 
