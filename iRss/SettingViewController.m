@@ -32,7 +32,6 @@
     return 3;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //сколько ячеек в секции
     if (section == 0) {
@@ -51,37 +50,30 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     UITableViewCell *cellButtonReset = [tableView dequeueReusableCellWithIdentifier:@"CellButtonReset"];
 
-    //Section - 0
-    if (indexPath.section == 0) {
+    /* Section - 0 */
+    if ([indexPath section] == 0) {
         if ([indexPath row] == 0) {
         [[cell textLabel] setText:@"About"];
         return cell;
         }
     }
     
-    //Section - 1
-    if (indexPath.section == 1) {
+    /* Section - 1 */
+    if ([indexPath section] == 1) {
         if (indexPath.row == 0) {
             [[cellButtonReset textLabel] setText:@"Send the report"];
             return cellButtonReset;
         }
     }
     
-    //Section - 2
+    /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:@"Reset"];
             return cellButtonReset;
         }
     }
-
-    
-    
-    
-    
-    
     return nil;
-
 }
 
 #pragma mark - UITableViewDelegate
@@ -105,11 +97,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@", indexPath);
     
+    /* Section - 1 */
     if ([indexPath section] == 1) {
         if ([indexPath row] == 0) {
             [self sendEmail];
         }
     }
+    /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
@@ -118,8 +112,6 @@
                                                       cancelButtonTitle:@"Delete"
                                                       otherButtonTitles:@"Cancel", nil];
             [alertView show];
-            
-            
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -155,16 +147,14 @@
 
 #pragma mark - Array
 - (NSArray *)arrayTitle {
-    return @[
-             @"Version of the program",
+    return @[@"Version of the program",
              @"Name",
              @"Last name"
              ];
 }
 
 - (NSArray *)arrayDiscription {
-    return @[
-             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
+    return @[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
              @"Alex",
              @"Zarochoncev",
              ];

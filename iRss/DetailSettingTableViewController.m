@@ -25,12 +25,10 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //Сколько секций в таблице всего
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //сколько ячеек в секции
     return [self countNumberRows];
 }
 
