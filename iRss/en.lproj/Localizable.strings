@@ -32,6 +32,11 @@
 "ABOUT" = "About a program";
 "SEND_REPORT" = "Send the report";
 "RESET" = "Reset";
+"INFO_APP" = "Here you can see information about the application.";
+"SEND_REPORT_ERROR" = "You found an error? Please send us a description of the error, we will try to fix it soon and would be very grateful to you.";
+"RESET_CONT_AND_SETING" = "This function allows you to remove the content and reset all settings to factory default. Think before you click. This action may not be undone!";
+"NAME_APPS" = "Name";
+"VERSION_APPS" = "Version";
 
 /* Detain Setting Table View Controller */
 "REPORT_AN_ISSUE" = "Report an issue";

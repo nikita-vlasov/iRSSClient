@@ -81,13 +81,13 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Here you can see information about the application and.";
+        return NSLocalizedString(@"INFO_APP", nil);
     }
     if (section == 1) {
-        return @"You found an error? Please send us a description of the error, we will try to fix it soon and would be very grateful to you.";
+        return NSLocalizedString(@"SEND_REPORT_ERROR", nil);
     }
     if (section == 2) {
-        return @"This function allows you to remove the content and reset all settings to factory default. Think before you click. This action may not be undone!";
+        return NSLocalizedString(@"RESET_CONT_AND_SETING", nil);
     }
     return nil;
 }
@@ -145,7 +145,7 @@
 
 #pragma mark - Array
 - (NSArray *)arrayTitle {
-    return @[@"Name",
+    return @[NSLocalizedString(@"NAME_APPS", nil),
              @"Version"];
 }
 
