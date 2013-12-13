@@ -6,7 +6,7 @@
 #import "SQLiteAccess.h"
 #import "Internet.h"
 
-@interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate, UIPrintInteractionControllerDelegate> {
+@interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     @private
     UIBarButtonItem *barButtonAaction;
     UIBarButtonItem *barButtonShare;
@@ -34,8 +34,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
 @property (weak, nonatomic) IBOutlet UITextView *textViewContent;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 #pragma mark - Online
 @property (strong, nonatomic) RSSItem *detailItem;

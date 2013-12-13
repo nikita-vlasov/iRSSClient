@@ -40,17 +40,14 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
                                                         message:@"Do you really want to delete all records? Then you can not restore the deleted data."
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:@"Delete", nil];
+                                              cancelButtonTitle:@"Delete"
+                                              otherButtonTitles:@"Cancel", nil];
     [alertView show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0: {
-            break;
-        }
-        case 1: {
             [ResetSettingToDefault cleanerListFavorites];
             [[self tableView] reloadData];
             break;

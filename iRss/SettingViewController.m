@@ -57,7 +57,6 @@
         return cell;
         }
     }
-    
     /* Section - 1 */
     if ([indexPath section] == 1) {
         if (indexPath.row == 0) {
@@ -65,7 +64,6 @@
             return cellButtonReset;
         }
     }
-    
     /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
@@ -149,15 +147,13 @@
 - (NSArray *)arrayTitle {
     return @[@"Version of the program",
              @"Name",
-             @"Last name"
-             ];
+             @"Last name"];
 }
 
 - (NSArray *)arrayDiscription {
     return @[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
              @"Alex",
-             @"Zarochoncev",
-             ];
+             @"Zarochoncev",];
 }
 
 #pragma mark - Navigation
