@@ -112,7 +112,11 @@
     }
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Do you really want to delete all content and reset all settings?" delegate:self cancelButtonTitle:@"Delete" otherButtonTitles:@"Cancel", nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                                message:@"Do you really want to delete all content and reset all settings?"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Delete"
+                                                      otherButtonTitles:@"Cancel", nil];
             [alertView show];
             
             
@@ -138,8 +142,9 @@
 #pragma mark - SendReport
 - (void)sendEmail {
     mfMailComposeViewController.mailComposeDelegate = self;
-    [mfMailComposeViewController setSubject:@"Test"];
-    [mfMailComposeViewController setMessageBody:@"Test" isHTML:YES];
+    [mfMailComposeViewController setToRecipients:@[@"alex.kovalskiy@icloud.com"]];
+    [mfMailComposeViewController setSubject:@"iRss | Fail"];
+    [mfMailComposeViewController setMessageBody:@"" isHTML:YES];
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
 }
 
