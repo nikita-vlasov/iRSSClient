@@ -7,6 +7,7 @@
 
 /* Selection Table View Controller */
 "ALL_RSS" = "RSS-Feeds";
+"DELETE_ALL_CHANEL" = "Do you really want to delete all RSS feeds? Be careful, these data can not be recovered.";
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "News";
@@ -21,6 +22,7 @@
 
 /* Offline Table View Controller */
 "FAVORITES" = "Favorites";
+"DELETE_AFF_FAVORITES" = "Do you really want to delete all records? Then you can not restore the deleted data.";
 
 /* Setting View Controller */
 "SETTING" = "Setting";

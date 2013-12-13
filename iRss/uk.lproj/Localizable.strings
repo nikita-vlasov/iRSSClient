@@ -7,6 +7,7 @@
 
 /* Selection Table View Controller */
 "ALL_RSS" = "RSS-канали";
+"DELETE_ALL_CHANEL" = "Ви дійсно хочете видалити всі RSS-канали? Будьте обережні, ці дані не можуть бути відновлені.";
 
 /* Table View Controller */
 "TITLE_NEWS_ONLINE" = "Новини";
@@ -21,6 +22,7 @@
 
 /* Offline Table View Controller */
 "FAVORITES" = "Обране";
+"DELETE_AFF_FAVORITES" = "Ви дійсно хочете видалити всі записи? Тоді ви не можете відновити видалені дані.";
 
 /* Setting View Controller */
 "SETTING" = "Налаштування";

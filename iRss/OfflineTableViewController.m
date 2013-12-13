@@ -37,11 +37,11 @@
 
 #pragma mark - Action
 - (void)buttonDeleteAllRecords:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
-                                                        message:@"Do you really want to delete all records? Then you can not restore the deleted data."
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
+                                                        message:NSLocalizedString(@"DELETE_AFF_FAVORITES", nil)
                                                        delegate:self
-                                              cancelButtonTitle:@"Delete"
-                                              otherButtonTitles:@"Cancel", nil];
+                                              cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                              otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
     [alertView show];
 }
 

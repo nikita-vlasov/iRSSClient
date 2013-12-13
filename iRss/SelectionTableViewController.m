@@ -49,7 +49,7 @@
 
 - (void)buttonBarTrashAllChanel:(id)sender {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
-                                                        message:@"Do you really want to delete all RSS feeds? Be careful, these data can not be recovered."
+                                                        message:NSLocalizedString(@"DELETE_ALL_CHANEL", nil)
                                                        delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
                                               otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
