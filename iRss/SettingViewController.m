@@ -110,6 +110,15 @@
             [self sendEmail];
         }
     }
+    if ([indexPath section] == 2) {
+        if ([indexPath row] == 0) {
+            [ResetSettingToDefault resetFontSize];
+            [ResetSettingToDefault cleanerListFavorites];
+            
+            
+            [ResetSettingToDefault cleanerAllRssChanel];
+        }
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
