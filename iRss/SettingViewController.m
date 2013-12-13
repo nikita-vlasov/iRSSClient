@@ -81,7 +81,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Here you can see information about the application and about the author.";
+        return @"Here you can see information about the application and.";
     }
     if (section == 1) {
         return @"You found an error? Please send us a description of the error, we will try to fix it soon and would be very grateful to you.";
