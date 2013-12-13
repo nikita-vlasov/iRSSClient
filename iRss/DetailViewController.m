@@ -42,7 +42,7 @@
         [barButtonAaction setEnabled:NO];
         [barButtonShare setEnabled:NO];
     }
-
+    
     if (![_stringOfflineKey isEqualToString:@"Offline"]) {
         [self obtainingOnlineData];
     }
@@ -90,26 +90,19 @@
 }
 
 - (IBAction)buttonAddNewsToOffline:(id)sender {
-    if ([self requestToLink: (NSString *) urlLink] == YES) {
-        NSLog(@"Уже есть такая новость");
-        return;
-    }
-    else {
-        NSLog(@"Нет такой новости");
-        [self addNewNews];
-        
-        UIAlertView *autoAlertView = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:NSLocalizedString(@"ADD_NEWS_TO_OFFLINE", "")
-                                                               delegate:self
-                                                      cancelButtonTitle:nil
-                                                      otherButtonTitles:nil];
-        autoAlertView.transform = CGAffineTransformMake(1.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f);
-        [autoAlertView performSelector:@selector(dismissWithClickedButtonIndex:animated:)
-                            withObject:nil
-                            afterDelay:1.5f];
-        [autoAlertView show];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    [self addNewNews];
+    
+    UIAlertView *autoAlertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:NSLocalizedString(@"ADD_NEWS_TO_OFFLINE", nil)
+                                                           delegate:self
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:nil];
+    autoAlertView.transform = CGAffineTransformMake(1.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f);
+    [autoAlertView performSelector:@selector(dismissWithClickedButtonIndex:animated:)
+                        withObject:nil
+                        afterDelay:1.5f];
+    [autoAlertView show];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Button Share
@@ -228,6 +221,11 @@
     stringItemDescription = [_detailItem itemDescription];
     stringPubDate = [_detailItem pubDates];
     urlLink = [_detailItem link];
+    
+    if ([self requestToLink: (NSString *) urlLink] == YES) {
+        NSLog(@"%@", urlLink);
+        _buttonAddNewsToOfflineOutlet.enabled = NO;
+    }
 }
 
 #pragma mark - Offline
