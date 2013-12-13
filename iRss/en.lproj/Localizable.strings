@@ -24,6 +24,8 @@
 
 /* Setting View Controller */
 "SETTING" = "Setting";
+"DELETE" = "Remove";
+"WARNING" = "Warning";
 
 /* Detain Setting Table View Controller */
 "ABOUT" = "About";

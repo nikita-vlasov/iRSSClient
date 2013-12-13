@@ -107,8 +107,8 @@
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning"
                                                                 message:@"Do you really want to delete all content and reset all settings?"
                                                                delegate:self
-                                                      cancelButtonTitle:@"Delete"
-                                                      otherButtonTitles:@"Cancel", nil];
+                                                      cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                                      otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
             [alertView show];
         }
     }

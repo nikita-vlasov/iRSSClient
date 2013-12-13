@@ -24,6 +24,8 @@
 
 /* Setting View Controller */
 "SETTING" = "Настройки";
+"DELETE" = "Удалить";
+"WARNING" = "Предупреждение";
 
 /* Detain Setting Table View Controller */
 "ABOUT" = "Про";
