@@ -93,15 +93,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@", indexPath);
-    
-    /* Section - 1 */
+    /* Section - 1 (Send Report) */
     if ([indexPath section] == 1) {
         if ([indexPath row] == 0) {
             [self sendEmail];
         }
     }
-    /* Section - 2 */
+    /* Section - 2 (Reset content and Setting) */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
