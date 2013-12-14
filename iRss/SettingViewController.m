@@ -59,7 +59,7 @@
     }
     /* Section - 1 */
     if ([indexPath section] == 1) {
-        if (indexPath.row == 0) {
+        if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:NSLocalizedString(@"SEND_REPORT", nil)];
             return cellButtonReset;
         }
@@ -129,10 +129,11 @@
 
 #pragma mark - SendReport
 - (void)sendEmail {
+    NSString *stringSubject = [NSString stringWithFormat:@"iRss | Version - %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    
     mfMailComposeViewController.mailComposeDelegate = self;
     [mfMailComposeViewController setToRecipients:@[@"alex.kovalskiy@icloud.com"]];
-    [mfMailComposeViewController setSubject:@"iRss | Fail"];
-    [mfMailComposeViewController setMessageBody:@"" isHTML:YES];
+    [mfMailComposeViewController setSubject:stringSubject];
     [self presentViewController:mfMailComposeViewController animated:YES completion:nil];
 }
 
