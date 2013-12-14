@@ -44,28 +44,28 @@
 
 #pragma mark - SQL Query
 - (void)saveRssChanel {
-    if ([self.textFieldTitle.text isEqualToString:@""]) {
+    if ([[[self textFieldTitle] text] isEqualToString:@""]) {
         self.imageTitle.backgroundColor = [UIColor redColor];
     }
     else {
         self.imageTitle.backgroundColor = [UIColor greenColor];
     }
-    if ([self.textFieldLink.text isEqualToString:@""]) {
+    if ([[[self textFieldLink] text] isEqualToString:@""]) {
         self.imageLink.backgroundColor = [UIColor redColor];
     }
     else {
         self.imageLink.backgroundColor = [UIColor greenColor];
     }
     
-    if ([self.imageTitle.backgroundColor isEqual:[UIColor greenColor]] && [self.imageLink.backgroundColor isEqual:[UIColor greenColor]]) {
-        NSString *rssChanelID = [self.dictionaryRssChanel objectForKey:@"id_rss_chanel"];
+    if ([[[self imageTitle] backgroundColor] isEqual:[UIColor greenColor]] && [[[self imageLink] backgroundColor] isEqual:[UIColor greenColor]]) {
+        NSString *rssChanelID = [[self dictionaryRssChanel] objectForKey:@"id_rss_chanel"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
                                  [[self textFieldTitle] text],
                                  [[self textFieldLink] text],
                                  [[self textFieldDescription] text],
                                  rssChanelID];
         [SQLiteAccess updateWithSQL:queryString];
-        [self.navigationController popViewControllerAnimated:YES];
+        [[self navigationController] popViewControllerAnimated:YES];
     }
 }
 

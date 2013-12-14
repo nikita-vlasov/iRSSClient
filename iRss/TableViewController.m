@@ -47,7 +47,7 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     [RSSParser parseRSSFeedForRequest:request success:^(NSArray *feedItems) {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         arrayDataRss = feedItems;
         NSString *stringTitle = [NSString stringWithFormat:NSLocalizedString(@"TITLE_ALL_NEWS", nil), (unsigned long)[arrayDataRss count]];
         [[self navigationItem] setTitle:stringTitle];
@@ -69,7 +69,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    RSSItem *item = [arrayDataRss objectAtIndex:indexPath.row];
+    RSSItem *item = [arrayDataRss objectAtIndex:[indexPath row]];
     
     [[cell textLabel] setText:[item title]];
     [[cell detailTextLabel] setText:[item pubDates]];

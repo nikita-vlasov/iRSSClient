@@ -96,16 +96,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+    NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:[indexPath section]];
     
-    cell.textLabel.text = [dictionary objectForKey:@"title"];
+    [[cell textLabel] setText:[dictionary objectForKey:@"title"]];
    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:[indexPath section]];
         NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];
 

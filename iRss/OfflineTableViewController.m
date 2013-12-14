@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
-    self.navigationItem.title = NSLocalizedString(@"FAVORITES", nil);
+    [[self navigationItem] setTitle:NSLocalizedString(@"FAVORITES", nil)];
     
     buttonDeleteAll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                     target:self
@@ -85,7 +85,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
+    NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
     
     [[cell textLabel] setText:[dictionaryOfflineNews objectForKey:@"title"]];
     [[cell detailTextLabel] setText:[dictionaryOfflineNews objectForKey:@"date_added"]];
@@ -95,7 +95,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
+        NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
         NSString *offlineNewsID = [dictionaryOfflineNews objectForKey:@"id"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline WHERE id = '%@'", offlineNewsID];
         
@@ -120,8 +120,8 @@
     if (indexPath) {
         NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
         DetailViewController *detailViewController = [segue destinationViewController];
-        [detailViewController setDetailItemOffline:dictionary];
         [detailViewController setStringOfflineKey:@"Offline"];
+        [detailViewController setDetailItemOffline:dictionary];
     }
 }
 
