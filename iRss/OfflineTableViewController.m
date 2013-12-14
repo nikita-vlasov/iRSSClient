@@ -87,8 +87,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [dictionaryOfflineNews objectForKey:@"title"];
-    cell.detailTextLabel.text = [dictionaryOfflineNews objectForKey:@"date_added"];
+  //  cell.textLabel.text = [dictionaryOfflineNews objectForKey:@"title"];
+    [[cell textLabel] setText:[dictionaryOfflineNews objectForKey:@"title"]];
+//    cell.detailTextLabel.text = [dictionaryOfflineNews objectForKey:@"date_added"];
+    [[cell detailTextLabel] setText:[dictionaryOfflineNews objectForKey:@"date_added"]];
+    
     
     return cell;
 }
