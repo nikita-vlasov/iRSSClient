@@ -389,6 +389,9 @@
                     <connections>
                         <outlet property="imageLink" destination="Y3M-Yx-wc0" id="2Fa-vV-UVz"/>
                         <outlet property="imageTitle" destination="Vft-J3-bTe" id="PLX-iW-qP1"/>
+                        <outlet property="labelDescription" destination="Xkh-QW-OaL" id="7oN-2l-CXM"/>
+                        <outlet property="labelLink" destination="qpX-aH-c9Q" id="Rdy-8s-Az4"/>
+                        <outlet property="labelTitle" destination="QVw-GS-23w" id="L7n-xN-dSU"/>
                         <outlet property="textFieldDescription" destination="AHA-lI-mmT" id="ZBK-wO-Hll"/>
                         <outlet property="textFieldLink" destination="kah-8K-3oI" id="vVa-d6-u7F"/>
                         <outlet property="textFieldTitle" destination="ZeE-VA-GZL" id="9xQ-YS-2uJ"/>

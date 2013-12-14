@@ -21,8 +21,8 @@
     self.navigationItem.title = NSLocalizedString(@"FAVORITES", nil);
     
     buttonDeleteAll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
-                                                                       target:self
-                                                                       action:@selector(buttonDeleteAllRecords:)];
+                                                                    target:self
+                                                                    action:@selector(buttonDeleteAllRecords:)];
     [[self tableView] reloadData];
 }
 

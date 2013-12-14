@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldDescription;
 @property (weak, nonatomic) IBOutlet UIImageView *imageTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *imageLink;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labelLink;
+@property (weak, nonatomic) IBOutlet UILabel *labelDescription;
 
 #pragma mark -
 @property (strong, nonatomic) NSDictionary *dictionaryRssChanel;

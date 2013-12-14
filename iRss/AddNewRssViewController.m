@@ -18,8 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[self labelTitle] setText:NSLocalizedString(@"TITLE", nil)];
     [[self textFieldTitle] setPlaceholder:NSLocalizedString(@"TITLE", nil)];
+    [[self labelLink] setText:NSLocalizedString(@"LINK", nil)];
     [[self textFieldLink] setPlaceholder:NSLocalizedString(@"LINK", nil)];
+    [[self labelDescription] setText:NSLocalizedString(@"DESCRIPTION", nil)];
     [[self textFieldDescription] setPlaceholder:NSLocalizedString(@"DESCRIPTION", nil)];
     
     [self reloadData];
