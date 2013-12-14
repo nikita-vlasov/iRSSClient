@@ -118,9 +118,6 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
-        case 0: {
-            break;
-        }
         case 1: {
             [self sendEmail];
             break;
