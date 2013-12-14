@@ -18,8 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     arrayDataRss = [[NSArray alloc] init];
-    
-    self.navigationItem.title = NSLocalizedString(@"TITLE_NEWS_ONLINE", nil);
     [self buttonBarRefresh:nil];
 }
 
@@ -52,7 +50,7 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         arrayDataRss = feedItems;
         NSString *stringTitle = [NSString stringWithFormat:NSLocalizedString(@"TITLE_ALL_NEWS", nil), (unsigned long)[arrayDataRss count]];
-        self.navigationItem.title = stringTitle;
+        [[self navigationItem] setTitle:stringTitle];
         [[self tableView] reloadData];
     }failure:^(NSError *error) {
         NSLog(@"Error Get Data! %@", error);
