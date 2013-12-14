@@ -17,11 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self reloadData];
     
-    self.textFieldTitle.placeholder = NSLocalizedString(@"TITLE", nil);
-    self.textFieldLink.placeholder = NSLocalizedString(@"LINK", nil);
-    self.textFieldDescription.placeholder = NSLocalizedString(@"DESCRIPTION", nil);
+    [[self textFieldTitle] setPlaceholder:NSLocalizedString(@"TITLE", nil)];
+    [[self textFieldLink] setPlaceholder:NSLocalizedString(@"LINK", nil)];
+    [[self textFieldDescription] setPlaceholder:NSLocalizedString(@"DESCRIPTION", nil)];
+    
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
