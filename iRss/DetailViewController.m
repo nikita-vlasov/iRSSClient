@@ -29,8 +29,6 @@
     barButtonShare =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
-    self.navigationItem.rightBarButtonItems = @[barButtonAaction, barButtonShare];
-    
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
     stringItemDescription = [[NSString alloc] init];
@@ -41,6 +39,7 @@
         [barButtonShare setEnabled:NO];
     }
     else {
+        self.navigationItem.rightBarButtonItems = @[barButtonAaction, barButtonShare];
         slComposeViewController = [[SLComposeViewController alloc] init];
         mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
     }
