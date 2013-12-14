@@ -10,6 +10,7 @@
 		FA41530D1854F997005A7685 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530C1854F997005A7685 /* SettingViewController.m */; };
 		FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */; };
 		FA7827AB185C9FE100A35A5D /* EditRssChanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7827AA185C9FE100A35A5D /* EditRssChanelController.m */; };
+		FA7827AE185CA0B800A35A5D /* CellEditChanel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7827AD185CA0B800A35A5D /* CellEditChanel.m */; };
 		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
 		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
 		FA93AB6E1857D45800AE5F79 /* AddNewRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */; };
@@ -69,6 +70,8 @@
 		FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSettingTableViewController.m; sourceTree = "<group>"; };
 		FA7827A9185C9FE100A35A5D /* EditRssChanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRssChanelController.h; sourceTree = "<group>"; };
 		FA7827AA185C9FE100A35A5D /* EditRssChanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRssChanelController.m; sourceTree = "<group>"; };
+		FA7827AC185CA0B800A35A5D /* CellEditChanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellEditChanel.h; sourceTree = "<group>"; };
+		FA7827AD185CA0B800A35A5D /* CellEditChanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellEditChanel.m; sourceTree = "<group>"; };
 		FA93AB6018573B1700AE5F79 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
 		FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
+				FA7827AC185CA0B800A35A5D /* CellEditChanel.h */,
+				FA7827AD185CA0B800A35A5D /* CellEditChanel.m */,
 				FA7827A9185C9FE100A35A5D /* EditRssChanelController.h */,
 				FA7827AA185C9FE100A35A5D /* EditRssChanelController.m */,
 			);
@@ -538,6 +543,7 @@
 				FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */,
 				FABCC9301853EAB300765CD9 /* UIImageView+AFNetworking.m in Sources */,
 				FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */,
+				FA7827AE185CA0B800A35A5D /* CellEditChanel.m in Sources */,
 				FABCC92A1853EAB300765CD9 /* AFImageRequestOperation.m in Sources */,
 				FABCC9311853EAB300765CD9 /* RSSItem.m in Sources */,
 				FABCC9291853EAB300765CD9 /* AFHTTPRequestOperation.m in Sources */,
