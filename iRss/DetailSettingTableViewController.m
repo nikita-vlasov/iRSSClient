@@ -35,8 +35,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    [[cell textLabel] setText:[self.arrayTitle objectAtIndex:indexPath.row]];
-    [[cell detailTextLabel] setText:[self.arrayDescription objectAtIndex:indexPath.row]];
+    [[cell textLabel] setText:[[self arrayTitle] objectAtIndex:[indexPath row]]];
+    [[cell detailTextLabel] setText:[[self arrayDescription] objectAtIndex:[indexPath row]]];
     
     return cell;
 }

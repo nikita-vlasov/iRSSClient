@@ -70,9 +70,9 @@
 }
 
 - (void)reloadData {
-    self.textFieldLink.text = [self.dictionaryRssChanel objectForKey:@"link"];
-    self.textFieldTitle.text = [self.dictionaryRssChanel objectForKey:@"title"];
-    self.textFieldDescription.text = [self.dictionaryRssChanel objectForKey:@"description"];
+    [[self textFieldTitle] setText:[[self dictionaryRssChanel] objectForKey:@"title"]];
+    [[self textFieldLink] setText:[[self dictionaryRssChanel] objectForKey:@"link"]];
+    [[self textFieldDescription] setText:[[self dictionaryRssChanel] objectForKey:@"description"]];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

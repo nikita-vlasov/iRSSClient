@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = NSLocalizedString(@"SETTING", nil);
+    [[self navigationItem] setTitle:NSLocalizedString(@"SETTING", nil)];
     
     mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
 }

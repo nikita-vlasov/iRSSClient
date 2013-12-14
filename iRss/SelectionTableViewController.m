@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
-    self.navigationItem.title = NSLocalizedString(@"ALL_RSS", nil);
+    [[self navigationItem] setTitle:NSLocalizedString(@"ALL_RSS", nil)];
     
     barButtonAddChanel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                             target:self
@@ -134,7 +134,7 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     if (UITableViewCellAccessoryDisclosureIndicator) {
-        dictionaryRssChanel = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        dictionaryRssChanel = [[self arrayGetRssChanel] objectAtIndex:[indexPath section]];
         [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
     }
 }
@@ -144,7 +144,7 @@
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
     if (indexPath) {
         TableViewController *tableViewController = [segue destinationViewController];
-        NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:indexPath.section];
+        NSDictionary *dictionary = [[self arrayGetRssChanel] objectAtIndex:[indexPath section]];
         NSString *stringUrlLink = [dictionary objectForKey:@"link"];
         [tableViewController setLinkToTheRssFeeds:stringUrlLink];
     }

@@ -118,8 +118,8 @@
     NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
     
     if (indexPath) {
-        NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:indexPath.row];
-        DetailViewController *detailViewController = segue.destinationViewController;
+        NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
+        DetailViewController *detailViewController = [segue destinationViewController];
         [detailViewController setDetailItemOffline:dictionary];
         [detailViewController setStringOfflineKey:@"Offline"];
     }

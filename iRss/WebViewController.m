@@ -82,7 +82,7 @@
 - (void)reloadData {
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[self link]];
     [[self webView] loadRequest:request];
-    self.webView.scalesPageToFit = YES;
+    [[self webView] setScalesPageToFit:YES];
 }
 
 #pragma mark - NJKWebViewProgressDelegate

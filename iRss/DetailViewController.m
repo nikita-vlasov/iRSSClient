@@ -20,7 +20,7 @@
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     fontSize = [userDefaults integerForKey:@"FONT_SIZE"];
-    self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
+    [[self textViewContent] setFont:[UIFont fontWithName:@"HelveticaNeue" size:fontSize]];
     
     barButtonAaction = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
@@ -147,7 +147,7 @@
 
 #pragma mark - SQL Query
 - (void)addNewNews {
-    NSDate *dateToday =[NSDate date];
+    NSDate *dateToday = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
     NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
@@ -220,7 +220,7 @@
     urlLink = [_detailItem link];
     
     if ([self requestToLink: (NSString *) urlLink] == YES) {
-        _buttonAddNewsToOfflineOutlet.hidden = YES;
+        [_buttonAddNewsToOfflineOutlet setHidden:YES];
     }
 }
 
@@ -249,12 +249,12 @@
     [userDefaults setInteger:fontSize forKey:@"FONT_SIZE"];
     [userDefaults synchronize];
 
-    self.textViewContent.font = [UIFont fontWithName:@"HelveticaNeue" size:fontSize];
+    [[self textViewContent] setFont:[UIFont fontWithName:@"HelveticaNeue" size:fontSize]];
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    WebViewController *webViewController = segue.destinationViewController;
+    WebViewController *webViewController = [segue destinationViewController];
     [webViewController setLink:urlLink];
 }
 
