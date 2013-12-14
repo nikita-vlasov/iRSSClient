@@ -37,10 +37,14 @@
     urlLink = [[NSURL alloc] init];
     
     if ([Internet internetConnection] == NO) {
-        slComposeViewController = [[SLComposeViewController alloc] init];
-        mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+        NSLog(@"Интернет нет");
         [barButtonAaction setEnabled:NO];
         [barButtonShare setEnabled:NO];
+    }
+    else {
+                NSLog(@"Интернет есть");
+        slComposeViewController = [[SLComposeViewController alloc] init];
+        mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
     }
     
     if (![_stringOfflineKey isEqualToString:@"Offline"]) {
