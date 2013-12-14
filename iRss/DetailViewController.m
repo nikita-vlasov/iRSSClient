@@ -238,9 +238,9 @@
 
 #pragma mark - Reload
 - (void)reloadData {
-    self.labelTitle.text = stringTitle;
-    self.labelDate.text = stringPubDate;
-    self.textViewContent.text = stringItemDescription;
+    [[self labelTitle] setText:stringTitle];
+    [[self labelDate] setText:stringPubDate];
+    [[self textViewContent] setText:stringItemDescription];
 }
 
 #pragma mark - Update Size
