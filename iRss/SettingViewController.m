@@ -19,6 +19,9 @@
     [super viewDidLoad];
     [[self navigationItem] setTitle:NSLocalizedString(@"SETTING", nil)];
     
+    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:newBackButton];
+    
     mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
 }
 

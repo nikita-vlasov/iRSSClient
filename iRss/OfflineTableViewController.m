@@ -20,6 +20,9 @@
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
     [[self navigationItem] setTitle:NSLocalizedString(@"FAVORITES", nil)];
     
+    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:newBackButton];
+    
     buttonDeleteAll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                     target:self
                                                                     action:@selector(buttonDeleteAllRecords:)];

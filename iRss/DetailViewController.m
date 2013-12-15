@@ -22,6 +22,9 @@
     fontSize = [userDefaults integerForKey:@"FONT_SIZE"];
     [[self textViewContent] setFont:[UIFont fontWithName:@"HelveticaNeue" size:fontSize]];
     
+    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:newBackButton];
+    
     barButtonAaction = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                             target:self
                                                                             action:@selector(buttonBarAction:)];
