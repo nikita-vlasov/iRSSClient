@@ -12,7 +12,6 @@
 		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
 		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
 		FA93AB6E1857D45800AE5F79 /* AddNewRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */; };
-		FA948CB3185E0643006113BC /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA948CB2185E0643006113BC /* DetailTableViewController.m */; };
 		FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
@@ -73,8 +72,6 @@
 		FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		FA93AB6C1857D45800AE5F79 /* AddNewRssViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewRssViewController.h; sourceTree = "<group>"; };
 		FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewRssViewController.m; sourceTree = "<group>"; };
-		FA948CB1185E0643006113BC /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
-		FA948CB2185E0643006113BC /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetSettingToDefault.h; sourceTree = "<group>"; };
 		FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetSettingToDefault.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,8 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
-				FA948CB1185E0643006113BC /* DetailTableViewController.h */,
-				FA948CB2185E0643006113BC /* DetailTableViewController.m */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -555,7 +550,6 @@
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
-				FA948CB3185E0643006113BC /* DetailTableViewController.m in Sources */,
 				FA41530D1854F997005A7685 /* SettingViewController.m in Sources */,
 				FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */,
 				FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */,
