@@ -55,8 +55,8 @@
     }failure:^(NSError *error) {
         NSLog(@"Error Get Data! %@", error);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка"
-                                                            message:@"Скорее всего такого канала не существует, пожалуйста, вроверьте правельность введенной Вами ссылки на канал и повторите попытку."
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", nil)
+                                                            message:NSLocalizedString(@"CHANEL_NOT_ERRPR", nil)
                                                            delegate:self
                                                   cancelButtonTitle:nil
                                                   otherButtonTitles:@"OK", nil];

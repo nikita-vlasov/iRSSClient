@@ -13,6 +13,7 @@
 "ERROR" = "Error";
 "ERROR_INTERNET_CONNECTION" = "Unfortunately you are not connected to the Internet, we encourage you to do it. Otherwise, we can only read the news, which was added to the list for offline reading.";
 "TITLE_ALL_NEWS" = "News (%lu)";
+"CHANEL_NOT_ERRPR" = "Most likely such a channel does not exist, please check that you have entered the feed link and try again.";
 
 /* Detail View Controller */
 "CANCEL" = "Cancel";
