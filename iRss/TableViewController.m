@@ -54,6 +54,7 @@
         [[self tableView] reloadData];
     }failure:^(NSError *error) {
         NSLog(@"Error Get Data! %@", error);
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка"
                                                             message:@"Скорее всего такого канала не существует, пожалуйста, вроверьте правельность введенной Вами ссылки на канал и повторите попытку."
                                                            delegate:self
