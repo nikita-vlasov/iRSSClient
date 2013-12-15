@@ -50,7 +50,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar addSubview:progressView];
+    [[[self navigationController] navigationBar] addSubview:progressView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

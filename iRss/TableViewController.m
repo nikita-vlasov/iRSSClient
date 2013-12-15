@@ -43,7 +43,7 @@
 
 #pragma mark -
 - (void)retrievingData {
-    NSURL *url = [NSURL URLWithString:_linkToTheRssFeeds];
+    NSURL *url = [NSURL URLWithString:[self linkToTheRssFeeds]];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     [RSSParser parseRSSFeedForRequest:request success:^(NSArray *feedItems) {
