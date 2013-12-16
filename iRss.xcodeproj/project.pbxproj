@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA41530D1854F997005A7685 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530C1854F997005A7685 /* SettingViewController.m */; };
 		FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */; };
+		FA6DD56B185E820300C46B82 /* CustomCellEditChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD56A185E820300C46B82 /* CustomCellEditChannel.m */; };
+		FA6DD56E185E829400C46B82 /* EditChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */; };
 		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
 		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
 		FA93AB6E1857D45800AE5F79 /* AddNewRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */; };
@@ -66,6 +68,10 @@
 		FA41530C1854F997005A7685 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		FA41530E185522B3005A7685 /* DetailSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSettingTableViewController.h; sourceTree = "<group>"; };
 		FA41530F185522B3005A7685 /* DetailSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSettingTableViewController.m; sourceTree = "<group>"; };
+		FA6DD569185E820300C46B82 /* CustomCellEditChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellEditChannel.h; sourceTree = "<group>"; };
+		FA6DD56A185E820300C46B82 /* CustomCellEditChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellEditChannel.m; sourceTree = "<group>"; };
+		FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditChannelTableViewController.h; sourceTree = "<group>"; };
+		FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditChannelTableViewController.m; sourceTree = "<group>"; };
 		FA93AB6018573B1700AE5F79 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
 		FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
@@ -306,6 +312,10 @@
 			isa = PBXGroup;
 			children = (
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
+				FA6DD569185E820300C46B82 /* CustomCellEditChannel.h */,
+				FA6DD56A185E820300C46B82 /* CustomCellEditChannel.m */,
+				FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */,
+				FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -531,6 +541,7 @@
 			files = (
 				FABCC92E1853EAB300765CD9 /* AFURLConnectionOperation.m in Sources */,
 				FA415310185522B3005A7685 /* DetailSettingTableViewController.m in Sources */,
+				FA6DD56E185E829400C46B82 /* EditChannelTableViewController.m in Sources */,
 				FABCC9301853EAB300765CD9 /* UIImageView+AFNetworking.m in Sources */,
 				FABCC9421853F14B00765CD9 /* DetailViewController.m in Sources */,
 				FABCC92A1853EAB300765CD9 /* AFImageRequestOperation.m in Sources */,
@@ -540,6 +551,7 @@
 				FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */,
 				FABCC9281853EAB300765CD9 /* AFHTTPClient.m in Sources */,
 				FABCC92F1853EAB300765CD9 /* AFXMLRequestOperation.m in Sources */,
+				FA6DD56B185E820300C46B82 /* CustomCellEditChannel.m in Sources */,
 				FABCC9321853EAB300765CD9 /* RSSParser.m in Sources */,
 				FA93AB6E1857D45800AE5F79 /* AddNewRssViewController.m in Sources */,
 				FABCC9071853E69B00765CD9 /* Internet.m in Sources */,
