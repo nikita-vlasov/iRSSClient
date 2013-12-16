@@ -19,14 +19,45 @@
     [super viewDidLoad];
     [[self navigationItem] setTitle:NSLocalizedString(@"SETTING", nil)];
     
-    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:nil
+                                                                     style:UIBarButtonItemStyleBordered
+                                                                    target:nil
+                                                                    action:nil];
     [[self navigationItem] setBackBarButtonItem:newBackButton];
     
+    switchButton = [[UISwitch alloc] initWithFrame:CGRectZero];
+    [switchButton addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    userDefaults = [NSUserDefaults standardUserDefaults];
+
+    
+    [switchButton setOn:[userDefaults boolForKey:@"SWITCH_TIPS_BOOL"] animated:YES];
     mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    
+    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - 
+- (void)switchChanged:(id)sender {
+    UISwitch* switchControl = sender;
+    int binary;
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (switchControl.on) {
+        binary = YES;
+    }
+    else {
+        binary = NO;
+    }
+
+    [userDefaults setBool:binary forKey:@"SWITCH_TIPS_BOOL"];
+    [userDefaults synchronize];
+    
+    NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
 }
 
 #pragma mark - UITableViewDataSource
@@ -40,6 +71,9 @@
     if (section == 0) {
         return 1;
     }
+    if (section == 1) {
+        return 1;
+    }
     if (section == 2) {
         return 1;
     }
@@ -51,6 +85,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    UITableViewCell *switchCell = [tableView dequeueReusableCellWithIdentifier:@"SwitchButton"];
     UITableViewCell *cellButtonReset = [tableView dequeueReusableCellWithIdentifier:@"CellButton"];
 
     /* Section - 0 */
@@ -60,14 +95,22 @@
         return cell;
         }
     }
-    /* Section - 1 */
+    /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:NSLocalizedString(@"SEND_REPORT", nil)];
             return cellButtonReset;
         }
     }
-    /* Section - 2 */
+    if ([indexPath section] == 1) {
+        if ([indexPath row] == 0) {
+            [[switchCell textLabel] setText:@"Подсказки"];
+            switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            switchCell.accessoryView = switchButton;
+            return switchCell;
+        }
+    }
+    /* Section - 3 */
     if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:NSLocalizedString(@"RESET", nil)];
@@ -96,13 +139,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    /* Section - 1 (Send Report) */
+    /* Section - 1 switch */
+    if ([indexPath section] == 1) {
+        if ([indexPath row] == 0) {
+        }
+    }
+    /* Section - 2 (Send Report) */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [self sendEmail];
         }
     }
-    /* Section - 2 (Reset content and Setting) */
+    /* Section - 3 (Reset content and Setting) */
     if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
@@ -122,6 +170,9 @@
             [ResetSettingToDefault resetFontSize];
             [ResetSettingToDefault cleanerListFavorites];
             [ResetSettingToDefault cleanerAllRssChanel];
+            [ResetSettingToDefault resetTipsSwitch];
+            [switchButton setOn:YES animated:YES];
+            [[self tableView] reloadData];
             break;
         }
         default: {

@@ -11,5 +11,6 @@
 
 #pragma mark -
 + (void)resetFontSize;
++ (void)resetTipsSwitch;
 
 @end

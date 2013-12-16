@@ -20,4 +20,10 @@
     [userDefaults synchronize];
 }
 
++ (void)resetTipsSwitch {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:YES forKey:@"SWITCH_TIPS_BOOL"];
+    [userDefaults synchronize];
+}
+
 @end

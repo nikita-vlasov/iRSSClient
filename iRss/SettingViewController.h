@@ -5,6 +5,10 @@
 
 @interface SettingViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate> {
     @private
+    UISwitch *switchButton;
+    
+    NSUserDefaults *userDefaults;
+    
     MFMailComposeViewController *mfMailComposeViewController;
 }
 

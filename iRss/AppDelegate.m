@@ -4,9 +4,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    /* Пользователь раннее заходил в приложение. */
+    if ([userDefaults integerForKey:@"START"] != 100) {
+        [userDefaults setInteger:100 forKey:@"START"];
+        [userDefaults synchronize];
+        [ResetSettingToDefault resetTipsSwitch];
+    }
     if ([userDefaults integerForKey:@"FONT_SIZE"] <= 1) {
         [ResetSettingToDefault resetFontSize];
     }
+    
     return YES;
 }
 

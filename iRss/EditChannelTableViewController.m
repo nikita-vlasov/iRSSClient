@@ -106,7 +106,13 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return NSLocalizedString(@"DESCRIPTION_TABLE_TITLE", nil);
+    NSUserDefaults *userDefoults = [NSUserDefaults standardUserDefaults];
+    if ([userDefoults boolForKey:@"SWITCH_TIPS_BOOL"] == YES) {
+        return NSLocalizedString(@"DESCRIPTION_TABLE_TITLE", nil);
+    }
+    else {
+        return nil;
+    }
 }
 
 @end
