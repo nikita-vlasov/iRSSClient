@@ -5,8 +5,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    /* Пользователь раннее заходил в приложение. */
     if ([userDefaults integerForKey:@"START"] != 100) {
+        /* Пользователь раннее не заходил в приложение. */
         [userDefaults setInteger:100 forKey:@"START"];
         [userDefaults synchronize];
         [ResetSettingToDefault resetTipsSwitch];
