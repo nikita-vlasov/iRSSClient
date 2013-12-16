@@ -32,7 +32,7 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //Сколько секций в таблице всего
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -40,10 +40,10 @@
     if (section == 0) {
         return 1;
     }
-    if (section == 1) {
+    if (section == 2) {
         return 1;
     }
-    if (section == 2) {
+    if (section == 3) {
         return 1;
     }
     return 0;
@@ -51,7 +51,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    UITableViewCell *cellButtonReset = [tableView dequeueReusableCellWithIdentifier:@"CellButtonReset"];
+    UITableViewCell *cellButtonReset = [tableView dequeueReusableCellWithIdentifier:@"CellButton"];
 
     /* Section - 0 */
     if ([indexPath section] == 0) {
@@ -61,14 +61,14 @@
         }
     }
     /* Section - 1 */
-    if ([indexPath section] == 1) {
+    if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:NSLocalizedString(@"SEND_REPORT", nil)];
             return cellButtonReset;
         }
     }
     /* Section - 2 */
-    if ([indexPath section] == 2) {
+    if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:NSLocalizedString(@"RESET", nil)];
             return cellButtonReset;
@@ -86,10 +86,10 @@
     if (section == 0) {
         return NSLocalizedString(@"INFO_APP", nil);
     }
-    if (section == 1) {
+    if (section == 2) {
         return NSLocalizedString(@"SEND_REPORT_ERROR", nil);
     }
-    if (section == 2) {
+    if (section == 3) {
         return NSLocalizedString(@"RESET_CONT_AND_SETING", nil);
     }
     return nil;
@@ -97,13 +97,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     /* Section - 1 (Send Report) */
-    if ([indexPath section] == 1) {
+    if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [self sendEmail];
         }
     }
     /* Section - 2 (Reset content and Setting) */
-    if ([indexPath section] == 2) {
+    if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
                                                                 message:NSLocalizedString(@"RESET_SETTING", nil)
