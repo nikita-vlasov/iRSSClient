@@ -2,7 +2,8 @@
 #import "SQLiteAccess.h"
 
 @interface ResetSettingToDefault : NSObject {
-    
+    @public
+//    NSUserDefaults *userDefaults;
 }
 
 #pragma mark SQL
@@ -12,5 +13,6 @@
 #pragma mark -
 + (void)resetFontSize;
 + (void)resetTipsSwitch;
++ (void)resetWarningSwitch;
 
 @end

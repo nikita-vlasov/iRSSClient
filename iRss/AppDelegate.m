@@ -10,6 +10,7 @@
         [userDefaults setInteger:100 forKey:@"START"];
         [userDefaults synchronize];
         [ResetSettingToDefault resetTipsSwitch];
+        [ResetSettingToDefault resetWarningSwitch];
     }
     if ([userDefaults integerForKey:@"FONT_SIZE"] <= 1) {
         [ResetSettingToDefault resetFontSize];

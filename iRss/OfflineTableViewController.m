@@ -40,12 +40,19 @@
 
 #pragma mark - Action
 - (void)buttonDeleteAllRecords:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
-                                                        message:NSLocalizedString(@"DELETE_AFF_FAVORITES", nil)
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
-                                              otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
-    [alertView show];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
+        [ResetSettingToDefault cleanerListFavorites];
+        [[self tableView] reloadData];
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
+                                                            message:NSLocalizedString(@"DELETE_AFF_FAVORITES", nil)
+                                                           delegate:self
+                                                  cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                                  otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
+        [alertView show];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

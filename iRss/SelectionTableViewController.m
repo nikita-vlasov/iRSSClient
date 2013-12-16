@@ -50,12 +50,21 @@
 }
 
 - (void)buttonBarTrashAllChanel:(id)sender {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
+        [ResetSettingToDefault cleanerAllRssChanel];
+        [[self tableView] reloadData];
+    }
+    else {
+        
+    
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
                                                         message:NSLocalizedString(@"DELETE_ALL_CHANEL", nil)
                                                        delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
                                               otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
     [alertView show];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

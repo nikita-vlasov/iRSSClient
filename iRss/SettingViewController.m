@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[self navigationItem] setTitle:NSLocalizedString(@"SETTING", nil)];
+    userDefaults = [NSUserDefaults standardUserDefaults];
+    mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    
     
     UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:nil
                                                                      style:UIBarButtonItemStyleBordered
@@ -25,14 +28,19 @@
                                                                     action:nil];
     [[self navigationItem] setBackBarButtonItem:newBackButton];
     
-    switchButton = [[UISwitch alloc] initWithFrame:CGRectZero];
-    [switchButton addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    buttonSwitchTips = [[UISwitch alloc] initWithFrame:CGRectZero];
+    [buttonSwitchTips addTarget:self action:@selector(switchTips:) forControlEvents:UIControlEventValueChanged];
     
-    userDefaults = [NSUserDefaults standardUserDefaults];
+    buttonSwitchWarning = [[UISwitch alloc] initWithFrame:CGRectZero];
+    [buttonSwitchWarning addTarget:self action:@selector(switchWarning:) forControlEvents:UIControlEventValueChanged];
+    
+    
+    
 
     
-    [switchButton setOn:[userDefaults boolForKey:@"SWITCH_TIPS_BOOL"] animated:YES];
-    mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
+    [buttonSwitchTips setOn:[userDefaults boolForKey:@"SWITCH_TIPS_BOOL"] animated:YES];
+    [buttonSwitchWarning setOn:[userDefaults boolForKey:@"SWITCH_WARNING_BOOL"] animated:YES];
+    
     
     [[self tableView] reloadData];
 }
@@ -42,9 +50,9 @@
 }
 
 #pragma mark - 
-- (void)switchChanged:(id)sender {
-    UISwitch* switchControl = sender;
-    int binary;
+- (void)switchTips:(id)switchTipsSender {
+    UISwitch *switchControl = switchTipsSender;
+    BOOL binary;
     
     if (switchControl.on) {
         binary = YES;
@@ -53,11 +61,27 @@
         binary = NO;
     }
 
-    [userDefaults setBool:binary forKey:@"SWITCH_TIPS_BOOL"];
+    [self boolAction:binary and:@"SWITCH_TIPS_BOOL"];
+}
+
+- (void)switchWarning:(id)switchWarning {
+    UISwitch *switchControl = switchWarning;
+    BOOL binary;
+    
+    if (switchControl.on) {
+        binary = YES;
+    }
+    else {
+        binary = NO;
+    }
+    
+    [self boolAction:binary and:@"SWITCH_WARNING_BOOL"];
+}
+
+- (void)boolAction:(BOOL)boolIdentifer and:(NSString *)stringKey {
+    [userDefaults setBool:boolIdentifer forKey:stringKey];
     [userDefaults synchronize];
     [[self tableView] reloadData];
-    
-    NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
 }
 
 #pragma mark - UITableViewDataSource
@@ -72,7 +96,7 @@
         return 1;
     }
     if (section == 1) {
-        return 1;
+        return 2;
     }
     if (section == 2) {
         return 1;
@@ -95,19 +119,25 @@
         return cell;
         }
     }
+    if ([indexPath section] == 1) {
+        if ([indexPath row] == 0) {
+            [[switchCell textLabel] setText:NSLocalizedString(@"TIPS", nil)];
+            switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            switchCell.accessoryView = buttonSwitchTips;
+            return switchCell;
+        }
+        if ([indexPath row] == 1) {
+            [[switchCell textLabel] setText:@"Warning"];
+            switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            switchCell.accessoryView = buttonSwitchWarning;
+            return switchCell;
+        }
+    }
     /* Section - 2 */
     if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
             [[cellButtonReset textLabel] setText:NSLocalizedString(@"SEND_REPORT", nil)];
             return cellButtonReset;
-        }
-    }
-    if ([indexPath section] == 1) {
-        if ([indexPath row] == 0) {
-            [[switchCell textLabel] setText:NSLocalizedString(@"TIPS", nil)];
-            switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            switchCell.accessoryView = switchButton;
-            return switchCell;
         }
     }
     /* Section - 3 */
@@ -177,7 +207,7 @@
             [ResetSettingToDefault cleanerListFavorites];
             [ResetSettingToDefault cleanerAllRssChanel];
             [ResetSettingToDefault resetTipsSwitch];
-            [switchButton setOn:YES animated:YES];
+            [buttonSwitchTips setOn:YES animated:YES];
             [[self tableView] reloadData];
             break;
         }
