@@ -28,7 +28,11 @@
 #pragma mark - Action
 - (IBAction)buttonBarSave:(id)sender {
     [[self tableView] reloadData];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Точно" message:@"weqwe" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:NSLocalizedString(@"SAVE_EDITING", nil)
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Save", nil];
     [alertView show];
 }
 
@@ -48,14 +52,9 @@
 
 - (void)saveEditing {
     NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
-    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
-                             stringTitle,
-                             stringLink,
-                             stringDescription,
-                             rssChanelID];
+    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'", stringTitle, stringLink, stringDescription, rssChanelID];
     [SQLiteAccess updateWithSQL:queryString];
 }
-
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -1,9 +1,10 @@
 /* Russian */
 
-/* AddNewRssViewController */
+/* Edit Channe lTable View Controller */
 "TITLE" = "Заголовок";
 "LINK" = "Ссылка";
 "DESCRIPTION" = "Описание";
+"SAVE_EDITING" = "Вы действительно хотите, чтобы сохранить изменения?";
 
 /* Selection Table View Controller */
 "ALL_RSS" = "Каналы";

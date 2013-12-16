@@ -1,5 +1,4 @@
 #import "SelectionTableViewController.h"
-#import "AddNewRssViewController.h"
 
 @interface SelectionTableViewController () {
     

@@ -13,7 +13,6 @@
 		FA6DD56E185E829400C46B82 /* EditChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */; };
 		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
 		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
-		FA93AB6E1857D45800AE5F79 /* AddNewRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */; };
 		FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
@@ -76,8 +75,6 @@
 		FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
 		FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
-		FA93AB6C1857D45800AE5F79 /* AddNewRssViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewRssViewController.h; sourceTree = "<group>"; };
-		FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewRssViewController.m; sourceTree = "<group>"; };
 		FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetSettingToDefault.h; sourceTree = "<group>"; };
 		FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetSettingToDefault.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +193,15 @@
 			name = Online;
 			sourceTree = "<group>";
 		};
+		FA6DD56F185EA40200C46B82 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA6DD569185E820300C46B82 /* CustomCellEditChannel.h */,
+				FA6DD56A185E820300C46B82 /* CustomCellEditChannel.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
 		FA6F4B4818553DAB00C42218 /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +304,7 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
+				FA6DD56F185EA40200C46B82 /* CustomCell */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
 				FA6F4B4818553DAB00C42218 /* Web */,
@@ -312,10 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
-				FA6DD569185E820300C46B82 /* CustomCellEditChannel.h */,
-				FA6DD56A185E820300C46B82 /* CustomCellEditChannel.m */,
-				FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */,
-				FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -431,10 +434,10 @@
 		FABCCA4618542D0C00765CD9 /* ChannelSelection */ = {
 			isa = PBXGroup;
 			children = (
-				FA93AB6C1857D45800AE5F79 /* AddNewRssViewController.h */,
-				FA93AB6D1857D45800AE5F79 /* AddNewRssViewController.m */,
 				FABCCA43185423F700765CD9 /* SelectionTableViewController.h */,
 				FABCCA44185423F700765CD9 /* SelectionTableViewController.m */,
+				FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */,
+				FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */,
 			);
 			name = ChannelSelection;
 			sourceTree = "<group>";
@@ -553,7 +556,6 @@
 				FABCC92F1853EAB300765CD9 /* AFXMLRequestOperation.m in Sources */,
 				FA6DD56B185E820300C46B82 /* CustomCellEditChannel.m in Sources */,
 				FABCC9321853EAB300765CD9 /* RSSParser.m in Sources */,
-				FA93AB6E1857D45800AE5F79 /* AddNewRssViewController.m in Sources */,
 				FABCC9071853E69B00765CD9 /* Internet.m in Sources */,
 				FABCC8E21853E52F00765CD9 /* AppDelegate.m in Sources */,
 				FABCC8DE1853E52F00765CD9 /* main.m in Sources */,

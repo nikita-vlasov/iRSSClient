@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
-//#import "AddNewRssViewController.h"
 #import "EditChannelTableViewController.h"
 #include "ResetSettingToDefault.h"
 

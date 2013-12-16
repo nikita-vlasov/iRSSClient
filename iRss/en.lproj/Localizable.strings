@@ -1,9 +1,10 @@
 /* English */
 
-/* AddNewRssViewController */
+/* Edit Channe lTable View Controller */
 "TITLE" = "Title";
 "LINK" = "Link";
 "DESCRIPTION" = "Description";
+"SAVE_EDITING" = "Do you really want to save changes?";
 
 /* Selection Table View Controller */
 "ALL_RSS" = "Feeds";
