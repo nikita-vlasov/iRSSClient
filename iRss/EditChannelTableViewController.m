@@ -36,7 +36,6 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 1: {
-
             [self saveEditing];
             [[self navigationController] popViewControllerAnimated:YES];
             break;
@@ -71,7 +70,7 @@
     CustomCellEditChannel *cell = [tableView dequeueReusableCellWithIdentifier:@"CellEditChannel"];
     
     if ([indexPath row] == 0) {
-        [[cell labelCellEdit] setText:@"Title"];
+        [[cell labelCellEdit] setText:NSLocalizedString(@"TITLE", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"title"]];
         }
@@ -79,7 +78,7 @@
         return cell;
     }
     if ([indexPath row] == 1) {
-        [[cell labelCellEdit] setText:@"Link"];
+        [[cell labelCellEdit] setText:NSLocalizedString(@"LINK", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"link"]];
         }
@@ -87,7 +86,7 @@
         return cell;
     }
     if ([indexPath row] == 2) {
-        [[cell labelCellEdit] setText:@"Descripton"];
+        [[cell labelCellEdit] setText:NSLocalizedString(@"DESCRIPTION", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"description"]];
         }
