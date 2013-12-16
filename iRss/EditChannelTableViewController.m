@@ -30,33 +30,14 @@
     [[self tableView] reloadData];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Точно" message:@"weqwe" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
     [alertView show];
-    NSLog(@"T = %@", stringTitle);
-    NSLog(@"L = %@", stringLink);
-    NSLog(@"D = %@", stringDescription);
-}
-
-- (IBAction)buttonBarCancel:(id)sender {
-    [[self tableView] reloadData];
 }
 
 #pragma mark -
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 1: {
-            NSLog(@"+++T = %@", stringTitle);
-            NSLog(@"+++L = %@", stringLink);
-            NSLog(@"+++D = %@", stringDescription);
-            
-            NSLog(@"Save");
-            
-            
-            NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
-            NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
-                                     stringTitle,
-                                     stringLink,
-                                     stringDescription,
-                                     rssChanelID];
-            [SQLiteAccess updateWithSQL:queryString];
+
+            [self saveEditing];
             [[self navigationController] popViewControllerAnimated:YES];
             break;
         }
@@ -64,6 +45,16 @@
             break;
         }
     }
+}
+
+- (void)saveEditing {
+    NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
+    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
+                             stringTitle,
+                             stringLink,
+                             stringDescription,
+                             rssChanelID];
+    [SQLiteAccess updateWithSQL:queryString];
 }
 
 
