@@ -303,33 +303,37 @@
         <scene sceneID="cTz-QM-G1g">
             <objects>
                 <tableViewController id="5wI-L2-6if" customClass="EditChannelTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bh6-FH-4wx">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Bh6-FH-4wx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Y2k-hd-9Lq" customClass="CustomCellEditChannel">
-                                <rect key="frame" x="0.0" y="86" width="320" height="50"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellEditChannel" id="Y2k-hd-9Lq" customClass="CustomCellEditChannel">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y2k-hd-9Lq" id="FgU-pQ-4Z7">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2tR-Wf-JNn">
-                                            <rect key="frame" x="20" y="14" width="64" height="21"/>
+                                            <rect key="frame" x="20" y="14" width="77" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="Q0L-Xj-7pH">
-                                            <rect key="frame" x="92" y="10" width="223" height="30"/>
+                                            <rect key="frame" x="105" y="10" width="210" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelCellEdit" destination="2tR-Wf-JNn" id="hSQ-ss-MdT"/>
+                                    <outlet property="textFieldCellEdit" destination="Q0L-Xj-7pH" id="mB8-lo-RRP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -337,7 +341,18 @@
                             <outlet property="delegate" destination="5wI-L2-6if" id="rsP-OX-zBI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pEr-qz-PyY"/>
+                    <navigationItem key="navigationItem" id="pEr-qz-PyY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="PfZ-1l-Lyn">
+                            <connections>
+                                <action selector="buttonBarCancel:" destination="5wI-L2-6if" id="70j-Cr-Bu8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pvt-VC-eCi">
+                            <connections>
+                                <action selector="buttonBarSave:" destination="5wI-L2-6if" id="c6e-9G-eHC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Bh6-FH-4wx" id="ZA0-z4-OfH"/>
                     </connections>

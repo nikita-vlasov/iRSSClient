@@ -8,6 +8,7 @@
 
 
 @implementation EditChannelTableViewController
+//@synthesize tableView;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -18,10 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    stringTitle = [[NSString alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Action
+- (IBAction)buttonBarSave:(id)sender {
+    NSLog(@"T = %@", stringTitle);
+    NSLog(@"L = %@", stringLink);
+    NSLog(@"D = %@", stringDescription);
+}
+
+- (IBAction)buttonBarCancel:(id)sender {
+    [[self tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -34,63 +48,36 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    CustomCellEditChannel *cell = [tableView dequeueReusableCellWithIdentifier:@"CellEditChannel"];
     
-    // Configure the cell...
-    
-    return cell;
+    if ([indexPath row] == 0) {
+        [[cell labelCellEdit] setText:@"Title"];
+        [[cell textFieldCellEdit] setPlaceholder:@"Title"];
+        stringTitle = [[cell textFieldCellEdit] text];
+        return cell;
+    }
+    if ([indexPath row] == 1) {
+        [[cell labelCellEdit] setText:@"Link"];
+        [[cell textFieldCellEdit] setPlaceholder:@"Link"];
+        stringLink = [[cell textFieldCellEdit] text];
+        return cell;
+    }
+    if ([indexPath row] == 2) {
+        [[cell labelCellEdit] setText:@"Descripton"];
+        [[cell textFieldCellEdit] setPlaceholder:@"Descripton"];
+        stringDescription = [[cell textFieldCellEdit] text];
+        return cell;
+    }
+    return nil;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
- */
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.1f;
+}
 
 @end
