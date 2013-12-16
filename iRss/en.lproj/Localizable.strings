@@ -46,6 +46,8 @@
 "RESET_CONT_AND_SETING" = "This function allows you to remove the content and reset all settings to factory default. Think before you click. This action may not be undone!";
 "NAME_APPS" = "Name";
 "VERSION_APPS" = "Version";
+"TIPS" = "Tips";
+"TIPS_DESCRIPTION" = "This switch is to turn off all sorts of clues in the program.";
 
 /* Detain Setting Table View Controller */
 "REPORT_AN_ISSUE" = "Report an issue";

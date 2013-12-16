@@ -104,7 +104,7 @@
     }
     if ([indexPath section] == 1) {
         if ([indexPath row] == 0) {
-            [[switchCell textLabel] setText:@"Подсказки"];
+            [[switchCell textLabel] setText:NSLocalizedString(@"TIPS", nil)];
             switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             switchCell.accessoryView = switchButton;
             return switchCell;
@@ -131,7 +131,7 @@
             return NSLocalizedString(@"INFO_APP", nil);
         }
         if (section == 1) {
-            return @"HEkjdnsfkjndsf";
+            return NSLocalizedString(@"TIPS_DESCRIPTION", nil);
         }
         if (section == 2) {
             return NSLocalizedString(@"SEND_REPORT_ERROR", nil);
