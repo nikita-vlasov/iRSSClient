@@ -86,7 +86,7 @@
 }
 
 #pragma mark - NJKWebViewProgressDelegate
--(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
+- (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [progressView setProgress:progress animated:YES];
 }

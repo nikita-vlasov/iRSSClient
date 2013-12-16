@@ -151,9 +151,7 @@
         [tableViewController setLinkToTheRssFeeds:stringUrlLink];
     }
     if ([[segue identifier] isEqualToString:@"OpenAddRssChanel"]) {
-        //AddNewRssViewController *addNewRssViewController = [segue destinationViewController];
         EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
-        //[addNewRssViewController setDictionaryRssChanel:dictionaryRssChanel];
         [editChannelTableViewController setDictionaryRssChannel:dictionaryRssChanel];
     }
 }

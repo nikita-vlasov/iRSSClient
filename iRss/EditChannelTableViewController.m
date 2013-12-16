@@ -50,6 +50,7 @@
     }
 }
 
+#pragma mark - SQL Query
 - (void)saveEditing {
     NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
     NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'", stringTitle, stringLink, stringDescription, rssChanelID];
@@ -102,6 +103,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.1f;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    return NSLocalizedString(@"DESCRIPTION_TABLE_TITLE", nil);
 }
 
 @end

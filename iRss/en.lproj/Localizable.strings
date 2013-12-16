@@ -6,6 +6,7 @@
 "DESCRIPTION" = "Description";
 "SAVE_EDITING" = "Do you really want to save changes?";
 "SAVE" = "Save";
+"DESCRIPTION_TABLE_TITLE" = "You can change any field, be careful with the wrong address to the RSS Feed you originate a mistake, and you will have to fix it.";
 
 /* Selection Table View Controller */
 "ALL_RSS" = "Feeds";
