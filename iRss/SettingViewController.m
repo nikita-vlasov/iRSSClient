@@ -45,7 +45,6 @@
 - (void)switchChanged:(id)sender {
     UISwitch* switchControl = sender;
     int binary;
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     if (switchControl.on) {
         binary = YES;
@@ -56,6 +55,7 @@
 
     [userDefaults setBool:binary forKey:@"SWITCH_TIPS_BOOL"];
     [userDefaults synchronize];
+    [[self tableView] reloadData];
     
     NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
 }
@@ -126,17 +126,23 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    if (section == 0) {
-        return NSLocalizedString(@"INFO_APP", nil);
-    }
-    if (section == 2) {
-        return NSLocalizedString(@"SEND_REPORT_ERROR", nil);
-    }
-    if (section == 3) {
-        return NSLocalizedString(@"RESET_CONT_AND_SETING", nil);
+    if ([userDefaults boolForKey:@"SWITCH_TIPS_BOOL"] == YES) {
+        if (section == 0) {
+            return NSLocalizedString(@"INFO_APP", nil);
+        }
+        if (section == 1) {
+            return @"HEkjdnsfkjndsf";
+        }
+        if (section == 2) {
+            return NSLocalizedString(@"SEND_REPORT_ERROR", nil);
+        }
+        if (section == 3) {
+            return NSLocalizedString(@"RESET_CONT_AND_SETING", nil);
+        }
     }
     return nil;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     /* Section - 1 switch */
