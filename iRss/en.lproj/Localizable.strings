@@ -5,6 +5,7 @@
 "LINK" = "Link";
 "DESCRIPTION" = "Description";
 "SAVE_EDITING" = "Do you really want to save changes?";
+"SAVE" = "Save";
 
 /* Selection Table View Controller */
 "ALL_RSS" = "Feeds";

@@ -31,8 +31,8 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
                                                         message:NSLocalizedString(@"SAVE_EDITING", nil)
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:@"Save", nil];
+                                              cancelButtonTitle:NSLocalizedString(@"CANCEL", nil)
+                                              otherButtonTitles:NSLocalizedString(@"SAVE", nil), nil];
     [alertView show];
 }
 

@@ -5,6 +5,7 @@
 "LINK" = "Посилання";
 "DESCRIPTION" = "Опис";
 "SAVE_EDITING" = "Ви дійсно хочете, щоб зберегти зміни?";
+"SAVE" = "Зберегти";
 
 /* Selection Table View Controller */
 "ALL_RSS" = "Канали";
