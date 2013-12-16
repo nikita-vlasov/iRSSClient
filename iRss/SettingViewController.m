@@ -49,7 +49,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - 
+#pragma mark - Button Switch
 - (void)switchTips:(id)switchTipsSender {
     UISwitch *switchControl = switchTipsSender;
     BOOL binary;
@@ -60,7 +60,6 @@
     else {
         binary = NO;
     }
-
     [self boolAction:binary and:@"SWITCH_TIPS_BOOL"];
 }
 
@@ -74,7 +73,6 @@
     else {
         binary = NO;
     }
-    
     [self boolAction:binary and:@"SWITCH_WARNING_BOOL"];
 }
 
@@ -119,6 +117,7 @@
         return cell;
         }
     }
+    /* Section - 1 SWitch button */
     if ([indexPath section] == 1) {
         if ([indexPath row] == 0) {
             [[switchCell textLabel] setText:NSLocalizedString(@"TIPS", nil)];
@@ -127,7 +126,7 @@
             return switchCell;
         }
         if ([indexPath row] == 1) {
-            [[switchCell textLabel] setText:@"Warning"];
+            [[switchCell textLabel] setText:NSLocalizedString(@"WARNING", nil)];
             switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             switchCell.accessoryView = buttonSwitchWarning;
             return switchCell;
