@@ -13,6 +13,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Iw-nc-2qH">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="gvb-Tq-o2Q" kind="relationship" relationship="rootViewController" id="eZj-IV-WiX"/>
@@ -137,6 +141,10 @@
                     <tabBarItem key="tabBarItem" systemItem="more" id="mVu-rV-gKj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Dj-OY-CsO">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="voq-dr-G61" kind="relationship" relationship="rootViewController" id="r3D-yP-WrD"/>
@@ -281,7 +289,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="LL3-Ur-kWj" style="IBUITableViewCellStyleDefault" id="T3h-7t-9uQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="LL3-Ur-kWj" style="IBUITableViewCellStyleDefault" id="T3h-7t-9uQ">
                                 <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3h-7t-9uQ" id="eVD-oy-vDZ">
@@ -297,6 +305,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="onH-e5-554" kind="push" identifier="ppp" id="6YJ-wQ-3wN"/>
                                 </connections>
@@ -380,6 +389,10 @@
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="2KV-7I-b5U"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mSv-cd-Suj">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="5WW-zy-tB0" kind="relationship" relationship="rootViewController" id="Un2-hP-R0V"/>
@@ -483,7 +496,7 @@
                         <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
                         <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
                         <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
-                        <segue destination="1Wy-Ux-oLy" kind="push" identifier="OpenLink" id="u1O-XC-otZ"/>
+                        <segue destination="1Wy-Ux-oLy" kind="push" identifier="OpenLink" id="7sX-HI-g46"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2t-vt-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -515,9 +528,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUe-yV-R4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-653" y="-827"/>
+            <point key="canvasLocation" x="-615" y="-827"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

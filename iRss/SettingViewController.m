@@ -22,23 +22,15 @@
     mfMailComposeViewController = [[MFMailComposeViewController alloc] init];
     
     
-    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:nil
-                                                                     style:UIBarButtonItemStyleBordered
-                                                                    target:nil
-                                                                    action:nil];
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleBordered target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:newBackButton];
     
     buttonSwitchTips = [[UISwitch alloc] initWithFrame:CGRectZero];
     [buttonSwitchTips addTarget:self action:@selector(switchTips:) forControlEvents:UIControlEventValueChanged];
+    [buttonSwitchTips setOn:[userDefaults boolForKey:@"SWITCH_TIPS_BOOL"] animated:YES];
     
     buttonSwitchWarning = [[UISwitch alloc] initWithFrame:CGRectZero];
     [buttonSwitchWarning addTarget:self action:@selector(switchWarning:) forControlEvents:UIControlEventValueChanged];
-    
-    
-    
-
-    
-    [buttonSwitchTips setOn:[userDefaults boolForKey:@"SWITCH_TIPS_BOOL"] animated:YES];
     [buttonSwitchWarning setOn:[userDefaults boolForKey:@"SWITCH_WARNING_BOOL"] animated:YES];
     
     
@@ -173,7 +165,6 @@
     return nil;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     /* Section - 1 switch */
     if ([indexPath section] == 1) {
@@ -189,12 +180,19 @@
     /* Section - 3 (Reset content and Setting) */
     if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
+            if ([userDefaults boolForKey:@"SWITCH_WARNING_BOOL"] == YES) {
+                
+            
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
                                                                 message:NSLocalizedString(@"RESET_SETTING", nil)
                                                                delegate:self
                                                       cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
                                                       otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
             [alertView show];
+            }
+            else {
+                [self resetAllSetting];
+            }
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -203,22 +201,26 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0: {
-            [ResetSettingToDefault resetFontSize];
-            [ResetSettingToDefault cleanerListFavorites];
-            [ResetSettingToDefault cleanerAllRssChanel];
-            
-            [ResetSettingToDefault resetTipsSwitch];
-            [ResetSettingToDefault resetWarningSwitch];
-            
-            [buttonSwitchTips setOn:YES animated:YES];
-            [buttonSwitchWarning setOn:YES animated:YES];
-            [[self tableView] reloadData];
+            [self resetAllSetting];
             break;
         }
         default: {
             break;
         }
     }
+}
+
+- (void)resetAllSetting {
+    [ResetSettingToDefault resetFontSize];
+    [ResetSettingToDefault cleanerListFavorites];
+    [ResetSettingToDefault cleanerAllRssChanel];
+    
+    [ResetSettingToDefault resetTipsSwitch];
+    [buttonSwitchTips setOn:YES animated:YES];
+    
+    [ResetSettingToDefault resetWarningSwitch];
+    [buttonSwitchWarning setOn:YES animated:YES];
+    [[self tableView] reloadData];
 }
 
 #pragma mark - SendReport
