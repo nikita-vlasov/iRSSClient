@@ -57,9 +57,9 @@
                                      stringDescription,
                                      rssChanelID];
             [SQLiteAccess updateWithSQL:queryString];
+            [[self navigationController] popViewControllerAnimated:YES];
             break;
         }
-             
         default: {
             break;
         }
@@ -82,22 +82,24 @@
     if ([indexPath row] == 0) {
         [[cell labelCellEdit] setText:@"Title"];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
-            NSLog(@"++++++++++++++++++++++++++++++++++");
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"title"]];
         }
-        
         stringTitle = [[cell textFieldCellEdit] text];
         return cell;
     }
     if ([indexPath row] == 1) {
         [[cell labelCellEdit] setText:@"Link"];
-        [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"link"]];
+        if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
+            [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"link"]];
+        }
         stringLink = [[cell textFieldCellEdit] text];
         return cell;
     }
     if ([indexPath row] == 2) {
         [[cell labelCellEdit] setText:@"Descripton"];
-        [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"description"]];
+        if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
+            [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"description"]];
+        }
         stringDescription = [[cell textFieldCellEdit] text];
         return cell;
     }

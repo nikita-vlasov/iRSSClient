@@ -292,7 +292,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="n1E-6F-bDU"/>
                     <connections>
-                        <segue destination="5wI-L2-6if" kind="push" identifier="OpenAddRssChanel" id="mMA-04-TIK"/>
+                        <segue destination="5wI-L2-6if" kind="push" identifier="OpenAddRssChanel" id="QhM-1F-Eeg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5E-Oi-hSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,11 +342,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pEr-qz-PyY">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="PfZ-1l-Lyn">
-                            <connections>
-                                <action selector="buttonBarCancel:" destination="5wI-L2-6if" id="70j-Cr-Bu8"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="pvt-VC-eCi">
                             <connections>
                                 <action selector="buttonBarSave:" destination="5wI-L2-6if" id="c6e-9G-eHC"/>

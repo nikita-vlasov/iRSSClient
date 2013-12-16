@@ -12,7 +12,6 @@
 
 #pragma mark - Action
 - (IBAction)buttonBarSave:(id)sender;
-- (IBAction)buttonBarCancel:(id)sender;
 
 #pragma mark - Outlet
 @property (strong ,nonatomic, readwrite) IBOutlet UITableView *tableView;

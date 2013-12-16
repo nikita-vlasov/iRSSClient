@@ -46,6 +46,7 @@
 #pragma mark - Action
 - (void)buttonBarAddNewRssChanel:(id)sender {
     [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('Hot News', 'http://images.apple.com/main/rss/hotnews/hotnews.rss', 'Apple Hot News')"];
+    
     [[self tableView] reloadData];
 }
 
@@ -137,7 +138,7 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     if (UITableViewCellAccessoryDisclosureIndicator) {
         dictionaryRssChanel = [[self arrayGetRssChanel] objectAtIndex:[indexPath section]];
-        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];
+        [self performSegueWithIdentifier:@"OpenAddRssChanel" sender:self];        
     }
 }
 
