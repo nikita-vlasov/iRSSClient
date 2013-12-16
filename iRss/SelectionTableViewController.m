@@ -56,14 +56,12 @@
         [[self tableView] reloadData];
     }
     else {
-        
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
-                                                        message:NSLocalizedString(@"DELETE_ALL_CHANEL", nil)
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
-                                              otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
-    [alertView show];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
+                                                            message:NSLocalizedString(@"DELETE_ALL_CHANEL", nil)
+                                                           delegate:self
+                                                  cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                                  otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
+        [alertView show];
     }
 }
 

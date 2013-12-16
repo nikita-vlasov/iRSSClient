@@ -1,10 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "SQLiteAccess.h"
 
-@interface ResetSettingToDefault : NSObject {
-    @public
-//    NSUserDefaults *userDefaults;
-}
+@interface ResetSettingToDefault : NSObject
 
 #pragma mark SQL
 + (void)cleanerListFavorites;
@@ -12,6 +9,8 @@
 
 #pragma mark -
 + (void)resetFontSize;
+
+#pragma mark - Switch Button
 + (void)resetTipsSwitch;
 + (void)resetWarningSwitch;
 

@@ -47,7 +47,7 @@
 "NAME_APPS" = "Name";
 "VERSION_APPS" = "Version";
 "TIPS" = "Tips";
-"TIPS_DESCRIPTION" = "This switch is to turn off all sorts of clues in the program.";
+"TIPS_DESCRIPTION" = "With these switches you can configure the behavior of the program, we believe that the name of the cell as a whole will be clear what action they perform.";
 
 /* Detain Setting Table View Controller */
 "REPORT_AN_ISSUE" = "Report an issue";

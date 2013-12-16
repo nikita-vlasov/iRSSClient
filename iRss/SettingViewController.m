@@ -76,6 +76,7 @@
     [self boolAction:binary and:@"SWITCH_WARNING_BOOL"];
 }
 
+#pragma mark - Void
 - (void)boolAction:(BOOL)boolIdentifer and:(NSString *)stringKey {
     [userDefaults setBool:boolIdentifer forKey:stringKey];
     [userDefaults synchronize];
@@ -205,8 +206,12 @@
             [ResetSettingToDefault resetFontSize];
             [ResetSettingToDefault cleanerListFavorites];
             [ResetSettingToDefault cleanerAllRssChanel];
+            
             [ResetSettingToDefault resetTipsSwitch];
+            [ResetSettingToDefault resetWarningSwitch];
+            
             [buttonSwitchTips setOn:YES animated:YES];
+            [buttonSwitchWarning setOn:YES animated:YES];
             [[self tableView] reloadData];
             break;
         }
