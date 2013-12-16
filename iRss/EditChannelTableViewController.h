@@ -1,5 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomCellEditChannel.h"
+#import "SQLiteAccess.h"
+#import "SelectionTableViewController.h"
 
 @interface EditChannelTableViewController : UITableViewController <UITableViewDataSource, UITabBarDelegate> {
     @private
@@ -13,6 +15,9 @@
 - (IBAction)buttonBarCancel:(id)sender;
 
 #pragma mark - Outlet
-@property (strong, nonatomic, readwrite) IBOutlet UITableView *tableView;
+@property (strong ,nonatomic, readwrite) IBOutlet UITableView *tableView;
+
+#pragma mark - 
+@property (strong, nonatomic) NSDictionary *dictionaryRssChannel;
 
 @end

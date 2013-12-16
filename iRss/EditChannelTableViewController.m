@@ -8,7 +8,6 @@
 
 
 @implementation EditChannelTableViewController
-//@synthesize tableView;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -19,8 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    stringTitle = [[NSString alloc] init];
+    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +27,9 @@
 
 #pragma mark - Action
 - (IBAction)buttonBarSave:(id)sender {
+    [[self tableView] reloadData];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Точно" message:@"weqwe" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+    [alertView show];
     NSLog(@"T = %@", stringTitle);
     NSLog(@"L = %@", stringLink);
     NSLog(@"D = %@", stringDescription);
@@ -37,6 +38,34 @@
 - (IBAction)buttonBarCancel:(id)sender {
     [[self tableView] reloadData];
 }
+
+#pragma mark -
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 1: {
+            NSLog(@"+++T = %@", stringTitle);
+            NSLog(@"+++L = %@", stringLink);
+            NSLog(@"+++D = %@", stringDescription);
+            
+            NSLog(@"Save");
+            
+            
+            NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
+            NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'",
+                                     stringTitle,
+                                     stringLink,
+                                     stringDescription,
+                                     rssChanelID];
+            [SQLiteAccess updateWithSQL:queryString];
+            break;
+        }
+             
+        default: {
+            break;
+        }
+    }
+}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -52,19 +81,23 @@
     
     if ([indexPath row] == 0) {
         [[cell labelCellEdit] setText:@"Title"];
-        [[cell textFieldCellEdit] setPlaceholder:@"Title"];
+        if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
+            NSLog(@"++++++++++++++++++++++++++++++++++");
+            [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"title"]];
+        }
+        
         stringTitle = [[cell textFieldCellEdit] text];
         return cell;
     }
     if ([indexPath row] == 1) {
         [[cell labelCellEdit] setText:@"Link"];
-        [[cell textFieldCellEdit] setPlaceholder:@"Link"];
+        [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"link"]];
         stringLink = [[cell textFieldCellEdit] text];
         return cell;
     }
     if ([indexPath row] == 2) {
         [[cell labelCellEdit] setText:@"Descripton"];
-        [[cell textFieldCellEdit] setPlaceholder:@"Descripton"];
+        [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"description"]];
         stringDescription = [[cell textFieldCellEdit] text];
         return cell;
     }
