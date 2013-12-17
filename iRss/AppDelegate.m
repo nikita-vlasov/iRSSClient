@@ -5,6 +5,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
+    /* Если заходит в if - пользователь раннее не заходил в приложение, так как по ключу "START" не хранится значение 100 изначально. */
     if ([userDefaults integerForKey:@"START"] != 100) {
         /* Пользователь раннее не заходил в приложение. */
         [userDefaults setInteger:100 forKey:@"START"];
