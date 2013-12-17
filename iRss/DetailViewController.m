@@ -51,7 +51,7 @@
         [self obtainingOnlineData];
     }
     else {
-        _buttonAddNewsToOfflineOutlet.hidden = YES;
+        [[self buttonAddNewsToOfflineOutlet] setEnabled:NO];
         [self obtainingOfflineData];
     }
     [self reloadData];
@@ -219,7 +219,7 @@
     urlLink = [_detailItem link];
     
     if ([self requestToLink: (NSString *) urlLink] == YES) {
-        [_buttonAddNewsToOfflineOutlet setHidden:YES];
+        [[self buttonAddNewsToOfflineOutlet] setEnabled:NO];
     }
 }
 

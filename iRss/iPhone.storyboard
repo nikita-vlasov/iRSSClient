@@ -379,7 +379,7 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="bookmarks" id="sHC-WG-uZi">
+                                    <barButtonItem image="Star.png" id="sHC-WG-uZi">
                                         <connections>
                                             <segue destination="CId-eI-951" kind="modal" id="jlR-wW-P08"/>
                                         </connections>
@@ -500,6 +500,7 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonAddNewsToOfflineOutlet" destination="ZJi-pf-Fje" id="mKm-fk-aiD"/>
                         <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
                         <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
                         <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
@@ -570,6 +571,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Star.png" width="22" height="22"/>
         <image name="setting.png" width="22" height="22"/>
     </resources>
     <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
