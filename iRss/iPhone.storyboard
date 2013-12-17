@@ -67,6 +67,10 @@
                 <navigationController definesPresentationContext="YES" id="CId-eI-951" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="86r-LJ-YVA">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="5WW-zy-tB0" kind="relationship" relationship="rootViewController" id="BVp-Rn-pMO"/>
