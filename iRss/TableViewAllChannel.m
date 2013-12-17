@@ -38,12 +38,6 @@
 }
 
 - (void)buttonBarAddNewRssChannel:(id)sender {
-    /*
-    [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('Hot News', 'http://images.apple.com/main/rss/hotnews/hotnews.rss', 'Apple Hot News')"];
-    
-    [[self tableView] reloadData];
-     */
-    //OpenAddRssChannel
     [self performSegueWithIdentifier:@"OpenAddRssChannel" sender:self];
 }
 
@@ -129,15 +123,17 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30.0f;
+    return 0.01f;
 }
 
+/*
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return @"Channel";
     }
     return nil;
 }
+ */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

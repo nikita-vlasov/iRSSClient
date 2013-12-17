@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*
     UIBarButtonItem *refresh =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                             target:self
                                                                             action:@selector(buttonBarRefreshPage:)];
@@ -34,6 +35,7 @@
                                                                          target:self
                                                                          action:@selector(buttonBarStopPage:)];
     self.navigationItem.rightBarButtonItems = @[refresh, forward, back, stop];
+     */
     
     progressProxy = [[NJKWebViewProgress alloc] init];
     self.webView.delegate = progressProxy;
@@ -62,20 +64,21 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Action Bar Button
-- (void)buttonBarRefreshPage:(id)sender {
-    [[self webView] reload];
-}
-
-- (void)buttonBarForwardPage:(id)sender {
-    [[self webView] goForward];
-}
-- (void)buttonBarBackPage:(id)sender {
+#pragma mark - Action Toolbar Button
+- (IBAction)buttonToolbarBack:(id)sender {
     [[self webView] goBack];
 }
 
-- (void)buttonBarStopPage:(id)sender{
+- (IBAction)buttonToolbarForward:(id)sender {
+    [[self webView] goForward];
+}
+
+- (IBAction)buttonToolbarStop:(id)sender {
     [[self webView] stopLoading];
+}
+
+- (IBAction)buttonToolbarRefresh:(id)sender {
+    [[self webView] reload];
 }
 
 #pragma mark -
@@ -90,5 +93,6 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [progressView setProgress:progress animated:YES];
 }
+
 
 @end

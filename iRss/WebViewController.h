@@ -8,6 +8,12 @@
     NJKWebViewProgress *progressProxy;
 }
 
+#pragma mark - Action
+- (IBAction)buttonToolbarBack:(id)sender;
+- (IBAction)buttonToolbarForward:(id)sender;
+- (IBAction)buttonToolbarStop:(id)sender;
+- (IBAction)buttonToolbarRefresh:(id)sender;
+
 #pragma mark - Outlet
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
