@@ -37,8 +37,9 @@
     [[self tableView] reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+#pragma mark - Bar Button
+- (IBAction)barButtonDone:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Button Switch
@@ -261,6 +262,10 @@
             [detainSettingTableViewController setCountNumberRows:2];
         }
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end

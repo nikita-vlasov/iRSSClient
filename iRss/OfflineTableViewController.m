@@ -26,6 +26,10 @@
     buttonDeleteAll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                                     target:self
                                                                     action:@selector(buttonDeleteAllRecords:)];
+    barButtonDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                    target:self
+                                                                    action:@selector(barButtonDone:)];
+    self.navigationItem.rightBarButtonItem = barButtonDone;
     [[self tableView] reloadData];
 }
 
@@ -39,6 +43,10 @@
 }
 
 #pragma mark - Action
+- (void)barButtonDone:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)buttonDeleteAllRecords:(id)sender {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
@@ -75,7 +83,7 @@
         self.navigationItem.rightBarButtonItem = buttonDeleteAll;
     }
     else {
-        self.navigationItem.rightBarButtonItem = nil;
+        self.navigationItem.rightBarButtonItem = barButtonDone;
     }
 }
 

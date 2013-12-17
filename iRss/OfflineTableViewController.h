@@ -6,6 +6,7 @@
 @interface OfflineTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
     UIBarButtonItem *buttonDeleteAll;
+    UIBarButtonItem *barButtonDone;
 }
 
 #pragma mark - Outlet

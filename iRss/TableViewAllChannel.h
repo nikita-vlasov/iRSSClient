@@ -11,6 +11,9 @@
         NSDictionary *dictionaryRssChannel;
 }
 
+#pragma mark - Action
+- (IBAction)buttonToolbarOpenSetting:(id)sender;
+
 #pragma mark - Outlet
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

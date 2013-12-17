@@ -37,6 +37,12 @@
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
 }
 
+#pragma mark - Button Toolbar
+- (IBAction)buttonToolbarOpenSetting:(id)sender {
+    
+}
+
+#pragma mark - Button Bar
 - (void)buttonBarAddNewRssChannel:(id)sender {
     [self performSegueWithIdentifier:@"OpenAddRssChannel" sender:self];
 }

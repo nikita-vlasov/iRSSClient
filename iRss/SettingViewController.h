@@ -13,6 +13,9 @@
     MFMailComposeViewController *mfMailComposeViewController;
 }
 
+#pragma mark - Action
+- (IBAction)barButtonDone:(id)sender;
+
 #pragma mark - Outlet
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
