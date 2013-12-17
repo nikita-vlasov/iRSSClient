@@ -89,7 +89,7 @@
     }
 }
 
-#pragma mark SQL
+#pragma mark - SQL
 - (NSArray *)arrayGetRssChanel {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
 }

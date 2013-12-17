@@ -16,6 +16,7 @@
 		FAA2F94818605F66001D503A /* Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F94618605F66001D503A /* Star@2x.png */; };
 		FAA2F94918605F66001D503A /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F94718605F66001D503A /* Star.png */; };
 		FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */; };
+		FAB5758B1860802F00E8DBE4 /* TableViewAllChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5758A1860802F00E8DBE4 /* TableViewAllChannel.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
 		FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D51853E52F00765CD9 /* UIKit.framework */; };
@@ -81,6 +82,8 @@
 		FAA2F94718605F66001D503A /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetSettingToDefault.h; sourceTree = "<group>"; };
 		FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetSettingToDefault.m; sourceTree = "<group>"; };
+		FAB575891860802F00E8DBE4 /* TableViewAllChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAllChannel.h; sourceTree = "<group>"; };
+		FAB5758A1860802F00E8DBE4 /* TableViewAllChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewAllChannel.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC8D11853E52E00765CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -444,6 +447,8 @@
 				FABCCA44185423F700765CD9 /* SelectionTableViewController.m */,
 				FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */,
 				FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */,
+				FAB575891860802F00E8DBE4 /* TableViewAllChannel.h */,
+				FAB5758A1860802F00E8DBE4 /* TableViewAllChannel.m */,
 			);
 			name = ChannelSelection;
 			sourceTree = "<group>";
@@ -563,6 +568,7 @@
 				FABCC9281853EAB300765CD9 /* AFHTTPClient.m in Sources */,
 				FABCC92F1853EAB300765CD9 /* AFXMLRequestOperation.m in Sources */,
 				FA6DD56B185E820300C46B82 /* CustomCellEditChannel.m in Sources */,
+				FAB5758B1860802F00E8DBE4 /* TableViewAllChannel.m in Sources */,
 				FABCC9321853EAB300765CD9 /* RSSParser.m in Sources */,
 				FABCC9071853E69B00765CD9 /* Internet.m in Sources */,
 				FABCC8E21853E52F00765CD9 /* AppDelegate.m in Sources */,

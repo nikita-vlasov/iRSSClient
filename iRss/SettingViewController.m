@@ -106,7 +106,7 @@
     /* Section - 0 */
     if ([indexPath section] == 0) {
         if ([indexPath row] == 0) {
-        [[cell textLabel] setText:NSLocalizedString(@"ABOUT", nil)];
+            [[cell textLabel] setText:NSLocalizedString(@"ABOUT", nil)];
         return cell;
         }
     }
