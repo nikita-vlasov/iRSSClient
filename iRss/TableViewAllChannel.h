@@ -2,6 +2,7 @@
 #import "TableViewController.h"
 #import "EditChannelTableViewController.h"
 #import "SQLiteAccess.h"
+#import "ResetSettingToDefault.h"
 
 @interface TableViewAllChannel : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     @private

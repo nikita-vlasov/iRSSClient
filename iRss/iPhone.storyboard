@@ -4,28 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="FNg-U7-Y0d">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="6Mh-z4-yFf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="k35-vF-tYK"/>
-                    <navigationItem key="navigationItem" id="KM8-ge-wTw"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Iw-nc-2qH">
-                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gvb-Tq-o2Q" kind="relationship" relationship="rootViewController" id="eZj-IV-WiX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TKw-cy-QbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3832" y="-1673"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="kU2-4g-Wwb">
             <objects>
@@ -301,45 +279,6 @@
             </objects>
             <point key="canvasLocation" x="-3496" y="1524"/>
         </scene>
-        <!--Selection Table View Controller-->
-        <scene sceneID="YMj-3h-0Dh">
-            <objects>
-                <tableViewController id="gvb-Tq-o2Q" customClass="SelectionTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="PYq-CX-NVM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="LL3-Ur-kWj" style="IBUITableViewCellStyleDefault" id="T3h-7t-9uQ">
-                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3h-7t-9uQ" id="eVD-oy-vDZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LL3-Ur-kWj">
-                                            <rect key="frame" x="15" y="0.0" width="238" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gvb-Tq-o2Q" id="Hhk-wG-Qqe"/>
-                            <outlet property="delegate" destination="gvb-Tq-o2Q" id="W4p-0B-ifU"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="n1E-6F-bDU"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v5E-Oi-hSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3388" y="-1673"/>
-        </scene>
         <!--Edit Channel Table View Controller-->
         <scene sceneID="cTz-QM-G1g">
             <objects>
@@ -395,7 +334,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdi-Zl-CHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4938" y="-544"/>
+            <point key="canvasLocation" x="-4938" y="-524"/>
         </scene>
         <!--Table View All Channel-->
         <scene sceneID="a2G-aq-oai">
@@ -547,6 +486,7 @@
                                             <action selector="buttonAddNewsToOffline:" destination="UEn-bv-hdN" id="evK-mA-BCp"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2Ur-TK-SqZ"/>
                                 </items>
                             </toolbar>
                         </subviews>

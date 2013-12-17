@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "CustomCellEditChannel.h"
 #import "SQLiteAccess.h"
-#import "SelectionTableViewController.h"
 
 @interface EditChannelTableViewController : UITableViewController <UITableViewDataSource, UITabBarDelegate> {
     @private
@@ -16,7 +15,8 @@
 #pragma mark - Outlet
 @property (strong ,nonatomic, readwrite) IBOutlet UITableView *tableView;
 
-#pragma mark - 
+#pragma mark -
+/* Определяет с какой целью был выполнен переход на этот контролер. */
 @property (strong, nonatomic) NSString *stringAddKey;
 @property (strong, nonatomic) NSDictionary *dictionaryRssChannel;
 
