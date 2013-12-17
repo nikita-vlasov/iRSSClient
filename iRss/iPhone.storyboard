@@ -96,7 +96,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QQ-Ho-H3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4938" y="924"/>
+            <point key="canvasLocation" x="-4938" y="852"/>
         </scene>
         <!--Offline Table View Controller-->
         <scene sceneID="12F-Hg-m7c">
@@ -147,7 +147,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AP7-zP-cOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4401" y="924"/>
+            <point key="canvasLocation" x="-4401" y="852"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0eM-Dc-L4b">
@@ -167,7 +167,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKj-1q-J2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4401" y="1628"/>
+            <point key="canvasLocation" x="-4401" y="1524"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Fno-81-Gig">
@@ -251,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXT-3o-8Vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3944" y="1628"/>
+            <point key="canvasLocation" x="-3944" y="1524"/>
         </scene>
         <!--Detail Setting Table View Controller-->
         <scene sceneID="Kht-hc-M2r">
@@ -299,7 +299,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuP-XE-AMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3496" y="1628"/>
+            <point key="canvasLocation" x="-3496" y="1524"/>
         </scene>
         <!--Selection Table View Controller-->
         <scene sceneID="YMj-3h-0Dh">
@@ -395,7 +395,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdi-Zl-CHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4938" y="-496"/>
+            <point key="canvasLocation" x="-4938" y="-544"/>
         </scene>
         <!--Table View All Channel-->
         <scene sceneID="a2G-aq-oai">
@@ -510,7 +510,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is content" id="wLh-1z-HbH">
-                                <rect key="frame" x="19" y="162" width="280" height="356"/>
+                                <rect key="frame" x="19" y="162" width="280" height="362"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
@@ -538,22 +538,24 @@
                                     <action selector="buttonFondSizeTake:" destination="UEn-bv-hdN" eventType="touchUpInside" id="fSn-vY-jua"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="m2A-mC-NrV">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="ZJi-pf-Fje">
+                                        <connections>
+                                            <action selector="buttonAddNewsToOffline:" destination="UEn-bv-hdN" id="evK-mA-BCp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lxt-R1-JGb">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="rHv-mD-BSY">
-                            <rect key="frame" x="149" y="11" width="22" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <connections>
-                                <action selector="buttonAddNewsToOffline:" destination="UEn-bv-hdN" eventType="touchUpInside" id="y8d-Cn-T1W"/>
-                            </connections>
-                        </button>
                     </navigationItem>
                     <connections>
-                        <outlet property="buttonAddNewsToOfflineOutlet" destination="rHv-mD-BSY" id="6fb-w0-l2m"/>
                         <outlet property="labelDate" destination="UuC-fG-XPk" id="qWO-Nc-qtc"/>
                         <outlet property="labelTitle" destination="1If-Fs-xfZ" id="8xp-p4-xco"/>
                         <outlet property="textViewContent" destination="wLh-1z-HbH" id="HYn-mr-iIn"/>
@@ -562,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2t-vt-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3858" y="540"/>
+            <point key="canvasLocation" x="-3858" y="516"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="ArJ-4Y-3qq">
@@ -620,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUe-yV-R4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3388" y="540"/>
+            <point key="canvasLocation" x="-3388" y="516"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
