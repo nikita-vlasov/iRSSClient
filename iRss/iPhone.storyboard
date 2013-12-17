@@ -21,9 +21,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8bB-2n-Ydl">
-                                            <rect key="frame" x="15" y="13" width="26" height="17"/>
+                                            <rect key="frame" x="15" y="13" width="29" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -37,7 +37,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UEn-bv-hdN" kind="push" id="y1P-1A-IOa"/>
+                                    <segue destination="UEn-bv-hdN" kind="push" identifier="OpenDetailNews" id="y1P-1A-IOa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -113,7 +113,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UEn-bv-hdN" kind="push" id="QhL-dM-APS"/>
+                                    <segue destination="UEn-bv-hdN" kind="push" identifier="OpenNewsOfFavorites" id="QhL-dM-APS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

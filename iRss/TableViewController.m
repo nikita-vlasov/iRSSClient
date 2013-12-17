@@ -89,10 +89,12 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
-    if (indexPath) {
-        RSSItem *item = [arrayDataRss objectAtIndex:[indexPath row]];
-        [[segue destinationViewController] setDetailItem:item];
+    if ([[segue identifier] isEqualToString:@"OpenDetailNews"]) {
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        if (indexPath) {
+            RSSItem *item = [arrayDataRss objectAtIndex:[indexPath row]];
+            [[segue destinationViewController] setDetailItem:item];
+        }
     }
 }
 

@@ -129,13 +129,14 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
-    
-    if (indexPath) {
-        NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
-        DetailViewController *detailViewController = [segue destinationViewController];
-        [detailViewController setStringOfflineKey:@"Offline"];
-        [detailViewController setDetailItemOffline:dictionary];
+    if ([[segue identifier] isEqualToString:@"OpenNewsOfFavorites"]) {
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        if (indexPath) {
+            NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
+            DetailViewController *detailViewController = [segue destinationViewController];
+            [detailViewController setStringOfflineKey:@"Offline"];
+            [detailViewController setDetailItemOffline:dictionary];
+        }
     }
 }
 

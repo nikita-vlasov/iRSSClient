@@ -204,6 +204,8 @@
 				FABCC9091853E75900765CD9 /* TableViewController.m */,
 				FABCC9401853F14B00765CD9 /* DetailViewController.h */,
 				FABCC9411853F14B00765CD9 /* DetailViewController.m */,
+				FAB575A41860F1A800E8DBE4 /* OneTextView.h */,
+				FAB575A51860F1A800E8DBE4 /* OneTextView.m */,
 			);
 			name = Online;
 			sourceTree = "<group>";
@@ -334,8 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
-				FAB575A41860F1A800E8DBE4 /* OneTextView.h */,
-				FAB575A51860F1A800E8DBE4 /* OneTextView.m */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
