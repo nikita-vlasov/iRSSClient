@@ -1,38 +1,45 @@
-//
-//  OneTextView.m
-//  iRss
-//
-//  Created by Alex on 12/17/13.
-//  Copyright (c) 2013 Alex. All rights reserved.
-//
-
 #import "OneTextView.h"
+#import "DetailViewController.h"
 
-@interface OneTextView ()
+@interface OneTextView () {
+    
+}
 
 @end
 
+
 @implementation OneTextView
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self reloadTextView];
 }
 
-- (void)didReceiveMemoryWarning
-{
+#pragma mark - Setter
+- (void)setStringText:(NSString *)stringText {
+    _stringText = stringText;
+}
+
+#pragma mark - Action
+- (IBAction)buttonToolbarDone:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark -
+- (void)reloadTextView {
+    [[self textViewOneText] setText:_stringText];
+}
+
+#pragma mark -
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

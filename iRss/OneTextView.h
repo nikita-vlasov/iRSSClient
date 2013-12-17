@@ -1,13 +1,16 @@
-//
-//  OneTextView.h
-//  iRss
-//
-//  Created by Alex on 12/17/13.
-//  Copyright (c) 2013 Alex. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
-@interface OneTextView : UIViewController
+@interface OneTextView : UIViewController {
+    
+}
+
+#pragma mark - Action
+- (IBAction)buttonToolbarDone:(id)sender;
+
+#pragma mark - Outlet
+@property (weak, nonatomic) IBOutlet UITextView *textViewOneText;
+
+#pragma mark -
+@property (strong, nonatomic) NSString *stringText;
 
 @end

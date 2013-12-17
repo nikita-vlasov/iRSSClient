@@ -5,6 +5,7 @@
 #import "WebViewController.h"
 #import "SQLiteAccess.h"
 #import "Internet.h"
+#import "OneTextView.h"
 
 @interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     @private
