@@ -59,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msD-A0-OEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4401" y="184"/>
+            <point key="canvasLocation" x="-6305" y="-2016"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ex-R1-2A8">
@@ -78,7 +78,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QQ-Ho-H3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4938" y="852"/>
+            <point key="canvasLocation" x="-6842" y="-1348"/>
         </scene>
         <!--Offline Table View Controller-->
         <scene sceneID="12F-Hg-m7c">
@@ -129,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AP7-zP-cOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4401" y="852"/>
+            <point key="canvasLocation" x="-6305" y="-1348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0eM-Dc-L4b">
@@ -149,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKj-1q-J2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4401" y="1524"/>
+            <point key="canvasLocation" x="-6305" y="-676"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Fno-81-Gig">
@@ -233,7 +233,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXT-3o-8Vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3944" y="1524"/>
+            <point key="canvasLocation" x="-5848" y="-676"/>
         </scene>
         <!--Detail Setting Table View Controller-->
         <scene sceneID="Kht-hc-M2r">
@@ -281,7 +281,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuP-XE-AMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3496" y="1524"/>
+            <point key="canvasLocation" x="-5400" y="-676"/>
         </scene>
         <!--Edit Channel Table View Controller-->
         <scene sceneID="cTz-QM-G1g">
@@ -338,7 +338,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdi-Zl-CHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4938" y="-524"/>
+            <point key="canvasLocation" x="-6842" y="-2724"/>
         </scene>
         <!--Table View All Channel-->
         <scene sceneID="a2G-aq-oai">
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="in0-T2-nvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4938" y="184"/>
+            <point key="canvasLocation" x="-6842" y="-2016"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ytW-Pr-uQ5">
@@ -428,7 +428,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f32-eC-siO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5431" y="184"/>
+            <point key="canvasLocation" x="-7335" y="-2016"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="veF-Bj-5dP">
@@ -473,11 +473,12 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2Ur-TK-SqZ"/>
-                                    <barButtonItem title="Item" id="jrN-oc-e7R">
+                                    <barButtonItem title="Text" id="jrN-oc-e7R">
                                         <connections>
                                             <segue destination="nh9-pK-bcs" kind="modal" identifier="OpenOneText" id="8My-K7-RkB"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="17" style="plain" systemItem="fixedSpace" id="OaW-cT-izw"/>
                                     <barButtonItem title="T+" id="ia1-Lz-oc2">
                                         <connections>
                                             <action selector="buttonFondSizeAdd:" destination="UEn-bv-hdN" id="17J-Aa-TGn"/>
@@ -506,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2t-vt-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3862" y="518"/>
+            <point key="canvasLocation" x="-5766" y="-1682"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="ArJ-4Y-3qq">
@@ -564,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUe-yV-R4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3328" y="184"/>
+            <point key="canvasLocation" x="-5232" y="-2016"/>
         </scene>
         <!--One Text View-->
         <scene sceneID="1QS-bR-GOG">
@@ -579,7 +580,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ufk-2U-X8r">
@@ -592,6 +593,16 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JjN-Nu-4U6"/>
+                                    <barButtonItem title="T+" id="H3c-Ka-nDS">
+                                        <connections>
+                                            <action selector="buttonToolbarFondSizeAdd:" destination="nh9-pK-bcs" id="80Z-6V-hMQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="T-" id="7Qu-Hw-91w">
+                                        <connections>
+                                            <action selector="buttonToolbarFondSizeTake:" destination="nh9-pK-bcs" id="mvK-m9-Hx3"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -603,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkI-5r-Ks5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3328" y="852"/>
+            <point key="canvasLocation" x="-5232" y="-1348"/>
         </scene>
     </scenes>
     <resources>
