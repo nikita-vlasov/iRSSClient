@@ -20,6 +20,8 @@
 		FAB575A61860F1A800E8DBE4 /* OneTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB575A51860F1A800E8DBE4 /* OneTextView.m */; };
 		FAB575B51861029600E8DBE4 /* text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB575B31861029600E8DBE4 /* text@2x.png */; };
 		FAB575B61861029600E8DBE4 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB575B41861029600E8DBE4 /* text.png */; };
+		FAB575B91861051B00E8DBE4 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB575B71861051B00E8DBE4 /* star.png */; };
+		FAB575BA1861051B00E8DBE4 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB575B81861051B00E8DBE4 /* star@2x.png */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
 		FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D51853E52F00765CD9 /* UIKit.framework */; };
@@ -90,6 +92,8 @@
 		FAB575A51860F1A800E8DBE4 /* OneTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTextView.m; sourceTree = "<group>"; };
 		FAB575B31861029600E8DBE4 /* text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text@2x.png"; sourceTree = "<group>"; };
 		FAB575B41861029600E8DBE4 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
+		FAB575B71861051B00E8DBE4 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		FAB575B81861051B00E8DBE4 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC8D11853E52E00765CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -415,6 +419,8 @@
 		FABCC9371853F09E00765CD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FAB575B71861051B00E8DBE4 /* star.png */,
+				FAB575B81861051B00E8DBE4 /* star@2x.png */,
 				FAB575B31861029600E8DBE4 /* text@2x.png */,
 				FAB575B41861029600E8DBE4 /* text.png */,
 				FAB575961860C52600E8DBE4 /* setting@2x.png */,
@@ -536,7 +542,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB575BA1861051B00E8DBE4 /* star@2x.png in Resources */,
 				FABCC8DC1853E52F00765CD9 /* InfoPlist.strings in Resources */,
+				FAB575B91861051B00E8DBE4 /* star.png in Resources */,
 				FABCC9FA185412C900765CD9 /* Localizable.strings in Resources */,
 				FAB575B51861029600E8DBE4 /* text@2x.png in Resources */,
 				FAB575991860C52600E8DBE4 /* setting.png in Resources */,
