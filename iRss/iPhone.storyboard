@@ -463,28 +463,6 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LFn-es-vCs">
-                                <rect key="frame" x="19" y="133" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
-                                <state key="normal" title="T+">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonFondSizeAdd:" destination="UEn-bv-hdN" eventType="touchUpInside" id="Pqi-k3-Qrl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IWj-ki-pNU">
-                                <rect key="frame" x="52" y="133" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
-                                <state key="normal" title="T-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonFondSizeTake:" destination="UEn-bv-hdN" eventType="touchUpInside" id="fSn-vY-jua"/>
-                                </connections>
-                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="m2A-mC-NrV">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -495,6 +473,16 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2Ur-TK-SqZ"/>
+                                    <barButtonItem title="T+" id="ia1-Lz-oc2">
+                                        <connections>
+                                            <action selector="buttonFondSizeAdd:" destination="UEn-bv-hdN" id="17J-Aa-TGn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="T-" id="mEh-QR-Ta8">
+                                        <connections>
+                                            <action selector="buttonFondSizeTake:" destination="UEn-bv-hdN" id="ude-Pg-ogU"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
