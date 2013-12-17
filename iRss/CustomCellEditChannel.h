@@ -5,7 +5,6 @@
 }
 
 #pragma mark - Outlet
-@property (weak, nonatomic) IBOutlet UILabel *labelCellEdit;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCellEdit;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewCell;
 
