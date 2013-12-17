@@ -42,7 +42,6 @@
 
 #pragma mark - Button Toolbar
 - (IBAction)buttonToolbarOpenSetting:(id)sender {
-    
 }
 
 #pragma mark - Button Bar

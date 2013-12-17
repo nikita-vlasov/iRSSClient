@@ -253,8 +253,10 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    WebViewController *webViewController = [segue destinationViewController];
-    [webViewController setLink:urlLink];
+    if ([[segue identifier] isEqualToString:@"OpenLink"]) {
+        WebViewController *webViewController = [segue destinationViewController];
+        [webViewController setLink:urlLink];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
