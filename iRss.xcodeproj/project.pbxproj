@@ -19,6 +19,7 @@
 		FAB575991860C52600E8DBE4 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB575971860C52600E8DBE4 /* setting.png */; };
 		FAB5759C1860C62F00E8DBE4 /* Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB5759A1860C62F00E8DBE4 /* Star@2x.png */; };
 		FAB5759D1860C62F00E8DBE4 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB5759B1860C62F00E8DBE4 /* Star.png */; };
+		FAB575A01860DADA00E8DBE4 /* CustomCellDetailNews.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5759F1860DADA00E8DBE4 /* CustomCellDetailNews.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
 		FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D51853E52F00765CD9 /* UIKit.framework */; };
@@ -87,6 +88,8 @@
 		FAB575971860C52600E8DBE4 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		FAB5759A1860C62F00E8DBE4 /* Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star@2x.png"; sourceTree = "<group>"; };
 		FAB5759B1860C62F00E8DBE4 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		FAB5759E1860DADA00E8DBE4 /* CustomCellDetailNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellDetailNews.h; sourceTree = "<group>"; };
+		FAB5759F1860DADA00E8DBE4 /* CustomCellDetailNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellDetailNews.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC8D11853E52E00765CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -327,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
+				FAB5759E1860DADA00E8DBE4 /* CustomCellDetailNews.h */,
+				FAB5759F1860DADA00E8DBE4 /* CustomCellDetailNews.m */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				FABCC92B1853EAB300765CD9 /* AFJSONRequestOperation.m in Sources */,
 				FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */,
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
+				FAB575A01860DADA00E8DBE4 /* CustomCellDetailNews.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
 				FA41530D1854F997005A7685 /* SettingViewController.m in Sources */,
