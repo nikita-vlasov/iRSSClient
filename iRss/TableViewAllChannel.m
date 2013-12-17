@@ -28,12 +28,16 @@
     [[self tableView] reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    [super setEditing:editing animated:YES];
+#pragma mark - UIViewControllerEditing
+- (void)setEditing:(BOOL)flag animated:(BOOL)animated {
+    [super setEditing:flag animated:animated];
+    
+    if (flag == YES) {
+            [[self tableView] setEditing:YES animated:YES];
+    }
+    else {
+            [[self tableView] setEditing:NO animated:YES];
+    }
 }
 
 #pragma mark - SQL Query
@@ -98,7 +102,32 @@
     return YES;
 }
 
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self setEditing:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self setEditing:NO];
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"OpenRssChannel"]) {
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        if (indexPath) {
+            TableViewController *tableViewController = [segue destinationViewController];
+            NSDictionary *dictionary = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
+            NSString *stringUrlLink = [dictionary objectForKey:@"link"];
+            [tableViewController setLinkToTheRssFeeds:stringUrlLink];
+        }
+    }
+    if ([[segue identifier] isEqualToString:@""]) {
+        
+    }
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 @end
