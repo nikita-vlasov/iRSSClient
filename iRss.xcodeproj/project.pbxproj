@@ -13,6 +13,8 @@
 		FA6DD56E185E829400C46B82 /* EditChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */; };
 		FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */; };
 		FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */; };
+		FAA2F94818605F66001D503A /* Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F94618605F66001D503A /* Star@2x.png */; };
+		FAA2F94918605F66001D503A /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F94718605F66001D503A /* Star.png */; };
 		FAACBEC61856E0A3001FC79F /* ResetSettingToDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
@@ -75,6 +77,8 @@
 		FA93AB6118573B1700AE5F79 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		FA93AB6218573B1700AE5F79 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
 		FA93AB6318573B1700AE5F79 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		FAA2F94618605F66001D503A /* Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star@2x.png"; sourceTree = "<group>"; };
+		FAA2F94718605F66001D503A /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetSettingToDefault.h; sourceTree = "<group>"; };
 		FAACBEC51856E0A3001FC79F /* ResetSettingToDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetSettingToDefault.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,6 +406,8 @@
 		FABCC9371853F09E00765CD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2F94618605F66001D503A /* Star@2x.png */,
+				FAA2F94718605F66001D503A /* Star.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -519,6 +525,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA2F94818605F66001D503A /* Star@2x.png in Resources */,
+				FAA2F94918605F66001D503A /* Star.png in Resources */,
 				FABCC8DC1853E52F00765CD9 /* InfoPlist.strings in Resources */,
 				FABCC9FA185412C900765CD9 /* Localizable.strings in Resources */,
 				FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */,
