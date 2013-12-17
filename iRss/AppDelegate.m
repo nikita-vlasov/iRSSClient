@@ -12,6 +12,7 @@
         [userDefaults synchronize];
         [ResetSettingToDefault resetTipsSwitch];
         [ResetSettingToDefault resetWarningSwitch];
+        [ResetSettingToDefault resetSortChannelSwitch];
     }
     if ([userDefaults integerForKey:@"FONT_SIZE"] <= 1) {
         [ResetSettingToDefault resetFontSize];

@@ -33,6 +33,10 @@
     [buttonSwitchWarning addTarget:self action:@selector(switchWarning:) forControlEvents:UIControlEventValueChanged];
     [buttonSwitchWarning setOn:[userDefaults boolForKey:@"SWITCH_WARNING_BOOL"] animated:YES];
     
+    buttonSwitchSortChannel = [[UISwitch alloc] initWithFrame:CGRectZero];
+    [buttonSwitchSortChannel addTarget:self action:@selector(switchSortChannel:) forControlEvents:UIControlEventValueChanged];
+    [buttonSwitchSortChannel setOn:[userDefaults boolForKey:@"SWITCH_SORT_CHANNEL_BOOL"] animated:YES];
+    
     
     [[self tableView] reloadData];
 }
@@ -69,6 +73,18 @@
     [self boolAction:binary and:@"SWITCH_WARNING_BOOL"];
 }
 
+- (void)switchSortChannel:(id)switchSortChannel {
+    UISwitch *switchControl = switchSortChannel;
+    BOOL binary;
+    if (switchControl.on) {
+        binary = YES;
+    }
+    else {
+        binary = NO;
+    }
+    [self boolAction:binary and:@"SWITCH_SORT_CHANNEL_BOOL"];
+}
+
 #pragma mark - Void
 - (void)boolAction:(BOOL)boolIdentifer and:(NSString *)stringKey {
     [userDefaults setBool:boolIdentifer forKey:stringKey];
@@ -88,7 +104,7 @@
         return 1;
     }
     if (section == 1) {
-        return 2;
+        return 3;
     }
     if (section == 2) {
         return 1;
@@ -123,6 +139,13 @@
             [[switchCell textLabel] setText:NSLocalizedString(@"WARNING", nil)];
             switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             switchCell.accessoryView = buttonSwitchWarning;
+            return switchCell;
+        }
+        if ([indexPath row] == 2) {
+            [[switchCell textLabel] setText:@"Сортировать каналы A-Z"];
+            switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            switchCell.accessoryView = buttonSwitchSortChannel;
+            //SWITCH_SORT_CHANNEL_BOOL
             return switchCell;
         }
     }
@@ -221,6 +244,10 @@
     
     [ResetSettingToDefault resetWarningSwitch];
     [buttonSwitchWarning setOn:YES animated:YES];
+    
+    [ResetSettingToDefault resetSortChannelSwitch];
+    [buttonSwitchSortChannel setOn:YES animated:YES];
+    
     [[self tableView] reloadData];
 }
 

@@ -33,4 +33,10 @@
     [userDefaults synchronize];
 }
 
++ (void)resetSortChannelSwitch {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:YES forKey:@"SWITCH_SORT_CHANNEL_BOOL"];
+    [userDefaults synchronize];
+}
+
 @end

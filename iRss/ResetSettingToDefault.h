@@ -13,5 +13,6 @@
 #pragma mark - Switch Button
 + (void)resetTipsSwitch;
 + (void)resetWarningSwitch;
++ (void)resetSortChannelSwitch;
 
 @end

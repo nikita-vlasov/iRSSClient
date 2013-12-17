@@ -7,6 +7,7 @@
     @private
     UISwitch *buttonSwitchTips;
     UISwitch *buttonSwitchWarning;
+    UISwitch *buttonSwitchSortChannel;
     
     NSUserDefaults *userDefaults;
     

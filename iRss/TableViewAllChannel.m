@@ -37,7 +37,13 @@
 
 #pragma mark - SQL Query
 - (NSArray *)arrayGetAllRssChannel {
-    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title"];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    if ([userDefault boolForKey:@"SWITCH_SORT_CHANNEL_BOOL"] == NO) {
+        return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
+    }
+    else {
+        return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title"];
+    }
 }
 
 #pragma mark - Button Toolbar
