@@ -45,7 +45,12 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 1: {
-            [self saveEditing];
+            if ([[self stringAddKey] isEqualToString:@"ADD_CHANNEL"]) {
+                [self addNewRssChannel];
+            }
+            else {
+                [self saveEditing];
+            }
             [[self navigationController] popViewControllerAnimated:YES];
             break;
         }
@@ -59,6 +64,11 @@
 - (void)saveEditing {
     NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
     NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'", stringTitle, stringLink, stringDescription, rssChanelID];
+    [SQLiteAccess updateWithSQL:queryString];
+}
+
+- (void)addNewRssChannel {
+    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link, description) VALUES ('%@', '%@', '%@')", stringTitle, stringLink, stringDescription];
     [SQLiteAccess updateWithSQL:queryString];
 }
 

@@ -38,9 +38,13 @@
 }
 
 - (void)buttonBarAddNewRssChannel:(id)sender {
+    /*
     [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('Hot News', 'http://images.apple.com/main/rss/hotnews/hotnews.rss', 'Apple Hot News')"];
     
     [[self tableView] reloadData];
+     */
+    //OpenAddRssChannel
+    [self performSegueWithIdentifier:@"OpenAddRssChannel" sender:self];
 }
 
 - (void)buttonBarDeleteAllChannel:(id)sender {
@@ -174,6 +178,10 @@
     if ([[segue identifier] isEqualToString:@"OpenEditRssChannel"]) {
         EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
         [editChannelTableViewController setDictionaryRssChannel:dictionaryRssChannel];
+    }
+    if ([[segue identifier] isEqualToString:@"OpenAddRssChannel"]) {
+        EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
+        [editChannelTableViewController setStringAddKey:@"ADD_CHANNEL"];
     }
 }
 

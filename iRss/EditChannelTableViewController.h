@@ -17,6 +17,7 @@
 @property (strong ,nonatomic, readwrite) IBOutlet UITableView *tableView;
 
 #pragma mark - 
+@property (strong, nonatomic) NSString *stringAddKey;
 @property (strong, nonatomic) NSDictionary *dictionaryRssChannel;
 
 @end

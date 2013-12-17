@@ -81,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msD-A0-OEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3633" y="198"/>
+            <point key="canvasLocation" x="-3351" y="162"/>
         </scene>
         <!--Offline Table View Controller-->
         <scene sceneID="12F-Hg-m7c">
@@ -377,7 +377,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdi-Zl-CHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4247" y="-615"/>
+            <point key="canvasLocation" x="-3815" y="-500"/>
         </scene>
         <!--Table View All Channel-->
         <scene sceneID="a2G-aq-oai">
@@ -433,11 +433,12 @@
                     <connections>
                         <outlet property="tableView" destination="WQ4-us-mVL" id="ZvF-UF-z4C"/>
                         <segue destination="5wI-L2-6if" kind="push" identifier="OpenEditRssChannel" id="XAf-49-hIQ"/>
+                        <segue destination="5wI-L2-6if" kind="push" identifier="OpenAddRssChannel" id="gUE-Nd-dQ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="in0-T2-nvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4247" y="198"/>
+            <point key="canvasLocation" x="-4485" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ytW-Pr-uQ5">
@@ -452,7 +453,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f32-eC-siO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4668" y="198"/>
+            <point key="canvasLocation" x="-4906" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="scb-Py-N7D">
@@ -591,6 +592,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="X1w-ok-V1P"/>
+        <segue reference="gUE-Nd-dQ8"/>
         <segue reference="y1P-1A-IOa"/>
     </inferredMetricsTieBreakers>
 </document>
