@@ -9,6 +9,7 @@
 
 #pragma mark -
 + (void)resetFontSize;
++ (void)resetFontSizeOnlyText;
 
 #pragma mark - Switch Button
 + (void)resetTipsSwitch;

@@ -234,6 +234,7 @@
 
 - (void)resetAllSetting {
     [ResetSettingToDefault resetFontSize];
+    [ResetSettingToDefault resetFontSizeOnlyText];
     [ResetSettingToDefault cleanerListFavorites];
     [ResetSettingToDefault cleanerAllRssChanel];
     

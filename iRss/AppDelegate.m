@@ -16,6 +16,7 @@
     }
     if ([userDefaults integerForKey:@"FONT_SIZE"] <= 1) {
         [ResetSettingToDefault resetFontSize];
+        [ResetSettingToDefault resetFontSizeOnlyText];
     }
     
     return YES;

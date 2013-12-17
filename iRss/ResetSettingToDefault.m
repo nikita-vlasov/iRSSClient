@@ -20,6 +20,12 @@
     [userDefaults synchronize];
 }
 
++ (void)resetFontSizeOnlyText {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:20 forKey:@"FONT_SIZE_DESCRIPTION"];
+    [userDefaults synchronize];
+}
+
 #pragma mark - Switch Button
 + (void)resetTipsSwitch {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
