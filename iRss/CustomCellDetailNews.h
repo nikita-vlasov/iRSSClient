@@ -1,13 +1,12 @@
-//
-//  CustomCellDetailNews.h
-//  iRss
-//
-//  Created by Alex on 12/17/13.
-//  Copyright (c) 2013 Alex. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
-@interface CustomCellDetailNews : UITableViewCell
+@interface CustomCellDetailNews : UITableViewCell {
+    
+}
+
+#pragma mark - Outlet
+@property (weak, nonatomic) IBOutlet UILabel *labelCellHeader;
+@property (weak, nonatomic) IBOutlet UILabel *labelCellDate;
+@property (weak, nonatomic) IBOutlet UITextView *textViewCellContent;
 
 @end

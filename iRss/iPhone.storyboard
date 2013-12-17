@@ -430,10 +430,10 @@
             </objects>
             <point key="canvasLocation" x="-5431" y="184"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Table View-->
         <scene sceneID="l0l-lG-YfU">
             <objects>
-                <viewController id="qyI-U3-y5y" sceneMemberID="viewController">
+                <viewController id="qyI-U3-y5y" customClass="DetailTableView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qVY-wV-Llu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -443,7 +443,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="313" id="frm-uH-cE8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDetail" rowHeight="313" id="frm-uH-cE8" customClass="CustomCellDetailNews">
                                         <rect key="frame" x="0.0" y="22" width="320" height="313"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="frm-uH-cE8" id="Efq-Bd-jbs">
@@ -469,7 +469,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6He-yW-Bk6">
-                                                    <rect key="frame" x="20" y="97" width="280" height="128"/>
+                                                    <rect key="frame" x="20" y="97.000002106651607" width="280" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -478,6 +478,11 @@
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelCellDate" destination="WjR-7L-mSh" id="pSi-29-mrK"/>
+                                            <outlet property="labelCellHeader" destination="h7d-po-yVu" id="mxG-KY-uuC"/>
+                                            <outlet property="textViewCellContent" destination="6He-yW-Bk6" id="Qii-ze-0K0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -633,6 +638,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="XAf-49-hIQ"/>
-        <segue reference="QhL-dM-APS"/>
+        <segue reference="y1P-1A-IOa"/>
     </inferredMetricsTieBreakers>
 </document>
