@@ -33,10 +33,6 @@
     [[self tableView] reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[self tableView] reloadData];
@@ -141,6 +137,10 @@
         [detailViewController setStringOfflineKey:@"Offline"];
         [detailViewController setDetailItemOffline:dictionary];
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end

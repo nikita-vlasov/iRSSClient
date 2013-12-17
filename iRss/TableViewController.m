@@ -23,10 +23,6 @@
     [self buttonBarRefresh:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - Action
 - (IBAction)buttonBarRefresh:(id)sender {
     if ([Internet internetConnection] == YES) {
@@ -98,6 +94,10 @@
         RSSItem *item = [arrayDataRss objectAtIndex:[indexPath row]];
         [[segue destinationViewController] setDetailItem:item];
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end

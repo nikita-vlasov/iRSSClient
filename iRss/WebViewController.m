@@ -41,10 +41,6 @@
     [progressView removeFromSuperview];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - Action Toolbar Button
 - (IBAction)buttonToolbarBack:(id)sender {
     [[self webView] goBack];
@@ -75,5 +71,8 @@
     [progressView setProgress:progress animated:YES];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 @end

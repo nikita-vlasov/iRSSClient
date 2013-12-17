@@ -21,6 +21,9 @@
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
     [[self navigationItem] setTitle:NSLocalizedString(@"ALL_RSS", nil)];
     
+    UIBarButtonItem *newBackButton= [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:newBackButton];
+    
     barButtonAddChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonBarAddNewRssChannel:)];
     self.navigationItem.rightBarButtonItem = barButtonAddChannel;
     
