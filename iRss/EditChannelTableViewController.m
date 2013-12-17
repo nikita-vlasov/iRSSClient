@@ -59,12 +59,12 @@
 #pragma mark - SQL Query
 - (void)saveEditing {
     NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
-    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@', description = '%@' WHERE id_rss_chanel = '%@'", stringTitle, stringLink, stringDescription, rssChanelID];
+    NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@' WHERE id_rss_chanel = '%@'", stringTitle, stringLink, rssChanelID];
     [SQLiteAccess updateWithSQL:queryString];
 }
 
 - (void)addNewRssChannel {
-    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link, description) VALUES ('%@', '%@', '%@')", stringTitle, stringLink, stringDescription];
+    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link) VALUES ('%@', '%@')", stringTitle, stringLink];
     [SQLiteAccess updateWithSQL:queryString];
 }
 
@@ -74,7 +74,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,6 +82,7 @@
     
     if ([indexPath row] == 0) {
         [[cell labelCellEdit] setText:NSLocalizedString(@"TITLE", nil)];
+        [[cell textFieldCellEdit] setPlaceholder:NSLocalizedString(@"TITLE", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"title"]];
         }
@@ -90,12 +91,14 @@
     }
     if ([indexPath row] == 1) {
         [[cell labelCellEdit] setText:NSLocalizedString(@"LINK", nil)];
+        [[cell textFieldCellEdit] setPlaceholder:NSLocalizedString(@"LINK", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"link"]];
         }
         stringLink = [[cell textFieldCellEdit] text];
         return cell;
     }
+    /*
     if ([indexPath row] == 2) {
         [[cell labelCellEdit] setText:NSLocalizedString(@"DESCRIPTION", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
@@ -104,6 +107,7 @@
         stringDescription = [[cell textFieldCellEdit] text];
         return cell;
     }
+     */
     return nil;
 }
 

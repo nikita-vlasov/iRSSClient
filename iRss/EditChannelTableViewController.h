@@ -6,7 +6,6 @@
     @private
     NSString *stringTitle;
     NSString *stringLink;
-    NSString *stringDescription;    
 }
 
 #pragma mark - Action
