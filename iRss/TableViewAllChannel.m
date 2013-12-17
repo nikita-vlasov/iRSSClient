@@ -19,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
+    [[self navigationItem] setTitle:NSLocalizedString(@"ALL_RSS", nil)];
+    
+    barButtonAddChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                        target:self
+                                                                        action:@selector(buttonBarAddNewRssChannel:)];
+    self.navigationItem.rightBarButtonItem = barButtonAddChannel;
     
     [[self tableView] reloadData];
 }
@@ -28,21 +34,55 @@
     [[self tableView] reloadData];
 }
 
-#pragma mark - UIViewControllerEditing
-- (void)setEditing:(BOOL)flag animated:(BOOL)animated {
-    [super setEditing:flag animated:animated];
-    
-    if (flag == YES) {
-            [[self tableView] setEditing:YES animated:YES];
-    }
-    else {
-            [[self tableView] setEditing:NO animated:YES];
-    }
-}
-
 #pragma mark - SQL Query
 - (NSArray *)arrayGetAllRssChannel {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
+}
+
+- (void)buttonBarAddNewRssChannel:(id)sender {
+}
+
+- (void)buttonBarDeleteAllChannel:(id)sender {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
+        [ResetSettingToDefault cleanerAllRssChanel];
+        [[self tableView] reloadData];
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
+                                                            message:NSLocalizedString(@"DELETE_ALL_CHANEL", nil)
+                                                           delegate:self
+                                                  cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                                  otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
+        [alertView show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:{
+            [ResetSettingToDefault cleanerAllRssChanel];
+            [[self tableView] reloadData];
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+}
+
+#pragma mark - UIViewControllerEditing
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    if (editing) {
+        [[self tableView] setEditing:YES animated:YES];
+        barButtonDeleteAllChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(buttonBarDeleteAllChannel:)];
+        self.navigationItem.rightBarButtonItem = barButtonDeleteAllChannel;
+    }
+    else {
+        [[self tableView] setEditing:NO animated:YES];
+        self.navigationItem.rightBarButtonItem = barButtonAddChannel;
+    }
 }
 
 #pragma mark - UITableViewDataSource

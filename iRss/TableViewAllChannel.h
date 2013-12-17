@@ -5,6 +5,8 @@
 
 @interface TableViewAllChannel : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     @private
+    UIBarButtonItem *barButtonAddChannel;
+    UIBarButtonItem *barButtonDeleteAllChannel;
 }
 
 #pragma mark - Outlet
