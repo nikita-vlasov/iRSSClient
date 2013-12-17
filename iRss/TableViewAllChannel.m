@@ -188,6 +188,10 @@
         EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
         [editChannelTableViewController setStringAddKey:@"ADD_CHANNEL"];
     }
+    if ([[segue identifier] isEqualToString:@"OpenFavorites"]) {
+    }
+    if ([[segue identifier] isEqualToString:@"OpenSetting"]) {
+    }
 }
 
 - (void)didReceiveMemoryWarning {

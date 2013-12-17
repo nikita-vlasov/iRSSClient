@@ -58,6 +58,7 @@
         binary = NO;
     }
     [self boolAction:binary and:@"SWITCH_TIPS_BOOL"];
+    [[self tableView] reloadData];
 }
 
 - (void)switchWarning:(id)switchWarning {
@@ -89,7 +90,6 @@
 - (void)boolAction:(BOOL)boolIdentifer and:(NSString *)stringKey {
     [userDefaults setBool:boolIdentifer forKey:stringKey];
     [userDefaults synchronize];
-    [[self tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -278,14 +278,16 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
-    DetailSettingTableViewController *detainSettingTableViewController = [segue destinationViewController];
-    
-    if ([indexPath section] == 0) {
-        if ([indexPath row] == 0) {
-            [detainSettingTableViewController setArrayTitle:[self arrayTitle]];
-            [detainSettingTableViewController setArrayDescription:[self arrayDiscription]];
-            [detainSettingTableViewController setCountNumberRows:2];
+    if ([[segue identifier] isEqualToString:@"OpenDetailSetting"]) {
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        DetailSettingTableViewController *detainSettingTableViewController = [segue destinationViewController];
+        
+        if ([indexPath section] == 0) {
+            if ([indexPath row] == 0) {
+                [detainSettingTableViewController setArrayTitle:[self arrayTitle]];
+                [detainSettingTableViewController setArrayDescription:[self arrayDiscription]];
+                [detainSettingTableViewController setCountNumberRows:2];
+            }
         }
     }
 }

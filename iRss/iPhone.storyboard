@@ -177,7 +177,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Nje-Na-HUX" kind="push" id="Z8X-Bx-gzg"/>
+                                    <segue destination="Nje-Na-HUX" kind="push" identifier="OpenDetailSetting" id="Z8X-Bx-gzg"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchButton" textLabel="2HY-jU-XLq" style="IBUITableViewCellStyleDefault" id="enK-ds-LEc">
@@ -382,14 +382,14 @@
                                 <items>
                                     <barButtonItem image="star.png" id="sHC-WG-uZi">
                                         <connections>
-                                            <segue destination="CId-eI-951" kind="modal" id="jlR-wW-P08"/>
+                                            <segue destination="CId-eI-951" kind="modal" identifier="OpenFavorites" id="jlR-wW-P08"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QKW-ON-1eV"/>
                                     <barButtonItem image="setting.png" id="QM1-xh-S8f">
                                         <connections>
                                             <action selector="buttonToolbarOpenSetting:" destination="ufX-5x-Dxc" id="H3p-7B-4zN"/>
-                                            <segue destination="xvT-td-ecX" kind="modal" id="Box-ag-6SZ"/>
+                                            <segue destination="xvT-td-ecX" kind="modal" identifier="OpenSetting" id="Box-ag-6SZ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
