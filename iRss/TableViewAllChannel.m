@@ -37,7 +37,7 @@
 
 #pragma mark - SQL Query
 - (NSArray *)arrayGetAllRssChannel {
-    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
+    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title"];
 }
 
 #pragma mark - Button Toolbar

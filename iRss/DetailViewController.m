@@ -151,6 +151,30 @@
     [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
     NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
     
+    NSString *title = [_detailItem title];
+    NSString *itemDescription = [_detailItem itemDescription];
+    NSString *content = [_detailItem content];
+    NSString *link = (NSString *) [_detailItem link];
+    NSString *commentsLink = (NSString *) [_detailItem commentsLink];
+    NSString *commentsFeed = (NSString *) [_detailItem commentsFeed];
+    NSString *commentsCount = (NSString *) [_detailItem commentsCount];
+    NSString *pubDates = (NSString *) [_detailItem pubDates];
+    NSString *author = [_detailItem author];
+    NSString *guid = [_detailItem guid];
+    NSString *category = [_detailItem category];
+    
+    NSArray *array = [NSArray arrayWithObjects:title, itemDescription, content, link, commentsLink, commentsFeed, commentsCount, pubDates, author, guid, category,  nil];
+    for (int i = 0; i < [array count]; i++) {
+        if (array[i] == NULL) {
+            NSLog(@"%@", array[i]);
+        }
+        if (array[i] != NULL) {
+            NSLog(@"NOT NULL = %@", array[i]);
+        }
+    }
+    NSLog(@"%lu", (unsigned long)[array count]);
+    
+    /*
     NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
                              [_detailItem title],
                              [_detailItem itemDescription],
@@ -164,8 +188,42 @@
                              [_detailItem guid],
                              [_detailItem category],
                              stringTodayDate];
+     */
+    
+    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
+                              title,
+                              itemDescription,
+                              content,
+                              link,
+                              commentsLink,
+                              commentsFeed,
+                              commentsCount,
+                              pubDates,
+                              author,
+                              guid,
+                              category,
+                             stringTodayDate];
+    
     
     [SQLiteAccess insertWithSQL:queryString];
+
+        NSLog(@"\n\n\n\n\n\n\n\n");
+    NSLog(@"title = %@", title);
+    NSLog(@"itemDescription = %@", itemDescription);
+    NSLog(@"content = %@", content);
+    NSLog(@"link = %@", link);
+    NSLog(@"commentsLink = %@", commentsLink);
+    NSLog(@"commentsFeed = %@", commentsFeed);
+    NSLog(@"commentsCount = %@", commentsCount);
+    NSLog(@"pubDates = %@", pubDates);
+    NSLog(@"author = %@", author);
+    NSLog(@"guid = %@", guid);
+    NSLog(@"category = %@", category);
+    NSLog(@"stringTodayDate = %@", stringTodayDate);
+    NSLog(@"\n\n\n\n\n\n\n\n");
+
+    
+    
 }
 
 - (BOOL)requestToLink:(NSString *)link {
