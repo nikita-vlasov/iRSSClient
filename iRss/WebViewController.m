@@ -18,25 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /*
-    UIBarButtonItem *refresh =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                                                                            target:self
-                                                                            action:@selector(buttonBarRefreshPage:)];
-    
-    UIBarButtonItem *forward =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward
-                                                                            target:self
-                                                                            action:@selector(buttonBarForwardPage:)];
-    
-    UIBarButtonItem *back =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind
-                                                                         target:self
-                                                                         action:@selector(buttonBarBackPage:)];
-    
-    UIBarButtonItem *stop =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop
-                                                                         target:self
-                                                                         action:@selector(buttonBarStopPage:)];
-    self.navigationItem.rightBarButtonItems = @[refresh, forward, back, stop];
-     */
-    
     progressProxy = [[NJKWebViewProgress alloc] init];
     self.webView.delegate = progressProxy;
     progressProxy.webViewProxyDelegate = self;
