@@ -20,7 +20,6 @@
 		FAB5759C1860C62F00E8DBE4 /* Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB5759A1860C62F00E8DBE4 /* Star@2x.png */; };
 		FAB5759D1860C62F00E8DBE4 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB5759B1860C62F00E8DBE4 /* Star.png */; };
 		FAB575A01860DADA00E8DBE4 /* CustomCellDetailNews.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5759F1860DADA00E8DBE4 /* CustomCellDetailNews.m */; };
-		FAB575A31860DB7900E8DBE4 /* DetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB575A21860DB7900E8DBE4 /* DetailTableView.m */; };
 		FABCC8D21853E52E00765CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D11853E52E00765CD9 /* Foundation.framework */; };
 		FABCC8D41853E52F00765CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */; };
 		FABCC8D61853E52F00765CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABCC8D51853E52F00765CD9 /* UIKit.framework */; };
@@ -91,8 +90,6 @@
 		FAB5759B1860C62F00E8DBE4 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		FAB5759E1860DADA00E8DBE4 /* CustomCellDetailNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellDetailNews.h; sourceTree = "<group>"; };
 		FAB5759F1860DADA00E8DBE4 /* CustomCellDetailNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellDetailNews.m; sourceTree = "<group>"; };
-		FAB575A11860DB7900E8DBE4 /* DetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableView.h; sourceTree = "<group>"; };
-		FAB575A21860DB7900E8DBE4 /* DetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableView.m; sourceTree = "<group>"; };
 		FABCC8CE1853E52E00765CD9 /* iRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC8D11853E52E00765CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FABCC8D31853E52F00765CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -335,8 +332,6 @@
 				FABCC9021853E61A00765CD9 /* iPhone.storyboard */,
 				FAB5759E1860DADA00E8DBE4 /* CustomCellDetailNews.h */,
 				FAB5759F1860DADA00E8DBE4 /* CustomCellDetailNews.m */,
-				FAB575A11860DB7900E8DBE4 /* DetailTableView.h */,
-				FAB575A21860DB7900E8DBE4 /* DetailTableView.m */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -583,7 +578,6 @@
 				FAB5758B1860802F00E8DBE4 /* TableViewAllChannel.m in Sources */,
 				FABCC9321853EAB300765CD9 /* RSSParser.m in Sources */,
 				FABCC9071853E69B00765CD9 /* Internet.m in Sources */,
-				FAB575A31860DB7900E8DBE4 /* DetailTableView.m in Sources */,
 				FABCC8E21853E52F00765CD9 /* AppDelegate.m in Sources */,
 				FABCC8DE1853E52F00765CD9 /* main.m in Sources */,
 				FABCC92B1853EAB300765CD9 /* AFJSONRequestOperation.m in Sources */,
