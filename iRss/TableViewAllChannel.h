@@ -7,6 +7,8 @@
     @private
     UIBarButtonItem *barButtonAddChannel;
     UIBarButtonItem *barButtonDeleteAllChannel;
+    
+        NSDictionary *dictionaryRssChannel;
 }
 
 #pragma mark - Outlet

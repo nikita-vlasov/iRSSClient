@@ -21,9 +21,7 @@
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
     [[self navigationItem] setTitle:NSLocalizedString(@"ALL_RSS", nil)];
     
-    barButtonAddChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                        target:self
-                                                                        action:@selector(buttonBarAddNewRssChannel:)];
+    barButtonAddChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonBarAddNewRssChannel:)];
     self.navigationItem.rightBarButtonItem = barButtonAddChannel;
     
     [[self tableView] reloadData];
@@ -153,6 +151,15 @@
     [self setEditing:NO];
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    if (UITableViewCellAccessoryDisclosureIndicator) {
+        if ([indexPath section] == 0) {
+            dictionaryRssChannel = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
+            [self performSegueWithIdentifier:@"OpenEditRssChannel" sender:self];
+        }
+    }
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"OpenRssChannel"]) {
@@ -164,8 +171,9 @@
             [tableViewController setLinkToTheRssFeeds:stringUrlLink];
         }
     }
-    if ([[segue identifier] isEqualToString:@""]) {
-        
+    if ([[segue identifier] isEqualToString:@"OpenEditRssChannel"]) {
+        EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
+        [editChannelTableViewController setDictionaryRssChannel:dictionaryRssChannel];
     }
 }
 
