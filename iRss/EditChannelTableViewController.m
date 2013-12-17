@@ -81,7 +81,7 @@
     CustomCellEditChannel *cell = [tableView dequeueReusableCellWithIdentifier:@"CellEditChannel"];
     
     if ([indexPath row] == 0) {
-        [[cell labelCellEdit] setText:NSLocalizedString(@"TITLE", nil)];
+        [[cell imageViewCell] setImage:[UIImage imageNamed:@"header.png"]];
         [[cell textFieldCellEdit] setPlaceholder:NSLocalizedString(@"TITLE", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"title"]];
@@ -90,7 +90,7 @@
         return cell;
     }
     if ([indexPath row] == 1) {
-        [[cell labelCellEdit] setText:NSLocalizedString(@"LINK", nil)];
+        [[cell imageViewCell] setImage:[UIImage imageNamed:@"link.png"]];
         [[cell textFieldCellEdit] setPlaceholder:NSLocalizedString(@"LINK", nil)];
         if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
             [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"link"]];
@@ -98,16 +98,6 @@
         stringLink = [[cell textFieldCellEdit] text];
         return cell;
     }
-    /*
-    if ([indexPath row] == 2) {
-        [[cell labelCellEdit] setText:NSLocalizedString(@"DESCRIPTION", nil)];
-        if ([[[cell textFieldCellEdit] text] isEqualToString:@""]) {
-            [[cell textFieldCellEdit] setText:[[self dictionaryRssChannel] objectForKey:@"description"]];
-        }
-        stringDescription = [[cell textFieldCellEdit] text];
-        return cell;
-    }
-     */
     return nil;
 }
 
