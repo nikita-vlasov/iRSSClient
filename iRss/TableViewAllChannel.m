@@ -40,6 +40,9 @@
 }
 
 - (void)buttonBarAddNewRssChannel:(id)sender {
+    [SQLiteAccess updateWithSQL:@"INSERT INTO add_rss (title, link, description) VALUES ('Hot News', 'http://images.apple.com/main/rss/hotnews/hotnews.rss', 'Apple Hot News')"];
+    
+    [[self tableView] reloadData];
 }
 
 - (void)buttonBarDeleteAllChannel:(id)sender {
