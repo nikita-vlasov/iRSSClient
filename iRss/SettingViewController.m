@@ -142,7 +142,7 @@
             return switchCell;
         }
         if ([indexPath row] == 2) {
-            [[switchCell textLabel] setText:@"Сортировать каналы A-Z"];
+            [[switchCell textLabel] setText:NSLocalizedString(@"SORT_CHANNEL", nil)];
             switchCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             switchCell.accessoryView = buttonSwitchSortChannel;
             //SWITCH_SORT_CHANNEL_BOOL
@@ -205,13 +205,11 @@
     if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
             if ([userDefaults boolForKey:@"SWITCH_WARNING_BOOL"] == YES) {
-                
-            
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
-                                                                message:NSLocalizedString(@"RESET_SETTING", nil)
-                                                               delegate:self
-                                                      cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
-                                                      otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", nil)
+                                                                    message:NSLocalizedString(@"RESET_SETTING", nil)
+                                                                   delegate:self
+                                                          cancelButtonTitle:NSLocalizedString(@"DELETE", nil)
+                                                          otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
             [alertView show];
             }
             else {

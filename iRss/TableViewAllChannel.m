@@ -39,7 +39,7 @@
 - (NSArray *)arrayGetAllRssChannel {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     if ([userDefault boolForKey:@"SWITCH_SORT_CHANNEL_BOOL"] == NO) {
-        return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss"];
+        return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title  DESC"];
     }
     else {
         return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title"];

@@ -48,6 +48,7 @@
 "VERSION_APPS" = "Version";
 "TIPS" = "Tips";
 "TIPS_DESCRIPTION" = "With these switches you can configure the behavior of the program, we believe that the name of the cell as a whole will be clear what action they perform.";
+"SORT_CHANNEL" = "Sort channels A-Z";
 
 /* Detain Setting Table View Controller */
 "REPORT_AN_ISSUE" = "Report an issue";
