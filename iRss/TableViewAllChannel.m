@@ -173,6 +173,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"OpenRssChannel"]) {
         NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         if (indexPath) {
             TableViewController *tableViewController = [segue destinationViewController];
             NSDictionary *dictionary = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
