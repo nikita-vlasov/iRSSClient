@@ -9,7 +9,7 @@
     UIBarButtonItem *barButtonAddChannel;
     UIBarButtonItem *barButtonDeleteAllChannel;
     
-        NSDictionary *dictionaryRssChannel;
+    NSDictionary *dictionaryRssChannel;
 }
 
 #pragma mark - Action
