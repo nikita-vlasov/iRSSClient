@@ -181,17 +181,17 @@
             [tableViewController setLinkToTheRssFeeds:stringUrlLink];
         }
     }
-    if ([[segue identifier] isEqualToString:@"OpenEditRssChannel"]) {
+    else if ([[segue identifier] isEqualToString:@"OpenEditRssChannel"]) {
         EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
         [editChannelTableViewController setDictionaryRssChannel:dictionaryRssChannel];
     }
-    if ([[segue identifier] isEqualToString:@"OpenAddRssChannel"]) {
+    else if ([[segue identifier] isEqualToString:@"OpenAddRssChannel"]) {
         EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
         [editChannelTableViewController setStringAddKey:@"ADD_CHANNEL"];
     }
-    if ([[segue identifier] isEqualToString:@"OpenFavorites"]) {
+    else if ([[segue identifier] isEqualToString:@"OpenFavorites"]) {
     }
-    if ([[segue identifier] isEqualToString:@"OpenSetting"]) {
+    else if ([[segue identifier] isEqualToString:@"OpenSetting"]) {
     }
 }
 

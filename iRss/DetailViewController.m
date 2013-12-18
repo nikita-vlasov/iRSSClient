@@ -256,7 +256,7 @@
         WebViewController *webViewController = [segue destinationViewController];
         [webViewController setLink:urlLink];
     }
-    if ([[segue identifier] isEqualToString:@"OpenOneText"]) {
+    else if ([[segue identifier] isEqualToString:@"OpenOneText"]) {
         OneTextView *oneTextView = [segue destinationViewController];
         [oneTextView setStringText:stringItemDescription];
     }

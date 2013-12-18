@@ -77,10 +77,12 @@
     
     RSSItem *item = [arrayDataRss objectAtIndex:[indexPath row]];
     
-    [[cell textLabel] setText:[item title]];
-    [[cell detailTextLabel] setText:[item pubDates]];
-    
-    return cell;
+    if (cell) {
+        [[cell textLabel] setText:[item title]];
+        [[cell detailTextLabel] setText:[item pubDates]];
+        return cell;
+    }
+    return nil;
 }
 
 #pragma mark - UITableViewDelegate
