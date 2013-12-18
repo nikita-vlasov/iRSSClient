@@ -245,7 +245,7 @@
     [buttonSwitchWarning setOn:YES animated:YES];
     
     [ResetSettingToDefault resetSortChannelSwitch];
-    [buttonSwitchSortChannel setOn:YES animated:YES];
+    [buttonSwitchSortChannel setOn:NO animated:YES];
     
     [[self tableView] reloadData];
 }

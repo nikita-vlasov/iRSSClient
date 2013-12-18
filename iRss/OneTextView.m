@@ -23,7 +23,6 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     fontSize = [userDefaults integerForKey:@"FONT_SIZE_DESCRIPTION"];
     [[self textViewOneText] setFont:[UIFont fontWithName:@"HelveticaNeue" size:fontSize]];
-    
     [self reloadTextView];
 }
 
