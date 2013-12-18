@@ -126,6 +126,7 @@
         }
         case 3: {
             [self shareTwitter];
+            break;
         }
         default: {
             break;
