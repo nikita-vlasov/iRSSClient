@@ -262,6 +262,7 @@
     }
 }
 
+#pragma mark -
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

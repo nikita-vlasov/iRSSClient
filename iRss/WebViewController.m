@@ -71,6 +71,7 @@
     [progressView setProgress:progress animated:YES];
 }
 
+#pragma mark -
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
