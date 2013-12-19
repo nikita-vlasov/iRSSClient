@@ -32,10 +32,12 @@
     barButtonShare = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                           target:self
                                                                           action:@selector(buttonBarShareSocial:)];
+    /*
     stringTitle = [[NSString alloc] init];
     stringPubDate = [[NSString alloc] init];
     stringItemDescription = [[NSString alloc] init];
     urlLink = [[NSURL alloc] init];
+     */
     
     if ([Internet internetConnection] == NO) {
         [barButtonAaction setEnabled:NO];
@@ -189,10 +191,11 @@
 }
 
 #pragma mark - Online
-
+/*
 - (void)setDetailItem:(RSSItem *)detailItem {
     _detailItem = detailItem;
 }
+ */
  
 - (void)obtainingOnlineData {
     stringTitle = [_detailItem title];
@@ -206,10 +209,11 @@
 }
 
 #pragma mark - Offline
-
+/*
 - (void)setDetailItemOffline:(NSDictionary *)detailItemOffline {
     _detailItemOffline = detailItemOffline;
 }
+ */
 
 - (void)obtainingOfflineData {
     stringTitle = [_detailItemOffline objectForKey:@"title"];
