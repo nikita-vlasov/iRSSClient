@@ -13,6 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 #pragma mark -
-- (NSArray *)arrayDataRssOffline;
+- (NSArray *)arrayAllFavoritesNotes;
 
 @end

@@ -84,7 +84,7 @@
 }
 
 #pragma mark - SQL Query
-- (NSArray *)arrayDataRssOffline {
+- (NSArray *)arrayAllFavoritesNotes {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline ORDER BY date_added DESC"];
 }
 
@@ -94,12 +94,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self arrayDataRssOffline] count];
+    return [[self arrayAllFavoritesNotes] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
+    NSDictionary *dictionaryOfflineNews = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
     
     [[cell textLabel] setText:[dictionaryOfflineNews objectForKey:@"title"]];
     [[cell detailTextLabel] setText:[dictionaryOfflineNews objectForKey:@"date_added"]];
@@ -109,7 +109,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSDictionary *dictionaryOfflineNews = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
+        NSDictionary *dictionaryOfflineNews = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
         NSString *offlineNewsID = [dictionaryOfflineNews objectForKey:@"id"];
         NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline WHERE id = '%@'", offlineNewsID];
         
@@ -132,7 +132,7 @@
     if ([[segue identifier] isEqualToString:@"OpenNewsOfFavorites"]) {
         NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
         if (indexPath) {
-            NSDictionary *dictionary = [[self arrayDataRssOffline] objectAtIndex:[indexPath row]];
+            NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
             DetailViewController *detailViewController = [segue destinationViewController];
             [detailViewController setStringOfflineKey:@"Offline"];
             [detailViewController setDetailItemOffline:dictionary];

@@ -11,6 +11,10 @@
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title"];
 }
 
++ (NSArray *)selectAllFavoritesNotes {
+    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline ORDER BY date_added DESC"];
+}
+
 #pragma mark - SQL Query Select
 + (void)deleteRssChannel:(NSString *)idChannel {
     NSString *query = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", idChannel];
