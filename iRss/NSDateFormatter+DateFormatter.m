@@ -1,13 +1,12 @@
-//
-//  NSDateFormatter+DateFormatter.m
-//  iRss
-//
-//  Created by Alex on 12/19/13.
-//  Copyright (c) 2013 Alex. All rights reserved.
-//
-
 #import "NSDateFormatter+DateFormatter.h"
 
 @implementation NSDateFormatter (DateFormatter)
+
++ (NSString *)todayDateTime {
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
+    return [dateFormatter stringFromDate:date];
+}
 
 @end

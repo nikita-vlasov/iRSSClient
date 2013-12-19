@@ -147,12 +147,16 @@
 
 #pragma mark - SQL Query
 - (void)addNewNews {
+    /*
     NSDate *dateToday = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
     NSString *stringTodayDate = [dateFormatter stringFromDate:dateToday];
+     */
     
-    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
+    NSString *date = [NSDateFormatter todayDateTime];
+    
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')",
                              [_detailItem title],
                              [_detailItem itemDescription],
                              [_detailItem content],
@@ -164,9 +168,9 @@
                              [_detailItem author],
                              [_detailItem guid],
                              [_detailItem category],
-                             stringTodayDate];
+                             date];
     
-    [SQLiteAccess insertWithSQL:queryString];
+    [SQLiteAccess insertWithSQL:query];
 }
 
 - (BOOL)requestToLink:(NSString *)link {

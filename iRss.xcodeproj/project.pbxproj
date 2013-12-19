@@ -289,6 +289,7 @@
 		FABCC8D71853E52F00765CD9 /* iRss */ = {
 			isa = PBXGroup;
 			children = (
+				FAD0396E18638AFC005A7E65 /* Categories */,
 				FABCC9001853E55F00765CD9 /* Classes */,
 				FABCC9011853E5F800765CD9 /* Storyboard */,
 				FABCC8E31853E52F00765CD9 /* Images.xcassets */,
@@ -335,7 +336,6 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
-				FAD0396E18638AFC005A7E65 /* Categories */,
 				FA6DD56F185EA40200C46B82 /* CustomCell */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,

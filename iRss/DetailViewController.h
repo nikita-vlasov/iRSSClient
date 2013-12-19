@@ -6,6 +6,7 @@
 #import "SQLiteAccess.h"
 #import "Internet.h"
 #import "OneTextView.h"
+#import "NSDateFormatter+DateFormatter.h"
 
 @interface DetailViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     @private
