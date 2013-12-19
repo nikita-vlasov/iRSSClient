@@ -8,6 +8,12 @@
     [SQLiteAccess insertWithSQL:query];
 }
 
+#pragma mark - SQL Query Update
++ (void)updateChannelSetTitle:(NSString *)title setLink:(NSString *)link setIdChannel:(NSString *)idChannel {
+    NSString *query = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@' WHERE id_rss_chanel = '%@'", title, link, idChannel];
+    [SQLiteAccess updateWithSQL:query];
+}
+
 #pragma mark - SQL Query Select
 + (NSArray *)selectAllChannelDesc {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY id_rss_chanel DESC"];
