@@ -26,8 +26,6 @@
     
     barButtonAddChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(buttonBarAddNewRssChannel:)];
     self.navigationItem.rightBarButtonItem = barButtonAddChannel;
-    
-    [[self tableView] reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

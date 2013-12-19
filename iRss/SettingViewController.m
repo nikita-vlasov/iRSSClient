@@ -36,9 +36,6 @@
     buttonSwitchSortChannel = [[UISwitch alloc] initWithFrame:CGRectZero];
     [buttonSwitchSortChannel addTarget:self action:@selector(switchSortChannel:) forControlEvents:UIControlEventValueChanged];
     [buttonSwitchSortChannel setOn:[userDefaults boolForKey:@"SWITCH_SORT_CHANNEL_BOOL"] animated:YES];
-    
-    
-    [[self tableView] reloadData];
 }
 
 #pragma mark - Bar Button

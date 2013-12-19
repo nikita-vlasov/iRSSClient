@@ -2,6 +2,7 @@
 
 @implementation NSDateFormatter (DateFormatter)
 
+#pragma mark -
 + (NSString *)todayDateTime {
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

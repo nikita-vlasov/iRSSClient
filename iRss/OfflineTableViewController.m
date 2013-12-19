@@ -30,12 +30,6 @@
                                                                     target:self
                                                                     action:@selector(barButtonDone:)];
     self.navigationItem.rightBarButtonItem = barButtonDone;
-    [[self tableView] reloadData];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [[self tableView] reloadData];
 }
 
 #pragma mark - Action
@@ -86,7 +80,6 @@
 #pragma mark - SQL Query
 - (NSArray *)arrayAllFavoritesNotes {
     return [Client selectAllFavoritesNotes];
-    
 }
 
 #pragma mark - UITableViewDataSource
@@ -102,18 +95,22 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
     
-    if ([indexPath section] == 0) {
-        [[cell textLabel] setText:[dictionary objectForKey:@"title"]];
-        [[cell detailTextLabel] setText:[dictionary objectForKey:@"date_added"]];
-        return cell;
+    if (cell) {
+        if ([indexPath section] == 0) {
+            [[cell textLabel] setText:[dictionary objectForKey:@"title"]];
+            [[cell detailTextLabel] setText:[dictionary objectForKey:@"date_added"]];
+            return cell;
+        }
     }
     return nil;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
-        [Client deleteFavoritesNotes:[dictionary objectForKey:@"id"]];
+        if ([indexPath section] == 0) {
+            NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
+            [Client deleteFavoritesNotes:[dictionary objectForKey:@"id"]];
+        }
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
