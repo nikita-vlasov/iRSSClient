@@ -126,10 +126,13 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if ([indexPath section] == 0) {
             NSDictionary *dictionary = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
-            NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
-            NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];
             
-            [SQLiteAccess deleteWithSQL:queryString];
+            [Client deleteRssChannel:[dictionary objectForKey:@"id_rss_chanel"]];
+            
+//            NSString *addRssID = [dictionary objectForKey:@"id_rss_chanel"];
+  //          NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", addRssID];
+            
+    //        [SQLiteAccess deleteWithSQL:queryString];
         }
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         /**

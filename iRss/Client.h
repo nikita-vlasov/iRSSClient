@@ -5,8 +5,11 @@
     
 }
 
-#pragma mark - SQL Select
+#pragma mark - SQL Query Select
 + (NSArray *)selectAllChannelDesc;
 + (NSArray *)selectAllChannelByTitle;
+
+#pragma mark - SQL Query Delete
++ (void)deleteRssChannel:(NSString *)idChannel;
 
 @end
