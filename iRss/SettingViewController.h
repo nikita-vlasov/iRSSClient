@@ -2,6 +2,7 @@
 #import "DetailSettingTableViewController.h"
 #import "ResetSettingToDefault.h"
 #import <MessageUI/MFMailComposeViewController.h>
+#import "Client.h"
 
 @interface SettingViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate> {
     @private

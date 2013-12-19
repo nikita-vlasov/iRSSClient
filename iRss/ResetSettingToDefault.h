@@ -3,9 +3,11 @@
 
 @interface ResetSettingToDefault : NSObject
 
+/*
 #pragma mark SQL
 + (void)cleanerListFavorites;
 + (void)cleanerAllRssChanel;
+ */
 
 #pragma mark -
 + (void)resetFontSize;

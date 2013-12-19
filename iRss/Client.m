@@ -12,7 +12,6 @@
     
     NSString *dateTime = [NSDateFormatter todayDateTime];
     NSString *query = [NSString stringWithFormat:@"INSERT INTO offline (title, item_description, content, link, comments_link, comments_feed, comments_count, pub_date, author, guid, category, date_added) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", title, description, content, link, commentsLink, commentsFeed,commentsCount, pubDate, author, guid, category, dateTime];
-    
     [SQLiteAccess insertWithSQL:query];
 }
 
@@ -36,6 +35,14 @@
 }
 
 #pragma mark - SQL Query Delete
++ (void)deleteAllRssChanel {
+    [SQLiteAccess deleteWithSQL:@"DELETE FROM add_rss"];
+}
+
++ (void)deleteAllFavorites {
+    [SQLiteAccess deleteWithSQL:@"DELETE FROM offline"];
+}
+
 + (void)deleteRssChannel:(NSString *)idChannel {
     NSString *query = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", idChannel];
     [SQLiteAccess deleteWithSQL:query];

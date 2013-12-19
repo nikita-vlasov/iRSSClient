@@ -235,8 +235,10 @@
 - (void)resetAllSetting {
     [ResetSettingToDefault resetFontSize];
     [ResetSettingToDefault resetFontSizeOnlyText];
-    [ResetSettingToDefault cleanerListFavorites];
-    [ResetSettingToDefault cleanerAllRssChanel];
+//    [ResetSettingToDefault cleanerListFavorites];
+//    [ResetSettingToDefault cleanerAllRssChanel];
+    [Client deleteAllRssChanel];
+    [Client deleteAllFavorites];
     
     [ResetSettingToDefault resetTipsSwitch];
     [buttonSwitchTips setOn:YES animated:YES];

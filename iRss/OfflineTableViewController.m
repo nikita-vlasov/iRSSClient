@@ -46,7 +46,8 @@
 - (void)buttonDeleteAllRecords:(id)sender {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
-        [ResetSettingToDefault cleanerListFavorites];
+//        [ResetSettingToDefault cleanerListFavorites];
+        [Client deleteAllFavorites];
         [[self tableView] reloadData];
     }
     else {
@@ -62,7 +63,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0: {
-            [ResetSettingToDefault cleanerListFavorites];
+//            [ResetSettingToDefault cleanerListFavorites];
+            [Client deleteAllFavorites];
             [[self tableView] reloadData];
             break;
         }

@@ -58,7 +58,8 @@
 - (void)buttonBarDeleteAllChannel:(id)sender {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
-        [ResetSettingToDefault cleanerAllRssChanel];
+//        [ResetSettingToDefault cleanerAllRssChanel];
+        [Client deleteAllRssChanel];
         [[self tableView] reloadData];
     }
     else {
@@ -74,7 +75,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:{
-            [ResetSettingToDefault cleanerAllRssChanel];
+//            [ResetSettingToDefault cleanerAllRssChanel];
+            [Client deleteAllRssChanel];
             [[self tableView] reloadData];
             break;
         }

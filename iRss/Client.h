@@ -19,6 +19,8 @@
 + (NSArray *)selectAllFavoritesNotes;
 
 #pragma mark - SQL Query Delete
++ (void)deleteAllFavorites;
++ (void)deleteAllRssChanel;
 + (void)deleteRssChannel:(NSString *)idChannel;
 + (void)deleteFavoritesNotes:(NSString *)idNews;
 
