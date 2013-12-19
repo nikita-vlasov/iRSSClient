@@ -189,6 +189,7 @@
 }
 
 #pragma mark - Online
+
 - (void)setDetailItem:(RSSItem *)detailItem {
     _detailItem = detailItem;
 }
@@ -205,6 +206,7 @@
 }
 
 #pragma mark - Offline
+
 - (void)setDetailItemOffline:(NSDictionary *)detailItemOffline {
     _detailItemOffline = detailItemOffline;
 }

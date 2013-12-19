@@ -46,7 +46,6 @@
 - (void)buttonDeleteAllRecords:(id)sender {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     if ([userDefault boolForKey:@"SWITCH_WARNING_BOOL"] == NO) {
-//        [ResetSettingToDefault cleanerListFavorites];
         [Client deleteAllFavorites];
         [[self tableView] reloadData];
     }
@@ -63,7 +62,6 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0: {
-//            [ResetSettingToDefault cleanerListFavorites];
             [Client deleteAllFavorites];
             [[self tableView] reloadData];
             break;
