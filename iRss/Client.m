@@ -15,9 +15,14 @@
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline ORDER BY date_added DESC"];
 }
 
-#pragma mark - SQL Query Select
+#pragma mark - SQL Query Delete
 + (void)deleteRssChannel:(NSString *)idChannel {
     NSString *query = [[NSString alloc] initWithFormat:@"DELETE FROM add_rss WHERE id_rss_chanel = '%@'", idChannel];
+    [SQLiteAccess deleteWithSQL:query];
+}
+
++ (void)deleteFavoritesNotes:(NSString *)idNews {
+    NSString *query = [[NSString alloc] initWithFormat:@"DELETE FROM offline WHERE id = '%@'", idNews];
     [SQLiteAccess deleteWithSQL:query];
 }
 

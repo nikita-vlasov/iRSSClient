@@ -12,5 +12,6 @@
 
 #pragma mark - SQL Query Delete
 + (void)deleteRssChannel:(NSString *)idChannel;
++ (void)deleteFavoritesNotes:(NSString *)idNews;
 
 @end

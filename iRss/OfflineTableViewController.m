@@ -110,11 +110,14 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSDictionary *dictionaryOfflineNews = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
-        NSString *offlineNewsID = [dictionaryOfflineNews objectForKey:@"id"];
-        NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline WHERE id = '%@'", offlineNewsID];
+        NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
         
-        [SQLiteAccess deleteWithSQL:queryString];
+        [Client deleteFavoritesNotes:[dictionary objectForKey:@"id"]];
+        
+//        NSString *offlineNewsID = [dictionaryOfflineNews objectForKey:@"id"];
+  //      NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline WHERE id = '%@'", offlineNewsID];
+        
+    //    [SQLiteAccess deleteWithSQL:queryString];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
