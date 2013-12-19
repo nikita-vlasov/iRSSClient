@@ -7,5 +7,6 @@
 
 #pragma mark - SQL Select
 + (NSArray *)selectAllChannelDesc;
++ (NSArray *)selectAllChannelByTitle;
 
 @end

@@ -42,7 +42,7 @@
         return [Client selectAllChannelDesc];
     }
     else {
-        return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY title"];
+        return [Client selectAllChannelByTitle];
     }
 }
 
