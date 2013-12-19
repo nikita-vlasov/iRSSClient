@@ -63,8 +63,6 @@
 }
 
 - (void)addNewRssChannel {
- //   NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link) VALUES ('%@', '%@')", stringTitle, stringLink];
-   // [SQLiteAccess updateWithSQL:queryString];
     [Client addNewChannelSetTitle:stringTitle setLink:stringLink];
 }
 
