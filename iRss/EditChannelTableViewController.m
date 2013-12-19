@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[self tableView] reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -64,8 +63,9 @@
 }
 
 - (void)addNewRssChannel {
-    NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link) VALUES ('%@', '%@')", stringTitle, stringLink];
-    [SQLiteAccess updateWithSQL:queryString];
+ //   NSString *queryString = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link) VALUES ('%@', '%@')", stringTitle, stringLink];
+   // [SQLiteAccess updateWithSQL:queryString];
+    [Client addNewChannelSetTitle:stringTitle setLink:stringLink];
 }
 
 #pragma mark - UITableViewDataSource

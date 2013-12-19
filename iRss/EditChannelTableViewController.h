@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomCellEditChannel.h"
 #import "SQLiteAccess.h"
+#import "Client.h"
 
 @interface EditChannelTableViewController : UITableViewController <UITableViewDataSource, UITabBarDelegate> {
     @private

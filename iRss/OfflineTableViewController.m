@@ -100,24 +100,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDictionary *dictionaryOfflineNews = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
+    NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
     
-    [[cell textLabel] setText:[dictionaryOfflineNews objectForKey:@"title"]];
-    [[cell detailTextLabel] setText:[dictionaryOfflineNews objectForKey:@"date_added"]];
-    
-    return cell;
+    if ([indexPath section] == 0) {
+        [[cell textLabel] setText:[dictionary objectForKey:@"title"]];
+        [[cell detailTextLabel] setText:[dictionary objectForKey:@"date_added"]];
+        return cell;
+    }
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSDictionary *dictionary = [[self arrayAllFavoritesNotes] objectAtIndex:[indexPath row]];
-        
         [Client deleteFavoritesNotes:[dictionary objectForKey:@"id"]];
-        
-//        NSString *offlineNewsID = [dictionaryOfflineNews objectForKey:@"id"];
-  //      NSString *queryString = [[NSString alloc] initWithFormat:@"DELETE FROM offline WHERE id = '%@'", offlineNewsID];
-        
-    //    [SQLiteAccess deleteWithSQL:queryString];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }

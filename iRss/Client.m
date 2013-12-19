@@ -2,6 +2,12 @@
 
 @implementation Client
 
+#pragma mark - SQL Query Add
++ (void)addNewChannelSetTitle:(NSString *)title setLink:(NSString *)link {
+    NSString *query = [[NSString alloc] initWithFormat:@"INSERT INTO add_rss (title, link) VALUES ('%@', '%@')", title, link];
+    [SQLiteAccess insertWithSQL:query];
+}
+
 #pragma mark - SQL Query Select
 + (NSArray *)selectAllChannelDesc {
     return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM add_rss ORDER BY id_rss_chanel DESC"];

@@ -5,6 +5,9 @@
     
 }
 
+#pragma mark - SQL Query Add
++ (void)addNewChannelSetTitle:(NSString *)title setLink:(NSString *)link;
+
 #pragma mark - SQL Query Select
 + (NSArray *)selectAllChannelDesc;
 + (NSArray *)selectAllChannelByTitle;
