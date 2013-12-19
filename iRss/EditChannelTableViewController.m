@@ -56,11 +56,7 @@
 }
 
 #pragma mark - SQL Query
-- (void)saveEditing {
-//    NSString *rssChanelID = [[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"];
-  //  NSString *queryString = [[NSString alloc] initWithFormat:@"UPDATE add_rss SET title = '%@', link = '%@' WHERE id_rss_chanel = '%@'", stringTitle, stringLink, rssChanelID];
-//    [SQLiteAccess updateWithSQL:queryString];
-    
+- (void)saveEditing {    
     [Client updateChannelSetTitle:stringTitle setLink:stringLink setIdChannel:[[self dictionaryRssChannel] objectForKey:@"id_rss_chanel"]];
 }
 

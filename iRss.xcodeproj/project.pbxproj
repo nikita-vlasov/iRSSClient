@@ -62,6 +62,7 @@
 		FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FABCC94F1854039000765CD9 /* offline_news.sqlite */; };
 		FABCC9FA185412C900765CD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FABCC9FC185412C900765CD9 /* Localizable.strings */; };
 		FAD0396C18637ED9005A7E65 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0396B18637ED9005A7E65 /* Client.m */; };
+		FAD0397418638B92005A7E65 /* NSDateFormatter+DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0397318638B92005A7E65 /* NSDateFormatter+DateFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,8 @@
 		FABCC9FE1854141500765CD9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAD0396A18637ED9005A7E65 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		FAD0396B18637ED9005A7E65 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		FAD0397218638B92005A7E65 /* NSDateFormatter+DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+DateFormatter.h"; sourceTree = "<group>"; };
+		FAD0397318638B92005A7E65 /* NSDateFormatter+DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+DateFormatter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,8 +335,7 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
-				FAD0396A18637ED9005A7E65 /* Client.h */,
-				FAD0396B18637ED9005A7E65 /* Client.m */,
+				FAD0396E18638AFC005A7E65 /* Categories */,
 				FA6DD56F185EA40200C46B82 /* CustomCell */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
@@ -356,6 +358,8 @@
 		FABCC9041853E66A00765CD9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				FAD0396A18637ED9005A7E65 /* Client.h */,
+				FAD0396B18637ED9005A7E65 /* Client.m */,
 				FABCC9051853E69B00765CD9 /* Internet.h */,
 				FABCC9061853E69B00765CD9 /* Internet.m */,
 				FAACBEC41856E0A3001FC79F /* ResetSettingToDefault.h */,
@@ -480,6 +484,15 @@
 				FAB5758A1860802F00E8DBE4 /* TableViewAllChannel.m */,
 			);
 			name = ChannelSelection;
+			sourceTree = "<group>";
+		};
+		FAD0396E18638AFC005A7E65 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0397218638B92005A7E65 /* NSDateFormatter+DateFormatter.h */,
+				FAD0397318638B92005A7E65 /* NSDateFormatter+DateFormatter.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,6 +624,7 @@
 				FABCC8DE1853E52F00765CD9 /* main.m in Sources */,
 				FABCC92B1853EAB300765CD9 /* AFJSONRequestOperation.m in Sources */,
 				FA93AB6418573B1700AE5F79 /* NJKWebViewProgress.m in Sources */,
+				FAD0397418638B92005A7E65 /* NSDateFormatter+DateFormatter.m in Sources */,
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,

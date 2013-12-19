@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
 #import "EditChannelTableViewController.h"
-#import "SQLiteAccess.h"
 #import "ResetSettingToDefault.h"
 #import "Client.h"
 
