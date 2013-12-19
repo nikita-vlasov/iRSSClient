@@ -61,6 +61,7 @@
 		FABCC94D1853FDB600765CD9 /* OfflineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCC94C1853FDB600765CD9 /* OfflineTableViewController.m */; };
 		FABCC9501854039000765CD9 /* offline_news.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FABCC94F1854039000765CD9 /* offline_news.sqlite */; };
 		FABCC9FA185412C900765CD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FABCC9FC185412C900765CD9 /* Localizable.strings */; };
+		FAD0395818631CA0005A7E65 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0395718631CA0005A7E65 /* Client.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,8 @@
 		FABCC9FB185412C900765CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FABCC9FD1854141400765CD9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FABCC9FE1854141500765CD9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAD0395618631CA0005A7E65 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		FAD0395718631CA0005A7E65 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +332,8 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
+				FAD0395618631CA0005A7E65 /* Client.h */,
+				FAD0395718631CA0005A7E65 /* Client.m */,
 				FA6DD56F185EA40200C46B82 /* CustomCell */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
@@ -609,6 +614,7 @@
 				FABCC9491853F7EB00765CD9 /* WebViewController.m in Sources */,
 				FABCC90A1853E75900765CD9 /* TableViewController.m in Sources */,
 				FABCC9331853EAB300765CD9 /* SQLiteAccess.m in Sources */,
+				FAD0395818631CA0005A7E65 /* Client.m in Sources */,
 				FAB575A61860F1A800E8DBE4 /* OneTextView.m in Sources */,
 				FA41530D1854F997005A7685 /* SettingViewController.m in Sources */,
 				FA93AB6518573B1700AE5F79 /* NJKWebViewProgressView.m in Sources */,
