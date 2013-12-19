@@ -36,7 +36,7 @@
 }
 
 #pragma mark - SQL Query
-- (NSArray *)arrayGetAllRssChannel {
+- (NSArray *)arrayAllRssChannel {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     if ([userDefault boolForKey:@"SWITCH_SORT_CHANNEL_BOOL"] == NO) {
         return [Client selectAllChannelDesc];
@@ -105,14 +105,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return [[self arrayGetAllRssChannel] count];
+        return [[self arrayAllRssChannel] count];
     }
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *channelCell = [tableView dequeueReusableCellWithIdentifier:@"ChannelCell"];
-    NSDictionary *dictionary = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
+    NSDictionary *dictionary = [[self arrayAllRssChannel] objectAtIndex:[indexPath row]];
     if (channelCell) {
         if ([indexPath section] == 0) {
             [[channelCell textLabel] setText:[dictionary objectForKey:@"title"]];
@@ -125,7 +125,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if ([indexPath section] == 0) {
-            NSDictionary *dictionary = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
+            NSDictionary *dictionary = [[self arrayAllRssChannel] objectAtIndex:[indexPath row]];
             [Client deleteRssChannel:[dictionary objectForKey:@"id_rss_chanel"]];
         }
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -160,7 +160,7 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     if (UITableViewCellAccessoryDisclosureIndicator) {
         if ([indexPath section] == 0) {
-            dictionaryRssChannel = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
+            dictionaryRssChannel = [[self arrayAllRssChannel] objectAtIndex:[indexPath row]];
             [self performSegueWithIdentifier:@"OpenEditRssChannel" sender:self];
         }
     }
@@ -173,7 +173,7 @@
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         if (indexPath) {
             TableViewController *tableViewController = [segue destinationViewController];
-            NSDictionary *dictionary = [[self arrayGetAllRssChannel] objectAtIndex:[indexPath row]];
+            NSDictionary *dictionary = [[self arrayAllRssChannel] objectAtIndex:[indexPath row]];
             NSString *stringUrlLink = [dictionary objectForKey:@"link"];
             [tableViewController setLinkToTheRssFeeds:stringUrlLink];
         }

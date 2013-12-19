@@ -20,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 #pragma mark -
-- (NSArray *)arrayGetAllRssChannel;
+- (NSArray *)arrayAllRssChannel;
 
 @end
