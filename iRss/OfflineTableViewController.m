@@ -85,7 +85,8 @@
 
 #pragma mark - SQL Query
 - (NSArray *)arrayAllFavoritesNotes {
-    return [SQLiteAccess selectManyRowsWithSQL:@"SELECT * FROM offline ORDER BY date_added DESC"];
+    return [Client selectAllFavoritesNotes];
+    
 }
 
 #pragma mark - UITableViewDataSource
