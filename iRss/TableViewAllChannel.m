@@ -125,8 +125,9 @@
         if ([indexPath section] == 0) {
             NSDictionary *dictionary = [[self arrayAllRssChannel] objectAtIndex:[indexPath row]];
             [Client deleteRssChannel:[dictionary objectForKey:@"id_rss_chanel"]];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
          //Удаляет секциями.
          //[tableView deleteSections:[NSIndexSet indexSetWithIndex:[indexPath section]] withRowAnimation:UITableViewRowAnimationFade];
     }
