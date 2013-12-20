@@ -2,9 +2,7 @@
 #import "NSDateFormatter+DateFormatter.h"
 #import "SQLiteAccess.h"
 
-@interface Client : NSObject {
-    
-}
+@interface Client : NSObject
 
 #pragma mark - SQL Query Add
 + (void)addNewChannelSetTitle:(NSString *)title setLink:(NSString *)link;

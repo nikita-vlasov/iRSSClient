@@ -15,8 +15,6 @@
 @property (strong ,nonatomic, readwrite) IBOutlet UITableView *tableView;
 
 #pragma mark -
-/* Определяет с какой целью был выполнен переход на этот контролер. */
-@property (strong, nonatomic) NSString *stringAddKey;
 @property (strong, nonatomic) NSDictionary *dictionaryRssChannel;
 
 @end

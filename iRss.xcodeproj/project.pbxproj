@@ -478,10 +478,10 @@
 		FABCCA4618542D0C00765CD9 /* ChannelSelection */ = {
 			isa = PBXGroup;
 			children = (
-				FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */,
-				FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */,
 				FAB575891860802F00E8DBE4 /* TableViewAllChannel.h */,
 				FAB5758A1860802F00E8DBE4 /* TableViewAllChannel.m */,
+				FA6DD56C185E829400C46B82 /* EditChannelTableViewController.h */,
+				FA6DD56D185E829400C46B82 /* EditChannelTableViewController.m */,
 			);
 			name = ChannelSelection;
 			sourceTree = "<group>";

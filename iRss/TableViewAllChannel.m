@@ -179,8 +179,6 @@
         [editChannelTableViewController setDictionaryRssChannel:dictionaryRssChannel];
     }
     else if ([[segue identifier] isEqualToString:@"OpenAddRssChannel"]) {
-        EditChannelTableViewController *editChannelTableViewController = [segue destinationViewController];
-        [editChannelTableViewController setStringAddKey:@"ADD_CHANNEL"];
     }
     else if ([[segue identifier] isEqualToString:@"OpenFavorites"]) {
     }

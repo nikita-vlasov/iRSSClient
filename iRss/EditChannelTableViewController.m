@@ -35,7 +35,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 1: {
-            if ([[self stringAddKey] isEqualToString:@"ADD_CHANNEL"]) {
+            if ([self dictionaryRssChannel] == NULL) {
                 [self addNewRssChannel];
             }
             else {
