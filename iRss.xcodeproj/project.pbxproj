@@ -336,7 +336,6 @@
 			children = (
 				FABCC8E01853E52F00765CD9 /* AppDelegate.h */,
 				FABCC8E11853E52F00765CD9 /* AppDelegate.m */,
-				FA6DD56F185EA40200C46B82 /* CustomCell */,
 				FABCCA4618542D0C00765CD9 /* ChannelSelection */,
 				FA41530A1854F971005A7685 /* Online */,
 				FA6F4B4818553DAB00C42218 /* Web */,
@@ -358,6 +357,7 @@
 		FABCC9041853E66A00765CD9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				FA6DD56F185EA40200C46B82 /* CustomCell */,
 				FAD0396A18637ED9005A7E65 /* Client.h */,
 				FAD0396B18637ED9005A7E65 /* Client.m */,
 				FABCC9051853E69B00765CD9 /* Internet.h */,

@@ -127,7 +127,6 @@
             [Client deleteRssChannel:[dictionary objectForKey:@"id_rss_chanel"]];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
-        
          //Удаляет секциями.
          //[tableView deleteSections:[NSIndexSet indexSetWithIndex:[indexPath section]] withRowAnimation:UITableViewRowAnimationFade];
     }
