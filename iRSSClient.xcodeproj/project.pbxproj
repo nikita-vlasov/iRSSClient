@@ -20,6 +20,7 @@
 		FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28118DC735400B79FE8 /* ChannelView.m */; };
 		FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28518DC737800B79FE8 /* ChannelController.m */; };
 		FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28918DCD9F900B79FE8 /* Channel.m */; };
+		FA37A28E18DCDB2300B79FE8 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28D18DCDB2300B79FE8 /* Article.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		FA37A28518DC737800B79FE8 /* ChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelController.m; path = Controller/ChannelController.m; sourceTree = "<group>"; };
 		FA37A28818DCD9F900B79FE8 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Channel.h; path = MappingModel/Channel.h; sourceTree = "<group>"; };
 		FA37A28918DCD9F900B79FE8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Channel.m; path = MappingModel/Channel.m; sourceTree = "<group>"; };
+		FA37A28C18DCDB2300B79FE8 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = MappingModel/Article.h; sourceTree = "<group>"; };
+		FA37A28D18DCDB2300B79FE8 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 			children = (
 				FA37A28818DCD9F900B79FE8 /* Channel.h */,
 				FA37A28918DCD9F900B79FE8 /* Channel.m */,
+				FA37A28C18DCDB2300B79FE8 /* Article.h */,
+				FA37A28D18DCDB2300B79FE8 /* Article.m */,
 			);
 			name = MappingModel;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			files = (
 				FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */,
 				FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */,
+				FA37A28E18DCDB2300B79FE8 /* Article.m in Sources */,
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
