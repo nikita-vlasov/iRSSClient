@@ -15,6 +15,7 @@
 		FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A25818DC6F7700B79FE8 /* AppDelegate.m */; };
 		FA37A25B18DC6F7700B79FE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37A25A18DC6F7700B79FE8 /* Images.xcassets */; };
 		FA37A27818DC707700B79FE8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA37A27718DC707700B79FE8 /* iPhone.storyboard */; };
+		FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA37A27A18DC718600B79FE8 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FA37A25A18DC6F7700B79FE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA37A26118DC6F7800B79FE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FA37A27718DC707700B79FE8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Storyboard/iPhone.storyboard; sourceTree = "<group>"; };
+		FA37A27B18DC718600B79FE8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		FA37A24F18DC6F7700B79FE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA37A27D18DC718C00B79FE8 /* DataModel */,
 				FA37A25018DC6F7700B79FE8 /* iRSSClient-Info.plist */,
 				FA37A25118DC6F7700B79FE8 /* InfoPlist.strings */,
 				FA37A25418DC6F7700B79FE8 /* main.m */,
@@ -104,6 +107,14 @@
 				FA37A27718DC707700B79FE8 /* iPhone.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		FA37A27D18DC718C00B79FE8 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A27A18DC718600B79FE8 /* DataModel.xcdatamodeld */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
 				FA37A25518DC6F7700B79FE8 /* main.m in Sources */,
 			);
@@ -311,6 +323,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA37A27A18DC718600B79FE8 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA37A27B18DC718600B79FE8 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = FA37A27B18DC718600B79FE8 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = DataModel/DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA37A23D18DC6F7700B79FE8 /* Project object */;
 }
