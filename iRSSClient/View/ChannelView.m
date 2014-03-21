@@ -17,4 +17,11 @@
 }
 */
 
+- (UIBarButtonItem *)barButtonOpenChannel {
+    if (!_barButtonOpenChannel) {
+        _barButtonOpenChannel = [[UIBarButtonItem alloc] init];
+    }
+    return _barButtonOpenChannel;
+}
+
 @end
