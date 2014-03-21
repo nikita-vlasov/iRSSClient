@@ -3,6 +3,9 @@
 
 @interface ChannelController ()
 
+#pragma mark - UIView
+@property (strong, nonatomic) IBOutlet ChannelView *channelView;
+
 @end
 
 
@@ -16,7 +19,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-#pragma mark - 
 
 @end
