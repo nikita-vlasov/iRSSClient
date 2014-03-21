@@ -117,12 +117,12 @@
 		FA37A24F18DC6F7700B79FE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA37A29818DCDF4D00B79FE8 /* Localizable */,
 				FA37A27D18DC718C00B79FE8 /* DataModel */,
-				FA37A25018DC6F7700B79FE8 /* iRSSClient-Info.plist */,
+				FA37A29518DCDF3D00B79FE8 /* Localizable.strings */,
 				FA37A25118DC6F7700B79FE8 /* InfoPlist.strings */,
 				FA37A25418DC6F7700B79FE8 /* main.m */,
 				FA37A25618DC6F7700B79FE8 /* iRSSClient-Prefix.pch */,
+				FA37A25018DC6F7700B79FE8 /* iRSSClient-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,14 +170,6 @@
 				FA37A28D18DCDB2300B79FE8 /* Article.m */,
 			);
 			name = MappingModel;
-			sourceTree = "<group>";
-		};
-		FA37A29818DCDF4D00B79FE8 /* Localizable */ = {
-			isa = PBXGroup;
-			children = (
-				FA37A29518DCDF3D00B79FE8 /* Localizable.strings */,
-			);
-			name = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
