@@ -1,13 +1,11 @@
-//
-//  Channel.h
-//  iRSSClient
-//
-//  Created by Alex on 3/21/14.
-//  Copyright (c) 2014 Alex. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 @interface Channel : NSObject
+/** Заголовок канала. */
+@property (strong, nonatomic) NSString *title;
+/** Описание канала. */
+@property (strong, nonatomic) NSString *description;
+/** Ссылка на канал. */
+@property (strong, nonatomic) NSString *link;
 
 @end
