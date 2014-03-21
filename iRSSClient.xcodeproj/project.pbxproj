@@ -16,6 +16,9 @@
 		FA37A25B18DC6F7700B79FE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37A25A18DC6F7700B79FE8 /* Images.xcassets */; };
 		FA37A27818DC707700B79FE8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA37A27718DC707700B79FE8 /* iPhone.storyboard */; };
 		FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA37A27A18DC718600B79FE8 /* DataModel.xcdatamodeld */; };
+		FA37A27F18DC723A00B79FE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA37A27E18DC723A00B79FE8 /* CoreData.framework */; };
+		FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28118DC735400B79FE8 /* ChannelView.m */; };
+		FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28518DC737800B79FE8 /* ChannelController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,11 @@
 		FA37A26118DC6F7800B79FE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FA37A27718DC707700B79FE8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Storyboard/iPhone.storyboard; sourceTree = "<group>"; };
 		FA37A27B18DC718600B79FE8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		FA37A27E18DC723A00B79FE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FA37A28018DC735400B79FE8 /* ChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelView.h; path = View/ChannelView.h; sourceTree = "<group>"; };
+		FA37A28118DC735400B79FE8 /* ChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelView.m; path = View/ChannelView.m; sourceTree = "<group>"; };
+		FA37A28418DC737800B79FE8 /* ChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelController.h; path = Controller/ChannelController.h; sourceTree = "<group>"; };
+		FA37A28518DC737800B79FE8 /* ChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelController.m; path = Controller/ChannelController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA37A27F18DC723A00B79FE8 /* CoreData.framework in Frameworks */,
 				FA37A24B18DC6F7700B79FE8 /* CoreGraphics.framework in Frameworks */,
 				FA37A24D18DC6F7700B79FE8 /* UIKit.framework in Frameworks */,
 				FA37A24918DC6F7700B79FE8 /* Foundation.framework in Frameworks */,
@@ -69,6 +78,7 @@
 		FA37A24718DC6F7700B79FE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA37A27E18DC723A00B79FE8 /* CoreData.framework */,
 				FA37A24818DC6F7700B79FE8 /* Foundation.framework */,
 				FA37A24A18DC6F7700B79FE8 /* CoreGraphics.framework */,
 				FA37A24C18DC6F7700B79FE8 /* UIKit.framework */,
@@ -82,6 +92,8 @@
 			children = (
 				FA37A25718DC6F7700B79FE8 /* AppDelegate.h */,
 				FA37A25818DC6F7700B79FE8 /* AppDelegate.m */,
+				FA37A28318DC735900B79FE8 /* View */,
+				FA37A28718DC737F00B79FE8 /* Controller */,
 				FA37A27918DC708400B79FE8 /* Storyboard */,
 				FA37A25A18DC6F7700B79FE8 /* Images.xcassets */,
 				FA37A24F18DC6F7700B79FE8 /* Supporting Files */,
@@ -115,6 +127,24 @@
 				FA37A27A18DC718600B79FE8 /* DataModel.xcdatamodeld */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		FA37A28318DC735900B79FE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A28018DC735400B79FE8 /* ChannelView.h */,
+				FA37A28118DC735400B79FE8 /* ChannelView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FA37A28718DC737F00B79FE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A28418DC737800B79FE8 /* ChannelController.h */,
+				FA37A28518DC737800B79FE8 /* ChannelController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */,
+				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
 				FA37A25518DC6F7700B79FE8 /* main.m in Sources */,
