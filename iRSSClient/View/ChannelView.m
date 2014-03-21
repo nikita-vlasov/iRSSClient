@@ -1,21 +1,10 @@
-//
-//  ChannelView.m
-//  iRSSClient
-//
-//  Created by Alex on 3/21/14.
-//  Copyright (c) 2014 Alex. All rights reserved.
-//
-
 #import "ChannelView.h"
 
 @implementation ChannelView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
+    if (self) {}
     return self;
 }
 
