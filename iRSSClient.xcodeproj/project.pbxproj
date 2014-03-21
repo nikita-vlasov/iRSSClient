@@ -21,6 +21,7 @@
 		FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28518DC737800B79FE8 /* ChannelController.m */; };
 		FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28918DCD9F900B79FE8 /* Channel.m */; };
 		FA37A28E18DCDB2300B79FE8 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28D18DCDB2300B79FE8 /* Article.m */; };
+		FA37A29318DCDF3D00B79FE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA37A29518DCDF3D00B79FE8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,11 @@
 		FA37A28918DCD9F900B79FE8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Channel.m; path = MappingModel/Channel.m; sourceTree = "<group>"; };
 		FA37A28C18DCDB2300B79FE8 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = MappingModel/Article.h; sourceTree = "<group>"; };
 		FA37A28D18DCDB2300B79FE8 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
+		FA37A29118DCDF3200B79FE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA37A29218DCDF3700B79FE8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA37A29418DCDF3D00B79FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA37A29618DCDF4200B79FE8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA37A29718DCDF4300B79FE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		FA37A24F18DC6F7700B79FE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA37A29818DCDF4D00B79FE8 /* Localizable */,
 				FA37A27D18DC718C00B79FE8 /* DataModel */,
 				FA37A25018DC6F7700B79FE8 /* iRSSClient-Info.plist */,
 				FA37A25118DC6F7700B79FE8 /* InfoPlist.strings */,
@@ -165,6 +172,14 @@
 			name = MappingModel;
 			sourceTree = "<group>";
 		};
+		FA37A29818DCDF4D00B79FE8 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A29518DCDF3D00B79FE8 /* Localizable.strings */,
+			);
+			name = Localizable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +215,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
+				uk,
 			);
 			mainGroup = FA37A23C18DC6F7700B79FE8;
 			productRefGroup = FA37A24618DC6F7700B79FE8 /* Products */;
@@ -217,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA37A25318DC6F7700B79FE8 /* InfoPlist.strings in Resources */,
+				FA37A29318DCDF3D00B79FE8 /* Localizable.strings in Resources */,
 				FA37A27818DC707700B79FE8 /* iPhone.storyboard in Resources */,
 				FA37A25B18DC6F7700B79FE8 /* Images.xcassets in Resources */,
 			);
@@ -246,8 +264,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA37A25218DC6F7700B79FE8 /* en */,
+				FA37A29118DCDF3200B79FE8 /* ru */,
+				FA37A29218DCDF3700B79FE8 /* uk */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA37A29518DCDF3D00B79FE8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA37A29418DCDF3D00B79FE8 /* en */,
+				FA37A29618DCDF4200B79FE8 /* uk */,
+				FA37A29718DCDF4300B79FE8 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
