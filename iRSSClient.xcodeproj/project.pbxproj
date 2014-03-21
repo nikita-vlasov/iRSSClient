@@ -19,6 +19,7 @@
 		FA37A27F18DC723A00B79FE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA37A27E18DC723A00B79FE8 /* CoreData.framework */; };
 		FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28118DC735400B79FE8 /* ChannelView.m */; };
 		FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28518DC737800B79FE8 /* ChannelController.m */; };
+		FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28918DCD9F900B79FE8 /* Channel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		FA37A28118DC735400B79FE8 /* ChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelView.m; path = View/ChannelView.m; sourceTree = "<group>"; };
 		FA37A28418DC737800B79FE8 /* ChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelController.h; path = Controller/ChannelController.h; sourceTree = "<group>"; };
 		FA37A28518DC737800B79FE8 /* ChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelController.m; path = Controller/ChannelController.m; sourceTree = "<group>"; };
+		FA37A28818DCD9F900B79FE8 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Channel.h; path = MappingModel/Channel.h; sourceTree = "<group>"; };
+		FA37A28918DCD9F900B79FE8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Channel.m; path = MappingModel/Channel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 			children = (
 				FA37A25718DC6F7700B79FE8 /* AppDelegate.h */,
 				FA37A25818DC6F7700B79FE8 /* AppDelegate.m */,
+				FA37A28B18DCDA0500B79FE8 /* MappingModel */,
 				FA37A28318DC735900B79FE8 /* View */,
 				FA37A28718DC737F00B79FE8 /* Controller */,
 				FA37A27918DC708400B79FE8 /* Storyboard */,
@@ -145,6 +149,15 @@
 				FA37A28518DC737800B79FE8 /* ChannelController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		FA37A28B18DCDA0500B79FE8 /* MappingModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A28818DCD9F900B79FE8 /* Channel.h */,
+				FA37A28918DCD9F900B79FE8 /* Channel.m */,
+			);
+			name = MappingModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */,
+				FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */,
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
