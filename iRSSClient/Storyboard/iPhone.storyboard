@@ -31,7 +31,32 @@
                     <view key="view" contentMode="scaleToFill" id="PYr-iO-qj5" customClass="ChannelView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-Vq-zd6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrg-6M-mKz">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" id="eIo-qa-pNK"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KNp-DE-9Jk"/>
+                                    <barButtonItem title="Item" id="coz-Pw-5Eh"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZdU-bW-ObE" firstAttribute="top" secondItem="h7Y-Vq-zd6" secondAttribute="bottom" id="Bp4-VG-umV"/>
+                            <constraint firstItem="h7Y-Vq-zd6" firstAttribute="top" secondItem="PYr-iO-qj5" secondAttribute="top" id="PuX-OO-xdG"/>
+                            <constraint firstItem="h7Y-Vq-zd6" firstAttribute="leading" secondItem="PYr-iO-qj5" secondAttribute="leading" id="W4I-I8-ARA"/>
+                            <constraint firstAttribute="trailing" secondItem="Jrg-6M-mKz" secondAttribute="trailing" id="kbw-78-k6G"/>
+                            <constraint firstItem="ZdU-bW-ObE" firstAttribute="top" secondItem="Jrg-6M-mKz" secondAttribute="bottom" id="nJg-lg-LH4"/>
+                            <constraint firstAttribute="trailing" secondItem="h7Y-Vq-zd6" secondAttribute="trailing" id="pNa-qr-YqU"/>
+                            <constraint firstItem="Jrg-6M-mKz" firstAttribute="leading" secondItem="PYr-iO-qj5" secondAttribute="leading" id="rYc-iY-k7S"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5al-Wi-nAJ"/>
                     <connections>
