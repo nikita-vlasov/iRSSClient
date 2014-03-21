@@ -20,6 +20,44 @@
             </objects>
             <point key="canvasLocation" x="-447" y="-228"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="aEI-oT-wMb">
+            <objects>
+                <viewController id="Y6H-LL-1jb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YnH-9Y-NpD"/>
+                        <viewControllerLayoutGuide type="bottom" id="TJh-Lf-DXj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="chK-zT-Hci">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11S-Re-1wW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9RO-7E-dsr"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="VWN-CI-sps">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HIj-b8-YDI"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="11S-Re-1wW" firstAttribute="leading" secondItem="chK-zT-Hci" secondAttribute="leading" id="Gid-Or-2KY"/>
+                            <constraint firstAttribute="trailing" secondItem="11S-Re-1wW" secondAttribute="trailing" id="fai-iq-1C8"/>
+                            <constraint firstItem="11S-Re-1wW" firstAttribute="top" secondItem="chK-zT-Hci" secondAttribute="top" id="sTn-7I-orm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cyc-Vs-jAx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czm-mO-pvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="-908"/>
+        </scene>
         <!--Channel Controller-->
         <scene sceneID="6Y4-hk-lGT">
             <objects>
@@ -89,6 +127,7 @@
                     <navigationItem key="navigationItem" id="5al-Wi-nAJ"/>
                     <connections>
                         <outlet property="channelView" destination="PYr-iO-qj5" id="kSA-eG-c3M"/>
+                        <segue destination="Y6H-LL-1jb" kind="modal" identifier="OpenAdd&amp;EditChannel" id="6XA-lE-uFe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S74-ft-QXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
