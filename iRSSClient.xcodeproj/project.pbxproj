@@ -72,6 +72,8 @@
 		FA437C3918EC9F140012BCE5 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3818EC9F140012BCE5 /* TextFieldCell.m */; };
 		FA437C4318ECA77A0012BCE5 /* EditChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C4218ECA77A0012BCE5 /* EditChannelView.m */; };
 		FA437C4618ECA7950012BCE5 /* EditChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C4518ECA7950012BCE5 /* EditChannelController.m */; };
+		FA437C4918ECACDB0012BCE5 /* RssFeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C4818ECACDB0012BCE5 /* RssFeedView.m */; };
+		FA437C4C18ECACEE0012BCE5 /* RssFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C4B18ECACEE0012BCE5 /* RssFeedController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +208,10 @@
 		FA437C4218ECA77A0012BCE5 /* EditChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditChannelView.m; path = View/EditChannelView.m; sourceTree = "<group>"; };
 		FA437C4418ECA7950012BCE5 /* EditChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditChannelController.h; path = Controller/EditChannelController.h; sourceTree = "<group>"; };
 		FA437C4518ECA7950012BCE5 /* EditChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditChannelController.m; path = Controller/EditChannelController.m; sourceTree = "<group>"; };
+		FA437C4718ECACDB0012BCE5 /* RssFeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssFeedView.h; path = View/RssFeedView.h; sourceTree = "<group>"; };
+		FA437C4818ECACDB0012BCE5 /* RssFeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssFeedView.m; path = View/RssFeedView.m; sourceTree = "<group>"; };
+		FA437C4A18ECACEE0012BCE5 /* RssFeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssFeedController.h; path = Controller/RssFeedController.h; sourceTree = "<group>"; };
+		FA437C4B18ECACEE0012BCE5 /* RssFeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssFeedController.m; path = Controller/RssFeedController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +318,8 @@
 				FA37A28118DC735400B79FE8 /* ChannelView.m */,
 				FA437C4118ECA77A0012BCE5 /* EditChannelView.h */,
 				FA437C4218ECA77A0012BCE5 /* EditChannelView.m */,
+				FA437C4718ECACDB0012BCE5 /* RssFeedView.h */,
+				FA437C4818ECACDB0012BCE5 /* RssFeedView.m */,
 				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
 				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
 			);
@@ -329,6 +337,8 @@
 				FA37A28518DC737800B79FE8 /* ChannelController.m */,
 				FA437C4418ECA7950012BCE5 /* EditChannelController.h */,
 				FA437C4518ECA7950012BCE5 /* EditChannelController.m */,
+				FA437C4A18ECACEE0012BCE5 /* RssFeedController.h */,
+				FA437C4B18ECACEE0012BCE5 /* RssFeedController.m */,
 				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
 				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
 			);
@@ -643,6 +653,7 @@
 				FA437C1A18EC81CC0012BCE5 /* UIButton+AFNetworking.m in Sources */,
 				FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */,
 				FA437C0B18EC81CC0012BCE5 /* SVModalWebViewController.m in Sources */,
+				FA437C4918ECACDB0012BCE5 /* RssFeedView.m in Sources */,
 				FA437C0518EC81CC0012BCE5 /* UIViewController+MMDrawerController.m in Sources */,
 				FA437C4318ECA77A0012BCE5 /* EditChannelView.m in Sources */,
 				FA437BFE18EC81CC0012BCE5 /* AFURLResponseSerialization.m in Sources */,
@@ -679,6 +690,7 @@
 				FA437C0318EC81CC0012BCE5 /* MMDrawerController.m in Sources */,
 				FA437BF818EC81CC0012BCE5 /* AFHTTPRequestOperationManager.m in Sources */,
 				FA437C1018EC81CC0012BCE5 /* SVWebViewControllerActivityChrome.m in Sources */,
+				FA437C4C18ECACEE0012BCE5 /* RssFeedController.m in Sources */,
 				FA437C1418EC81CC0012BCE5 /* SVWebViewControllerActivitySafari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
