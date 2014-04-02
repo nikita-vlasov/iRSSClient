@@ -16,7 +16,7 @@
 
 @implementation LeftController
 
-#pragma mark - UIViewCOntroller
+#pragma mark - UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -50,8 +50,8 @@
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self openControllers:[indexPath row]];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self openControllers:[indexPath row]];
 }
 
 /** Метод, дает возможность открыть необходимы контролер по индексу ячейки. */
