@@ -358,13 +358,13 @@
 			isa = PBXGroup;
 			children = (
 				FA437B9518EC81CC0012BCE5 /* AFNetworking */,
+				FA437BE518EC81CC0012BCE5 /* UIKit+AFNetworking */,
 				FA437BA918EC81CC0012BCE5 /* GoogleAnalytics */,
 				FA437BB918EC81CC0012BCE5 /* MMDrawerController */,
 				FA437BC318EC81CC0012BCE5 /* Reachability */,
 				FA437BC618EC81CC0012BCE5 /* RSSParser */,
 				FA437BCB18EC81CC0012BCE5 /* SVProgressHUD */,
 				FA437BD018EC81CC0012BCE5 /* SVWebViewController */,
-				FA437BE518EC81CC0012BCE5 /* UIKit+AFNetworking */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -471,9 +471,9 @@
 			isa = PBXGroup;
 			children = (
 				FA437BCC18EC81CC0012BCE5 /* SVProgressHUD-Prefix.pch */,
-				FA437BCD18EC81CC0012BCE5 /* SVProgressHUD.bundle */,
 				FA437BCE18EC81CC0012BCE5 /* SVProgressHUD.h */,
 				FA437BCF18EC81CC0012BCE5 /* SVProgressHUD.m */,
+				FA437BCD18EC81CC0012BCE5 /* SVProgressHUD.bundle */,
 			);
 			path = SVProgressHUD;
 			sourceTree = "<group>";
@@ -483,9 +483,9 @@
 			children = (
 				FA437BD118EC81CC0012BCE5 /* SVModalWebViewController.h */,
 				FA437BD218EC81CC0012BCE5 /* SVModalWebViewController.m */,
-				FA437BD318EC81CC0012BCE5 /* SVWebViewController.bundle */,
 				FA437BD418EC81CC0012BCE5 /* SVWebViewController.h */,
 				FA437BD518EC81CC0012BCE5 /* SVWebViewController.m */,
+				FA437BD318EC81CC0012BCE5 /* SVWebViewController.bundle */,
 				FA437BD618EC81CC0012BCE5 /* UIActivities */,
 			);
 			path = SVWebViewController;
