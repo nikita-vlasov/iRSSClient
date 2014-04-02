@@ -3,6 +3,10 @@
 
 #import "LeftController.h"
 
+/**
+ * Класс для реализации меню - слайда.
+ */
+
 @class MMDrawerController;
 
 @interface DrawerFactory : NSObject
