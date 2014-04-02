@@ -13,4 +13,8 @@
 #pragma mark - UIViewController
 - (LeftController *)leftController;
 
+#pragma mark - Others
+- (void)createLeftMenu;
+- (void)removeAllControllers;
+
 @end
