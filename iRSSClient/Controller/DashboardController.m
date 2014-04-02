@@ -7,10 +7,14 @@
 //
 
 #import "DashboardController.h"
+#import "DashboardView.h"
 
 @interface DashboardController ()
 
+@property (strong, nonatomic) IBOutlet DashboardView *dashboardView;
+
 @end
+
 
 @implementation DashboardController
 
