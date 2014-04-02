@@ -137,7 +137,7 @@
         <!--View Controller-->
         <scene sceneID="8My-N9-RdT">
             <objects>
-                <viewController id="ign-bl-HMR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Left" id="ign-bl-HMR" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u7t-q5-BB4"/>
                         <viewControllerLayoutGuide type="bottom" id="j9u-ea-7Cw"/>
