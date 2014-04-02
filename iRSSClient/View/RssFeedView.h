@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
+#import "LeftView.h"
 
-@interface RssFeedView : UIView
+@interface RssFeedView : LeftView
 
 @end
