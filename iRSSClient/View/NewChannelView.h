@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LeftView.h"
 
-@interface NewChannelView : UIView
+@interface NewChannelView : LeftView
 
 @end
