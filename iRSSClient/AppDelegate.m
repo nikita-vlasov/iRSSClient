@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import "DrawerFactory.h"
 
 @implementation AppDelegate
 
@@ -8,6 +9,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    [self loadLeftMenu];
+
     return YES;
 }
 
@@ -34,6 +38,12 @@
     [self saveContext];
 }
 
+- (void)loadLeftMenu {
+    [[DrawerFactory sharedFactory] createLeftMenu];
+    [[self window] setRootViewController:[[DrawerFactory sharedFactory] drawerViewController]];
+}
+
+#pragma mark - CoreData
 - (void)saveContext {
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
