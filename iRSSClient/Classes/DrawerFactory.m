@@ -8,6 +8,7 @@
 #pragma mark - UIViewController
 @property (strong, nonatomic) LeftController *left;
 @property (strong, nonatomic) DashboardController *dashboard;
+@property (strong, nonatomic) ChannelController *channel;
 
 #pragma mark - UIStoryboard
 @property (strong, nonatomic) UIStoryboard *storyboard;
@@ -39,6 +40,7 @@
 - (void)createLeftMenu {
     _left = [[self storyboard] instantiateViewControllerWithIdentifier:@"Left"];
     _dashboard = [[self storyboard] instantiateViewControllerWithIdentifier:@"Dashboard"];
+    _channel = [[self storyboard] instantiateViewControllerWithIdentifier:@"Channel"];
 
     _drawerController = [[MMDrawerController alloc] initWithCenterViewController:_dashboard
                                                         leftDrawerViewController:_left
@@ -65,6 +67,10 @@
 
 - (DashboardController *)dashboardController {
     return _dashboard;
+}
+
+- (ChannelController *)channelController {
+    return _channel;
 }
 
 @end
