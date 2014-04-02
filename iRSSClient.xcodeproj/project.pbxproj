@@ -70,6 +70,7 @@
 		FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */; };
 		FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3218EC9AE70012BCE5 /* SettingView.m */; };
 		FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3518EC9AFA0012BCE5 /* SettingController.m */; };
+		FA437C3918EC9F140012BCE5 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3818EC9F140012BCE5 /* TextFieldCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +201,8 @@
 		FA437C3218EC9AE70012BCE5 /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingView.m; path = View/SettingView.m; sourceTree = "<group>"; };
 		FA437C3418EC9AFA0012BCE5 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingController.h; path = Controller/SettingController.h; sourceTree = "<group>"; };
 		FA437C3518EC9AFA0012BCE5 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingController.m; path = Controller/SettingController.m; sourceTree = "<group>"; };
+		FA437C3718EC9F140012BCE5 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldCell.h; path = View/TableViewCell/TextFieldCell.h; sourceTree = "<group>"; };
+		FA437C3818EC9F140012BCE5 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldCell.m; path = View/TableViewCell/TextFieldCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +300,7 @@
 		FA37A28318DC735900B79FE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA437C3A18EC9F170012BCE5 /* TableViewCell */,
 				FA437C2518EC86230012BCE5 /* LeftView.h */,
 				FA437C2618EC86230012BCE5 /* LeftView.m */,
 				FA437C2B18EC8A540012BCE5 /* DashboardView.h */,
@@ -540,6 +544,15 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		FA437C3A18EC9F170012BCE5 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA437C3718EC9F140012BCE5 /* TextFieldCell.h */,
+				FA437C3818EC9F140012BCE5 /* TextFieldCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -631,6 +644,7 @@
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA437BFD18EC81CC0012BCE5 /* AFURLRequestSerialization.m in Sources */,
 				FA437BFB18EC81CC0012BCE5 /* AFSecurityPolicy.m in Sources */,
+				FA437C3918EC9F140012BCE5 /* TextFieldCell.m in Sources */,
 				FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */,
 				FA437C1D18EC81CC0012BCE5 /* UIRefreshControl+AFNetworking.m in Sources */,
 				FA437C1C18EC81CC0012BCE5 /* UIProgressView+AFNetworking.m in Sources */,
