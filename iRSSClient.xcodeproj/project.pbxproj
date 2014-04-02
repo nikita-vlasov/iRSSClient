@@ -36,7 +36,6 @@
 		FA37A25718DC6F7700B79FE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA37A25818DC6F7700B79FE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA37A25A18DC6F7700B79FE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FA37A26118DC6F7800B79FE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FA37A27718DC707700B79FE8 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Storyboard/iPhone.storyboard; sourceTree = "<group>"; };
 		FA37A27B18DC718600B79FE8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FA37A27E18DC723A00B79FE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -50,9 +49,9 @@
 		FA37A28D18DCDB2300B79FE8 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
 		FA37A29118DCDF3200B79FE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA37A29218DCDF3700B79FE8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FA37A29418DCDF3D00B79FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FA37A29618DCDF4200B79FE8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FA37A29718DCDF4300B79FE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA37A29418DCDF3D00B79FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA37A29618DCDF4200B79FE8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA37A29718DCDF4300B79FE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +93,6 @@
 				FA37A24818DC6F7700B79FE8 /* Foundation.framework */,
 				FA37A24A18DC6F7700B79FE8 /* CoreGraphics.framework */,
 				FA37A24C18DC6F7700B79FE8 /* UIKit.framework */,
-				FA37A26118DC6F7800B79FE8 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,10 +162,10 @@
 		FA37A28B18DCDA0500B79FE8 /* MappingModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA37A28818DCD9F900B79FE8 /* Channel.h */,
-				FA37A28918DCD9F900B79FE8 /* Channel.m */,
 				FA37A28C18DCDB2300B79FE8 /* Article.h */,
 				FA37A28D18DCDB2300B79FE8 /* Article.m */,
+				FA37A28818DCD9F900B79FE8 /* Channel.h */,
+				FA37A28918DCD9F900B79FE8 /* Channel.m */,
 			);
 			name = MappingModel;
 			sourceTree = "<group>";
