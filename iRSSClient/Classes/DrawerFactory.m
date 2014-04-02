@@ -9,6 +9,7 @@
 @property (strong, nonatomic) LeftController *left;
 @property (strong, nonatomic) DashboardController *dashboard;
 @property (strong, nonatomic) ChannelController *channel;
+@property (strong, nonatomic) SettingController *setting;
 
 #pragma mark - UIStoryboard
 @property (strong, nonatomic) UIStoryboard *storyboard;
@@ -41,6 +42,7 @@
     _left = [[self storyboard] instantiateViewControllerWithIdentifier:@"Left"];
     _dashboard = [[self storyboard] instantiateViewControllerWithIdentifier:@"Dashboard"];
     _channel = [[self storyboard] instantiateViewControllerWithIdentifier:@"Channel"];
+    _setting = [[self storyboard] instantiateViewControllerWithIdentifier:@"Setting"];
 
     _drawerController = [[MMDrawerController alloc] initWithCenterViewController:_dashboard
                                                         leftDrawerViewController:_left
@@ -71,6 +73,10 @@
 
 - (ChannelController *)channelController {
     return _channel;
+}
+
+- (SettingController *)settingController {
+    return _setting;
 }
 
 @end

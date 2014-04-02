@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "MMDrawerController.h"
-#import "DashboardController.h"
-#import "ChannelController.h"
 
 #import "LeftController.h"
+#import "DashboardController.h"
+#import "ChannelController.h"
+#import "SettingController.h"
 
 /**
  * Класс для реализации меню - слайда.
@@ -22,6 +23,7 @@
 - (LeftController *)leftController;
 - (DashboardController *)dashboardController;
 - (ChannelController *)channelController;
+- (SettingController *)settingController;
 
 #pragma mark - Others
 - (void)createLeftMenu;
