@@ -23,6 +23,8 @@
     [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
 
     rssItems = [[RSSItem alloc] init];
+
+//    [[[self rssFeedView] refreshControl] addTarget:self action:@selector(startRefresh:) forControlEvents:UIControlEventAllEvents];
 }
 
 - (void)didReceiveMemoryWarning {
