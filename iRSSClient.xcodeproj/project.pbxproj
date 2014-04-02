@@ -68,6 +68,8 @@
 		FA437C2A18EC86350012BCE5 /* LeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2918EC86350012BCE5 /* LeftController.m */; };
 		FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2C18EC8A540012BCE5 /* DashboardView.m */; };
 		FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */; };
+		FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3218EC9AE70012BCE5 /* SettingView.m */; };
+		FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3518EC9AFA0012BCE5 /* SettingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +196,10 @@
 		FA437C2C18EC8A540012BCE5 /* DashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardView.m; path = View/DashboardView.m; sourceTree = "<group>"; };
 		FA437C2E18EC8A6A0012BCE5 /* DashboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardController.h; path = Controller/DashboardController.h; sourceTree = "<group>"; };
 		FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardController.m; path = Controller/DashboardController.m; sourceTree = "<group>"; };
+		FA437C3118EC9AE70012BCE5 /* SettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingView.h; path = View/SettingView.h; sourceTree = "<group>"; };
+		FA437C3218EC9AE70012BCE5 /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingView.m; path = View/SettingView.m; sourceTree = "<group>"; };
+		FA437C3418EC9AFA0012BCE5 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingController.h; path = Controller/SettingController.h; sourceTree = "<group>"; };
+		FA437C3518EC9AFA0012BCE5 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingController.m; path = Controller/SettingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +303,8 @@
 				FA437C2C18EC8A540012BCE5 /* DashboardView.m */,
 				FA37A28018DC735400B79FE8 /* ChannelView.h */,
 				FA37A28118DC735400B79FE8 /* ChannelView.m */,
+				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
+				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -310,6 +318,8 @@
 				FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */,
 				FA37A28418DC737800B79FE8 /* ChannelController.h */,
 				FA37A28518DC737800B79FE8 /* ChannelController.m */,
+				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
+				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -613,6 +623,7 @@
 				FA437C1818EC81CC0012BCE5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */,
 				FA437C1A18EC81CC0012BCE5 /* UIButton+AFNetworking.m in Sources */,
+				FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */,
 				FA437C0B18EC81CC0012BCE5 /* SVModalWebViewController.m in Sources */,
 				FA437C0518EC81CC0012BCE5 /* UIViewController+MMDrawerController.m in Sources */,
 				FA37A28E18DCDB2300B79FE8 /* Article.m in Sources */,
@@ -629,6 +640,7 @@
 				FA437C0618EC81CC0012BCE5 /* Reachability.m in Sources */,
 				FA437BF718EC81CC0012BCE5 /* AFHTTPRequestOperation.m in Sources */,
 				FA437C1718EC81CC0012BCE5 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */,
 				FA437BFF18EC81CC0012BCE5 /* AFURLSessionManager.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */,
