@@ -63,6 +63,7 @@
 		FA437C1D18EC81CC0012BCE5 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437BF418EC81CC0012BCE5 /* UIRefreshControl+AFNetworking.m */; };
 		FA437C1E18EC81CC0012BCE5 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437BF618EC81CC0012BCE5 /* UIWebView+AFNetworking.m */; };
 		FA437C2018EC82930012BCE5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA437C1F18EC82930012BCE5 /* README.md */; };
+		FA437C2318EC85720012BCE5 /* DrawerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2218EC85720012BCE5 /* DrawerFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,6 +180,8 @@
 		FA437BF518EC81CC0012BCE5 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		FA437BF618EC81CC0012BCE5 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		FA437C1F18EC82930012BCE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		FA437C2118EC85720012BCE5 /* DrawerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawerFactory.h; path = Classes/DrawerFactory.h; sourceTree = "<group>"; };
+		FA437C2218EC85720012BCE5 /* DrawerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawerFactory.m; path = Classes/DrawerFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,7 @@
 				FA437C1F18EC82930012BCE5 /* README.md */,
 				FA37A25718DC6F7700B79FE8 /* AppDelegate.h */,
 				FA37A25818DC6F7700B79FE8 /* AppDelegate.m */,
+				FA437C2418EC85750012BCE5 /* Classes */,
 				FA37A28B18DCDA0500B79FE8 /* MappingModel */,
 				FA37A28318DC735900B79FE8 /* View */,
 				FA37A28718DC737F00B79FE8 /* Controller */,
@@ -497,6 +501,15 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		FA437C2418EC85750012BCE5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA437C2118EC85720012BCE5 /* DrawerFactory.h */,
+				FA437C2218EC85720012BCE5 /* DrawerFactory.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,6 +617,7 @@
 				FA37A25518DC6F7700B79FE8 /* main.m in Sources */,
 				FA437BFA18EC81CC0012BCE5 /* AFNetworkReachabilityManager.m in Sources */,
 				FA437C0418EC81CC0012BCE5 /* MMDrawerVisualState.m in Sources */,
+				FA437C2318EC85720012BCE5 /* DrawerFactory.m in Sources */,
 				FA437C0718EC81CC0012BCE5 /* RSSItem.m in Sources */,
 				FA437C1618EC81CC0012BCE5 /* SVWebViewControllerActivity.m in Sources */,
 				FA437C0318EC81CC0012BCE5 /* MMDrawerController.m in Sources */,
