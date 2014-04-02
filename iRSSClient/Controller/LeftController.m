@@ -24,6 +24,7 @@
 
     [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @""}];
     [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @""}];
+    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @""}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,6 +62,9 @@
     }
     else if (index == 1) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] channelController] withCloseAnimation:YES completion:nil];
+    }
+    else if (index == 2) {
+        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] settingController] withCloseAnimation:YES completion:nil];
     }
 //    else if (index == 1) {
 //        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] customersController] withCloseAnimation:YES completion:nil];
