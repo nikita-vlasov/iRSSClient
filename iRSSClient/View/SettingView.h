@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
+#import "LeftView.h"
 
-@interface SettingView : UIView
+@interface SettingView : LeftView
 
 @end
