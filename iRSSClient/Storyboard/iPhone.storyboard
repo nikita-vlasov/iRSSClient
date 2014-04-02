@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="E5b-nx-qWt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qlV-Jq-c7Z">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Lau-zF-P3w">
             <objects>
-                <navigationController definesPresentationContext="YES" id="E5b-nx-qWt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Channel" definesPresentationContext="YES" id="E5b-nx-qWt" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQK-th-mPg">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHl-Dt-xT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="-1008"/>
+            <point key="canvasLocation" x="-284" y="-532"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aEI-oT-wMb">
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czm-mO-pvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="-1688"/>
+            <point key="canvasLocation" x="664" y="-1244"/>
         </scene>
         <!--Channel Controller-->
         <scene sceneID="6Y4-hk-lGT">
@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-Vq-zd6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-Vq-zd6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,7 +98,7 @@
                                     <outlet property="delegate" destination="kvg-2M-RNw" id="kun-Xn-PiK"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrg-6M-mKz">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jrg-6M-mKz">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -109,15 +109,6 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZdU-bW-ObE" firstAttribute="top" secondItem="h7Y-Vq-zd6" secondAttribute="bottom" id="Bp4-VG-umV"/>
-                            <constraint firstItem="h7Y-Vq-zd6" firstAttribute="top" secondItem="PYr-iO-qj5" secondAttribute="top" id="PuX-OO-xdG"/>
-                            <constraint firstItem="h7Y-Vq-zd6" firstAttribute="leading" secondItem="PYr-iO-qj5" secondAttribute="leading" id="W4I-I8-ARA"/>
-                            <constraint firstAttribute="trailing" secondItem="Jrg-6M-mKz" secondAttribute="trailing" id="kbw-78-k6G"/>
-                            <constraint firstItem="ZdU-bW-ObE" firstAttribute="top" secondItem="Jrg-6M-mKz" secondAttribute="bottom" id="nJg-lg-LH4"/>
-                            <constraint firstAttribute="trailing" secondItem="h7Y-Vq-zd6" secondAttribute="trailing" id="pNa-qr-YqU"/>
-                            <constraint firstItem="Jrg-6M-mKz" firstAttribute="leading" secondItem="PYr-iO-qj5" secondAttribute="leading" id="rYc-iY-k7S"/>
-                        </constraints>
                         <connections>
                             <outlet property="leftBarButton" destination="eIo-qa-pNK" id="rN0-dm-CKs"/>
                             <outlet property="rightBarButton" destination="coz-Pw-5Eh" id="D1q-hX-1wg"/>
@@ -132,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S74-ft-QXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="-1008"/>
+            <point key="canvasLocation" x="132" y="-532"/>
         </scene>
         <!--Left Controller-->
         <scene sceneID="8My-N9-RdT">
@@ -256,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ox5-1D-42a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-515"/>
+            <point key="canvasLocation" x="132" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Tq-1d-LMN">
@@ -271,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmg-CF-udP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="-515"/>
+            <point key="canvasLocation" x="-284" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-09-b6u">
