@@ -137,7 +137,7 @@
         <!--Left Controller-->
         <scene sceneID="8My-N9-RdT">
             <objects>
-                <viewController storyboardIdentifier="Left" id="ign-bl-HMR" customClass="LeftController" sceneMemberID="viewController">
+                <viewController id="ign-bl-HMR" customClass="LeftController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u7t-q5-BB4"/>
                         <viewControllerLayoutGuide type="bottom" id="j9u-ea-7Cw"/>
@@ -202,20 +202,23 @@
             </objects>
             <point key="canvasLocation" x="-732" y="-1203"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard Controller-->
         <scene sceneID="aJJ-SQ-Kmq">
             <objects>
-                <viewController storyboardIdentifier="Dashboard" id="QVD-UV-vzQ" sceneMemberID="viewController">
+                <viewController id="QVD-UV-vzQ" customClass="DashboardController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dSg-LR-O7a"/>
                         <viewControllerLayoutGuide type="bottom" id="J3U-eN-A6E"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nFC-vc-KAH">
+                    <view key="view" contentMode="scaleToFill" id="nFC-vc-KAH" customClass="DashboardView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="USa-L9-ByH"/>
+                    <connections>
+                        <outlet property="dashboardView" destination="nFC-vc-KAH" id="qaa-5b-Xs8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTJ-m3-fxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,7 +227,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zg3-dv-fhZ">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Ici-ge-xte" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Dashboard" definesPresentationContext="YES" id="Ici-ge-xte" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nl-Qx-xUS">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -273,7 +276,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RwQ-09-b6u">
             <objects>
-                <navigationController definesPresentationContext="YES" id="qlV-Jq-c7Z" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Left" definesPresentationContext="YES" id="qlV-Jq-c7Z" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p59-1h-ilY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
