@@ -8,6 +8,7 @@
     NSMutableArray *arrayTitle;
 }
 
+/** View */
 @property (strong, nonatomic) IBOutlet LeftView *leftView;
 
 @end
