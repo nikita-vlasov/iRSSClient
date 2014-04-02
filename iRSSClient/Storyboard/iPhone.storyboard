@@ -76,11 +76,47 @@
                     <connections>
                         <outlet property="channelView" destination="PYr-iO-qj5" id="kSA-eG-c3M"/>
                         <segue destination="Hvd-Bo-kzS" kind="modal" identifier="OpenEditChannel" id="QVe-lU-a7M"/>
+                        <segue destination="QMn-97-6mF" kind="push" identifier="OpenRssFeed" id="8Zg-Tz-lRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S74-ft-QXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-532"/>
+        </scene>
+        <!--Rss Feed Controller-->
+        <scene sceneID="fqt-Sg-cVt">
+            <objects>
+                <viewController id="QMn-97-6mF" customClass="RssFeedController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="efz-aL-1p5"/>
+                        <viewControllerLayoutGuide type="bottom" id="mUR-OZ-hBc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spF-pm-ARt" customClass="RssFeedView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3HC-bi-8gU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3HC-bi-8gU" secondAttribute="trailing" id="0r5-0Z-46l"/>
+                            <constraint firstItem="3HC-bi-8gU" firstAttribute="top" secondItem="spF-pm-ARt" secondAttribute="top" id="Ngn-s6-HvK"/>
+                            <constraint firstItem="mUR-OZ-hBc" firstAttribute="top" secondItem="3HC-bi-8gU" secondAttribute="bottom" id="W8Q-vY-TVU"/>
+                            <constraint firstItem="3HC-bi-8gU" firstAttribute="leading" secondItem="spF-pm-ARt" secondAttribute="leading" id="nPp-dw-rbm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nTj-Wd-Rng"/>
+                    <connections>
+                        <outlet property="rssFeedView" destination="spF-pm-ARt" id="hkf-PK-eBi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0X4-ng-qNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="-532"/>
         </scene>
         <!--Left Controller-->
         <scene sceneID="8My-N9-RdT">
