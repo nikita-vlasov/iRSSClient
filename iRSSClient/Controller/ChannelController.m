@@ -53,12 +53,14 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    [self performSegueWithIdentifier:@"OpenRssFeed" sender:nil];
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"OpenEditChannel"]) {
-    }
+    if ([[segue identifier] isEqualToString:@"OpenEditChannel"]) {}
+    else if ([[segue identifier] isEqualToString:@"OpenRssFeed"]) {}
 }
 
 @end
