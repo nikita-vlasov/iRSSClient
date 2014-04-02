@@ -41,21 +41,22 @@
     UITableViewCell *ringDetailCell = [tableView dequeueReusableCellWithIdentifier:@"RingDetailCell"];
 
     [[ringDetailCell textLabel] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
+    [[ringDetailCell detailTextLabel] setText:@""];
 
     return ringDetailCell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [self openControllers:[indexPath row]];
+    [self openControllers:[indexPath row]];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /** Метод, дает возможность открыть необходимы контролер по индексу ячейки. */
 - (void)openControllers:(int)index {
-//    if (index == 0) {
-//        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] dashboardController] withCloseAnimation:YES completion:nil];
-//    }
+    if (index == 0) {
+        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] dashboardController] withCloseAnimation:YES completion:nil];
+    }
 //    else if (index == 1) {
 //        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] customersController] withCloseAnimation:YES completion:nil];
 //    }
