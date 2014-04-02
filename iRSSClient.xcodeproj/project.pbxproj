@@ -20,7 +20,6 @@
 		FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28118DC735400B79FE8 /* ChannelView.m */; };
 		FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28518DC737800B79FE8 /* ChannelController.m */; };
 		FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28918DCD9F900B79FE8 /* Channel.m */; };
-		FA37A28E18DCDB2300B79FE8 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37A28D18DCDB2300B79FE8 /* Article.m */; };
 		FA37A29318DCDF3D00B79FE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA37A29518DCDF3D00B79FE8 /* Localizable.strings */; };
 		FA437BF718EC81CC0012BCE5 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437B9718EC81CC0012BCE5 /* AFHTTPRequestOperation.m */; };
 		FA437BF818EC81CC0012BCE5 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437B9918EC81CC0012BCE5 /* AFHTTPRequestOperationManager.m */; };
@@ -96,8 +95,6 @@
 		FA37A28518DC737800B79FE8 /* ChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelController.m; path = Controller/ChannelController.m; sourceTree = "<group>"; };
 		FA37A28818DCD9F900B79FE8 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Channel.h; path = MappingModel/Channel.h; sourceTree = "<group>"; };
 		FA37A28918DCD9F900B79FE8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Channel.m; path = MappingModel/Channel.m; sourceTree = "<group>"; };
-		FA37A28C18DCDB2300B79FE8 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = MappingModel/Article.h; sourceTree = "<group>"; };
-		FA37A28D18DCDB2300B79FE8 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
 		FA37A29118DCDF3200B79FE8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA37A29218DCDF3700B79FE8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA37A29418DCDF3D00B79FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -341,8 +338,6 @@
 		FA37A28B18DCDA0500B79FE8 /* MappingModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA37A28C18DCDB2300B79FE8 /* Article.h */,
-				FA37A28D18DCDB2300B79FE8 /* Article.m */,
 				FA37A28818DCD9F900B79FE8 /* Channel.h */,
 				FA37A28918DCD9F900B79FE8 /* Channel.m */,
 			);
@@ -649,7 +644,6 @@
 				FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */,
 				FA437C0B18EC81CC0012BCE5 /* SVModalWebViewController.m in Sources */,
 				FA437C0518EC81CC0012BCE5 /* UIViewController+MMDrawerController.m in Sources */,
-				FA37A28E18DCDB2300B79FE8 /* Article.m in Sources */,
 				FA437BFE18EC81CC0012BCE5 /* AFURLResponseSerialization.m in Sources */,
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA437BFD18EC81CC0012BCE5 /* AFURLRequestSerialization.m in Sources */,
