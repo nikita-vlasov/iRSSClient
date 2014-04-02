@@ -70,8 +70,6 @@
 		FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3218EC9AE70012BCE5 /* SettingView.m */; };
 		FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3518EC9AFA0012BCE5 /* SettingController.m */; };
 		FA437C3918EC9F140012BCE5 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3818EC9F140012BCE5 /* TextFieldCell.m */; };
-		FA437C3D18ECA0AF0012BCE5 /* NewChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3C18ECA0AF0012BCE5 /* NewChannelController.m */; };
-		FA437C4018ECA0C60012BCE5 /* NewChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C3F18ECA0C60012BCE5 /* NewChannelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,10 +200,6 @@
 		FA437C3518EC9AFA0012BCE5 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingController.m; path = Controller/SettingController.m; sourceTree = "<group>"; };
 		FA437C3718EC9F140012BCE5 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldCell.h; path = View/TableViewCell/TextFieldCell.h; sourceTree = "<group>"; };
 		FA437C3818EC9F140012BCE5 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldCell.m; path = View/TableViewCell/TextFieldCell.m; sourceTree = "<group>"; };
-		FA437C3B18ECA0AF0012BCE5 /* NewChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewChannelController.h; path = Controller/NewChannelController.h; sourceTree = "<group>"; };
-		FA437C3C18ECA0AF0012BCE5 /* NewChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewChannelController.m; path = Controller/NewChannelController.m; sourceTree = "<group>"; };
-		FA437C3E18ECA0C60012BCE5 /* NewChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewChannelView.h; path = View/NewChannelView.h; sourceTree = "<group>"; };
-		FA437C3F18ECA0C60012BCE5 /* NewChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewChannelView.m; path = View/NewChannelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,8 +304,6 @@
 				FA437C2C18EC8A540012BCE5 /* DashboardView.m */,
 				FA37A28018DC735400B79FE8 /* ChannelView.h */,
 				FA37A28118DC735400B79FE8 /* ChannelView.m */,
-				FA437C3E18ECA0C60012BCE5 /* NewChannelView.h */,
-				FA437C3F18ECA0C60012BCE5 /* NewChannelView.m */,
 				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
 				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
 			);
@@ -327,8 +319,6 @@
 				FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */,
 				FA37A28418DC737800B79FE8 /* ChannelController.h */,
 				FA37A28518DC737800B79FE8 /* ChannelController.m */,
-				FA437C3B18ECA0AF0012BCE5 /* NewChannelController.h */,
-				FA437C3C18ECA0AF0012BCE5 /* NewChannelController.m */,
 				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
 				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
 			);
@@ -657,7 +647,6 @@
 				FA437C2A18EC86350012BCE5 /* LeftController.m in Sources */,
 				FA437C0618EC81CC0012BCE5 /* Reachability.m in Sources */,
 				FA437BF718EC81CC0012BCE5 /* AFHTTPRequestOperation.m in Sources */,
-				FA437C3D18ECA0AF0012BCE5 /* NewChannelController.m in Sources */,
 				FA437C1718EC81CC0012BCE5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */,
 				FA437BFF18EC81CC0012BCE5 /* AFURLSessionManager.m in Sources */,
@@ -674,7 +663,6 @@
 				FA437C0418EC81CC0012BCE5 /* MMDrawerVisualState.m in Sources */,
 				FA437C2318EC85720012BCE5 /* DrawerFactory.m in Sources */,
 				FA437C0718EC81CC0012BCE5 /* RSSItem.m in Sources */,
-				FA437C4018ECA0C60012BCE5 /* NewChannelView.m in Sources */,
 				FA437C1618EC81CC0012BCE5 /* SVWebViewControllerActivity.m in Sources */,
 				FA437C0318EC81CC0012BCE5 /* MMDrawerController.m in Sources */,
 				FA437BF818EC81CC0012BCE5 /* AFHTTPRequestOperationManager.m in Sources */,
