@@ -2,4 +2,6 @@
 
 @interface RssFeedController : UIViewController
 
+@property (strong, nonatomic) NSString *linkRssChannel;
+
 @end
