@@ -1,7 +1,6 @@
 #import "RssFeedController.h"
 #import "RssFeedView.h"
 #import "RSSParser.h"
-#import "RSSItem.h"
 
 @interface RssFeedController () <UITableViewDataSource, UITableViewDelegate> {
     @private
@@ -47,6 +46,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
     return nil;
 }
 
