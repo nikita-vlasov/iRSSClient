@@ -1,21 +1,10 @@
-//
-//  LeftView.m
-//  iRSSClient
-//
-//  Created by Alex on 4/2/14.
-//  Copyright (c) 2014 Alex. All rights reserved.
-//
-
 #import "LeftView.h"
 
 @implementation LeftView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
+    if (self) {}
     return self;
 }
 
