@@ -838,6 +838,7 @@
 					/Users/Alex/Desktop/iRSSClient/Libraries/TestFlightSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -857,6 +858,7 @@
 					/Users/Alex/Desktop/iRSSClient/Libraries/TestFlightSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
