@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "MMDrawerController.h"
+#import "DashboardController.h"
 
 #import "LeftController.h"
 
@@ -15,7 +16,10 @@
 + (DrawerFactory *)sharedFactory;
 
 #pragma mark - UIViewController
+- (MMDrawerController *)drawerViewController;
+
 - (LeftController *)leftController;
+- (DashboardController *)dashboardController;
 
 #pragma mark - Others
 - (void)createLeftMenu;
