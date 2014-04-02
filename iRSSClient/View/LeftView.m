@@ -17,4 +17,12 @@
 }
 */
 
+#pragma mark - Getters
+- (UIRefreshControl *)refreshControl {
+    if (!_refreshControl) {
+        _refreshControl = [[UIRefreshControl alloc] init];
+    }
+    return _refreshControl;
+}
+
 @end
