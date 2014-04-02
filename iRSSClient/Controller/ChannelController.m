@@ -32,7 +32,7 @@
 
 #pragma mark - UIBarButtonItem
 - (void)opneChannel:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"OpenAdd&EditChannel" sender:nil];
+    [self performSegueWithIdentifier:@"OpenEditChannel" sender:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -57,7 +57,7 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"OpenAdd&EditChannel"]) {
+    if ([[segue identifier] isEqualToString:@"OpenEditChannel"]) {
     }
 }
 
