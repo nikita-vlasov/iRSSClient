@@ -1,6 +1,16 @@
 #import "RssFeedController.h"
+#import "RssFeedView.h"
+#import "RSSParser.h"
+#import "RSSItem.h"
 
-@interface RssFeedController ()
+@interface RssFeedController () <UITableViewDataSource, UITableViewDelegate> {
+    @private
+    RSSItem *rssItems;
+    NSArray *arrayRssFeed;
+}
+
+/** View */
+@property (strong, nonatomic) IBOutlet RssFeedView *rssFeedView;
 
 @end
 
@@ -14,6 +24,35 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - 
+- (void)loadRssFeed {
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[self linkRssChannel]]];
+    [RSSParser parseRSSFeedForRequest:urlRequest success:^(NSArray *feedItems) {
+        NSLog(@"Получение RSS-потока: %@", feedItems);
+        arrayRssFeed = feedItems;
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [arrayRssFeed count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
