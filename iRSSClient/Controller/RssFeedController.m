@@ -19,6 +19,10 @@
 #pragma mark - UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
+
+    rssItems = [[RSSItem alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
