@@ -20,10 +20,7 @@
 
     [[self navigationItem] setTitle:NSLocalizedString(@"Channel", nil)];
 
-
-    [[[self channelView] leftBarButton] setAction:@selector(openFavorites:)];
-    [[[self channelView] rightBarButton] setAction:@selector(openSetting:)];
-
+    arrayChannel = [[NSMutableArray alloc] init];
 
     _channelView.barButtonOpenChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(opneChannel:)];
     [[self navigationItem] setRightBarButtonItem:[[self channelView] barButtonOpenChannel]];
@@ -34,12 +31,6 @@
 }
 
 #pragma mark - UIBarButtonItem
-- (void)openSetting:(UIBarButtonItem *)sender {
-}
-
-- (void)openFavorites:(UIBarButtonItem *)sender {
-}
-
 - (void)opneChannel:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"OpenAdd&EditChannel" sender:nil];
 }
@@ -50,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [arrayChannel count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
