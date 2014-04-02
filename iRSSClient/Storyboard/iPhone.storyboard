@@ -225,20 +225,23 @@
             </objects>
             <point key="canvasLocation" x="-284" y="-1203"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting Controller-->
         <scene sceneID="hFy-nP-yFG">
             <objects>
-                <viewController id="PYO-X1-0iV" sceneMemberID="viewController">
+                <viewController id="PYO-X1-0iV" customClass="SettingController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UYp-D5-7Gq"/>
                         <viewControllerLayoutGuide type="bottom" id="gvi-es-3ne"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c4D-59-jBt">
+                    <view key="view" contentMode="scaleToFill" id="c4D-59-jBt" customClass="SettingView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VKI-Om-mSB"/>
+                    <connections>
+                        <outlet property="SettingView" destination="c4D-59-jBt" id="0ga-SH-kkd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ox5-1D-42a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +250,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3Tq-1d-LMN">
             <objects>
-                <navigationController definesPresentationContext="YES" id="qCU-jj-6EE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Setting" definesPresentationContext="YES" id="qCU-jj-6EE" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4KY-rC-xTm">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
