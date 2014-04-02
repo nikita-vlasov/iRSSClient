@@ -134,24 +134,27 @@
             </objects>
             <point key="canvasLocation" x="708" y="-128"/>
         </scene>
-        <!--View Controller-->
+        <!--Left Controller-->
         <scene sceneID="8My-N9-RdT">
             <objects>
-                <viewController storyboardIdentifier="Left" id="ign-bl-HMR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Left" id="ign-bl-HMR" customClass="LeftController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u7t-q5-BB4"/>
                         <viewControllerLayoutGuide type="bottom" id="j9u-ea-7Cw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pbx-4I-Smw">
+                    <view key="view" contentMode="scaleToFill" id="pbx-4I-Smw" customClass="LeftView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="wau-Hu-yzI"/>
+                    <connections>
+                        <outlet property="leftView" destination="pbx-4I-Smw" id="s6U-Sg-1cp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4n-CL-D95" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="-359"/>
+            <point key="canvasLocation" x="-68" y="-799"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwQ-09-b6u">
@@ -166,7 +169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLK-xS-ncE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-572" y="-359"/>
+            <point key="canvasLocation" x="-488" y="-799"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
