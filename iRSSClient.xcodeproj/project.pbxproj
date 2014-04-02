@@ -66,6 +66,8 @@
 		FA437C2318EC85720012BCE5 /* DrawerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2218EC85720012BCE5 /* DrawerFactory.m */; };
 		FA437C2718EC86230012BCE5 /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2618EC86230012BCE5 /* LeftView.m */; };
 		FA437C2A18EC86350012BCE5 /* LeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2918EC86350012BCE5 /* LeftController.m */; };
+		FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2C18EC8A540012BCE5 /* DashboardView.m */; };
+		FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +190,10 @@
 		FA437C2618EC86230012BCE5 /* LeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftView.m; path = View/LeftView.m; sourceTree = "<group>"; };
 		FA437C2818EC86350012BCE5 /* LeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftController.h; path = Controller/LeftController.h; sourceTree = "<group>"; };
 		FA437C2918EC86350012BCE5 /* LeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftController.m; path = Controller/LeftController.m; sourceTree = "<group>"; };
+		FA437C2B18EC8A540012BCE5 /* DashboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardView.h; path = View/DashboardView.h; sourceTree = "<group>"; };
+		FA437C2C18EC8A540012BCE5 /* DashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardView.m; path = View/DashboardView.m; sourceTree = "<group>"; };
+		FA437C2E18EC8A6A0012BCE5 /* DashboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardController.h; path = Controller/DashboardController.h; sourceTree = "<group>"; };
+		FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardController.m; path = Controller/DashboardController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +293,8 @@
 			children = (
 				FA437C2518EC86230012BCE5 /* LeftView.h */,
 				FA437C2618EC86230012BCE5 /* LeftView.m */,
+				FA437C2B18EC8A540012BCE5 /* DashboardView.h */,
+				FA437C2C18EC8A540012BCE5 /* DashboardView.m */,
 				FA37A28018DC735400B79FE8 /* ChannelView.h */,
 				FA37A28118DC735400B79FE8 /* ChannelView.m */,
 			);
@@ -298,6 +306,8 @@
 			children = (
 				FA437C2818EC86350012BCE5 /* LeftController.h */,
 				FA437C2918EC86350012BCE5 /* LeftController.m */,
+				FA437C2E18EC8A6A0012BCE5 /* DashboardController.h */,
+				FA437C2F18EC8A6A0012BCE5 /* DashboardController.m */,
 				FA37A28418DC737800B79FE8 /* ChannelController.h */,
 				FA37A28518DC737800B79FE8 /* ChannelController.m */,
 			);
@@ -610,6 +620,7 @@
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA437BFD18EC81CC0012BCE5 /* AFURLRequestSerialization.m in Sources */,
 				FA437BFB18EC81CC0012BCE5 /* AFSecurityPolicy.m in Sources */,
+				FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */,
 				FA437C1D18EC81CC0012BCE5 /* UIRefreshControl+AFNetworking.m in Sources */,
 				FA437C1C18EC81CC0012BCE5 /* UIProgressView+AFNetworking.m in Sources */,
 				FA437C0D18EC81CC0012BCE5 /* SVWebViewController.m in Sources */,
@@ -620,6 +631,7 @@
 				FA437C1718EC81CC0012BCE5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FA437BFF18EC81CC0012BCE5 /* AFURLSessionManager.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
+				FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */,
 				FA437C2718EC86230012BCE5 /* LeftView.m in Sources */,
 				FA437C1E18EC81CC0012BCE5 /* UIWebView+AFNetworking.m in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
