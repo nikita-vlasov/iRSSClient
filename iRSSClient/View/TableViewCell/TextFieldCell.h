@@ -1,13 +1,11 @@
-//
-//  TextFieldCell.h
-//  iRSSClient
-//
-//  Created by Alex on 4/2/14.
-//  Copyright (c) 2014 Alex. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @interface TextFieldCell : UITableViewCell
+
+#pragma mark - UIImageView
+@property (weak, nonatomic) IBOutlet UIImageView *ImageViewIcon;
+
+#pragma mark - UITextField
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
