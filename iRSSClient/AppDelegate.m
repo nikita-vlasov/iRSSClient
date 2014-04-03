@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "DrawerFactory.h"
+#import "LeftModel.h"
 
 @implementation AppDelegate
 
@@ -11,6 +12,7 @@
     // Override point for customization after application launch.
 
     [self loadLeftMenu];
+    NSLog(@"%@", [LeftModel createLeftMenu]);
 
     return YES;
 }
