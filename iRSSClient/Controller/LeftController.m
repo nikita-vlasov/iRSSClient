@@ -3,10 +3,13 @@
 #import "UIViewController+MMDrawerController.h"
 #import "DrawerFactory.h"
 #import "IconViewCell.h"
+#import "LeftModel.h"
 
 @interface LeftController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate> {
     @private
-    NSMutableArray *arrayTitle;
+//    NSMutableArray *arrayTitle;
+    LeftModel *leftModel;
+    NSArray *arrayTitle;
 }
 
 /** View */
@@ -24,11 +27,13 @@
     [[self navigationItem] setTitle:NSLocalizedString(@"Menu", nil)];
     [[_leftView searchBar] setPlaceholder:NSLocalizedString(@"Search", nil)];
 
-    arrayTitle = [[NSMutableArray alloc] init];
+//    arrayTitle = [[NSMutableArray alloc] init];
 
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @"icon_home.png"}];
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @"icon_channel.png"}];
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @"icon_settings.png"}];
+//    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @"icon_home.png"}];
+//    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @"icon_channel.png"}];
+//    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @"icon_settings.png"}];
+
+    arrayTitle = [LeftModel createLeftMenu];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,8 +61,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     IconViewCell *iconViewCell = [tableView dequeueReusableCellWithIdentifier:@"IconViewCell"];
 
-    [[iconViewCell labelTitle] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"icon"]]];
+    leftModel = [arrayTitle objectAtIndex:[indexPath row]];
+
+//    [[iconViewCell labelTitle] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
+//    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"icon"]]];
+
+    [[iconViewCell labelTitle] setText:[leftModel valueForKey:@"title"]];
+    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[leftModel valueForKey:@"icon"]]];
 
     return iconViewCell;
 }
@@ -70,6 +80,7 @@
 
 /** Метод, дает возможность открыть необходимы контролер по индексу ячейки. */
 - (void)openControllers:(int)index {
+    leftModel = [arrayTitle objectAtIndex:index];
     if (index == 0) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] dashboardController] withCloseAnimation:YES completion:nil];
     }
