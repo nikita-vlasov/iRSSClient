@@ -1,8 +1,12 @@
 #import "ChannelController.h"
 #import "ChannelView.h"
+#import "Channel.h"
+#import "DataModel.h"
+#import "RssFeedController.h"
 
 @interface ChannelController () <UITableViewDataSource, UITableViewDelegate> {
     @private
+    Channel *channel;
     NSMutableArray *arrayChannel;
 }
 
@@ -20,14 +24,30 @@
 
     [[self navigationItem] setTitle:NSLocalizedString(@"Channel", nil)];
 
+    channel = [[Channel alloc] init];
     arrayChannel = [[NSMutableArray alloc] init];
 
     _channelView.barButtonOpenChannel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(opneChannel:)];
     [[self navigationItem] setRightBarButtonItem:[[self channelView] barButtonOpenChannel]];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self loadChannelList];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - 
+- (void)loadChannelList {
+    [arrayChannel removeAllObjects];
+    for (channel in [[DataModel sharedModel] entityDataSetEnturyName:@"Channel"]) {
+        [arrayChannel addObject:channel];
+    }
+    [[_channelView tableView] reloadData];
 }
 
 #pragma mark - UIBarButtonItem
@@ -47,20 +67,27 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *basicCell = [[[self channelView] tableView] dequeueReusableCellWithIdentifier:@"BasicCell"];
 
+    channel = [arrayChannel objectAtIndex:[indexPath row]];
+
+    [[basicCell textLabel] setText:[channel title]];
+
     return basicCell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    channel = [arrayChannel objectAtIndex:[indexPath row]];
     [self performSegueWithIdentifier:@"OpenRssFeed" sender:nil];
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"OpenEditChannel"]) {}
-    else if ([[segue identifier] isEqualToString:@"OpenRssFeed"]) {}
+    else if ([[segue identifier] isEqualToString:@"OpenRssFeed"]) {
+        RssFeedController *rssFeedController = [segue destinationViewController];
+        [rssFeedController setLinkRssChannel:[channel valueForKey:@"link"]];
+    }
 }
 
 @end
