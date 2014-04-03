@@ -4,7 +4,7 @@
 #import "DrawerFactory.h"
 #import "IconViewCell.h"
 
-@interface LeftController () <UITableViewDataSource, UITableViewDelegate> {
+@interface LeftController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate> {
     @private
     NSMutableArray *arrayTitle;
 }
@@ -22,6 +22,7 @@
     [super viewDidLoad];
 
     [[self navigationItem] setTitle:NSLocalizedString(@"Menu", nil)];
+    [[_leftView searchBar] setPlaceholder:NSLocalizedString(@"Search", nil)];
 
     arrayTitle = [[NSMutableArray alloc] init];
 
@@ -32,6 +33,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [[_leftView searchBar] resignFirstResponder];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
 }
 
 #pragma mark - UITableViewDataSource
