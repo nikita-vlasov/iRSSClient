@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TextFieldCell.h"
 
-@interface IconViewCell : UITableViewCell
+@interface IconViewCell : TextFieldCell
+
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 
 @end
