@@ -152,11 +152,31 @@
                     <navigationItem key="navigationItem" id="nTj-Wd-Rng"/>
                     <connections>
                         <outlet property="rssFeedView" destination="spF-pm-ARt" id="hkf-PK-eBi"/>
+                        <segue destination="bZa-9Q-E1v" kind="push" identifier="OpenDetailItems" id="IFH-9z-t80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0X4-ng-qNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="671" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZTf-Yc-xJG">
+            <objects>
+                <viewController id="bZa-9Q-E1v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Psi-LS-ZE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="M1S-yL-hcS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0eL-MO-vS3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zoe-0f-FTA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xD1-M1-9CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="-532"/>
         </scene>
         <!--Left Controller-->
         <scene sceneID="8My-N9-RdT">
