@@ -65,13 +65,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *basicCell = [[[self channelView] tableView] dequeueReusableCellWithIdentifier:@"BasicCell"];
-
+    UITableViewCell *rindDetailCell = [tableView dequeueReusableCellWithIdentifier:@"RingDetailCell"];
     channel = [arrayChannel objectAtIndex:[indexPath row]];
 
-    [[basicCell textLabel] setText:[channel title]];
+    [[rindDetailCell textLabel] setText:[channel valueForKey:@"title"]];
+    [[rindDetailCell detailTextLabel] setText:@"1"];
 
-    return basicCell;
+    return rindDetailCell;
 }
 
 #pragma mark - UITableViewDelegate
