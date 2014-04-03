@@ -113,8 +113,6 @@
     [self performSegueWithIdentifier:@"OpenRssFeed" sender:nil];
 }
 
-
-
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     [self setEditing:YES];
 }
