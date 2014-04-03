@@ -86,8 +86,7 @@
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"--- %@", [textField text]);
-
+    [textField resignFirstResponder];
     return YES;
 }
 
