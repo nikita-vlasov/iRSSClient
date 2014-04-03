@@ -69,6 +69,15 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
+    [self performSegueWithIdentifier:@"OpenDetailItems" sender:nil];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"OpenDetailItems"]) {
+    }
 }
 
 @end
