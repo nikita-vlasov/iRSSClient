@@ -40,6 +40,7 @@
     [[_leftView searchBar] resignFirstResponder];
 }
 
+#pragma mark - UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
 }
 
