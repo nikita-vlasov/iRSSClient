@@ -69,18 +69,6 @@
     else if (index == 2) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] settingController] withCloseAnimation:YES completion:nil];
     }
-//    else if (index == 1) {
-//        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] customersController] withCloseAnimation:YES completion:nil];
-//    }
-//    else if (index == 2) {
-//        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] vendorsController] withCloseAnimation:YES completion:nil];
-//    }
-//    else if (index == 3) {
-//        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] historyController] withCloseAnimation:YES completion:nil];
-//    }
-//    else if (index == 4) {
-//        [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] settingController] withCloseAnimation:YES completion:nil];
-//    }
 }
 
 @end
