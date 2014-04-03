@@ -27,6 +27,12 @@
 //    [[[self rssFeedView] refreshControl] addTarget:self action:@selector(startRefresh:) forControlEvents:UIControlEventAllEvents];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self loadRssFeed];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
