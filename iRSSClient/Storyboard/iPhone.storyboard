@@ -75,7 +75,7 @@
                     <navigationItem key="navigationItem" id="5al-Wi-nAJ"/>
                     <connections>
                         <outlet property="channelView" destination="PYr-iO-qj5" id="kSA-eG-c3M"/>
-                        <segue destination="Hvd-Bo-kzS" kind="modal" identifier="OpenEditChannel" id="QVe-lU-a7M"/>
+                        <segue destination="Hvd-Bo-kzS" kind="push" identifier="OpenEditChannel" id="QVe-lU-a7M"/>
                         <segue destination="QMn-97-6mF" kind="push" identifier="OpenRssFeed" id="8Zg-Tz-lRH"/>
                     </connections>
                 </viewController>
@@ -220,13 +220,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="PVN-rk-znp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="PVN-rk-znp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCell" id="QIf-R1-cAd" customClass="TextFieldCell">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QIf-R1-cAd" id="gSn-s4-mj6">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -260,6 +260,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bl1-Jr-drl" firstAttribute="top" secondItem="PVN-rk-znp" secondAttribute="bottom" id="H8h-ky-5Ic"/>
+                            <constraint firstAttribute="trailing" secondItem="PVN-rk-znp" secondAttribute="trailing" id="N0J-PE-13W"/>
+                            <constraint firstItem="PVN-rk-znp" firstAttribute="leading" secondItem="4rp-wT-zq8" secondAttribute="leading" id="TK5-3z-xyJ"/>
+                            <constraint firstItem="PVN-rk-znp" firstAttribute="top" secondItem="4rp-wT-zq8" secondAttribute="top" id="rO7-SF-Cth"/>
+                        </constraints>
                         <connections>
                             <outlet property="tableView" destination="PVN-rk-znp" id="2zr-7C-ebA"/>
                         </connections>
