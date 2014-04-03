@@ -2,6 +2,7 @@
 #import "LeftView.h"
 #import "UIViewController+MMDrawerController.h"
 #import "DrawerFactory.h"
+#import "IconViewCell.h"
 
 @interface LeftController () <UITableViewDataSource, UITableViewDelegate> {
     @private
@@ -20,11 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [[self navigationItem] setTitle:NSLocalizedString(@"Menu", nil)];
+
     arrayTitle = [[NSMutableArray alloc] init];
 
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @""}];
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @""}];
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @""}];
+    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @"icon_home.png"}];
+    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @"icon_channel.png"}];
+    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @"icon_settings.png"}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +44,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *ringDetailCell = [tableView dequeueReusableCellWithIdentifier:@"RingDetailCell"];
+    IconViewCell *iconViewCell = [tableView dequeueReusableCellWithIdentifier:@"IconViewCell"];
 
-    [[ringDetailCell textLabel] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-    [[ringDetailCell detailTextLabel] setText:@""];
+    [[iconViewCell labelTitle] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
+    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"icon"]]];
 
-    return ringDetailCell;
+    return iconViewCell;
 }
 
 #pragma mark - UITableViewDelegate
