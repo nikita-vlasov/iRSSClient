@@ -92,6 +92,7 @@
 		FA85091418EE03200083BB00 /* icon_title.png in Resources */ = {isa = PBXBuildFile; fileRef = FA85090818EE03200083BB00 /* icon_title.png */; };
 		FA85091518EE03200083BB00 /* icon_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA85090918EE03200083BB00 /* icon_title@2x.png */; };
 		FA85091818EE03440083BB00 /* IconViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091718EE03440083BB00 /* IconViewCell.m */; };
+		FA85091B18EE15230083BB00 /* LeftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091A18EE15230083BB00 /* LeftModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +254,8 @@
 		FA85090918EE03200083BB00 /* icon_title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_title@2x.png"; sourceTree = "<group>"; };
 		FA85091618EE03440083BB00 /* IconViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IconViewCell.h; path = View/TableViewCell/IconViewCell.h; sourceTree = "<group>"; };
 		FA85091718EE03440083BB00 /* IconViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IconViewCell.m; path = View/TableViewCell/IconViewCell.m; sourceTree = "<group>"; };
+		FA85091918EE15230083BB00 /* LeftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftModel.h; path = Model/LeftModel.h; sourceTree = "<group>"; };
+		FA85091A18EE15230083BB00 /* LeftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftModel.m; path = Model/LeftModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +317,8 @@
 				FA437C1F18EC82930012BCE5 /* README.md */,
 				FA37A25718DC6F7700B79FE8 /* AppDelegate.h */,
 				FA37A25818DC6F7700B79FE8 /* AppDelegate.m */,
+				FA85091918EE15230083BB00 /* LeftModel.h */,
+				FA85091A18EE15230083BB00 /* LeftModel.m */,
 				FA437C2418EC85750012BCE5 /* Classes */,
 				FA37A28B18DCDA0500B79FE8 /* MappingModel */,
 				FA37A28318DC735900B79FE8 /* View */,
@@ -784,6 +789,7 @@
 				FA437C1718EC81CC0012BCE5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */,
 				FA437BFF18EC81CC0012BCE5 /* AFURLSessionManager.m in Sources */,
+				FA85091B18EE15230083BB00 /* LeftModel.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */,
 				FA437C2718EC86230012BCE5 /* LeftView.m in Sources */,
