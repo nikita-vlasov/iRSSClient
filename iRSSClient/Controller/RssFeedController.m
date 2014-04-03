@@ -23,8 +23,6 @@
     [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
 
     rssItems = [[RSSItem alloc] init];
-
-//    [[[self rssFeedView] refreshControl] addTarget:self action:@selector(startRefresh:) forControlEvents:UIControlEventAllEvents];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +41,7 @@
     [RSSParser parseRSSFeedForRequest:urlRequest success:^(NSArray *feedItems) {
         NSLog(@"Получение RSS-потока: %@", feedItems);
         arrayRssFeed = feedItems;
+        [[_rssFeedView tableView] reloadData];
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     }];
@@ -58,9 +57,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *subtitleCell = [tableView dequeueReusableCellWithIdentifier:@"SubtitleCell"];
 
     rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
-    return nil;
+
+    [[subtitleCell textLabel] setText:[rssItems title]];
+    [[subtitleCell detailTextLabel] setText:[rssItems itemDescription]];
+
+    return subtitleCell;
 }
 
 #pragma mark - UITableViewDelegate
