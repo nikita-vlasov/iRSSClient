@@ -56,6 +56,9 @@
 
 - (void)removeAllControllers {
     _left = nil;
+    _dashboard = nil;
+    _channel = nil;
+    _setting = nil;
 }
 
 #pragma mark - Getters

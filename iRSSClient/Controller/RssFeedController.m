@@ -1,7 +1,6 @@
 #import "RssFeedController.h"
 #import "RssFeedView.h"
 #import "RSSParser.h"
-#import "RSSItem.h"
 
 @interface RssFeedController () <UITableViewDataSource, UITableViewDelegate> {
     @private
@@ -20,6 +19,12 @@
 #pragma mark - UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
+
+    rssItems = [[RSSItem alloc] init];
+
+//    [[[self rssFeedView] refreshControl] addTarget:self action:@selector(startRefresh:) forControlEvents:UIControlEventAllEvents];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +52,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
     return nil;
 }
 
