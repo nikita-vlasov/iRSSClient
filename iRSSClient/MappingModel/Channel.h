@@ -8,5 +8,7 @@
 @property (strong, nonatomic) NSString *designation;
 /** Ссылка на канал. */
 @property (strong, nonatomic) NSString *link;
+/** Дата создания канала. */
+@property (strong, nonatomic) NSString *createDate;
 
 @end
