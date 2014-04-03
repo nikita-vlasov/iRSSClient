@@ -39,7 +39,6 @@
 - (void)loadRssFeed {
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[self linkRssChannel]]];
     [RSSParser parseRSSFeedForRequest:urlRequest success:^(NSArray *feedItems) {
-        NSLog(@"Получение RSS-потока: %@", feedItems);
         arrayRssFeed = feedItems;
         [[_rssFeedView tableView] reloadData];
     } failure:^(NSError *error) {
