@@ -9,6 +9,10 @@
     @private
     LeftModel *leftModel;
     NSArray *arrayTitle;
+
+    NSArray *arrayFiltered;
+
+    BOOL isSearch;
 }
 
 /** View */
@@ -40,6 +44,13 @@
 
 #pragma mark - UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.title contains[cd] %@", searchText];
+    arrayFiltered = [arrayTitle filteredArrayUsingPredicate:predicate];
+
+    if (![searchText length] == 0) isSearch = YES;
+    else isSearch = NO;
+
+    [[_leftView tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -48,13 +59,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (isSearch == YES) return [arrayFiltered count];
     return [arrayTitle count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     IconViewCell *iconViewCell = [tableView dequeueReusableCellWithIdentifier:@"IconViewCell"];
 
-    leftModel = [arrayTitle objectAtIndex:[indexPath row]];
+    if (isSearch == YES) leftModel = [arrayFiltered objectAtIndex:[indexPath row]];
+    else leftModel = [arrayTitle objectAtIndex:[indexPath row]];
 
     [[iconViewCell labelTitle] setText:[leftModel valueForKey:@"title"]];
     [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[leftModel valueForKey:@"icon"]]];
@@ -70,14 +83,16 @@
 
 /** Метод, дает возможность открыть необходимы контролер по индексу ячейки. */
 - (void)openControllers:(int)index {
-    leftModel = [arrayTitle objectAtIndex:index];
-    if (index == 0) {
+    if (isSearch == YES) leftModel = [arrayFiltered objectAtIndex:index];
+    else leftModel = [arrayTitle objectAtIndex:index];
+
+    if ([[leftModel valueForKey:@"key"] isEqualToString:@"Dashboard"]) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] dashboardController] withCloseAnimation:YES completion:nil];
     }
-    else if (index == 1) {
+    else if ([[leftModel valueForKey:@"key"] isEqualToString:@"Channel"]) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] channelController] withCloseAnimation:YES completion:nil];
     }
-    else if (index == 2) {
+    else if ([[leftModel valueForKey:@"key"] isEqualToString:@"Setting"]) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] settingController] withCloseAnimation:YES completion:nil];
     }
 }
