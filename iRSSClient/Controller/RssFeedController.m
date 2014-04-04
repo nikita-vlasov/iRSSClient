@@ -3,10 +3,13 @@
 #import "RSSParser.h"
 #import "DetailItemController.h"
 
-@interface RssFeedController () <UITableViewDataSource, UITableViewDelegate> {
+@interface RssFeedController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate> {
     @private
     RSSItem *rssItems;
     NSArray *arrayRssFeed;
+    NSArray *arrayRssFeedFiltered;
+
+    BOOL isSearch;
 }
 
 /** View */
@@ -24,6 +27,8 @@
     [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
 
     rssItems = [[RSSItem alloc] init];
+
+    [[_rssFeedView tableView] setContentOffset:CGPointMake(0, 44)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,19 +52,38 @@
     }];
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [[_rssFeedView searchBar] resignFirstResponder];
+}
+
+#pragma mark - UISearchBarDelegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.title contains[cd] %@", searchText];
+    arrayRssFeedFiltered = [arrayRssFeed filteredArrayUsingPredicate:predicate];
+
+    if (![searchText length] == 0) isSearch = YES;
+    else isSearch = NO;
+
+    [[_rssFeedView tableView] reloadData];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [arrayRssFeed count];
+    if (isSearch == YES) return [arrayRssFeedFiltered count];
+    else return [arrayRssFeed count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *subtitleCell = [tableView dequeueReusableCellWithIdentifier:@"SubtitleCell"];
 
-    rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
+
+    if (isSearch == YES) rssItems = [arrayRssFeedFiltered objectAtIndex:[indexPath row]];
+    else rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
 
     [[subtitleCell textLabel] setText:[rssItems title]];
     [[subtitleCell detailTextLabel] setText:[rssItems itemDescription]];
@@ -71,7 +95,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
+    if (isSearch == YES) rssItems = [arrayRssFeedFiltered objectAtIndex:[indexPath row]];
+    else rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
+
     [self performSegueWithIdentifier:@"OpenDetailItems" sender:nil];
 }
 
