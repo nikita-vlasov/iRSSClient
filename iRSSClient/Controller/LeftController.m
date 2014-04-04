@@ -7,7 +7,6 @@
 
 @interface LeftController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate> {
     @private
-//    NSMutableArray *arrayTitle;
     LeftModel *leftModel;
     NSArray *arrayTitle;
 }
@@ -26,13 +25,7 @@
 
     [[self navigationItem] setTitle:NSLocalizedString(@"Menu", nil)];
     [[_leftView searchBar] setPlaceholder:NSLocalizedString(@"Search", nil)];
-
-//    arrayTitle = [[NSMutableArray alloc] init];
-
-//    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @"icon_home.png"}];
-//    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @"icon_channel.png"}];
-//    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @"icon_settings.png"}];
-
+    
     arrayTitle = [LeftModel createLeftMenu];
 }
 
@@ -62,9 +55,6 @@
     IconViewCell *iconViewCell = [tableView dequeueReusableCellWithIdentifier:@"IconViewCell"];
 
     leftModel = [arrayTitle objectAtIndex:[indexPath row]];
-
-//    [[iconViewCell labelTitle] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-//    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"icon"]]];
 
     [[iconViewCell labelTitle] setText:[leftModel valueForKey:@"title"]];
     [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[leftModel valueForKey:@"icon"]]];
