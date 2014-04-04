@@ -106,9 +106,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="qmh-DJ-FRK">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="QMn-97-6mF" id="yOe-ES-yX7"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubtitleCell" textLabel="95p-Sl-Vbi" detailTextLabel="baK-SV-L7Y" style="IBUITableViewCellStyleSubtitle" id="9uc-aG-TCa">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uc-aG-TCa" id="VO3-gf-xTs">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -146,6 +154,7 @@
                             <constraint firstItem="3HC-bi-8gU" firstAttribute="leading" secondItem="spF-pm-ARt" secondAttribute="leading" id="nPp-dw-rbm"/>
                         </constraints>
                         <connections>
+                            <outlet property="searchBar" destination="qmh-DJ-FRK" id="5Bm-Dg-8wr"/>
                             <outlet property="tableView" destination="3HC-bi-8gU" id="KpR-2J-iJ7"/>
                         </connections>
                     </view>
@@ -159,20 +168,23 @@
             </objects>
             <point key="canvasLocation" x="671" y="-532"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Item Controller-->
         <scene sceneID="ZTf-Yc-xJG">
             <objects>
-                <viewController id="bZa-9Q-E1v" sceneMemberID="viewController">
+                <viewController id="bZa-9Q-E1v" customClass="DetailItemController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Psi-LS-ZE0"/>
                         <viewControllerLayoutGuide type="bottom" id="M1S-yL-hcS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0eL-MO-vS3">
+                    <view key="view" contentMode="scaleToFill" id="0eL-MO-vS3" customClass="DetailItemView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="zoe-0f-FTA"/>
+                    <connections>
+                        <outlet property="detailItemView" destination="0eL-MO-vS3" id="JBn-9E-sVK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xD1-M1-9CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,9 +206,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="NSr-Fd-5Fy">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="ign-bl-HMR" id="fXA-lt-mLk"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IconViewCell" id="u1Q-Kk-E7U" customClass="IconViewCell">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="42"/>
+                                        <rect key="frame" x="0.0" y="130" width="320" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u1Q-Kk-E7U" id="iBb-Ik-VMc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -247,6 +267,7 @@
                             <constraint firstItem="4KY-4F-5Uk" firstAttribute="top" secondItem="pbx-4I-Smw" secondAttribute="top" id="uMA-9Y-83P"/>
                         </constraints>
                         <connections>
+                            <outlet property="searchBar" destination="NSr-Fd-5Fy" id="CY7-9x-sYA"/>
                             <outlet property="tableView" destination="4KY-4F-5Uk" id="Xsx-S0-UmW"/>
                         </connections>
                     </view>

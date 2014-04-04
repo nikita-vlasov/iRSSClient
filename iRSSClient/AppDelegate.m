@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "DrawerFactory.h"
+#import "LeftModel.h"
 
 @implementation AppDelegate
 

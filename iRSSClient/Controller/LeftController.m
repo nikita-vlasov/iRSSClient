@@ -3,10 +3,16 @@
 #import "UIViewController+MMDrawerController.h"
 #import "DrawerFactory.h"
 #import "IconViewCell.h"
+#import "LeftModel.h"
 
-@interface LeftController () <UITableViewDataSource, UITableViewDelegate> {
+@interface LeftController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate> {
     @private
-    NSMutableArray *arrayTitle;
+    LeftModel *leftModel;
+    NSArray *arrayTitle;
+
+    NSArray *arrayFiltered;
+
+    BOOL isSearch;
 }
 
 /** View */
@@ -22,16 +28,30 @@
     [super viewDidLoad];
 
     [[self navigationItem] setTitle:NSLocalizedString(@"Menu", nil)];
+    [[_leftView searchBar] setPlaceholder:NSLocalizedString(@"Search", nil)];
+    [[_leftView tableView] setContentOffset:CGPointMake(0, 44)];
 
-    arrayTitle = [[NSMutableArray alloc] init];
-
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Dashboard", nil), @"icon" : @"icon_home.png"}];
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Channel", nil), @"icon" : @"icon_channel.png"}];
-    [arrayTitle addObject:@{@"title" : NSLocalizedString(@"Setting", nil), @"icon" : @"icon_settings.png"}];
+    arrayTitle = [LeftModel createLeftMenu];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [[_leftView searchBar] resignFirstResponder];
+}
+
+#pragma mark - UISearchBarDelegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.title contains[cd] %@", searchText];
+    arrayFiltered = [arrayTitle filteredArrayUsingPredicate:predicate];
+
+    if (![searchText length] == 0) isSearch = YES;
+    else isSearch = NO;
+
+    [[_leftView tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -40,14 +60,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (isSearch == YES) return [arrayFiltered count];
     return [arrayTitle count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     IconViewCell *iconViewCell = [tableView dequeueReusableCellWithIdentifier:@"IconViewCell"];
 
-    [[iconViewCell labelTitle] setText:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[[arrayTitle objectAtIndex:[indexPath row]] valueForKey:@"icon"]]];
+    if (isSearch == YES) leftModel = [arrayFiltered objectAtIndex:[indexPath row]];
+    else leftModel = [arrayTitle objectAtIndex:[indexPath row]];
+
+    [[iconViewCell labelTitle] setText:[leftModel valueForKey:@"title"]];
+    [[iconViewCell ImageViewIcon] setImage:[UIImage imageNamed:[leftModel valueForKey:@"icon"]]];
 
     return iconViewCell;
 }
@@ -60,13 +84,16 @@
 
 /** Метод, дает возможность открыть необходимы контролер по индексу ячейки. */
 - (void)openControllers:(int)index {
-    if (index == 0) {
+    if (isSearch == YES) leftModel = [arrayFiltered objectAtIndex:index];
+    else leftModel = [arrayTitle objectAtIndex:index];
+
+    if ([[leftModel valueForKey:@"key"] isEqualToString:@"Dashboard"]) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] dashboardController] withCloseAnimation:YES completion:nil];
     }
-    else if (index == 1) {
+    else if ([[leftModel valueForKey:@"key"] isEqualToString:@"Channel"]) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] channelController] withCloseAnimation:YES completion:nil];
     }
-    else if (index == 2) {
+    else if ([[leftModel valueForKey:@"key"] isEqualToString:@"Setting"]) {
         [[self mm_drawerController] setCenterViewController:[[DrawerFactory sharedFactory] settingController] withCloseAnimation:YES completion:nil];
     }
 }

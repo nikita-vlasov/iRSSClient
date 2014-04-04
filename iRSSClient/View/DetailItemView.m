@@ -1,6 +1,6 @@
-#import "DashboardView.h"
+#import "DetailItemView.h"
 
-@implementation DashboardView
+@implementation DetailItemView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
