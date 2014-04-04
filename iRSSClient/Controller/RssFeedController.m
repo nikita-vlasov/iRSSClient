@@ -1,6 +1,7 @@
 #import "RssFeedController.h"
 #import "RssFeedView.h"
 #import "RSSParser.h"
+#import "DetailItemController.h"
 
 @interface RssFeedController () <UITableViewDataSource, UITableViewDelegate> {
     @private
@@ -77,6 +78,8 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"OpenDetailItems"]) {
+        DetailItemController *detailItemController = [segue destinationViewController];
+        [detailItemController setRssItems:rssItems];
     }
 }
 
