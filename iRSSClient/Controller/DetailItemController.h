@@ -3,6 +3,7 @@
 
 @interface DetailItemController : UIViewController
 
+#pragma mark -
 @property (strong, nonatomic) RSSItem *rssItems;
 
 @end
