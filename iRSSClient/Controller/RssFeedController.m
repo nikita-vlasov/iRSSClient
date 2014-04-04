@@ -25,10 +25,9 @@
     [super viewDidLoad];
 
     [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
+    [[_rssFeedView tableView] setContentOffset:CGPointMake(0, 44)];
 
     rssItems = [[RSSItem alloc] init];
-
-    [[_rssFeedView tableView] setContentOffset:CGPointMake(0, 44)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
