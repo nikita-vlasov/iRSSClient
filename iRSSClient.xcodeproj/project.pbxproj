@@ -323,10 +323,9 @@
 				FA437C1F18EC82930012BCE5 /* README.md */,
 				FA37A25718DC6F7700B79FE8 /* AppDelegate.h */,
 				FA37A25818DC6F7700B79FE8 /* AppDelegate.m */,
-				FA85091918EE15230083BB00 /* LeftModel.h */,
-				FA85091A18EE15230083BB00 /* LeftModel.m */,
 				FA437C2418EC85750012BCE5 /* Classes */,
 				FA37A28B18DCDA0500B79FE8 /* MappingModel */,
+				FA836D9118EF552F0005FF8E /* Model */,
 				FA37A28318DC735900B79FE8 /* View */,
 				FA37A28718DC737F00B79FE8 /* Controller */,
 				FA37A27918DC708400B79FE8 /* Storyboard */,
@@ -646,6 +645,15 @@
 				FA437C5118ECB6760012BCE5 /* TestFlight.h */,
 			);
 			path = TestFlightSDK;
+			sourceTree = "<group>";
+		};
+		FA836D9118EF552F0005FF8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA85091918EE15230083BB00 /* LeftModel.h */,
+				FA85091A18EE15230083BB00 /* LeftModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FA8508FB18EE03200083BB00 /* Resources */ = {
