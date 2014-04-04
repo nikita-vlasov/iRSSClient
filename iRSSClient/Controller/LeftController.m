@@ -29,7 +29,8 @@
 
     [[self navigationItem] setTitle:NSLocalizedString(@"Menu", nil)];
     [[_leftView searchBar] setPlaceholder:NSLocalizedString(@"Search", nil)];
-    
+    [[_leftView tableView] setContentOffset:CGPointMake(0, 44)];
+
     arrayTitle = [LeftModel createLeftMenu];
 }
 
