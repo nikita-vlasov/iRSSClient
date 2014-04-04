@@ -14,6 +14,8 @@
 #pragma mark - UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSLog(@"%@", [self rssItems]);
 }
 
 - (void)didReceiveMemoryWarning {
