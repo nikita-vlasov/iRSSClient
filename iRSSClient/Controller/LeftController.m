@@ -7,11 +7,13 @@
 
 @interface LeftController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate> {
     @private
+    /** Модель данных. */
     LeftModel *leftModel;
+    /** Массив записе. */
     NSArray *arrayTitle;
-
+    /** Массив фильтрованых записе. */
     NSArray *arrayFiltered;
-
+    /** Для определения поиска. */
     BOOL isSearch;
 }
 
