@@ -78,6 +78,8 @@
 		FA437C5418ECB6B80012BCE5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA437C5318ECB6B80012BCE5 /* SystemConfiguration.framework */; };
 		FA437C5618ECB6CF0012BCE5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA437C5518ECB6CF0012BCE5 /* libz.dylib */; };
 		FA437C5818ECB6DB0012BCE5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA437C5718ECB6DB0012BCE5 /* AdSupport.framework */; };
+		FA836D8D18EF3C4F0005FF8E /* DetailItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */; };
+		FA836D9018EF3C830005FF8E /* DetailItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA836D8F18EF3C830005FF8E /* DetailItemView.m */; };
 		FA8508FA18EDFA870083BB00 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8508F918EDFA870083BB00 /* DataModel.m */; };
 		FA85090A18EE03200083BB00 /* icon_channel.png in Resources */ = {isa = PBXBuildFile; fileRef = FA8508FE18EE03200083BB00 /* icon_channel.png */; };
 		FA85090B18EE03200083BB00 /* icon_channel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA8508FF18EE03200083BB00 /* icon_channel@2x.png */; };
@@ -238,6 +240,10 @@
 		FA437C5318ECB6B80012BCE5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FA437C5518ECB6CF0012BCE5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FA437C5718ECB6DB0012BCE5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		FA836D8B18EF3C4F0005FF8E /* DetailItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailItemController.h; path = Controller/DetailItemController.h; sourceTree = "<group>"; };
+		FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailItemController.m; path = Controller/DetailItemController.m; sourceTree = "<group>"; };
+		FA836D8E18EF3C830005FF8E /* DetailItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailItemView.h; path = View/DetailItemView.h; sourceTree = "<group>"; };
+		FA836D8F18EF3C830005FF8E /* DetailItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailItemView.m; path = View/DetailItemView.m; sourceTree = "<group>"; };
 		FA8508F818EDFA870083BB00 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataModel.h; path = Classes/DataModel.h; sourceTree = "<group>"; };
 		FA8508F918EDFA870083BB00 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataModel.m; path = Classes/DataModel.m; sourceTree = "<group>"; };
 		FA8508FE18EE03200083BB00 /* icon_channel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_channel.png; sourceTree = "<group>"; };
@@ -374,6 +380,8 @@
 				FA437C4218ECA77A0012BCE5 /* EditChannelView.m */,
 				FA437C4718ECACDB0012BCE5 /* RssFeedView.h */,
 				FA437C4818ECACDB0012BCE5 /* RssFeedView.m */,
+				FA836D8E18EF3C830005FF8E /* DetailItemView.h */,
+				FA836D8F18EF3C830005FF8E /* DetailItemView.m */,
 				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
 				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
 			);
@@ -393,6 +401,8 @@
 				FA437C4518ECA7950012BCE5 /* EditChannelController.m */,
 				FA437C4A18ECACEE0012BCE5 /* RssFeedController.h */,
 				FA437C4B18ECACEE0012BCE5 /* RssFeedController.m */,
+				FA836D8B18EF3C4F0005FF8E /* DetailItemController.h */,
+				FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */,
 				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
 				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
 			);
@@ -784,6 +794,7 @@
 				FA437C0D18EC81CC0012BCE5 /* SVWebViewController.m in Sources */,
 				FA437C0218EC81CC0012BCE5 /* MMDrawerBarButtonItem.m in Sources */,
 				FA437C2A18EC86350012BCE5 /* LeftController.m in Sources */,
+				FA836D9018EF3C830005FF8E /* DetailItemView.m in Sources */,
 				FA437C0618EC81CC0012BCE5 /* Reachability.m in Sources */,
 				FA437BF718EC81CC0012BCE5 /* AFHTTPRequestOperation.m in Sources */,
 				FA437C1718EC81CC0012BCE5 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -796,6 +807,7 @@
 				FA437C1E18EC81CC0012BCE5 /* UIWebView+AFNetworking.m in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
 				FA437BF918EC81CC0012BCE5 /* AFHTTPSessionManager.m in Sources */,
+				FA836D8D18EF3C4F0005FF8E /* DetailItemController.m in Sources */,
 				FA437C4618ECA7950012BCE5 /* EditChannelController.m in Sources */,
 				FA437C0818EC81CC0012BCE5 /* RSSParser.m in Sources */,
 				FA437C0A18EC81CC0012BCE5 /* SVProgressHUD.m in Sources */,
