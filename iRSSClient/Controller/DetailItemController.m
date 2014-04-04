@@ -1,8 +1,13 @@
 #import "DetailItemController.h"
+#import "DetailItemView.h"
 
 @interface DetailItemController ()
 
+/** View. */
+@property (strong, nonatomic) IBOutlet DetailItemView *detailItemView;
+
 @end
+
 
 @implementation DetailItemController
 
