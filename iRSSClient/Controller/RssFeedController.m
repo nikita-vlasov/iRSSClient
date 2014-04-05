@@ -30,10 +30,6 @@
     [[_rssFeedView tableView] addSubview:[_rssFeedView refreshControl]];
 
     rssItems = [[RSSItem alloc] init];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
 
     [self startRefresh];
 }
@@ -51,13 +47,13 @@
 - (void)stopRefresh {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [[_rssFeedView refreshControl] endRefreshing];
+    [[_rssFeedView tableView] reloadData];
 }
 
 - (void)loadRssFeed {
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[self linkRssChannel]]];
     [RSSParser parseRSSFeedForRequest:urlRequest success:^(NSArray *feedItems) {
         arrayRssFeed = feedItems;
-        [[_rssFeedView tableView] reloadData];
         [self stopRefresh];
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
