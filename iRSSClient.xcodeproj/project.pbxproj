@@ -96,6 +96,7 @@
 		FA85091818EE03440083BB00 /* IconViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091718EE03440083BB00 /* IconViewCell.m */; };
 		FA85091B18EE15230083BB00 /* LeftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091A18EE15230083BB00 /* LeftModel.m */; };
 		FA997DC318F0424700A2A67F /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DC218F0424700A2A67F /* TextViewCell.m */; };
+		FA997DC618F055F000A2A67F /* NSDate+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DC518F055F000A2A67F /* NSDate+Date.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +266,8 @@
 		FA85091A18EE15230083BB00 /* LeftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftModel.m; path = Model/LeftModel.m; sourceTree = "<group>"; };
 		FA997DC118F0424700A2A67F /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = View/TableViewCell/TextViewCell.h; sourceTree = "<group>"; };
 		FA997DC218F0424700A2A67F /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = View/TableViewCell/TextViewCell.m; sourceTree = "<group>"; };
+		FA997DC418F055F000A2A67F /* NSDate+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Date.h"; path = "Category/NSDate+Date.h"; sourceTree = "<group>"; };
+		FA997DC518F055F000A2A67F /* NSDate+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Date.m"; path = "Category/NSDate+Date.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +329,7 @@
 				FA437C1F18EC82930012BCE5 /* README.md */,
 				FA37A25718DC6F7700B79FE8 /* AppDelegate.h */,
 				FA37A25818DC6F7700B79FE8 /* AppDelegate.m */,
+				FA997DC718F055F400A2A67F /* Category */,
 				FA437C2418EC85750012BCE5 /* Classes */,
 				FA37A28B18DCDA0500B79FE8 /* MappingModel */,
 				FA836D9118EF552F0005FF8E /* Model */,
@@ -696,6 +700,15 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		FA997DC718F055F400A2A67F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FA997DC418F055F000A2A67F /* NSDate+Date.h */,
+				FA997DC518F055F000A2A67F /* NSDate+Date.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -819,6 +832,7 @@
 				FA437C2718EC86230012BCE5 /* LeftView.m in Sources */,
 				FA437C1E18EC81CC0012BCE5 /* UIWebView+AFNetworking.m in Sources */,
 				FA37A25918DC6F7700B79FE8 /* AppDelegate.m in Sources */,
+				FA997DC618F055F000A2A67F /* NSDate+Date.m in Sources */,
 				FA437BF918EC81CC0012BCE5 /* AFHTTPSessionManager.m in Sources */,
 				FA836D8D18EF3C4F0005FF8E /* DetailItemController.m in Sources */,
 				FA437C4618ECA7950012BCE5 /* EditChannelController.m in Sources */,
