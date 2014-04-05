@@ -3,6 +3,7 @@
 #import "Channel.h"
 #import "DataModel.h"
 #import "RssFeedController.h"
+#import "EditChannelController.h"
 
 @interface ChannelController () <UITableViewDataSource, UITableViewDelegate> {
     @private
@@ -65,7 +66,7 @@
 
 #pragma mark - UIBarButtonItem
 - (void)opneChannel:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"OpenEditChannel" sender:nil];
+    [self performSegueWithIdentifier:@"OpenNewChannel" sender:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -110,7 +111,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     channel = [arrayChannel objectAtIndex:[indexPath row]];
+
     [self performSegueWithIdentifier:@"OpenRssFeed" sender:nil];
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    if (UITableViewCellAccessoryDisclosureIndicator) {
+        channel = [arrayChannel objectAtIndex:[indexPath row]];
+
+        [self performSegueWithIdentifier:@"OpenEditChannel" sender:self];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -123,7 +133,11 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"OpenEditChannel"]) {}
+    if ([[segue identifier] isEqualToString:@"OpenNewChannel"]) {}
+    else if ([[segue identifier] isEqualToString:@"OpenEditChannel"]) {
+        EditChannelController *editChannelController = [segue destinationViewController];
+        [editChannelController setChannel:channel];
+    }
     else if ([[segue identifier] isEqualToString:@"OpenRssFeed"]) {
         RssFeedController *rssFeedController = [segue destinationViewController];
         [rssFeedController setLinkRssChannel:[channel valueForKey:@"link"]];
