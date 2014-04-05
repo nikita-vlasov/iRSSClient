@@ -3,10 +3,9 @@
 #import "TextFieldCell.h"
 #import "Channel.h"
 
-@interface EditChannelController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIAlertViewDelegate> {
+@interface EditChannelController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIAlertViewDelegate, UITextFieldDelegate> {
     @private
     NSManagedObjectContext *managedObjectContext;
-    Channel *channel;
 }
 
 /** View */
@@ -24,17 +23,10 @@
     [[self navigationItem] setTitle:NSLocalizedString(@"Edit", nil)];
 
     managedObjectContext = [(AppDelegate *) [[UIApplication sharedApplication] delegate] managedObjectContext];
-    channel = [[Channel alloc] init];
 
     [[_editChannelView barButtonSave] setTitle:NSLocalizedString(@"Save", nil)];
     [[_editChannelView barButtonSave] setAction:@selector(saveChannel:)];
     [[_editChannelView barButtonSave] setTarget:self];
-
-    [[_editChannelView alertViewAction] setTitle:NSLocalizedString(@"Warning", nil)];
-    [[_editChannelView alertViewAction] setMessage:@""];
-    [[_editChannelView alertViewAction] addButtonWithTitle:@"OK"];
-    [[_editChannelView alertViewAction] addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
-    [[_editChannelView alertViewAction] setDelegate:self];
 
     [[self navigationItem] setRightBarButtonItem:[[self editChannelView] barButtonSave]];
 }
@@ -43,9 +35,18 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc {
+    _channel = nil;
+}
+
 - (void)saveChannel:(UIBarButtonItem *)sender {
-    [[_editChannelView tableView] reloadData];
-    [[_editChannelView alertViewAction] show];
+    [self becomeFirstResponder];
+    [self setEditing:YES];
+
+    if (![self channel]) {
+        [self saveChannel];
+    }
+    else [managedObjectContext save:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -62,17 +63,23 @@
 
     if ([indexPath row] == 0) {
         [[textFieldCell textField] setPlaceholder:NSLocalizedString(@"Title", nil)];
-        [channel setValue:[[textFieldCell textField] text] forKey:@"title"];
+        [[textFieldCell textField] setText:[[self channel] valueForKey:@"title"]];
+        [[textFieldCell textField] setTag:0];
+
         return textFieldCell;
     }
     else if ([indexPath row] == 1) {
         [[textFieldCell textField] setPlaceholder:NSLocalizedString(@"Link", nil)];
-        [channel setValue:[[textFieldCell textField] text] forKey:@"link"];
+        [[textFieldCell textField] setText:[[self channel] valueForKey:@"link"]];
+        [[textFieldCell textField] setTag:1];
+
         return textFieldCell;
     }
     else if ([indexPath row] == 2) {
         [[textFieldCell textField] setPlaceholder:NSLocalizedString(@"Description", nil)];
-        [channel setValue:[[textFieldCell textField] text] forKey:@"designation"];
+        [[textFieldCell textField] setText:[[self channel] valueForKey:@"designation"]];
+        [[textFieldCell textField] setTag:2];
+
         return textFieldCell;
     }
 
@@ -85,25 +92,23 @@
 }
 
 #pragma mark - UITextFieldDelegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([_editChannelView alertViewAction] == alertView) {
-        switch (buttonIndex) {
-            case 0: [self saveChannel]; break;
-            default: break;
-        }
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    switch ([textField tag]) {
+        case 0: [[self channel] setValue:[textField text] forKey:@"title"]; break;
+        case 1: [[self channel] setValue:[textField text] forKey:@"link"]; break;
+        case 2: [[self channel] setValue:[textField text] forKey:@"designation"]; break;
+        default: break;
     }
+
+    [managedObjectContext save:nil];
 }
 
 - (void)saveChannel {
-    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Channel" inManagedObjectContext:managedObjectContext];
-    [managedObject setValue:[channel title] forKey:@"title"];
-    [managedObject setValue:[channel link] forKey:@"link"];
-    [managedObject setValue:[channel description] forKey:@"designation"];
+    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Channel"
+                                                                   inManagedObjectContext:managedObjectContext];
+    [managedObject setValue:[[self channel] title] forKey:@"title"];
+    [managedObject setValue:[[self channel] link] forKey:@"link"];
+    [managedObject setValue:[[self channel] description] forKey:@"designation"];
 
     NSError *error = nil;
     [managedObjectContext save:&error];
