@@ -99,6 +99,7 @@
 		FA997DC618F055F000A2A67F /* NSDate+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DC518F055F000A2A67F /* NSDate+Date.m */; };
 		FA997DC918F06B0A00A2A67F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DC818F06B0A00A2A67F /* Social.framework */; };
 		FA997DCB18F06B1100A2A67F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DCA18F06B1100A2A67F /* MessageUI.framework */; };
+		FA997DCD18F0A97300A2A67F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA997DCC18F0A97300A2A67F /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -272,6 +273,7 @@
 		FA997DC518F055F000A2A67F /* NSDate+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Date.m"; path = "Category/NSDate+Date.m"; sourceTree = "<group>"; };
 		FA997DC818F06B0A00A2A67F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FA997DCA18F06B1100A2A67F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FA997DCC18F0A97300A2A67F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Bundle/Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +362,7 @@
 				FA37A25418DC6F7700B79FE8 /* main.m */,
 				FA37A25618DC6F7700B79FE8 /* iRSSClient-Prefix.pch */,
 				FA37A25018DC6F7700B79FE8 /* iRSSClient-Info.plist */,
+				FA997DCC18F0A97300A2A67F /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 			files = (
 				FA437C0918EC81CC0012BCE5 /* SVProgressHUD.bundle in Resources */,
 				FA85090C18EE03200083BB00 /* icon_home.png in Resources */,
+				FA997DCD18F0A97300A2A67F /* Settings.bundle in Resources */,
 				FA437C1218EC81CC0012BCE5 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				FA85091418EE03200083BB00 /* icon_title.png in Resources */,
 				FA437C1518EC81CC0012BCE5 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
