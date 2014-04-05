@@ -95,6 +95,7 @@
 		FA85091518EE03200083BB00 /* icon_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA85090918EE03200083BB00 /* icon_title@2x.png */; };
 		FA85091818EE03440083BB00 /* IconViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091718EE03440083BB00 /* IconViewCell.m */; };
 		FA85091B18EE15230083BB00 /* LeftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091A18EE15230083BB00 /* LeftModel.m */; };
+		FA997DC318F0424700A2A67F /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DC218F0424700A2A67F /* TextViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +263,8 @@
 		FA85091718EE03440083BB00 /* IconViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IconViewCell.m; path = View/TableViewCell/IconViewCell.m; sourceTree = "<group>"; };
 		FA85091918EE15230083BB00 /* LeftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftModel.h; path = Model/LeftModel.h; sourceTree = "<group>"; };
 		FA85091A18EE15230083BB00 /* LeftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftModel.m; path = Model/LeftModel.m; sourceTree = "<group>"; };
+		FA997DC118F0424700A2A67F /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = View/TableViewCell/TextViewCell.h; sourceTree = "<group>"; };
+		FA997DC218F0424700A2A67F /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = View/TableViewCell/TextViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,6 +635,8 @@
 				FA437C3818EC9F140012BCE5 /* TextFieldCell.m */,
 				FA85091618EE03440083BB00 /* IconViewCell.h */,
 				FA85091718EE03440083BB00 /* IconViewCell.m */,
+				FA997DC118F0424700A2A67F /* TextViewCell.h */,
+				FA997DC218F0424700A2A67F /* TextViewCell.m */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -824,6 +829,7 @@
 				FA8508FA18EDFA870083BB00 /* DataModel.m in Sources */,
 				FA437C0418EC81CC0012BCE5 /* MMDrawerVisualState.m in Sources */,
 				FA437C2318EC85720012BCE5 /* DrawerFactory.m in Sources */,
+				FA997DC318F0424700A2A67F /* TextViewCell.m in Sources */,
 				FA437C0718EC81CC0012BCE5 /* RSSItem.m in Sources */,
 				FA437C1618EC81CC0012BCE5 /* SVWebViewControllerActivity.m in Sources */,
 				FA437C0318EC81CC0012BCE5 /* MMDrawerController.m in Sources */,
