@@ -8,4 +8,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelAuthor;
 
+@property (strong, nonatomic) UIActionSheet *actionSheetShare;
+
 @end
