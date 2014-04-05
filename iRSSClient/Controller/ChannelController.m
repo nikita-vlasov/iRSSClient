@@ -83,7 +83,7 @@
     channel = [arrayChannel objectAtIndex:[indexPath row]];
 
     [[rindDetailCell textLabel] setText:[channel valueForKey:@"title"]];
-    [[rindDetailCell detailTextLabel] setText:@"1"];
+    [[rindDetailCell detailTextLabel] setText:@""];
 
     return rindDetailCell;
 }
