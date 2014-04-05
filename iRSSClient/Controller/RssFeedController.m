@@ -58,8 +58,10 @@
     [RSSParser parseRSSFeedForRequest:urlRequest success:^(NSArray *feedItems) {
         arrayRssFeed = feedItems;
         [[_rssFeedView tableView] reloadData];
+        [self stopRefresh];
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+        [self stopRefresh];
     }];
 }
 
