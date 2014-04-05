@@ -32,7 +32,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    UITableViewCell *ringDetailCell = [tableView dequeueReusableCellWithIdentifier:@"RingDetailCell"];
+    return ringDetailCell;
 }
 
 #pragma mark - UITableViewDelegate
