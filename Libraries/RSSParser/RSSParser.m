@@ -45,7 +45,12 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     
     operation.responseSerializer = [[AFXMLParserResponseSerializer alloc] init];
-    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml", @"text/xml",@"application/rss+xml", @"application/atom+xml", nil];
+    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:
+                                                           @"application/xml",
+                                                           @"text/xml",
+                                                           @"text/html",
+                                                           @"application/rss+xml",
+                                                           @"application/atom+xml", nil];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         failblock = [failure copy];
