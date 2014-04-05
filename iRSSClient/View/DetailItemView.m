@@ -17,4 +17,9 @@
 }
 */
 
+- (UIActionSheet *)actionSheetShare {
+    if (!_actionSheetShare) _actionSheetShare = [[UIActionSheet alloc] init];
+    return _actionSheetShare;
+}
+
 @end
