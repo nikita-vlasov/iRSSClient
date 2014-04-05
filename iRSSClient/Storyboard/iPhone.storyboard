@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RingDetailCell" textLabel="qVQ-oX-Lnk" detailTextLabel="ndg-PL-3mr" style="IBUITableViewCellStyleValue1" id="fQA-2B-m3q">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RingDetailCell" editingAccessoryType="detailDisclosureButton" textLabel="qVQ-oX-Lnk" detailTextLabel="ndg-PL-3mr" style="IBUITableViewCellStyleValue1" id="fQA-2B-m3q">
                                         <rect key="frame" x="0.0" y="86" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fQA-2B-m3q" id="k3t-bX-ExF">
@@ -82,8 +82,9 @@
                     <navigationItem key="navigationItem" id="5al-Wi-nAJ"/>
                     <connections>
                         <outlet property="channelView" destination="PYr-iO-qj5" id="kSA-eG-c3M"/>
-                        <segue destination="Hvd-Bo-kzS" kind="push" identifier="OpenEditChannel" id="QVe-lU-a7M"/>
+                        <segue destination="Hvd-Bo-kzS" kind="push" identifier="OpenNewChannel" id="QVe-lU-a7M"/>
                         <segue destination="QMn-97-6mF" kind="push" identifier="OpenRssFeed" id="8Zg-Tz-lRH"/>
+                        <segue destination="Hvd-Bo-kzS" kind="push" identifier="OpenEditChannel" id="Y6Q-W1-kq4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S74-ft-QXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -476,6 +477,7 @@
                             <outlet property="tableView" destination="PVN-rk-znp" id="2zr-7C-ebA"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="uPf-Gg-WUn"/>
                     <connections>
                         <outlet property="editChannelView" destination="4rp-wT-zq8" id="XrC-DJ-Rhx"/>
                     </connections>
@@ -590,4 +592,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="QVe-lU-a7M"/>
+    </inferredMetricsTieBreakers>
 </document>
