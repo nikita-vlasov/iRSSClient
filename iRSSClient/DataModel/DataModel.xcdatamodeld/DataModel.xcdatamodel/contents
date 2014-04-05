@@ -19,10 +19,10 @@
         <attribute name="isRead" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="channel_article" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Article" inverseName="article_channel" inverseEntity="Article" syncable="YES"/>
+        <relationship name="channel_article" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Article" inverseName="article_channel" inverseEntity="Article" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Channel" positionX="-234" positionY="108" width="128" height="133"/>
-        <element name="Article" positionX="18" positionY="-0" width="128" height="208"/>
+        <element name="Channel" positionX="-180" positionY="11" width="128" height="133"/>
+        <element name="Article" positionX="52" positionY="62" width="128" height="208"/>
     </elements>
 </model>
