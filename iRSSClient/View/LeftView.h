@@ -8,6 +8,7 @@
 #pragma mark - UISearchBar
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
+#pragma mark - UIRefreshControl
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
