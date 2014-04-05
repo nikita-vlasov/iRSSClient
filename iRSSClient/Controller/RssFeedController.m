@@ -26,6 +26,8 @@
 
     [[self navigationItem] setTitle:NSLocalizedString(@"RSS Feed", nil)];
     [[_rssFeedView tableView] setContentOffset:CGPointMake(0, 44)];
+    [[_rssFeedView refreshControl] addTarget:self action:@selector(startRefresh) forControlEvents:UIControlEventValueChanged];
+    [[_rssFeedView tableView] addSubview:[_rssFeedView refreshControl]];
 
     rssItems = [[RSSItem alloc] init];
 }
@@ -33,7 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [self loadRssFeed];
+    [self startRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +43,16 @@
 }
 
 #pragma mark - 
+- (void)startRefresh {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self loadRssFeed];
+}
+
+- (void)stopRefresh {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [[_rssFeedView refreshControl] endRefreshing];
+}
+
 - (void)loadRssFeed {
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[self linkRssChannel]]];
     [RSSParser parseRSSFeedForRequest:urlRequest success:^(NSArray *feedItems) {
@@ -79,7 +91,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *subtitleCell = [tableView dequeueReusableCellWithIdentifier:@"SubtitleCell"];
-
 
     if (isSearch == YES) rssItems = [arrayRssFeedFiltered objectAtIndex:[indexPath row]];
     else rssItems = [arrayRssFeed objectAtIndex:[indexPath row]];
