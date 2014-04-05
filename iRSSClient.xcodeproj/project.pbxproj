@@ -355,6 +355,7 @@
 		FA37A24F18DC6F7700B79FE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA997DCE18F0AFC800A2A67F /* Bundle */,
 				FA8508FB18EE03200083BB00 /* Resources */,
 				FA37A27D18DC718C00B79FE8 /* DataModel */,
 				FA37A29518DCDF3D00B79FE8 /* Localizable.strings */,
@@ -362,7 +363,6 @@
 				FA37A25418DC6F7700B79FE8 /* main.m */,
 				FA37A25618DC6F7700B79FE8 /* iRSSClient-Prefix.pch */,
 				FA37A25018DC6F7700B79FE8 /* iRSSClient-Info.plist */,
-				FA997DCC18F0A97300A2A67F /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -718,6 +718,14 @@
 				FA997DC518F055F000A2A67F /* NSDate+Date.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		FA997DCE18F0AFC800A2A67F /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				FA997DCC18F0A97300A2A67F /* Settings.bundle */,
+			);
+			name = Bundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
