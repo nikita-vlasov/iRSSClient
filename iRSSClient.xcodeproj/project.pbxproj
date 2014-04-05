@@ -97,6 +97,8 @@
 		FA85091B18EE15230083BB00 /* LeftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85091A18EE15230083BB00 /* LeftModel.m */; };
 		FA997DC318F0424700A2A67F /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DC218F0424700A2A67F /* TextViewCell.m */; };
 		FA997DC618F055F000A2A67F /* NSDate+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DC518F055F000A2A67F /* NSDate+Date.m */; };
+		FA997DC918F06B0A00A2A67F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DC818F06B0A00A2A67F /* Social.framework */; };
+		FA997DCB18F06B1100A2A67F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DCA18F06B1100A2A67F /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -268,6 +270,8 @@
 		FA997DC218F0424700A2A67F /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = View/TableViewCell/TextViewCell.m; sourceTree = "<group>"; };
 		FA997DC418F055F000A2A67F /* NSDate+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Date.h"; path = "Category/NSDate+Date.h"; sourceTree = "<group>"; };
 		FA997DC518F055F000A2A67F /* NSDate+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Date.m"; path = "Category/NSDate+Date.m"; sourceTree = "<group>"; };
+		FA997DC818F06B0A00A2A67F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FA997DCA18F06B1100A2A67F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA997DCB18F06B1100A2A67F /* MessageUI.framework in Frameworks */,
+				FA997DC918F06B0A00A2A67F /* Social.framework in Frameworks */,
 				FA437C5818ECB6DB0012BCE5 /* AdSupport.framework in Frameworks */,
 				FA437C5618ECB6CF0012BCE5 /* libz.dylib in Frameworks */,
 				FA437C5418ECB6B80012BCE5 /* SystemConfiguration.framework in Frameworks */,
@@ -312,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				FA437B9418EC81CC0012BCE5 /* Libraries */,
+				FA997DCA18F06B1100A2A67F /* MessageUI.framework */,
+				FA997DC818F06B0A00A2A67F /* Social.framework */,
 				FA437C5718ECB6DB0012BCE5 /* AdSupport.framework */,
 				FA437C5318ECB6B80012BCE5 /* SystemConfiguration.framework */,
 				FA37A27E18DC723A00B79FE8 /* CoreData.framework */,
