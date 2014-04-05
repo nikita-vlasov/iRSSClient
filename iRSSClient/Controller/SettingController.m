@@ -14,6 +14,8 @@
 #pragma mark - UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [[self navigationItem] setTitle:NSLocalizedString(@"Setting", nil)];
 }
 
 - (void)didReceiveMemoryWarning {
