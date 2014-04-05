@@ -1,4 +1,4 @@
-## iRssClient
+## iRSS Client
 
     [add] Левое меню:
         - Поиск по меню;
