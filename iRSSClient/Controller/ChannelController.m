@@ -47,21 +47,21 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - UIViewControllerEditing
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    [super setEditing:editing animated:animated];
-
-    if (editing) [[_channelView tableView] setEditing:YES animated:YES];
-    else [[_channelView tableView] setEditing:NO animated:YES];
-}
-
-#pragma mark - 
+#pragma mark -
 - (void)loadChannelList {
     [arrayChannel removeAllObjects];
     for (channel in [[DataModel sharedModel] entityDataSetEnturyName:@"Channel"]) {
         [arrayChannel addObject:channel];
     }
     [[_channelView tableView] reloadData];
+}
+
+#pragma mark - UIViewControllerEditing
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+
+    if (editing) [[_channelView tableView] setEditing:YES animated:YES];
+    else [[_channelView tableView] setEditing:NO animated:YES];
 }
 
 #pragma mark - UIBarButtonItem
