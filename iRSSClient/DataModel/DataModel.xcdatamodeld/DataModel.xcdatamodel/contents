@@ -2,15 +2,16 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Article" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="commentsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="commentsFeed" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="commentsLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="comments_feed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments_link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pubDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pub_date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="article_channel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Channel" inverseName="channel_article" inverseEntity="Channel" syncable="YES"/>
     </entity>
     <entity name="Channel" syncable="YES">
         <attribute name="designation" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,9 +19,10 @@
         <attribute name="isRead" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="channel_article" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Article" inverseName="article_channel" inverseEntity="Article" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Channel" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Article" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Channel" positionX="-234" positionY="108" width="128" height="133"/>
+        <element name="Article" positionX="18" positionY="-0" width="128" height="208"/>
     </elements>
 </model>
