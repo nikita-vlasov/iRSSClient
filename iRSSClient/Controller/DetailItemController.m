@@ -1,6 +1,7 @@
 #import "DetailItemController.h"
 #import "DetailItemView.h"
 #import "TextViewCell.h"
+#import "NSDate+Date.h"
 
 @interface DetailItemController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -30,7 +31,7 @@
 - (void)reloadData {
     [[[self detailItemView] labelTitle] setText:[[self rssItems] title]];
     [[[self detailItemView] labelAuthor] setText:[[self rssItems] author]];
-//    [[[self detailItemView] labelDate] setText:[[self rssItems] pubDate]];
+    [[[self detailItemView] labelDate] setText:[NSDate getFormattetDateSetDate:[[self rssItems] pubDate]]];
 }
 
 #pragma mark - UITableViewDataSource
@@ -44,15 +45,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TextViewCell *textViewCell = [tableView dequeueReusableCellWithIdentifier:@"TextViewCell"];
+    
     [[textViewCell textView] setText:[[self rssItems] itemDescription]];
 
     return textViewCell;
 }
-
-//UITextView *textView = [[UITextView alloc] init];
-//[textView setAttributedText:text];
-//CGSize size = [textView sizeThatFits:CGSizeMake(width, FLT_MAX)];
-//return size.height;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITextView *textView = [[UITextView alloc] init];
