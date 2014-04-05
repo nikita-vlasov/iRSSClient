@@ -100,6 +100,7 @@
 		FA997DC918F06B0A00A2A67F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DC818F06B0A00A2A67F /* Social.framework */; };
 		FA997DCB18F06B1100A2A67F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DCA18F06B1100A2A67F /* MessageUI.framework */; };
 		FA997DCD18F0A97300A2A67F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA997DCC18F0A97300A2A67F /* Settings.bundle */; };
+		FA997DD118F0C4E800A2A67F /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DD018F0C4E800A2A67F /* Article.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +275,8 @@
 		FA997DC818F06B0A00A2A67F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FA997DCA18F06B1100A2A67F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FA997DCC18F0A97300A2A67F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Bundle/Settings.bundle; sourceTree = "<group>"; };
+		FA997DCF18F0C4E800A2A67F /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = MappingModel/Article.h; sourceTree = "<group>"; };
+		FA997DD018F0C4E800A2A67F /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +434,8 @@
 			children = (
 				FA37A28818DCD9F900B79FE8 /* Channel.h */,
 				FA37A28918DCD9F900B79FE8 /* Channel.m */,
+				FA997DCF18F0C4E800A2A67F /* Article.h */,
+				FA997DD018F0C4E800A2A67F /* Article.m */,
 			);
 			name = MappingModel;
 			sourceTree = "<group>";
@@ -833,6 +838,7 @@
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA437BFD18EC81CC0012BCE5 /* AFURLRequestSerialization.m in Sources */,
 				FA437BFB18EC81CC0012BCE5 /* AFSecurityPolicy.m in Sources */,
+				FA997DD118F0C4E800A2A67F /* Article.m in Sources */,
 				FA437C3918EC9F140012BCE5 /* TextFieldCell.m in Sources */,
 				FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */,
 				FA437C1D18EC81CC0012BCE5 /* UIRefreshControl+AFNetworking.m in Sources */,
