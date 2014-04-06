@@ -303,6 +303,48 @@
             </objects>
             <point key="canvasLocation" x="1087" y="-532"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="WmG-Bo-BZ0">
+            <objects>
+                <viewController storyboardIdentifier="SelectFontSize" id="Sv1-py-DzI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="87L-bX-32f"/>
+                        <viewControllerLayoutGuide type="bottom" id="J3W-76-8gS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g6d-xN-ebu">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ry-WQ-UMl">
+                                <rect key="frame" x="28" y="85" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </stepper>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rck-fr-prK">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Select size" id="IQ6-p7-iWc"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rck-fr-prK" firstAttribute="top" secondItem="87L-bX-32f" secondAttribute="bottom" id="10C-nG-Fc0"/>
+                            <constraint firstItem="2ry-WQ-UMl" firstAttribute="top" secondItem="Rck-fr-prK" secondAttribute="bottom" constant="41" id="5u6-SC-ErU"/>
+                            <constraint firstItem="Rck-fr-prK" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" id="8a4-Cp-nXD"/>
+                            <constraint firstAttribute="trailing" secondItem="2ry-WQ-UMl" secondAttribute="trailing" constant="28" id="Bam-Rn-fmM"/>
+                            <constraint firstAttribute="trailing" secondItem="Rck-fr-prK" secondAttribute="trailing" id="gW6-Cl-GBR"/>
+                            <constraint firstItem="J3W-76-8gS" firstAttribute="top" secondItem="2ry-WQ-UMl" secondAttribute="bottom" constant="86" id="kEb-JR-jTy"/>
+                            <constraint firstItem="2ry-WQ-UMl" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" constant="28" id="xac-BA-XbA"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQF-te-St8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="-532"/>
+        </scene>
         <!--Left Controller-->
         <scene sceneID="8My-N9-RdT">
             <objects>
