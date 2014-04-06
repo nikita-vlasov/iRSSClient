@@ -11,4 +11,6 @@
 
     #import "AppDelegate.h"
     #import "SVProgressHUD.h"
+    #import "TestFlight.h"
+    #import "GAI.h"
 #endif
