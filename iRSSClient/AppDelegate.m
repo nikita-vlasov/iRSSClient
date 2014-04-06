@@ -9,7 +9,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
 
     /* Регистрирую пользовательские настройки */
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
