@@ -103,6 +103,7 @@
 		FA997DD118F0C4E800A2A67F /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DD018F0C4E800A2A67F /* Article.m */; };
 		FAA4E31D18F15D8A007245E3 /* description.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E31B18F15D8A007245E3 /* description.png */; };
 		FAA4E31E18F15D8A007245E3 /* description@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E31C18F15D8A007245E3 /* description@2x.png */; };
+		FAA4E32018F1919D007245E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA4E31F18F1919D007245E3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +282,7 @@
 		FA997DD018F0C4E800A2A67F /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
 		FAA4E31B18F15D8A007245E3 /* description.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = description.png; sourceTree = "<group>"; };
 		FAA4E31C18F15D8A007245E3 /* description@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "description@2x.png"; sourceTree = "<group>"; };
+		FAA4E31F18F1919D007245E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA4E32018F1919D007245E3 /* QuartzCore.framework in Frameworks */,
 				FA997DCB18F06B1100A2A67F /* MessageUI.framework in Frameworks */,
 				FA997DC918F06B0A00A2A67F /* Social.framework in Frameworks */,
 				FA437C5818ECB6DB0012BCE5 /* AdSupport.framework in Frameworks */,
@@ -327,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				FA437B9418EC81CC0012BCE5 /* Libraries */,
+				FAA4E31F18F1919D007245E3 /* QuartzCore.framework */,
 				FA997DCA18F06B1100A2A67F /* MessageUI.framework */,
 				FA997DC818F06B0A00A2A67F /* Social.framework */,
 				FA437C5718ECB6DB0012BCE5 /* AdSupport.framework */,
