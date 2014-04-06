@@ -26,7 +26,6 @@
     UIViewController *viewController;
 
     float contentFontSize;
-
 }
 
 /** View. */
