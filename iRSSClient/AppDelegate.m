@@ -11,6 +11,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+    /* Регистрирую пользовательские настройки */
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *registerDefaults = [NSMutableDictionary dictionary];
+
+    [registerDefaults setValue:@"14" forKey:@"content_font_size"];
+
+    [userDefaults registerDefaults:registerDefaults];
+    [userDefaults synchronize];
+
     [self loadLeftMenu];
 
     return YES;
