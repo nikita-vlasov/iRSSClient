@@ -18,16 +18,12 @@
 */
 
 - (UIBarButtonItem *)barButtonSave {
-    if (!_barButtonSave) {
-        _barButtonSave = [[UIBarButtonItem alloc] init];
-    }
+    if (!_barButtonSave) _barButtonSave = [[UIBarButtonItem alloc] init];
     return _barButtonSave;
 }
 
 - (UIAlertView *)alertViewAction {
-    if (!_alertViewAction) {
-        _alertViewAction = [[UIAlertView alloc] init];
-    }
+    if (!_alertViewAction) _alertViewAction = [[UIAlertView alloc] init];
     return _alertViewAction;
 }
 
