@@ -10,6 +10,7 @@
 @interface DetailItemController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate> {
     @private
     UIBarButtonItem *barButtonShare;
+    UIBarButtonItem *barButtonFontSize;
 
     /** Для отправки информации о коде через E-Mail. */
     MFMailComposeViewController *mfMailComposeViewController;
@@ -36,7 +37,14 @@
     barButtonShare = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                    target:self
                                                                    action:@selector(shareButton:)];
-    [[self navigationItem] setRightBarButtonItems:@[barButtonShare]];
+//    barButtonFontSize = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""]
+//                                                         style:UIBarButtonItemStyleBordered
+//                                                        target:self action:@selector(fontSizeButton:)];
+    barButtonFontSize = [[UIBarButtonItem alloc] initWithTitle:@"ABC" style:UIBarButtonItemStylePlain target:self action:nil];
+
+    NSArray *arrayButton = [[NSArray alloc] initWithObjects:barButtonShare, barButtonFontSize, nil];
+//    [[self navigationItem] setRightBarButtonItems:@[barButtonFontSize, barButtonShare]];
+    [[self navigationItem] setRightBarButtonItems:arrayButton];
 
     [[[self detailItemView] actionSheetShare] addButtonWithTitle:NSLocalizedString(@"E-Mail", nil)];
     [[[self detailItemView] actionSheetShare] addButtonWithTitle:NSLocalizedString(@"Message", nil)];
@@ -74,6 +82,10 @@
 #pragma mark - UIBarButtonItem
 - (void)shareButton:(UIBarButtonItem *)sender {
     [[[self detailItemView] actionSheetShare] showInView:[self detailItemView]];
+}
+
+- (void)fontSizeButton:(UIBarButtonItem *)sender {
+
 }
 
 #pragma mark - UITableViewDataSource
