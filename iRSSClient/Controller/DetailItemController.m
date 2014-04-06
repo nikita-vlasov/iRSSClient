@@ -25,6 +25,8 @@
     FPPopoverController *popoverController;
     UIViewController *viewController;
 
+    float contentFontSize;
+
 }
 
 /** View. */
@@ -62,6 +64,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    contentFontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"content_font_size"];
 
     [self reloadData];
 }
@@ -95,7 +98,7 @@
 
     viewController = [storyboard instantiateViewControllerWithIdentifier:@"SelectFontSize"];
     popoverController = [[FPPopoverController alloc] initWithViewController:viewController];
-    [popoverController setContentSize:CGSizeMake(150.0f, 200.0f)];
+//    [popoverController setContentSize:CGSizeMake(150.0f, 200.0f)];
 
     UIView *view = [sender valueForKey:@"view"];
     [popoverController presentPopoverFromView:view];
@@ -105,6 +108,8 @@
 
 #pragma mark - FPPopoverControllerDelegate
 - (void)popoverControllerDidDismissPopover:(FPPopoverController *)popoverController {
+    contentFontSize = [[NSUserDefaults standardUserDefaults] doubleForKey:@"content_font_size"];
+    [[[self detailItemView] tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -120,6 +125,7 @@
     TextViewCell *textViewCell = [tableView dequeueReusableCellWithIdentifier:@"TextViewCell"];
     
     [[textViewCell textView] setText:[[self rssItems] itemDescription]];
+    [[textViewCell textView] setFont:[UIFont fontWithName:@"Helvetica Neue" size:contentFontSize]];
 
     return textViewCell;
 }
@@ -129,11 +135,11 @@
     UITextView *textView = [[UITextView alloc] init];
     NSAttributedString *string = [[NSAttributedString alloc] initWithString:[[self rssItems] itemDescription]];
     [textView setAttributedText:string];
-    [textView setFont:[UIFont fontWithName:@"Helvetica Neue" size:14.0f]];
+    [textView setFont:[UIFont fontWithName:@"Helvetica Neue" size:contentFontSize]];
 
     CGSize size = [textView sizeThatFits:CGSizeMake(300.0f, FLT_MAX)];
 
-    return size.height;
+    return size.height - 20;
 
 }
 
