@@ -30,6 +30,16 @@
 			<key>DefaultValue</key>
 			<string>1</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Developer</string>
+			<key>Key</key>
+			<string>developer_setting</string>
+			<key>DefaultValue</key>
+			<string>Alex</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>
