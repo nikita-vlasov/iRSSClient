@@ -1,6 +1,10 @@
 #import "FontSizeController.h"
+#import "FontSizeView.h"
 
 @interface FontSizeController ()
+
+/** View. */
+@property (strong, nonatomic) IBOutlet FontSizeView *fontSizeView;
 
 @end
 
