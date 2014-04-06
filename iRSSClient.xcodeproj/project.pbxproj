@@ -109,6 +109,8 @@
 		FAA4E32B18F192B2007245E3 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32818F192B2007245E3 /* FPTouchView.m */; };
 		FAA4E33818F19C5B007245E3 /* icon_font_size.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E33618F19C5B007245E3 /* icon_font_size.png */; };
 		FAA4E33918F19C5B007245E3 /* icon_font_size@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */; };
+		FAA4E33C18F1A1DC007245E3 /* FontSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */; };
+		FAA4E33F18F1A1F8007245E3 /* FontSizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -298,6 +300,10 @@
 		FAA4E32F18F19575007245E3 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
 		FAA4E33618F19C5B007245E3 /* icon_font_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_font_size.png; sourceTree = "<group>"; };
 		FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_font_size@2x.png"; sourceTree = "<group>"; };
+		FAA4E33A18F1A1DC007245E3 /* FontSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontSizeView.h; path = View/FontSizeView.h; sourceTree = "<group>"; };
+		FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontSizeView.m; path = View/FontSizeView.m; sourceTree = "<group>"; };
+		FAA4E33D18F1A1F8007245E3 /* FontSizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontSizeController.h; path = Controller/FontSizeController.h; sourceTree = "<group>"; };
+		FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontSizeController.m; path = Controller/FontSizeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +433,8 @@
 				FA836D8F18EF3C830005FF8E /* DetailItemView.m */,
 				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
 				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
+				FAA4E33A18F1A1DC007245E3 /* FontSizeView.h */,
+				FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -448,6 +456,8 @@
 				FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */,
 				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
 				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
+				FAA4E33D18F1A1F8007245E3 /* FontSizeController.h */,
+				FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -883,6 +893,7 @@
 				FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */,
 				FA437C1818EC81CC0012BCE5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */,
+				FAA4E33C18F1A1DC007245E3 /* FontSizeView.m in Sources */,
 				FA437C1A18EC81CC0012BCE5 /* UIButton+AFNetworking.m in Sources */,
 				FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */,
 				FA437C0B18EC81CC0012BCE5 /* SVModalWebViewController.m in Sources */,
@@ -935,6 +946,7 @@
 				FA437BF818EC81CC0012BCE5 /* AFHTTPRequestOperationManager.m in Sources */,
 				FA437C1018EC81CC0012BCE5 /* SVWebViewControllerActivityChrome.m in Sources */,
 				FA437C4C18ECACEE0012BCE5 /* RssFeedController.m in Sources */,
+				FAA4E33F18F1A1F8007245E3 /* FontSizeController.m in Sources */,
 				FA437C1418EC81CC0012BCE5 /* SVWebViewControllerActivitySafari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
