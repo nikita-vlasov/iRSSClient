@@ -97,7 +97,8 @@
 
     viewController = [storyboard instantiateViewControllerWithIdentifier:@"SelectFontSize"];
     popoverController = [[FPPopoverController alloc] initWithViewController:viewController];
-//    [popoverController setContentSize:CGSizeMake(150.0f, 200.0f)];
+    /* На сториборде добавлять 20 пикселей. */
+    [popoverController setContentSize:CGSizeMake(150.0f, 200.0f)];
 
     UIView *view = [sender valueForKey:@"view"];
     [popoverController presentPopoverFromView:view];
