@@ -66,6 +66,8 @@
         [[textFieldCell textField] setText:[[self channel] valueForKey:@"title"]];
         [[textFieldCell textField] setTag:0];
 
+        [[textFieldCell ImageViewIcon] setImage:[UIImage imageNamed:@"icon_title.png"]];
+
         return textFieldCell;
     }
     else if ([indexPath row] == 1) {
@@ -73,12 +75,16 @@
         [[textFieldCell textField] setText:[[self channel] valueForKey:@"link"]];
         [[textFieldCell textField] setTag:1];
 
+        [[textFieldCell ImageViewIcon] setImage:[UIImage imageNamed:@"icon_link.png"]];
+
         return textFieldCell;
     }
     else if ([indexPath row] == 2) {
         [[textFieldCell textField] setPlaceholder:NSLocalizedString(@"Description", nil)];
         [[textFieldCell textField] setText:[[self channel] valueForKey:@"designation"]];
         [[textFieldCell textField] setTag:2];
+
+        [[textFieldCell ImageViewIcon] setImage:[UIImage imageNamed:@"description.png"]];
 
         return textFieldCell;
     }
