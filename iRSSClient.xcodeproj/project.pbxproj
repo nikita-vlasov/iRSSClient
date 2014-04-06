@@ -107,6 +107,8 @@
 		FAA4E32918F192B2007245E3 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32418F192B2007245E3 /* FPPopoverController.m */; };
 		FAA4E32A18F192B2007245E3 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32618F192B2007245E3 /* FPPopoverView.m */; };
 		FAA4E32B18F192B2007245E3 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32818F192B2007245E3 /* FPTouchView.m */; };
+		FAA4E33818F19C5B007245E3 /* icon_font_size.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E33618F19C5B007245E3 /* icon_font_size.png */; };
+		FAA4E33918F19C5B007245E3 /* icon_font_size@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -294,6 +296,8 @@
 		FAA4E32718F192B2007245E3 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
 		FAA4E32818F192B2007245E3 /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 		FAA4E32F18F19575007245E3 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		FAA4E33618F19C5B007245E3 /* icon_font_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_font_size.png; sourceTree = "<group>"; };
+		FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_font_size@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -720,6 +724,7 @@
 		FA8508FD18EE03200083BB00 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4E33518F19C5B007245E3 /* BarButton */,
 				FAA4E31B18F15D8A007245E3 /* description.png */,
 				FAA4E31C18F15D8A007245E3 /* description@2x.png */,
 				FA8508FE18EE03200083BB00 /* icon_channel.png */,
@@ -768,6 +773,15 @@
 				FAA4E32818F192B2007245E3 /* FPTouchView.m */,
 			);
 			path = FPPopover;
+			sourceTree = "<group>";
+		};
+		FAA4E33518F19C5B007245E3 /* BarButton */ = {
+			isa = PBXGroup;
+			children = (
+				FAA4E33618F19C5B007245E3 /* icon_font_size.png */,
+				FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */,
+			);
+			path = BarButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -837,6 +851,7 @@
 				FA85091118EE03200083BB00 /* icon_rss@2x.png in Resources */,
 				FA437C0C18EC81CC0012BCE5 /* SVWebViewController.bundle in Resources */,
 				FA437C1318EC81CC0012BCE5 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
+				FAA4E33818F19C5B007245E3 /* icon_font_size.png in Resources */,
 				FA37A29318DCDF3D00B79FE8 /* Localizable.strings in Resources */,
 				FA85091018EE03200083BB00 /* icon_rss.png in Resources */,
 				FA37A27818DC707700B79FE8 /* iPhone.storyboard in Resources */,
@@ -851,6 +866,7 @@
 				FA85090D18EE03200083BB00 /* icon_home@2x.png in Resources */,
 				FAA4E31D18F15D8A007245E3 /* description.png in Resources */,
 				FA85091218EE03200083BB00 /* icon_settings.png in Resources */,
+				FAA4E33918F19C5B007245E3 /* icon_font_size@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
