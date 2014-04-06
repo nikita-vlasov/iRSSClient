@@ -303,15 +303,15 @@
             </objects>
             <point key="canvasLocation" x="1087" y="-532"/>
         </scene>
-        <!--View Controller-->
+        <!--Font Size Controller-->
         <scene sceneID="WmG-Bo-BZ0">
             <objects>
-                <viewController storyboardIdentifier="SelectFontSize" id="Sv1-py-DzI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectFontSize" id="Sv1-py-DzI" customClass="FontSizeController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="87L-bX-32f"/>
                         <viewControllerLayoutGuide type="bottom" id="J3W-76-8gS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g6d-xN-ebu">
+                    <view key="view" contentMode="scaleToFill" id="g6d-xN-ebu" customClass="FontSizeView">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -337,9 +337,16 @@
                             <constraint firstItem="J3W-76-8gS" firstAttribute="top" secondItem="2ry-WQ-UMl" secondAttribute="bottom" constant="86" id="kEb-JR-jTy"/>
                             <constraint firstItem="2ry-WQ-UMl" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" constant="28" id="xac-BA-XbA"/>
                         </constraints>
+                        <connections>
+                            <outlet property="navigationBar" destination="Rck-fr-prK" id="DFI-J5-pe9"/>
+                            <outlet property="stepperButton" destination="2ry-WQ-UMl" id="PYg-qS-KHj"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="fontSizeView" destination="g6d-xN-ebu" id="yL9-24-F3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQF-te-St8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
