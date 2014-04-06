@@ -6,8 +6,9 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MessageUI.h>
 #import "SVWebViewController.h"
+#import "FPPopoverController.h"
 
-@interface DetailItemController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate> {
+@interface DetailItemController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, FPPopoverControllerDelegate> {
     @private
     UIBarButtonItem *barButtonShare;
     UIBarButtonItem *barButtonFontSize;
@@ -20,6 +21,10 @@
     SLComposeViewController *slComposeViewController;
     /** WebViewController */
     SVModalWebViewController *modalWebViewController;
+
+    FPPopoverController *popoverController;
+    UIViewController *viewController;
+
 }
 
 /** View. */
@@ -37,14 +42,12 @@
     barButtonShare = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                    target:self
                                                                    action:@selector(shareButton:)];
-//    barButtonFontSize = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""]
-//                                                         style:UIBarButtonItemStyleBordered
-//                                                        target:self action:@selector(fontSizeButton:)];
-    barButtonFontSize = [[UIBarButtonItem alloc] initWithTitle:@"ABC" style:UIBarButtonItemStylePlain target:self action:nil];
 
-    NSArray *arrayButton = [[NSArray alloc] initWithObjects:barButtonShare, barButtonFontSize, nil];
-//    [[self navigationItem] setRightBarButtonItems:@[barButtonFontSize, barButtonShare]];
-    [[self navigationItem] setRightBarButtonItems:arrayButton];
+    barButtonFontSize = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_font_size.png"]
+                                                         style:UIBarButtonItemStylePlain
+                                                        target:self
+                                                        action:@selector(fontSizeButton:)];
+    [[self navigationItem] setRightBarButtonItems:@[barButtonShare, barButtonFontSize]];
 
     [[[self detailItemView] actionSheetShare] addButtonWithTitle:NSLocalizedString(@"E-Mail", nil)];
     [[[self detailItemView] actionSheetShare] addButtonWithTitle:NSLocalizedString(@"Message", nil)];
@@ -63,16 +66,19 @@
     [self reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)dealloc {
     mfMailComposeViewController = nil;
     slComposeViewController = nil;
     modalWebViewController = nil;
+    popoverController = nil;
+    viewController = nil;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark -
 - (void)reloadData {
     [[[self detailItemView] labelTitle] setText:[[self rssItems] title]];
     [[[self detailItemView] labelAuthor] setText:[[self rssItems] author]];
@@ -85,7 +91,20 @@
 }
 
 - (void)fontSizeButton:(UIBarButtonItem *)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
 
+    viewController = [storyboard instantiateViewControllerWithIdentifier:@"SelectFontSize"];
+    popoverController = [[FPPopoverController alloc] initWithViewController:viewController];
+    [popoverController setContentSize:CGSizeMake(150.0f, 200.0f)];
+
+    UIView *view = [sender valueForKey:@"view"];
+    [popoverController presentPopoverFromView:view];
+
+    [popoverController setDelegate:self];
+}
+
+#pragma mark - FPPopoverControllerDelegate
+- (void)popoverControllerDidDismissPopover:(FPPopoverController *)popoverController {
 }
 
 #pragma mark - UITableViewDataSource
