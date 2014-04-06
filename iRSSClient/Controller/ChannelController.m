@@ -90,7 +90,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObject *managedObject= [arrayChannel objectAtIndex:[indexPath row]];
+        NSManagedObject *managedObject = [arrayChannel objectAtIndex:[indexPath row]];
         [managedObjectContext deleteObject:managedObject];
 
         NSError *error = nil;
