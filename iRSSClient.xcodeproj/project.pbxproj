@@ -101,6 +101,8 @@
 		FA997DCB18F06B1100A2A67F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA997DCA18F06B1100A2A67F /* MessageUI.framework */; };
 		FA997DCD18F0A97300A2A67F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA997DCC18F0A97300A2A67F /* Settings.bundle */; };
 		FA997DD118F0C4E800A2A67F /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = FA997DD018F0C4E800A2A67F /* Article.m */; };
+		FAA4E31D18F15D8A007245E3 /* description.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E31B18F15D8A007245E3 /* description.png */; };
+		FAA4E31E18F15D8A007245E3 /* description@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E31C18F15D8A007245E3 /* description@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,6 +279,8 @@
 		FA997DCC18F0A97300A2A67F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Bundle/Settings.bundle; sourceTree = "<group>"; };
 		FA997DCF18F0C4E800A2A67F /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = MappingModel/Article.h; sourceTree = "<group>"; };
 		FA997DD018F0C4E800A2A67F /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = MappingModel/Article.m; sourceTree = "<group>"; };
+		FAA4E31B18F15D8A007245E3 /* description.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = description.png; sourceTree = "<group>"; };
+		FAA4E31C18F15D8A007245E3 /* description@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "description@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -700,6 +704,8 @@
 		FA8508FD18EE03200083BB00 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4E31B18F15D8A007245E3 /* description.png */,
+				FAA4E31C18F15D8A007245E3 /* description@2x.png */,
 				FA8508FE18EE03200083BB00 /* icon_channel.png */,
 				FA8508FF18EE03200083BB00 /* icon_channel@2x.png */,
 				FA85090018EE03200083BB00 /* icon_home.png */,
@@ -809,8 +815,10 @@
 				FA85090B18EE03200083BB00 /* icon_channel@2x.png in Resources */,
 				FA37A25B18DC6F7700B79FE8 /* Images.xcassets in Resources */,
 				FA85090F18EE03200083BB00 /* icon_link@2x.png in Resources */,
+				FAA4E31E18F15D8A007245E3 /* description@2x.png in Resources */,
 				FA85091518EE03200083BB00 /* icon_title@2x.png in Resources */,
 				FA85090D18EE03200083BB00 /* icon_home@2x.png in Resources */,
+				FAA4E31D18F15D8A007245E3 /* description.png in Resources */,
 				FA85091218EE03200083BB00 /* icon_settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
