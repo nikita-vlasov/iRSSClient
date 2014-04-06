@@ -104,6 +104,13 @@
 		FAA4E31D18F15D8A007245E3 /* description.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E31B18F15D8A007245E3 /* description.png */; };
 		FAA4E31E18F15D8A007245E3 /* description@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E31C18F15D8A007245E3 /* description@2x.png */; };
 		FAA4E32018F1919D007245E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA4E31F18F1919D007245E3 /* QuartzCore.framework */; };
+		FAA4E32918F192B2007245E3 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32418F192B2007245E3 /* FPPopoverController.m */; };
+		FAA4E32A18F192B2007245E3 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32618F192B2007245E3 /* FPPopoverView.m */; };
+		FAA4E32B18F192B2007245E3 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E32818F192B2007245E3 /* FPTouchView.m */; };
+		FAA4E33818F19C5B007245E3 /* icon_font_size.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E33618F19C5B007245E3 /* icon_font_size.png */; };
+		FAA4E33918F19C5B007245E3 /* icon_font_size@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */; };
+		FAA4E33C18F1A1DC007245E3 /* FontSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */; };
+		FAA4E33F18F1A1F8007245E3 /* FontSizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,6 +290,20 @@
 		FAA4E31B18F15D8A007245E3 /* description.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = description.png; sourceTree = "<group>"; };
 		FAA4E31C18F15D8A007245E3 /* description@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "description@2x.png"; sourceTree = "<group>"; };
 		FAA4E31F18F1919D007245E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAA4E32218F192B1007245E3 /* fppopover-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fppopover-Prefix.pch"; sourceTree = "<group>"; };
+		FAA4E32318F192B1007245E3 /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
+		FAA4E32418F192B2007245E3 /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
+		FAA4E32518F192B2007245E3 /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
+		FAA4E32618F192B2007245E3 /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		FAA4E32718F192B2007245E3 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
+		FAA4E32818F192B2007245E3 /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
+		FAA4E32F18F19575007245E3 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		FAA4E33618F19C5B007245E3 /* icon_font_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_font_size.png; sourceTree = "<group>"; };
+		FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_font_size@2x.png"; sourceTree = "<group>"; };
+		FAA4E33A18F1A1DC007245E3 /* FontSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontSizeView.h; path = View/FontSizeView.h; sourceTree = "<group>"; };
+		FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontSizeView.m; path = View/FontSizeView.m; sourceTree = "<group>"; };
+		FAA4E33D18F1A1F8007245E3 /* FontSizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontSizeController.h; path = Controller/FontSizeController.h; sourceTree = "<group>"; };
+		FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontSizeController.m; path = Controller/FontSizeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +433,8 @@
 				FA836D8F18EF3C830005FF8E /* DetailItemView.m */,
 				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
 				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
+				FAA4E33A18F1A1DC007245E3 /* FontSizeView.h */,
+				FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -433,6 +456,8 @@
 				FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */,
 				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
 				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
+				FAA4E33D18F1A1F8007245E3 /* FontSizeController.h */,
+				FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -451,6 +476,7 @@
 		FA437B9418EC81CC0012BCE5 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4E32118F192B1007245E3 /* FPPopover */,
 				FA437C4D18ECB6760012BCE5 /* TestFlightSDK */,
 				FA437B9518EC81CC0012BCE5 /* AFNetworking */,
 				FA437BE518EC81CC0012BCE5 /* UIKit+AFNetworking */,
@@ -708,6 +734,7 @@
 		FA8508FD18EE03200083BB00 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4E33518F19C5B007245E3 /* BarButton */,
 				FAA4E31B18F15D8A007245E3 /* description.png */,
 				FAA4E31C18F15D8A007245E3 /* description@2x.png */,
 				FA8508FE18EE03200083BB00 /* icon_channel.png */,
@@ -741,6 +768,30 @@
 				FA997DCC18F0A97300A2A67F /* Settings.bundle */,
 			);
 			name = Bundle;
+			sourceTree = "<group>";
+		};
+		FAA4E32118F192B1007245E3 /* FPPopover */ = {
+			isa = PBXGroup;
+			children = (
+				FAA4E32F18F19575007245E3 /* ARCMacros.h */,
+				FAA4E32218F192B1007245E3 /* fppopover-Prefix.pch */,
+				FAA4E32318F192B1007245E3 /* FPPopoverController.h */,
+				FAA4E32418F192B2007245E3 /* FPPopoverController.m */,
+				FAA4E32518F192B2007245E3 /* FPPopoverView.h */,
+				FAA4E32618F192B2007245E3 /* FPPopoverView.m */,
+				FAA4E32718F192B2007245E3 /* FPTouchView.h */,
+				FAA4E32818F192B2007245E3 /* FPTouchView.m */,
+			);
+			path = FPPopover;
+			sourceTree = "<group>";
+		};
+		FAA4E33518F19C5B007245E3 /* BarButton */ = {
+			isa = PBXGroup;
+			children = (
+				FAA4E33618F19C5B007245E3 /* icon_font_size.png */,
+				FAA4E33718F19C5B007245E3 /* icon_font_size@2x.png */,
+			);
+			path = BarButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,6 +861,7 @@
 				FA85091118EE03200083BB00 /* icon_rss@2x.png in Resources */,
 				FA437C0C18EC81CC0012BCE5 /* SVWebViewController.bundle in Resources */,
 				FA437C1318EC81CC0012BCE5 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
+				FAA4E33818F19C5B007245E3 /* icon_font_size.png in Resources */,
 				FA37A29318DCDF3D00B79FE8 /* Localizable.strings in Resources */,
 				FA85091018EE03200083BB00 /* icon_rss.png in Resources */,
 				FA37A27818DC707700B79FE8 /* iPhone.storyboard in Resources */,
@@ -824,6 +876,7 @@
 				FA85090D18EE03200083BB00 /* icon_home@2x.png in Resources */,
 				FAA4E31D18F15D8A007245E3 /* description.png in Resources */,
 				FA85091218EE03200083BB00 /* icon_settings.png in Resources */,
+				FAA4E33918F19C5B007245E3 /* icon_font_size@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,6 +893,7 @@
 				FA37A28618DC737800B79FE8 /* ChannelController.m in Sources */,
 				FA437C1818EC81CC0012BCE5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				FA37A28A18DCD9F900B79FE8 /* Channel.m in Sources */,
+				FAA4E33C18F1A1DC007245E3 /* FontSizeView.m in Sources */,
 				FA437C1A18EC81CC0012BCE5 /* UIButton+AFNetworking.m in Sources */,
 				FA437C3318EC9AE70012BCE5 /* SettingView.m in Sources */,
 				FA437C0B18EC81CC0012BCE5 /* SVModalWebViewController.m in Sources */,
@@ -850,6 +904,8 @@
 				FA37A28218DC735400B79FE8 /* ChannelView.m in Sources */,
 				FA437BFD18EC81CC0012BCE5 /* AFURLRequestSerialization.m in Sources */,
 				FA437BFB18EC81CC0012BCE5 /* AFSecurityPolicy.m in Sources */,
+				FAA4E32A18F192B2007245E3 /* FPPopoverView.m in Sources */,
+				FAA4E32B18F192B2007245E3 /* FPTouchView.m in Sources */,
 				FA997DD118F0C4E800A2A67F /* Article.m in Sources */,
 				FA437C3918EC9F140012BCE5 /* TextFieldCell.m in Sources */,
 				FA437C3018EC8A6A0012BCE5 /* DashboardController.m in Sources */,
@@ -864,6 +920,7 @@
 				FA437C1718EC81CC0012BCE5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FA437C3618EC9AFA0012BCE5 /* SettingController.m in Sources */,
 				FA437BFF18EC81CC0012BCE5 /* AFURLSessionManager.m in Sources */,
+				FAA4E32918F192B2007245E3 /* FPPopoverController.m in Sources */,
 				FA85091B18EE15230083BB00 /* LeftModel.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
 				FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */,
@@ -889,6 +946,7 @@
 				FA437BF818EC81CC0012BCE5 /* AFHTTPRequestOperationManager.m in Sources */,
 				FA437C1018EC81CC0012BCE5 /* SVWebViewControllerActivityChrome.m in Sources */,
 				FA437C4C18ECACEE0012BCE5 /* RssFeedController.m in Sources */,
+				FAA4E33F18F1A1F8007245E3 /* FontSizeController.m in Sources */,
 				FA437C1418EC81CC0012BCE5 /* SVWebViewControllerActivitySafari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
