@@ -314,10 +314,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ry-WQ-UMl">
-                                <rect key="frame" x="113" y="69" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </stepper>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oig-tb-pwv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -325,14 +321,38 @@
                                     <navigationItem title="Title" id="WLe-6A-Mhg"/>
                                 </items>
                             </navigationBar>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ry-WQ-UMl">
+                                <rect key="frame" x="18" y="89" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="9jB-ia-aYv"/>
+                                    <constraint firstAttribute="width" constant="94" id="w1O-of-zvE"/>
+                                </constraints>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3Y-ag-UgN">
+                                <rect key="frame" x="18" y="60" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="8sg-mM-3zs"/>
+                                    <constraint firstAttribute="height" constant="21" id="eky-Kc-2Ef"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oig-tb-pwv" firstAttribute="top" secondItem="87L-bX-32f" secondAttribute="bottom" id="KlY-WM-bHH"/>
-                            <constraint firstAttribute="trailing" secondItem="oig-tb-pwv" secondAttribute="trailing" id="fq8-qR-ao0"/>
-                            <constraint firstItem="oig-tb-pwv" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" id="gkj-tf-wNF"/>
+                            <constraint firstItem="H3Y-ag-UgN" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" constant="18" id="1yr-HR-YQT"/>
+                            <constraint firstItem="2ry-WQ-UMl" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" constant="18" id="D5E-xs-kbS"/>
+                            <constraint firstAttribute="trailing" secondItem="oig-tb-pwv" secondAttribute="trailing" id="FFP-dm-iAk"/>
+                            <constraint firstItem="oig-tb-pwv" firstAttribute="leading" secondItem="g6d-xN-ebu" secondAttribute="leading" id="MOc-fa-15h"/>
+                            <constraint firstItem="H3Y-ag-UgN" firstAttribute="top" secondItem="oig-tb-pwv" secondAttribute="bottom" constant="16" id="Yfu-zR-wFv"/>
+                            <constraint firstItem="2ry-WQ-UMl" firstAttribute="top" secondItem="oig-tb-pwv" secondAttribute="bottom" constant="45" id="gZH-Aa-b5U"/>
+                            <constraint firstItem="oig-tb-pwv" firstAttribute="top" secondItem="87L-bX-32f" secondAttribute="bottom" id="mdK-Rh-gkg"/>
                         </constraints>
                         <connections>
+                            <outlet property="labelFontSize" destination="H3Y-ag-UgN" id="Ag1-Lc-sVy"/>
                             <outlet property="navigationBar" destination="oig-tb-pwv" id="mdS-Bo-30j"/>
                             <outlet property="stepperButton" destination="2ry-WQ-UMl" id="PYg-qS-KHj"/>
                         </connections>
