@@ -56,17 +56,17 @@
     [[_channelView tableView] reloadData];
 }
 
+#pragma mark - UIBarButtonItem
+- (void)opneChannel:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:@"OpenNewChannel" sender:nil];
+}
+
 #pragma mark - UIViewControllerEditing
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
 
     if (editing) [[_channelView tableView] setEditing:YES animated:YES];
     else [[_channelView tableView] setEditing:NO animated:YES];
-}
-
-#pragma mark - UIBarButtonItem
-- (void)opneChannel:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"OpenNewChannel" sender:nil];
 }
 
 #pragma mark - UITableViewDataSource
