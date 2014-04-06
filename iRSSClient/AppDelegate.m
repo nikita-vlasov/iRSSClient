@@ -9,7 +9,11 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [[GAI sharedInstance] setTrackUncaughtExceptions:YES];
+    [[GAI sharedInstance] setDispatchInterval:20.0f];
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-49499665-1"];
+    [TestFlight takeOff:@"6c60a6e2-2cc0-4898-a34e-87ec311f0e53"];
 
     /* Регистрирую пользовательские настройки */
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
