@@ -1,11 +1,9 @@
 #import "DashboardController.h"
 #import "DashboardView.h"
 
-#import "ChannelController.h"
-#import "FPPopoverController.h"
-
 @interface DashboardController ()
 
+/** View. */
 @property (strong, nonatomic) IBOutlet DashboardView *dashboardView;
 
 @end
