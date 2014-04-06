@@ -431,10 +431,10 @@
 				FA437C4818ECACDB0012BCE5 /* RssFeedView.m */,
 				FA836D8E18EF3C830005FF8E /* DetailItemView.h */,
 				FA836D8F18EF3C830005FF8E /* DetailItemView.m */,
-				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
-				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
 				FAA4E33A18F1A1DC007245E3 /* FontSizeView.h */,
 				FAA4E33B18F1A1DC007245E3 /* FontSizeView.m */,
+				FA437C3118EC9AE70012BCE5 /* SettingView.h */,
+				FA437C3218EC9AE70012BCE5 /* SettingView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -454,10 +454,10 @@
 				FA437C4B18ECACEE0012BCE5 /* RssFeedController.m */,
 				FA836D8B18EF3C4F0005FF8E /* DetailItemController.h */,
 				FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */,
-				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
-				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
 				FAA4E33D18F1A1F8007245E3 /* FontSizeController.h */,
 				FAA4E33E18F1A1F8007245E3 /* FontSizeController.m */,
+				FA437C3418EC9AFA0012BCE5 /* SettingController.h */,
+				FA437C3518EC9AFA0012BCE5 /* SettingController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
