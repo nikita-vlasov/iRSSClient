@@ -78,6 +78,7 @@
 		FA437C5418ECB6B80012BCE5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA437C5318ECB6B80012BCE5 /* SystemConfiguration.framework */; };
 		FA437C5618ECB6CF0012BCE5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA437C5518ECB6CF0012BCE5 /* libz.dylib */; };
 		FA437C5818ECB6DB0012BCE5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA437C5718ECB6DB0012BCE5 /* AdSupport.framework */; };
+		FA7B0FEB18F94FCC000D8D43 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7B0FE918F94FCC000D8D43 /* Appirater.m */; };
 		FA836D8D18EF3C4F0005FF8E /* DetailItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */; };
 		FA836D9018EF3C830005FF8E /* DetailItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA836D8F18EF3C830005FF8E /* DetailItemView.m */; };
 		FA8508FA18EDFA870083BB00 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8508F918EDFA870083BB00 /* DataModel.m */; };
@@ -256,6 +257,9 @@
 		FA437C5318ECB6B80012BCE5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FA437C5518ECB6CF0012BCE5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FA437C5718ECB6DB0012BCE5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		FA7B0FE818F94FCC000D8D43 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		FA7B0FE918F94FCC000D8D43 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		FA7B0FEA18F94FCC000D8D43 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
 		FA836D8B18EF3C4F0005FF8E /* DetailItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailItemController.h; path = Controller/DetailItemController.h; sourceTree = "<group>"; };
 		FA836D8C18EF3C4F0005FF8E /* DetailItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailItemController.m; path = Controller/DetailItemController.m; sourceTree = "<group>"; };
 		FA836D8E18EF3C830005FF8E /* DetailItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailItemView.h; path = View/DetailItemView.h; sourceTree = "<group>"; };
@@ -476,6 +480,7 @@
 		FA437B9418EC81CC0012BCE5 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FA7B0FE718F94FCC000D8D43 /* Appirater */,
 				FAA4E32118F192B1007245E3 /* FPPopover */,
 				FA437C4D18ECB6760012BCE5 /* TestFlightSDK */,
 				FA437B9518EC81CC0012BCE5 /* AFNetworking */,
@@ -706,6 +711,16 @@
 			path = TestFlightSDK;
 			sourceTree = "<group>";
 		};
+		FA7B0FE718F94FCC000D8D43 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				FA7B0FE818F94FCC000D8D43 /* Appirater.h */,
+				FA7B0FE918F94FCC000D8D43 /* Appirater.m */,
+				FA7B0FEA18F94FCC000D8D43 /* AppiraterDelegate.h */,
+			);
+			path = Appirater;
+			sourceTree = "<group>";
+		};
 		FA836D9118EF552F0005FF8E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,6 +938,7 @@
 				FAA4E32918F192B2007245E3 /* FPPopoverController.m in Sources */,
 				FA85091B18EE15230083BB00 /* LeftModel.m in Sources */,
 				FA37A27C18DC718600B79FE8 /* DataModel.xcdatamodeld in Sources */,
+				FA7B0FEB18F94FCC000D8D43 /* Appirater.m in Sources */,
 				FA437C2D18EC8A540012BCE5 /* DashboardView.m in Sources */,
 				FA437C2718EC86230012BCE5 /* LeftView.m in Sources */,
 				FA437C1E18EC81CC0012BCE5 /* UIWebView+AFNetworking.m in Sources */,
@@ -1060,8 +1076,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Alex/Desktop/iRSSClient/Libraries/GoogleAnalytics,
-					/Users/Alex/Desktop/iRSSClient/Libraries/TestFlightSDK,
+					/Users/Alex/Documents/iRSSClient/Libraries/GoogleAnalytics,
+					/Users/Alex/Documents/iRSSClient/Libraries/TestFlightSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1080,8 +1096,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Alex/Desktop/iRSSClient/Libraries/GoogleAnalytics,
-					/Users/Alex/Desktop/iRSSClient/Libraries/TestFlightSDK,
+					/Users/Alex/Documents/iRSSClient/Libraries/GoogleAnalytics,
+					/Users/Alex/Documents/iRSSClient/Libraries/TestFlightSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
