@@ -503,11 +503,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dS6-Ae-SaC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dS6-Ae-SaC">
                                                     <rect key="frame" x="20" y="10" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="iFX-2j-oYg"/>
+                                                        <constraint firstAttribute="height" constant="24" id="xSK-Qx-yfc"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYy-UX-7G7">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYy-UX-7G7">
                                                     <rect key="frame" x="52" y="0.0" width="248" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -517,6 +521,14 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mYy-UX-7G7" secondAttribute="trailing" constant="20" id="1aZ-sT-cYM"/>
+                                                <constraint firstItem="mYy-UX-7G7" firstAttribute="top" secondItem="gSn-s4-mj6" secondAttribute="top" id="2kt-bJ-tsb"/>
+                                                <constraint firstItem="dS6-Ae-SaC" firstAttribute="leading" secondItem="gSn-s4-mj6" secondAttribute="leading" constant="20" id="Igx-zn-UOY"/>
+                                                <constraint firstItem="dS6-Ae-SaC" firstAttribute="top" secondItem="gSn-s4-mj6" secondAttribute="top" constant="10" id="It1-X1-rr1"/>
+                                                <constraint firstAttribute="bottom" secondItem="mYy-UX-7G7" secondAttribute="bottom" id="qrV-WR-2to"/>
+                                                <constraint firstItem="mYy-UX-7G7" firstAttribute="leading" secondItem="dS6-Ae-SaC" secondAttribute="trailing" constant="8" id="xcY-Wg-nRo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ImageViewIcon" destination="dS6-Ae-SaC" id="QGs-5I-2fy"/>
@@ -577,7 +589,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="vQB-Zc-Id9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="vQB-Zc-Id9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -610,6 +622,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gvi-es-3ne" firstAttribute="top" secondItem="vQB-Zc-Id9" secondAttribute="bottom" id="ETu-SC-q19"/>
+                            <constraint firstAttribute="trailing" secondItem="vQB-Zc-Id9" secondAttribute="trailing" id="kXD-Kp-eIi"/>
+                            <constraint firstItem="vQB-Zc-Id9" firstAttribute="leading" secondItem="c4D-59-jBt" secondAttribute="leading" id="uk3-81-Fay"/>
+                            <constraint firstItem="vQB-Zc-Id9" firstAttribute="top" secondItem="c4D-59-jBt" secondAttribute="top" id="x3L-So-Njm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VKI-Om-mSB"/>
                     <connections>
